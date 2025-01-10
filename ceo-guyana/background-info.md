@@ -7,7 +7,7 @@ nav_order: 1
 
 # Background on Stratified Random Sampling, Map Validation, & Unbiased Area Estimation
 
-## Stratified Random Sampling
+## Stratified Random Sampling   xxxxxxxxxxxxxxxxx
 
 There are several different ways to sample an area in order to achieve a representative sample or the landscape and the variations within it. Sample data gathered in CEO can be used for a variety of purposes, including map validation.
 
