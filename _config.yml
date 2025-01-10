@@ -1,7 +1,7 @@
-title: COUNTRY NAME Training Template
-description: A website template for the SIG Caribbean trainings
-baseurl: "/caribbean-trainings" # the subpath of your site, e.g. /blog
-url: "https://servir-amazonia.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+title: Forest Monitoring Training - Liberia
+description: Materials for forest and mangrove monitoring in Liberia, February 2025
+baseurl: "/Liberia_NSC_ForestMonitoringTraining" # the subpath of your site, e.g. /blog
+url: "https://sig-gis.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/images/samz_usaid_nasa_ciat_sig.png"
 
 remote_theme: just-the-docs/just-the-docs
