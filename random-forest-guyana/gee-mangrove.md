@@ -3,7 +3,7 @@ layout: page
 title: "Intermediate Google Earth Engine: Mangrove Use Case"
 permalink: /gee-mangrove
 has_children: True
-nav_order: 7
+nav_order: 26
 ---
 
 # Intermediate Google Earth Engine: Mangrove Use Case

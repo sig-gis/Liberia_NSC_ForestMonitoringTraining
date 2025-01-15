@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Introduction to Google Earth Engine 1"
-permalink: /intro-gee-1
+title: "Classification with SEPAL"
+permalink: /04_class_SEPAL
 has_children: True
-nav_order: 23
+nav_order: 5
 ---
 
-# Introduction to Google Earth Engine 1
+# Classification with SEPAL
 
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 

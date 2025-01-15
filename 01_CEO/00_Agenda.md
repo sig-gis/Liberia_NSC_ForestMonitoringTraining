@@ -1,20 +1,20 @@
 ---
 layout: page
-title: "Map Validation and Area Estimation with Collect Earth Online"
+title: "Reference Data Collection with CEO"
 permalink: /01_CEO
 has_children: True
 nav_order: 2
 ---
 
-# Map Validation and Area Estimation with Collect Earth Online
+# Reference Data Collection with Collect Earth Online (CEO)
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
-**Date**: July 14, 2023
+**Date**: date?
 
-**Instructor(s):** Enikoe (Eni) Bihari
+**Instructor(s):** Crystal Wespestad
 
-**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
+**Contact information**: [who's email](em-trainings@sig-gis.com)
 
 Using Collect Earth Online and SEPAL for accuracy assessment and unbiased area estimation of maps
 

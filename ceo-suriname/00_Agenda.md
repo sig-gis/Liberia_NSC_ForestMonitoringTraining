@@ -3,7 +3,7 @@ layout: page
 title: "Map Validation with Collect Earth Online"
 permalink: /ceo
 has_children: True
-nav_order: 3
+nav_order: 21
 ---
 
 # Map Validation and Area Estimation with Collect Earth Online

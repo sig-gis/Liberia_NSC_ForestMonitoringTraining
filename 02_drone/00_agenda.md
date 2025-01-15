@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "Drone Flight & Image Processing"
-permalink: /drone-image-processing
+permalink: /02_drone
 has_children: True
-nav_order: 22
+nav_order: 3
 ---
 
-# Drone Flight and Image Processing
+# Drone Flight Planning and Image Processing
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
