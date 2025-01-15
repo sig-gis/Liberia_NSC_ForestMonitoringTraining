@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introduction to GEE"
+title: "3. Introduction to GEE"
 permalink: /03_intro_GEE
 has_children: True
 nav_order: 4

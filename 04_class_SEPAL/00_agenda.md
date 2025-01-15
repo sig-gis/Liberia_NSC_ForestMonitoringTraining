@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Classification with SEPAL"
+title: "4. Classification with SEPAL"
 permalink: /04_class_SEPAL
 has_children: True
 nav_order: 5

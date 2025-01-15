@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Classification with GEE"
+title: "5. Classification with GEE"
 permalink: /05_class_GEE
 has_children: True
 nav_order: 6
