@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  Preprocessing Imagery
+title:  Obtaining Imagery
 parent: "4. Intro to GEE"
 nav_order: 3
 ---
 
-# Preprocessing Imagery in GEE
+# Obtaining Imagery in GEE

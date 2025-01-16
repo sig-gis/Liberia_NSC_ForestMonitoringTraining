@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  Obtaining Imagery
+title:  Intro to Javascript
 parent: "4. Intro to GEE"
 nav_order: 2
 ---
 
-# Obtaining Imagery in GEE
+# Introduction to Javascript
