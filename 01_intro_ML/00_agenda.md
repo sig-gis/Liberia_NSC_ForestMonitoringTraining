@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "1. Introduction to Machine Learning"
+title: "1. Intro to Machine Learning"
 permalink: /01_intro_ML
 has_children: True
 nav_order: 2
