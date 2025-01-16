@@ -7,7 +7,7 @@ nav_order: 3
 
 # Data Collection Exercise in Collect Earth Online (CEO)
 
-Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “Suriname Geospatial Workshop.” Click `Visit`.
+Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “[The Environmental Protection Agency of Liberia (EPA).](https://app.collect.earth/review-institution?institutionId=4290)” Click `Visit`.
 
 <img align="center" src="../images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
 
@@ -31,7 +31,7 @@ On this first `Project Overview` page, under `Select Template`, select the `Suri
 
 You can also create a project from scratch, but for the sake of simplicity, we will use this project template that has already been made for you.  If you want to model a CEO project off of another project but create entirely new plots/samples or survey questions, you can uncheck `Copy Template Plots and Samples` and `Copy Template Widgets`.
 
-Then, **add YOUR NAME to the end of the project name**.  This way, everyone in the workshop will have their own project to work in.  
+For this workshop, **add YOUR NAME to the beginning of the project name**.  This way, everyone in the workshop will have their own project to work in and it can easily be distinguished as a test project later.  
 
 <img align="center" src="../images/ceo/CEO_newproject.png" hspace="15" vspace="10" width="700">
 
