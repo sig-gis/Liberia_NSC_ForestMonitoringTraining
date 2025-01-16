@@ -1,8 +1,0 @@
----
-layout: page
-title:  "Random Forest Classification"
-parent: "4. Classification with SEPAL"
-nav_order: 4
----
-
-# Classification with Random Forest in SEPAL
