@@ -7,9 +7,9 @@ logo: "/images/samz_usaid_nasa_ciat_sig.png"
 remote_theme: just-the-docs/just-the-docs
 
 # Aux links for the upper right navigation
-aux_links:
-  "SERVIR-Amazonia":
-    - "//www.servir.alliancebioversityciat.org"
+# aux_links:
+#   "SERVIR-Amazonia":
+#     - "//www.servir.alliancebioversityciat.org"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
