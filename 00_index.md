@@ -5,34 +5,82 @@ nav_order: 1
 ---
 
 # Liberia Geospatial Capacity Building Workshops for Forest Monitoring
-These workshops aim to build participants' capacity to use geospatial technologies for mangrove and hydrological event management. For a detailed overview, you can read the workshop's [concept note](https://docs.google.com/document/d/1N3lmDg1uZoC4VQdsRQyvUtch2jIqBJpM_BBgyg_aUqE/edit?usp=sharing). By the end of this training series, participants will gain:
-1. A conceptual understanding of geographic information systems and use of QGIS;
-2. Knowledge of the use and interpretation of moderate and high resolution satellite imagery and synthetic aperture radar data;
-3. An overview of the Google Earth Engine platform;
-4. Methodological approaches for mangrove and flood mapping and change detection.
+This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's [concept note](https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing).
 
-The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find information about all the workshop partners under the **Partners** tab, supplementary learning material under the **Resources** tab, and photos from the workshops (and a place to upload your own photos) under the **Photos** tab. 
+## Expected outcomes of the workshop
+
+#### Skills: 
+- Increased understanding of CEO, SEPAL, and GEE tools
+- Working knowledge of sampling design, machine learning, and map accuracy assessment
+- Basic knowledge of planning and implementing drone flights
+- Basic knowledge of analyzing drone data
+
+#### Products:
+- Draft CEO projects to be used for forest / non-forest training data collection and map validation
+- A 2014 forest extent map that can be further refined after the workshop
+- An example of analysis using drone imagery 
 
 
-## Questions
-If you have any questions about the material, please submit a question below! We are here to help.  
-
-[Ask a Question](https://forms.gle/a7MW4PtgtmPiPoZJ9){: .btn .btn-purple }
+The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
 ## Agenda
 This table is just an example. Actual 12-day overview will differ based on the country.
 
-| Instruction Day | Theme                                               | Timing         | Format    |
-|:----------------|:----------------------------------------------------|:---------------|:----------|
-| 1               | Introduction to GIS with QGIS                       | November 2022  | Virtual   | 
-| 2               | Introduction to Remote Sensing                      | January 2023   | Virtual   |
-| 3-4             | Introduction to Google Earth Engine                 | March 2023     | In-person |
-| 5               | Introduction to Radar                               | March 2023     | In-person |
-| 6-7             | Flood Mapping                                       | March 2023     | In-person | 
-| 8               | Mapping Using Multiple Sensors (Flood or Mangroves) | May 2023       | Virtual   |
-| 9               | Map Validation Using Collect Earth Online           | June 2023      | Virtual   |
-| 10-11           | Change Detection (Flood or Mangroves)               | June 2023      | Virtual   |
-| 12              | Capstone and Follow-up Support                      | September 2023 | Virtual   |
+#### Day 1
+
+|**Topic**| **Lead**      |
+|--------------------------------------------------------|---------------|
+| Registration / Workshop Opening / Introductions | Liberia team  |
+| Overview of workshop content | SIG           |
+| Liberia presentation on status of work| Liberia team  |
+| Discussion: needs of the team and desired takeaways from the workshop | Discussion    |
+| Intro to machine learning (ML) | SIG - Crystal |
+| Sampling design options  | SIG - Crystal |
+| Sampling design with “Stratified area estimator - Design” tool in SEPAL | SIG - Crystal |
+| CEO interpretation key recommendations and best practices | SIG - Crystal |
+
+#### Day 2
+| **Topic**                                | **Lead**      |
+|--------------------------------------------------------|---------------|
+| Collect Earth Online (advanced overview) | SIG - Crystal |
+| Exercise to collect training data in CEO | SIG - Crystal |
+| Drones and their applications            | SIG - Jarrett |
+| Drone flight planning and mapping        | SIG - Jarrett |
+| Hands-on flight planning                 | SIG - Jarrett |
+| Short flight session                     | SIG - Jarrett |
+
+#### Day 3
+| **Topic** | **Lead**      |
+|--------------------------------------------------------|---------------|
+| Hands-on field experience                              | SIG - Jarrett |
+| Drone data processing: overview                        | SIG - Jarrett |
+| Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
+| Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
+
+#### Day 4
+| **Topic**                                              | **Lead**      |
+|--------------------------------------------------------|---------------|
+| Hands-on field experience                              | SIG - Jarrett |
+| Drone data processing: overview                        | SIG - Jarrett |
+| Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
+| Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
+
+#### Day 5
+| **Topic**                                | **Lead**      |
+|--------------------------------------------------------|---------------|
+| SEPAL: Creating a composite image        | SIG - Crystal |
+| SEPAL: Classification tool               | SIG - Crystal |
+| GEE: Creating a composite image          | SIG - Crystal |
+| GEE: Machine learning for classification | SIG - Crystal |
+
+#### Day 6
+| **Topic**                                     | **Lead**      |
+|--------------------------------------------------------|---------------|
+| Development of Liberia’s 2014 forest baseline | Liberia / SIG |
+| Accuracy assessment of a map                  | SIG - Crystal |
+| Small group recaps                            | Liberia       |
+| Review of workshop outcomes and next steps    | Liberia / SIG |
+
 
 ## Feedback
 If you have any feedback from any of the workshops, please fill out the form below. It helps us improve future workshops!
