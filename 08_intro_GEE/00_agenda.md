@@ -3,7 +3,7 @@ layout: page
 title: "4. Intro to GEE"
 permalink: /04_intro_GEE
 has_children: True
-nav_order: 5
+nav_order: 9
 ---
 
 # Introduction to Google Earth Engine (GEE)

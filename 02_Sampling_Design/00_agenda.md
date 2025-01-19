@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "2. Reference Data Collection with CEO"
-permalink: /02_CEO
+title: "2. Sampling Design"
+permalink: /02_SamplingDesign
 has_children: True
 nav_order: 3
 ---
 
-# Reference Data Collection with Collect Earth Online (CEO)
+# Data Collection with Collect Earth Online (CEO)
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda

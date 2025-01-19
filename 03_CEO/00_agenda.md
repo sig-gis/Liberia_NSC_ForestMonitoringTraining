@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "1. Intro to Machine Learning"
-permalink: /01_intro_machine_learning
+title: "2. Data Collection with CEO"
+permalink: /02_CEO
 has_children: True
-nav_order: 2
+nav_order: 4
 ---
 
-# Introduction to Machine Learning
+# Data Collection with Collect Earth Online (CEO)
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
@@ -16,6 +16,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 **Contact information**: [who's email](em-trainings@sig-gis.com)
 
+Using Collect Earth Online and SEPAL for accuracy assessment and unbiased area estimation of maps
 
 
 

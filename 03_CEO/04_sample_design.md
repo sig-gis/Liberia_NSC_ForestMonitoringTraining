@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Sample Design"
-parent: "2. Reference Data Collection with CEO"
+parent: "2. Data Collection with CEO"
 nav_order: 4
 ---
 
