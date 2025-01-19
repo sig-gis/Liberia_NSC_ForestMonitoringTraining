@@ -29,7 +29,7 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 
 |**Topic**| **Lead**      |
 |--------------------------------------------------------|---------------|
-| Registration / Workshop Opening / Introductions | Liberia team  |
+| Registration / Workshop Opening / Introductions        | Liberia team  |
 | Overview of workshop content | SIG           |
 | Liberia presentation on status of work| Liberia team  |
 | Discussion: needs of the team and desired takeaways from the workshop | Discussion    |
@@ -43,7 +43,7 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 
 |**Topic**| **Lead**      |
 |--------------------------------------------------------|---------------|
-| Collect Earth Online (advanced overview) | SIG - Crystal  |
+| Collect Earth Online (advanced overview)               | SIG - Crystal  |
 | Exercise to collect training data in CEO | SIG - Crystal  |
 | Drones and their applications            | SIG - Jarrett  |
 | Drone flight planning and mapping        | SIG - Jarrett  |
@@ -78,8 +78,8 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 ### Day 5
 
 | **Topic**                                | **Lead**      |
-|------------------------------------------|---------------|
-| SEPAL: Creating a composite image        | SIG - Crystal |
+--------------------------------------------------------|---------------|
+| SEPAL: Creating a composite image                     | SIG - Crystal |
 | SEPAL: Classification tool               | SIG - Crystal |
 | GEE: Creating a composite image          | SIG - Crystal |
 | GEE: Machine learning for classification | SIG - Crystal |
@@ -89,8 +89,8 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 ### Day 6
 
 | **Topic**                                     | **Lead**      |
-|-----------------------------------------------|---------------|
-| Development of Liberia’s 2014 forest baseline | Liberia / SIG |
+--------------------------------------------------------|---------------|
+| Development of Liberia’s 2014 forest baseline         | Liberia / SIG |
 | Accuracy assessment of a map                  | SIG - Crystal |
 | Small group recaps                            | Liberia       |
 | Review of workshop outcomes and next steps    | Liberia / SIG |

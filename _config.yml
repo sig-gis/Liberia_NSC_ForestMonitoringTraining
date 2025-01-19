@@ -20,15 +20,6 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
-#tables 
-table {
-    table-layout: fixed;
-    width: 100%;
-}
-th, td {
-    word-wrap: break-word;
-}
-
 
 # Footer content
 # appears at the bottom of every page's main content
