@@ -20,6 +20,20 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
+#setting column width of tables for consistency
+# comment out if there are a lot of tables and this does not always apply
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+th:nth-child(1) {
+    width: 80%;
+}
+
+th:nth-child(2) {
+    width: 20%;
+}
 
 # Footer content
 # appears at the bottom of every page's main content
