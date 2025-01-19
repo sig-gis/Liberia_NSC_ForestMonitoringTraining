@@ -39,6 +39,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | Sampling design with “Stratified area estimator - Design” tool in SEPAL | SIG - Crystal |
 | CEO interpretation key recommendations and best practices | SIG - Crystal |
 
+
 #### Day 2
 | **Topic**                               | **Lead**       |
 |-----------------------------------------|----------------|
@@ -50,6 +51,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | Short flight session                    | SIG - Jarrett  |
 
 
+
 #### Day 3
 | **Topic** | **Lead**      |
 |--------------------------------------------------------|---------------|
@@ -57,6 +59,8 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | Drone data processing: overview                        | SIG - Jarrett |
 | Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
 | Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
+
+
 
 #### Day 4
 | **Topic**                                              | **Lead**      |
@@ -66,6 +70,8 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
 | Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
 
+
+
 #### Day 5
 | **Topic**                                | **Lead**      |
 |------------------------------------------|---------------|
@@ -74,6 +80,8 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | GEE: Creating a composite image          | SIG - Crystal |
 | GEE: Machine learning for classification | SIG - Crystal |
 
+
+
 #### Day 6
 | **Topic**                                     | **Lead**      |
 |-----------------------------------------------|---------------|
@@ -81,6 +89,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | Accuracy assessment of a map                  | SIG - Crystal |
 | Small group recaps                            | Liberia       |
 | Review of workshop outcomes and next steps    | Liberia / SIG |
+
 
 
 ## Feedback
