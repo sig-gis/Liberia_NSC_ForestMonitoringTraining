@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Obtaining Imagery
+title:  Introduction
 parent: "4. Intro to GEE"
 nav_order: 1
 ---
