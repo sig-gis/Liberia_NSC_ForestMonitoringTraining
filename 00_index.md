@@ -42,14 +42,15 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 #### Day 2
 
-| **Topic**                               | **Lead**       |
-|-----------------------------------------|----------------|
-| Collect Earth Online (advanced overview)| SIG - Crystal  |
-| Exercise to collect training data in CEO| SIG - Crystal  |
-| Drones and their applications           | SIG - Jarrett  |
-| Drone flight planning and mapping       | SIG - Jarrett  |
-| Hands-on flight planning                | SIG - Jarrett  |
-| Short flight session                    | SIG - Jarrett  |
+|**Topic**| **Lead**      |
+|--------------------------------------------------------|---------------|
+| Collect Earth Online (advanced overview) | SIG - Crystal  |
+| Exercise to collect training data in CEO | SIG - Crystal  |
+| Drones and their applications            | SIG - Jarrett  |
+| Drone flight planning and mapping        | SIG - Jarrett  |
+| Hands-on flight planning                 | SIG - Jarrett  |
+| Short flight session                     | SIG - Jarrett  |
+
 
 
 
