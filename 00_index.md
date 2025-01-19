@@ -23,79 +23,6 @@ This workshop aim to build participants' capacity to use remote sensing technolo
 
 The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
-## Agenda
-
-### Day 1
-
-|**Topic**| **Lead**      |
-|--------------------------------------------------------|---------------|
-| Registration / Workshop Opening / Introductions        | Liberia team  |
-| Overview of workshop content | SIG           |
-| Liberia presentation on status of work| Liberia team  |
-| Discussion: needs of the team and desired takeaways from the workshop | Discussion    |
-| Intro to machine learning (ML) | SIG - Crystal |
-| Sampling design options  | SIG - Crystal |
-| Sampling design with “Stratified area estimator - Design” tool in SEPAL | SIG - Crystal |
-| CEO interpretation key recommendations and best practices | SIG - Crystal |
-
-
-### Day 2
-
-|**Topic**| **Lead**      |
-|--------------------------------------------------------|---------------|
-| Collect Earth Online (advanced overview)               | SIG - Crystal |
-| Exercise to collect training data in CEO | SIG - Crystal  |
-| Drones and their applications            | SIG - Jarrett  |
-| Drone flight planning and mapping        | SIG - Jarrett  |
-| Hands-on flight planning                 | SIG - Jarrett  |
-| Short flight session                     | SIG - Jarrett  |
-
-
-
-
-### Day 3
-
-| **Topic** | **Lead**      |
-|--------------------------------------------------------|---------------|
-| Hands-on field experience                              | SIG - Jarrett |
-| Drone data processing: overview                        | SIG - Jarrett |
-| Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
-| Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
-
-
-
-### Day 4
-
-| **Topic**                                              | **Lead**      |
-|--------------------------------------------------------|---------------|
-| Hands-on field experience                              | SIG - Jarrett |
-| Drone data processing: overview                        | SIG - Jarrett |
-| Drone data processing: introduction to Pix4Dmapper     | SIG - Jarrett |
-| Drone data processing: analyzing and adjusting outputs | SIG - Jarrett |
-
-
-
-### Day 5
-
-| **Topic**                                | **Lead**      |
---------------------------------------------------------|---------------|
-| SEPAL: Creating a composite image                     | SIG - Crystal |
-| SEPAL: Classification tool               | SIG - Crystal |
-| GEE: Creating a composite image          | SIG - Crystal |
-| GEE: Machine learning for classification | SIG - Crystal |
-
-
-
-### Day 6
-
-| **Topic**                                     | **Lead**      |
---------------------------------------------------------|---------------|
-| Development of Liberia’s 2014 forest baseline         | Liberia / SIG |
-| Accuracy assessment of a map                  | SIG - Crystal |
-| Small group recaps                            | Liberia       |
-| Review of workshop outcomes and next steps    | Liberia / SIG |
-
-
 
 ## Agenda
 
@@ -131,6 +58,7 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 |            | Accuracy assessment of a map                 | SIG - Crystal |
 |            | Small group recaps                           | Liberia       |
 |            | Review of workshop outcomes and next steps   | Liberia / SIG |
+
 
 
 ## Feedback
