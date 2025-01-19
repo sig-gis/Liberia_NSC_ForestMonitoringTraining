@@ -40,14 +40,15 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | CEO interpretation key recommendations and best practices | SIG - Crystal |
 
 #### Day 2
-| **Topic**                                | **Lead**      |
-|--------------------------------------------------------|---------------|
-| Collect Earth Online (advanced overview) | SIG - Crystal |
-| Exercise to collect training data in CEO | SIG - Crystal |
-| Drones and their applications            | SIG - Jarrett |
-| Drone flight planning and mapping        | SIG - Jarrett |
-| Hands-on flight planning                 | SIG - Jarrett |
-| Short flight session                     | SIG - Jarrett |
+| **Topic**                               | **Lead**       |
+|-----------------------------------------|----------------|
+| Collect Earth Online (advanced overview)| SIG - Crystal  |
+| Exercise to collect training data in CEO| SIG - Crystal  |
+| Drones and their applications           | SIG - Jarrett  |
+| Drone flight planning and mapping       | SIG - Jarrett  |
+| Hands-on flight planning                | SIG - Jarrett  |
+| Short flight session                    | SIG - Jarrett  |
+
 
 #### Day 3
 | **Topic** | **Lead**      |
@@ -67,7 +68,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 #### Day 5
 | **Topic**                                | **Lead**      |
-|--------------------------------------------------------|---------------|
+|------------------------------------------|---------------|
 | SEPAL: Creating a composite image        | SIG - Crystal |
 | SEPAL: Classification tool               | SIG - Crystal |
 | GEE: Creating a composite image          | SIG - Crystal |
@@ -75,7 +76,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 #### Day 6
 | **Topic**                                     | **Lead**      |
-|--------------------------------------------------------|---------------|
+|-----------------------------------------------|---------------|
 | Development of Liberia’s 2014 forest baseline | Liberia / SIG |
 | Accuracy assessment of a map                  | SIG - Crystal |
 | Small group recaps                            | Liberia       |
