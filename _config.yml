@@ -2,7 +2,7 @@ title: Forest Monitoring Training - Liberia
 description: Materials for forest and mangrove monitoring in Liberia, February 2025
 baseurl: "/Liberia_NSC_ForestMonitoringTraining" # the subpath of your site, e.g. /blog
 url: "https://sig-gis.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/images/samz_usaid_nasa_ciat_sig.png"
+logo: "/images/SIG-logo-horizontal-2022.png"
 
 remote_theme: just-the-docs/just-the-docs
 
@@ -20,25 +20,10 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
-#setting column width of tables for consistency
-# comment out if there are a lot of tables and this does not always apply
-table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-th:nth-child(1) {
-    width: 80%;
-}
-
-th:nth-child(2) {
-    width: 20%;
-}
-
 # Footer content
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust markup / liquid-based content.
-footer_content: "Copyright &copy; 2023 SERVIR-Amazonia / Spatial Informatics Group. Distributed by an <a href=\"https://github.com/SERVIR-Amazonia/caribbean-trainings/blob/main/LICENSE\">EPL 2.0 license.</a>"
+footer_content: "2025 --- Spatial Informatics Group / NovaSphere --- Financial support from Environment and Climate Change Canada"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
