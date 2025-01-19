@@ -20,8 +20,6 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
-# Supported markdown 
-markdown: kramdown
 
 # Footer content
 # appears at the bottom of every page's main content

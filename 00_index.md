@@ -41,6 +41,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 #### Day 2
+
 | **Topic**                               | **Lead**       |
 |-----------------------------------------|----------------|
 | Collect Earth Online (advanced overview)| SIG - Crystal  |
@@ -53,6 +54,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 #### Day 3
+
 | **Topic** | **Lead**      |
 |--------------------------------------------------------|---------------|
 | Hands-on field experience                              | SIG - Jarrett |
@@ -63,6 +65,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 #### Day 4
+
 | **Topic**                                              | **Lead**      |
 |--------------------------------------------------------|---------------|
 | Hands-on field experience                              | SIG - Jarrett |
@@ -73,6 +76,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 #### Day 5
+
 | **Topic**                                | **Lead**      |
 |------------------------------------------|---------------|
 | SEPAL: Creating a composite image        | SIG - Crystal |
@@ -83,6 +87,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 #### Day 6
+
 | **Topic**                                     | **Lead**      |
 |-----------------------------------------------|---------------|
 | Development of Liberia’s 2014 forest baseline | Liberia / SIG |
