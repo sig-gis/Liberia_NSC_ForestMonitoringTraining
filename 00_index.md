@@ -24,9 +24,8 @@ This workshop aim to build participants' capacity to use remote sensing technolo
 The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
 ## Agenda
-This table is just an example. Actual 12-day overview will differ based on the country.
 
-#### Day 1
+### Day 1
 
 |**Topic**| **Lead**      |
 |--------------------------------------------------------|---------------|
@@ -40,7 +39,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 | CEO interpretation key recommendations and best practices | SIG - Crystal |
 
 
-#### Day 2
+### Day 2
 
 |**Topic**| **Lead**      |
 |--------------------------------------------------------|---------------|
@@ -54,7 +53,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 
-#### Day 3
+### Day 3
 
 | **Topic** | **Lead**      |
 |--------------------------------------------------------|---------------|
@@ -65,7 +64,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 
-#### Day 4
+### Day 4
 
 | **Topic**                                              | **Lead**      |
 |--------------------------------------------------------|---------------|
@@ -76,7 +75,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 
-#### Day 5
+### Day 5
 
 | **Topic**                                | **Lead**      |
 |------------------------------------------|---------------|
@@ -87,7 +86,7 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 
 
-#### Day 6
+### Day 6
 
 | **Topic**                                     | **Lead**      |
 |-----------------------------------------------|---------------|
