@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Random Forest Classification
-parent: "6. Classification with GEE"
+parent: "7. Classification with GEE"
 nav_order: 2
 ---
 

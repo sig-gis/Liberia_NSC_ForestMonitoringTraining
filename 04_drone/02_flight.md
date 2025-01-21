@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Flight Planning"
-parent: "3. Drone Flight & Image Processing"
+parent: "4. Drone Flight & Image Processing"
 nav_order: 2
 ---
 

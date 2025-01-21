@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "3. Data Collection with CEO"
-permalink: /02_CEO
+permalink: /03_CEO
 has_children: True
 nav_order: 4
 ---

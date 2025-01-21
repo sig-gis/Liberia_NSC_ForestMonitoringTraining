@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Data Collection in CEO"
-parent: "2. Data Collection with CEO"
+parent: "3. Data Collection with CEO"
 nav_order: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "8. Accuracy Assessment"
-permalink: /07_accuracy
+permalink: /08_accuracy
 has_children: True
 nav_order: 9
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "5. Intro to GEE"
-permalink: /04_intro_GEE
+permalink: /05_intro_GEE
 has_children: True
 nav_order: 6
 ---

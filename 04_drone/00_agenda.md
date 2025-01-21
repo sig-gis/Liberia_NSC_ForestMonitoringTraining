@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "4. Drone Flight & Image Processing"
-permalink: /03_drone
+permalink: /04_drone
 has_children: True
 nav_order: 5
 ---

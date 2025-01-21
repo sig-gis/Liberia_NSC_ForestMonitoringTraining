@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Preprocessing Imagery"
-parent: "5. Classification with SEPAL"
+parent: "6. Classification with SEPAL"
 nav_order: 1
 ---
 

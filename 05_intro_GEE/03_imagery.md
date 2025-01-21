@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Obtaining Imagery
-parent: "4. Intro to GEE"
+parent: "5. Intro to GEE"
 nav_order: 3
 ---
 
