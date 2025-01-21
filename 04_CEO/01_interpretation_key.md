@@ -28,3 +28,5 @@ Key areas that can always be improved and should be revisited:
 3. Make sure to include and protocol for interpreters (update if if your survey or goals change). This ensures repeatability and quality assurance accross the team of interpreters.
 
 Time to discuss the key and make improvements together.
+
+<img align="center" src="../images/ceo/LC_example_interpretationkey_improvements.png" hspace="5" vspace="5" width="1000">
