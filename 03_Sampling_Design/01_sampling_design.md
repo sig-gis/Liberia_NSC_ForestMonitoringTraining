@@ -1,11 +1,58 @@
 ---
 layout: page
-title:  "Sample Design"
-parent: "3. Data Collection with CEO"
-nav_order: 4
+title:  "Introduction to Sampling Design"
+parent: "2. Sampling Design"
+nav_order: 1
 ---
 
-# Sample Design Recommendations
+# Overview: What is Sampling Design?
+
+Sampling design refers to the structured approach used to select a subset of data points or observations from a larger population or dataset. A well-thought-out sampling design ensures that the selected sample is representative of the broader population, reducing bias and improving the reliability of results.
+
+Sampling design has uses in many fields, but we will be focusing on three main use cases:
+- Gathering samples for training machine learning algorithms
+- A statistical approach used to infer the characteristics of a larger area or population by analyzing data from a representative subset (sample) of that area
+    - Namely, *sample-based area estimation*, for estimating areas of a feature and quantifying uncertainties, avoiding the bias inherent in using maps for area estimation
+- Extracting samples for quality control / accuracy assessment
+
+
+# What are the goals of a good sampling design?
+
+1. **Representativeness**
+- Ensure the sample accurately reflects the population or area of interest.
+- Include all key subgroups or characteristics to avoid bias.
+- Achieve proportional representation where needed, such as in stratified sampling.
+- Avoid over-representing specific regions or under-sampling others.
+- Ensure variability within each class is captured in the sample.
+2. **Efficiency and Practicality**
+-  Maximize the accuracy and reliability of the estimates while minimizing resource use, such as time, cost, and effort.
+- Estimate the available resources and the number of samples needed to achieve goals early on in your design.
+- Some methods for improving efficiency include stratified sampling and systematic sampling.
+3. **Unbiased Estimation**
+- Avoid systematic errors in selecting or measuring samples.
+- Use probability-based methods to ensure each unit has a known and non-zero chance of selection, which should be recorded for later analyses.
+4. **Flexibility**
+- Allow for adaptability to unforeseen challenges during sampling, such as planning for iterative additional sampling.
+- Plan for potential integration of additional samples or modifications without compromising the design's integrity.
+5. **Statistical and Model Validity**
+- Allow for robust statistical analysis and meaningful inference about the population.
+- Ensure the sample size is adequate for achieving reliable estimates and uncertainties (when applicable).
+    - For most statistical analyses important to our use case, at least 30 samples from the class of interest are necessary for reliable results.
+- Avoid over-fitting or under-fitting a machine learning model.
+    - Overfitting occurs when a model learns patterns, noise, or anomalies specific to the training data, rather than generalizable patterns relevant to the entire population.
+    - Underfitting occurs when a model fails to learn sufficient patterns from the data, resulting in poor model performance.
+6. **Reproducibility**
+- Design a sampling process that can be repeated by others for consistency and verification.
+- Use clear, documented procedures for sample selection and measurement.
+
+
+For training machine learning algorithms, sampling design is critical to ensure that the data used to train the model covers the variability in the dataset, preventing overfitting or underfitting. Techniques like stratified sampling can be employed to ensure balanced representation of different classes, especially in imbalanced datasets. Random sampling can help ensure that the training data is unbiased, while techniques like cross-validation split the data into training and testing subsets to evaluate model performance effectively.
+
+In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. Probability-based designs, where every location has a known chance of being sampled, are essential for unbiased estimates. Geographical balance is also crucial to ensure all regions within the study area are adequately represented. Common techniques include systematic sampling, stratified random sampling, and cluster sampling, each tailored to the study's objectives and constraints.
+
+
+A carefully designed sample can yield reliable estimates of key population parameters, such as the percentage of forest cover. The primary aim of sampling is to obtain an unbiased estimate of a population characteristic (e.g., area proportion) while minimizing variance, considering available resources. When planning a sample design, two important considerations are: first, whether the design is probability-based, ensuring every location has a chance of being sampled; and second, whether it is geographically balanced, ensuring representation across all areas within the study region.
+
 
 ## Stratified Random Sampling
 
