@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "7. Accuracy Assessment"
-permalink: /07_accuracy
+title: "5. Intro to GEE"
+permalink: /04_intro_GEE
 has_children: True
-nav_order: 8
+nav_order: 6
 ---
 
-# Accuracy Assessment
+# Introduction to Google Earth Engine (GEE)
 
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 

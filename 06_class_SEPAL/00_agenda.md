@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "6. Classification with GEE"
-permalink: /06_class_GEE
+title: "6. Classification with SEPAL"
+permalink: /05_class_SEPAL
 has_children: True
 nav_order: 7
 ---
 
-# Classification with Google Earth Engine (GEE)
+# Classification with SEPAL
 
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 

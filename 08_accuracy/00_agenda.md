@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "5. Classification with SEPAL"
-permalink: /05_class_SEPAL
+title: "8. Accuracy Assessment"
+permalink: /07_accuracy
 has_children: True
-nav_order: 6
+nav_order: 9
 ---
 
-# Classification with SEPAL
+# Accuracy Assessment
 
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 

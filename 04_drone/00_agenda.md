@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3. Drone Flight & Image Processing"
+title: "4. Drone Flight & Image Processing"
 permalink: /03_drone
 has_children: True
 nav_order: 5

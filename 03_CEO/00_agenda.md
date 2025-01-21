@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2. Data Collection with CEO"
+title: "3. Data Collection with CEO"
 permalink: /02_CEO
 has_children: True
 nav_order: 4
