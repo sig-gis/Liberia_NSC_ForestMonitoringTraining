@@ -6,7 +6,7 @@ has_children: True
 nav_order: 3
 ---
 
-# Data Collection with Collect Earth Online (CEO)
+# Sampling Design
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
