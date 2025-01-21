@@ -12,11 +12,11 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 ## Session Agenda
 
-**Date**: May 11, 2023
+**Date**: date?
 
-**Instructors:** Andréa Puzzi Nicolau & Natalia Uribe 
+**Instructor(s):** Crystal Wespestad
 
-**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
+**Contact information**: [who's email](em-trainings@sig-gis.com)
 
 |      Time     |                                Topics                               |
 |:-------------:|:-------------------------------------------------------------------:|
