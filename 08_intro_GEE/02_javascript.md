@@ -13,6 +13,8 @@ In order to build a script for your analysis, you will need to use JavaScript. T
 
 ### Variables
 
+<font color = red> change Paramaribo below in text and in script to Monrovia and population to ~1.7 million </font>
+
 In a programming language, variables are used to store data values. In JavaScript, a variable is defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Paramaribo" to the variable named `city`. Note that the text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string. It's a good idea to be consistent: use single quotes or double quotes throughout a given script. Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
 
 ```javascript
@@ -36,6 +38,8 @@ print(population);
 
 It is useful to be able to store multiple values in a single variable. JavaScript provides a data structure called a "list" that can contain multiple values. We can create a new list by using the brackets [] and adding multiple values separated by a comma.
 
+<font color = red> change the cities below to Monrovia, Gbarnga, Buchanan, Ganta </font>
+
 ```javascript
 var cities = ['Paramaribo', 'Lelydorp', 'Brokopondo', 'Nieuw Nickerie'];
 print(cities);
@@ -51,14 +55,17 @@ Please note some important things about JavaScript syntax here. First, we can us
 
 ```javascript
 var cityData = {
-    'city': 'Paramaribo',
-    'coordinates': [-55.2038, 5.8520],
-    'population': 250000
+    'city': 'Monrovia',
+    'coordinates': [-10.8119, 6.3161],
+    'population': 1700000
 };
 print(cityData);
 ```
 
 The object will be printed to the `Console`. You can see that instead of a numeric index, each element has a label. This is known as the key and can be used to retrieve the value of an object.
+
+
+<font color = red> update the image below to show Monrovia, etc </font>
 
 <img align="center" src="../images/intro-gee/fig21.png" vspace="10" width="300">
 
@@ -86,9 +93,15 @@ As you type the code, it's helpful to add some text to explain the code or leave
 
 The Code Editor also provides a shortcut (Ctrl + / on Windows, Cmd + / on Mac) to comment or uncomment multiple lines at once. You can select multiple lines and press the key combination to make them all comments. Press again to reverse the operation. This is useful when debugging code to stop the execution of certain parts of the script.
 
+
+<font color = red> update the image below with the Monrovia script </font>
+
 <img align="center" src="../images/intro-gee/fig23.png" vspace="10" width="600">
 
 ### Complete code
+
+
+<font color = red> update the link below </font>
 
 "`2 Introduction to JS`" script from the repository and the `T1 & T2` folder or direct link:
 [https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716](https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716)
@@ -238,6 +251,9 @@ function triplicate(number) {
 Calculates the sum of all Numbers in `newList`. Save and print that value as `sum`.
 
 ### Complete code
+
+
+<font color = red> the code below works, but change info in Challenge 2 to Crystal's and copy all scripts </font>
 
 "`3 Earth Engine API`" script from repository and `T1 & T2` folder or direct link:
 [https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd).
