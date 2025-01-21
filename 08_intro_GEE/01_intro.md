@@ -13,6 +13,8 @@ Welcome to an Introduction to Google Earth Engine (GEE)! This workshop will prov
 
 Create a [Google Earth Engine account](https://code.earthengine.google.com/register). You need a [Google account](https://accounts.google.com/signup). Create a GEE account for non-commercial purposes.
 
+<font color = red> join a google cloud project? </font>
+
 ## Objectives
 
 1. Familiarize yourself with the GEE platform and its programming environment.
@@ -120,7 +122,7 @@ Some of GEE's applications include:
 - Air quality monitoring
 - Surface water mapping
 
-Examples of applications developed by SERVIR based on or using GEE:
+<font color = red> Examples of applications developed by SERVIR based on or using GEE:
 
 - [RAMI](https://rami.servirglobal.net/) - SERVIR-Amazon
 - [RLCMS](https://landcovermapping.org/en/landcover/) - SERVIR-Mekong & SERVIR-HKH
@@ -129,8 +131,9 @@ Examples of applications developed by SERVIR based on or using GEE:
 - [EcoDash](http://ecodash-servir.adpc.net/) - SERVIR-Mekong
 - [Wheat Mapping](http://geoapps.icimod.org/afwheat/) - SERVIR-HKH
 - [Fire Forecasting](https://servir-amazonia.earthengine.app/view/aptitud-incendios) - SERVIR-Amazonia
+</font>
 
-General examples:
+General examples of applications:
 
 - [Fire Monitoring in the Amazon](https://gis-acca.users.earthengine.app/view/amazon-fire-tracker) - Monitoring of the Andean Amazon Project
 - [Global Forest Change](https://glad.earthengine.app/view/global-forest-change) - University of Maryland
@@ -177,14 +180,20 @@ Once your home folder is created, you will be prompted to enter a new repository
 
 Finally, you will be able to save your script inside the newly created repository. Enter the name of your choice and click `OK`.
 
+<font color = red> edit the following image to create .../liberia? </font>
+
 <img align="center" src="../images/intro-gee/fig19.png" vspace="10" width="400">
 
 Once the script is saved, it will appear in the script manager panel (under `Owner`). Scripts are saved in the cloud and will always be available to you when you open the Code Editor.
+
+<font color = red> edit the following image to be .../liberia? </font>
 
 <img align="center" src="../images/intro-gee/fig20.png" vspace="10" width="400">
 
 Congratulations! You have created your first script.
 
 # Repository
+
+<font color = red> edit the following code to be .../liberia </font>
 
 All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
