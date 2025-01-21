@@ -57,7 +57,7 @@ Sampling design has uses in many fields, but we will be focusing on three main u
 # Some Well Known Sampling Techniques
 
 
-There are several different ways to sample an area in order to achieve a representative sample or the landscape and the variations within it. Here are a few ways to distribute 
+There are several different ways to sample an area in order to achieve a representative sample or the landscape and the variations within it. Here are a few ways to distribute samples.
 
 <img align="center" src="../images/ceo/4D_systematicsampling.png"  vspace="10" width="250"> 
 
@@ -103,7 +103,7 @@ Imagine teaching a child to identify apples:
 - **Model**: The kid forms a mental "rule" to identify apples.
 - **Prediction**: When shown a new fruit, the kid uses their rule to decide if it’s an apple.
 
-### Sampling design considerations for ML algorithm training
+### <span style="color: red;">Sampling design considerations</span> for ML algorithm training
 For training machine learning algorithms, sampling design is critical to ensure that the data used to train the model covers the variability in the dataset, preventing overfitting or underfitting. Sometimes the full data set of samples is split into training and testing subsets to evaluate model performance, but separate sampling design for the validation data can also be done. Anything you want the ML algorithm to learn, should be provided as an example in the training samples.
 
 ## Use 2: Inferring characteristics of a population based on a sample (e.g. sample-based area estimation)
@@ -114,7 +114,7 @@ Sample-based approaches use manually collected samples and statistical formulas 
 These samples are often called *reference data*. For forest and land cover analysis applications, these sample data are typically collected in a program like CEO. 
 
 
-## Sampling design considerations for quantifying the characteristics of a popultation
+## <span style="color: red;">Sampling design considerations</span> for quantifying the characteristics of a popultation
 Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
 
 In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
@@ -127,13 +127,15 @@ Map validation can be performed by comparing the map classes of representative s
 
 This type of accuracty assessment is often done using a confusion matrix (also called and error matrix). See further explanation of this process below, but it will be covered in detail at the end of the workshop.
 
-## Sampling design considerations for accuracy assessments
+## <span style="color: red;">Sampling design considerations</span> for map accuracy assessments
 When assessing the accuracy of a map, a random sample allows for a simple analysis in a confusion matrix. However, if you have rare classes you may only have a few points with which to analyze their accuracy in the map. Best practices suggest that sample sizes for each class should be at least 30 to ensure more robust and statistically meaningful results. You may need to gather your validation samples using a stratified approach to achieve this.
 
 
 If you gather your validation samples using a stratified approach, you must account for this in your confusion matrix. These unequal sample sizes that can come with stratified sampling where a minimum sample size was employed, do not reflect the actual proportions of the classes in the map or study area, complicating the calculation of unbiased overall accuracy. 
 
 While stratification may be helpful for class-specific accuracy (allows >30 points per strata), it can skew overall accuracy assessments if not correctly weighted to account for the actual area of these rare classes. To compute overall accuracy you must completed a *weighted accuracy assessment*, the accuracy within each class must be weighted by its proportion in the study area (rather than the number of samples).
+
+Note, the samples you are using for map validation **CANNOT** also be used for training the machine learning algorithm or for area estimation. This must be a completely separate set of points. When you validate with training data, the accuracy is typically much higher than it would be for new, unseen data because the model is evaluated on the same information it was trained to replicate.
 
 
 <br />
