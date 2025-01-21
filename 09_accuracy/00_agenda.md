@@ -3,7 +3,7 @@ layout: page
 title: "8. Accuracy Assessment"
 permalink: /08_accuracy
 has_children: True
-nav_order: 9
+nav_order: 10
 ---
 
 # Accuracy Assessment

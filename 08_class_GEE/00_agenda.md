@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "5. Intro to GEE"
-permalink: /05_intro_GEE
+title: "7. Classification with GEE"
+permalink: /07_class_GEE
 has_children: True
-nav_order: 6
+nav_order: 9
 ---
 
-# Introduction to Google Earth Engine (GEE)
+# Classification with Google Earth Engine (GEE)
 
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
