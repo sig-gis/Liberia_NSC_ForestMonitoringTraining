@@ -38,19 +38,19 @@ Map.addLayer(aoi, {}, 'Suriname AOI', false);
 Map.centerObject(aoi, 8);
 ```
 
-<img align="center" src="../images/change-detection-1/aoi.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/aoi.png" hspace="15" vspace="10" width="400">
 
 ## Import Landsat Data
 
 We create an an archive of Landsat imagery from Landsat missions 5 through 9, which allows us to compare any two years (or other time periods) between 1984 and 2023.  We are leaving out Landsat 7 because many scenes over Suriname have a distinctive striping pattern that is common in a lot of Landsat 7 data due to sensor errors (as you can see, Landsat 7 is commented out in the code).  
 
-<img align="center" src="../images/change-detection-1/landsat_timeline.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/landsat_timeline.png" hspace="15" vspace="10" width="600">
 
 Before beginning a change detection workflow, image preprocessing is essential. The goal is to ensure that each pixel records the same type of measurement at the same location over time. These steps include multitemporal image registration and radiometric and atmospheric corrections, which are especially important. A lot of this work has already been automated and applied to many `ImageCollections` that are available in Earth Engine. Image selection is also important. Selection considerations include finding images with low cloud cover and representing the same phenology (e.g., leaf-on or leaf-off).
 
 Landsat data comes in a variety of "Levels", "Collections", and "Tiers", based on data quality and preprocessing level.  We use Level 2, Collection 2, Tier 1, which is the highest quality data with the most preprocessing done on it.  This data set has pixel values that represent **surface reflectance**, meaning the proportion of incident radiation from the sun that is reflected back by objects on the surface of the earth.  This means that the reflectance values have been corrected for both radiometric (the sun's distance/angle to the earth) and atmospheric (the atmosphere's scattering/absorbtion of sunlight) distortions.  Surface reflectance is often preferred when comparing satellite imagery from different locations or dates, since atmospheric conditions can vary drastically between different images.
 
-<img align="center" src="../images/change-detection-1/landsat5_imagecollection.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/landsat5_imagecollection.png" hspace="15" vspace="10" width="600">
 
 We always want to apply filters to `ImageCollections` as early in our workflow as we can to reduce the amount of effort the GEE servers will require. We already know the area that we'd like to pull data for our AOI, and that we want relatively few clouds in our images, so we apply a boundary and a cloud cover filter.
 
@@ -114,7 +114,7 @@ var lc9 = ee.ImageCollection('LANDSAT/LC09/C02/T1_L2')
 print("Landsat 5 image collection:", lt5)
 ```
 
-<img align="center" src="../images/change-detection-1/landsat5_print.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/landsat5_print.png" hspace="15" vspace="10" width="600">
 
 Checking in the **Console**, we see that `lt5` is an `ImageCollection` with over 280 images in it. 
 
@@ -124,7 +124,7 @@ Next, we apply some functions to each Landsat scene in a collection.
 
 In the first function, we mask clouds and cloud shadows using the `QA_PIXEL` band that is included in every Landsat scene. The `QA_PIXEL` band is a bitmask generated in the Landsat processing center before it is distributed to the end-user. It has a lot of useful information contained in it. We use the `cloud` and `cloud shadow` bits for this function.
 
-<img align="center" src="../images/change-detection-1/qa_pixel.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/qa_pixel.png" hspace="15" vspace="10" width="600">
 
 ``` javascript
 //--------------------------------------------------------------
@@ -177,7 +177,7 @@ Working with indices known to highlight the land cover conditions before and aft
 
 Looking at the spectral curves of different objects, we can begin to pick out which bands (wavelengths) of light can be most useful in making indices that distinguish between these different objects.
 
-<img align="center" src="../images/change-detection-1/spectralsignatures.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/spectralsignatures.png" hspace="15" vspace="10" width="600">
 
 *Tip: Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)*
 
@@ -225,7 +225,7 @@ var lc9_preprocessed = lc9.map(applyScaleFactors)
 print("Bands:", lc9_preprocessed.first().bandNames())
 ```
 
-<img align="center" src="../images/change-detection-1/bands_print.png" hspace="15" vspace="10" width="200">
+<img align="center" src="../images/class-gee/bands_print.png" hspace="15" vspace="10" width="200">
 
 Let's add the first raw and first pre-processed Landsat 8 image to the map.  Toggle between the two image layers to see the result of the cloud masking fucntion. You can use **Inspector**  mode on each image in the map to see that the preprocessed image has a different set of spectral bands than the non-processed image.
 
@@ -255,7 +255,7 @@ Map.addLayer(firstPreProcessed,
             'First pre-processed LC8 image', false);
 ```
 
-<img align="center" src="../images/change-detection-1/first_preprocessedimage.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/first_preprocessedimage.png" hspace="15" vspace="10" width="600">
 
 ## Composite Landsat Data
 
@@ -333,9 +333,9 @@ Map.addLayer(postImage, visParamtrue, 'Year 2 - true color', false);
 
 ```
 
-<img align="center" src="../images/change-detection-1/truecolor.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/truecolor.png" hspace="15" vspace="10" width="400">
 
-<img align="center" src="../images/change-detection-1/falsecolor.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/falsecolor.png" hspace="15" vspace="10" width="400">
 
 ## Create Training Data 
 
@@ -360,15 +360,15 @@ Below is the workflow for creating reference data directly in Earth Engine. We w
 
 1. In the geometry drawing toolbar (top-left of the **Map** panel), go to **Geometry Imports** and click **new layer**.
 
-    <img align="center" src="../images/change-detection-1/geometryimports.png" hspace="15" vspace="10" width="400">
+    <img align="center" src="../images/class-gee/geometryimports.png" hspace="15" vspace="10" width="400">
 
 2. Click on the **Edit layer properties** button (cog icon next to the geometry's name) to configure the new geometry layer. Name the new layer `forest_year1` and change its color. Under **Import as**, change it to `FeatureCollection`. Finally, click on the **+ Property** button and enter a new property `landcover` with a value of `1`.  Each geometry layer, imported to your script now as a `FeatureCollection` will represent one class within your map product. 
 
-    <img align="center" src="../images/change-detection-1/configuregeometry.png" hspace="15" vspace="10" width="400">
+    <img align="center" src="../images/class-gee/configuregeometry.png" hspace="15" vspace="10" width="400">
 
 3. Draw representative polygons on the map. Click again on the geometry layer **forest_year1** in the **Geometry Imports** panel and ensure it shows up in **bold text**. Then click on the **draw a shape** icon. Draw your open water polygons. 
 
-    <img align="center" src="../images/change-detection-1/drawgeometry.png" hspace="15" vspace="10" width="400">
+    <img align="center" src="../images/class-gee/drawgeometry.png" hspace="15" vspace="10" width="400">
 
 Repeat these steps for each of the remaining map classes for both years. To get through this demonstration, shoot for 3 or 4 large polygons or 7 or 8 smaller ones per class. We can refine the quality of our reference data later if we have time.  
 
@@ -427,7 +427,7 @@ print('Sample size - year 1: ', samples_y1.size());
 print('Sample size - year2: ', samples_y2.size());
 ```
 
-<img align="center" src="../images/change-detection-1/samplesize_print.png" hspace="15" vspace="10" width="200">
+<img align="center" src="../images/class-gee/samplesize_print.png" hspace="15" vspace="10" width="200">
 
 Then, we set aside 80% of the reference points to train our classifier, and use the remaining 20% for validation. We do this simply by adding a new column to the reference points called `random` (which contains random decimal numbers between 0 and 1) and then filtering them into the two groups (those greater than 0.8 and those smaller than 0.8).  This should give us about 80% of the points for training and 20% for testing.
 
