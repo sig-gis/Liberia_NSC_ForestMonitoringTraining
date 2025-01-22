@@ -7,9 +7,7 @@ nav_order: 2
 # Pre-Workshop Setup
 
 
-<font color = red> should we move this to be after Overview, before ML? </font>
-
-#### Please complete the following before the workshop:
+### Please complete the following before the workshop:
 
 - Make a SEPAL account and request additional resources (for days 1 and 5).
 - Create a Collect Earth Online account and join the Liberia workshop institution (for day 2).
