@@ -1,11 +1,13 @@
 ---
 layout: page
-title:  "Introduction to Sampling Design"
-parent: "2. Sampling Design"
-nav_order: 1
+title: "3. Sampling Design"
+permalink: /03_SamplingDesign
+has_children: True
+nav_order: 4
 ---
 
-# Overview 
+
+# Overview of Sampling Design
 
 ## What is Sampling Design?
 Sampling design refers to the structured approach used to select a subset of data points or observations from a larger population or dataset. A well-thought-out sampling design ensures that the selected sample is representative of the broader population, reducing bias and improving the reliability of results. 
@@ -54,8 +56,7 @@ Sampling design has uses in many fields, but we will be focusing on three main u
 - Use clear, documented procedures for sample selection and measurement.
 
 
-# Some Well Known Sampling Techniques
-
+## Some Well Known Sampling Techniques
 
 There are several different ways to sample an area in order to achieve a representative sample or the landscape and the variations within it. Here are a few ways to distribute samples.
 
