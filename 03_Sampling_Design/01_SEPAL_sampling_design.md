@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Sampling Design using SEPAL"
-parent: "2. Sampling Design"
+parent: "3. Sampling Design"
 nav_order: 2
 ---
 

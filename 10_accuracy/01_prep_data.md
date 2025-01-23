@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Prepare Data"
-parent: "8. Accuracy Assessment"
+parent: "10. Accuracy Assessment"
 nav_order: 1
 ---
 

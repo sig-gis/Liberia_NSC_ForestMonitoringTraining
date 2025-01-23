@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Image Processing
-parent: "4. Drone Flight & Image Processing"
+parent: "6. Drone Flight & Image Processing"
 nav_order: 3
 ---
 

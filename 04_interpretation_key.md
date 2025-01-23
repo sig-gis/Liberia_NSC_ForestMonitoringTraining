@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "Interpretation Key"
-parent: "3. Data Collection with CEO"
-nav_order: 1
+title: "4. Your Interpretation Key"
+permalink: /04_InterpretationKey
+nav_order: 5
 ---
 
 # Reminders from Workshop 1 on Interpretation Key Generation
