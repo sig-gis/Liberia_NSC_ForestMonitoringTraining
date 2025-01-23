@@ -8,10 +8,19 @@ nav_order: 6
 # Collect Earth Online (CEO)
 This hands on session assumes you have some previous experience with CEO from past trainings. 
 
- ## Ensure you can access your CEO institution
+## Ensure you have an account and have joined the institution
+ [Make CEO Accounts and Join Institution](https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link) 
+
 Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “[The Environmental Protection Agency of Liberia (EPA).](https://app.collect.earth/review-institution?institutionId=4290)” Click `Visit`.
 
 <img align="center" src="../images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
+
+
+# Potential Uses of CEO
+
+
+
+# CEO Project Creation
 
 
 ## Add Imagery to the CEO Institution
