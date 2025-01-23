@@ -1,15 +1,18 @@
 ---
 layout: page
-title:  "Data Collection in CEO"
-parent: "3. Data Collection with CEO"
-nav_order: 3
+title: "5. CEO"
+permalink: /05_CEO
+nav_order: 6
 ---
 
-# Data Collection Exercise in Collect Earth Online (CEO)
+# Collect Earth Online (CEO)
+This hands on session assumes you have some previous experience with CEO from past trainings. 
 
+ ## Ensure you can access your CEO institution
 Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “[The Environmental Protection Agency of Liberia (EPA).](https://app.collect.earth/review-institution?institutionId=4290)” Click `Visit`.
 
 <img align="center" src="../images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
+
 
 ## Add Imagery to the CEO Institution
 
@@ -124,3 +127,16 @@ Now that you have finished collecting data in your project, go back to the insti
 <img align="center" src="../images/ceo/CEO_projectpage2.png" hspace="15" vspace="10" width="600">
 
 <img align="center" src="../images/ceo/CEO_download.png" hspace="15" vspace="10" width="500">
+
+<br />
+<br />
+
+## Sources 
+Material for this overview was gathered and modified from:
+
+* https://www.collect.earth/
+* https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)
+* https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)
+* https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/
+* https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory
+
