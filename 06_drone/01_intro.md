@@ -7,9 +7,8 @@ nav_order: 1
 
 # Introduction
 
-Welcome to Drone Flight and Image Processing! In this workshop, we will discuss the steps in the drone flight planning process and then plan our own drone flight in Pix4Dcapture.  We will also do a short drone flight as a demonstration.  Finally, we will use example drone images from the CIAT campus to conduct drone image processing in Pix4Dmapper, producing an orthomosaic and a digital surface model (DSM).
+Welcome to Drone Flight and Image Processing! In this portion of the workshop, we will discuss the steps in the drone flight planning process and then plan our own drone flight in Pix4Dcapture.  We will also do a short drone flight as a demonstration.  Finally, we will use example drone images to conduct drone image processing in Pix4Dmapper, producing an orthomosaic, a digital surface model (DSM) and a digital terrain model (DTM).
 
-*The imagery we use in this workshop has been provided by Paula A. Paz from the CIAT Campus.*
 
 ## Pre-workshop Set-up
 
