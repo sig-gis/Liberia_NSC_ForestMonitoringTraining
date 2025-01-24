@@ -18,6 +18,8 @@ The design includes several key dedision points such as the:
 - sampling technique (e.g. random, gridded, proportional allocation across strata) 
 - method of sample distribution (tool used to assign sample locations)
 
+<img align="center" src="../images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
+
 ## How is sampling used?
 Sampling design has uses in many fields, but we will be focusing on three main use cases:
 - Gathering samples for training machine learning algorithms
@@ -131,7 +133,6 @@ This type of accuracty assessment is often done using a confusion matrix (also c
 ## <span style="color: red;">Sampling design considerations</span> for map accuracy assessments
 When assessing the accuracy of a map, a random sample allows for a simple analysis in a confusion matrix. However, if you have rare classes you may only have a few points with which to analyze their accuracy in the map. Best practices suggest that sample sizes for each class should be at least 30 to ensure more robust and statistically meaningful results. You may need to gather your validation samples using a stratified approach to achieve this.
 
-
 If you gather your validation samples using a stratified approach, you must account for this in your confusion matrix. These unequal sample sizes that can come with stratified sampling where a minimum sample size was employed, do not reflect the actual proportions of the classes in the map or study area, complicating the calculation of unbiased overall accuracy. 
 
 While stratification may be helpful for class-specific accuracy (allows >30 points per strata), it can skew overall accuracy assessments if not correctly weighted to account for the actual area of these rare classes. To compute overall accuracy you must completed a *weighted accuracy assessment*, the accuracy within each class must be weighted by its proportion in the study area (rather than the number of samples).
@@ -141,6 +142,8 @@ Note, the samples you are using for map validation **CANNOT** also be used for t
 
 <br />
 <br />
+<img align="center" src="../images/sampling/stats_graphic.png"  vspace="10" width="200"> 
+
 
 ## Futher explanation of statistical details 
 
