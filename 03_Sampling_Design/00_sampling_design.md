@@ -18,7 +18,7 @@ The design includes several key dedision points such as the:
 - sampling technique (e.g. random, gridded, proportional allocation across strata) 
 - method of sample distribution (tool used to assign sample locations)
 
-<img align="center" src="../images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="/Users/cew/Documents/GitHub/Liberia_NSC_ForestMonitoringTraining/images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
 
 ## How is sampling used?
 Sampling design has uses in many fields, but we will be focusing on three main use cases:
@@ -142,7 +142,7 @@ Note, the samples you are using for map validation **CANNOT** also be used for t
 
 <br />
 <br />
-<img align="center" src="../images/sampling/stats_graphic.png"  vspace="10" width="200"> 
+<img align="center" src="/Users/cew/Documents/GitHub/Liberia_NSC_ForestMonitoringTraining/images/sampling/stats_graphic.png"  vspace="10" width="200"> 
 
 
 ## Futher explanation of statistical details 
