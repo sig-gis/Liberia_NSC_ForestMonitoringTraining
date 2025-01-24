@@ -13,7 +13,7 @@ This hands on session assumes you have some previous experience with CEO from pa
 
 Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “[The Environmental Protection Agency of Liberia (EPA).](https://app.collect.earth/review-institution?institutionId=4290)” Click `Visit`.
 
-<img align="center" src="../images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
+<img align="center" src="./images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
 
 
 # Potential Uses of CEO
@@ -27,17 +27,17 @@ Log in to CEO.  On the main CEO page, in the search bar at the top left, search 
 
 On the institution's home page, click on `Imagery`.
 
-<img align="center" src="../images/ceo/CEO_imagery.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_imagery.png" hspace="15" vspace="10" width="700">
 
 Click on the `edit` button for the last imagery on the page called "Global Mangrove Forests Distribution".  Here, you can see how to add a new type of imagery to a project.  There are some data sets already available in CEO, like Sentinel and Planet, but you can also import any public GEE `Image` or `ImageCollection` or any private GEE asset.  You just need its asset ID, a start and end date, and some parameters for its visualization.
 
-<img align="center" src="../images/ceo/CEO_imagery2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_imagery2.png" hspace="15" vspace="10" width="700">
 
 ## Create a CEO Project
 
 On the institution’s home page, go to the `Projects` tab and click `+ Create New Project`.  The workflow for creating a new project should appear. 
 
-<img align="center" src="../images/ceo/CEO_projectpage.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_projectpage.png" hspace="15" vspace="10" width="700">
 
 On this first `Project Overview` page, under `Select Template`, select the `Suriname land cover map validation` project that is already present in the institution, and click `Load`.  All of the project parameters should now be identical to the project that has already been created.
 
@@ -45,31 +45,31 @@ You can also create a project from scratch, but for the sake of simplicity, we w
 
 For this workshop, **add YOUR NAME to the beginning of the project name**.  This way, everyone in the workshop will have their own project to work in and it can easily be distinguished as a test project later.  
 
-<img align="center" src="../images/ceo/CEO_newproject.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_newproject.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Imagery Selection` page, you can change the imagery that will be available when collecting data.  You will see the default CEO imagery data sets under `Public Imagery`, as well as the imagery data sets you or someone else manually uploaded to your institution under `Private Institution Imagery `.  Here, we have already imported several useful data sets, such as some elevation, PALSAR and Sentinel 1 radar, and Sentinel 2 optical imagery.
 
-<img align="center" src="../images/ceo/CEO_imageryselection.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_imageryselection.png" hspace="15" vspace="10" width="700">
 
 On the `Plot Design` page, you cannot currently change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  There are 50 plots centered on our validation points exported from GEE.  They are square and 30m in width because the Landsat data used for our classification has a resolution of 30m.
 
-<img align="center" src="../images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
 
 If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would need to upload the .csv file with the validation points that was exported from GEE.
 
-<img align="center" src="../images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Sample Design` page, you also cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  Each plot corresponds to a single sample located in the center of the plot.
 
-<img align="center" src="../images/ceo/CEO_sampledesign.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_sampledesign.png" hspace="15" vspace="10" width="700">
 
 If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would be able to create multiple samples within each plot.
 
-<img align="center" src="../images/ceo/CEO_sampledesign2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_sampledesign2.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
@@ -77,39 +77,39 @@ On the `Survey Questions` page, you can create various types of sruvey questions
 
 For this exercise, we have two simple survey questions asking about what the land cover type is and what the percentage of that land cover type is.  On the right, you can see an example of what the survey question will look like when collecting data.
 
-<img align="center" src="../images/ceo/CEO_surveyquestions.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_surveyquestions.png" hspace="15" vspace="10" width="700">
 
-<img align="center" src="../images/ceo/CEO_surveyquestions2.png" hspace="15" vspace="10" width="300">
+<img align="center" src="./images/ceo/CEO_surveyquestions2.png" hspace="15" vspace="10" width="300">
 
 Click `Next`.
 
 On the `Survey Rules` page, you can create rules related to your survey questions.  For this exercise, we have just created 5 rules that prevent the user from answering 0% for any of the possible land cover classes (this is not a very useful rule since the 0%, 25%, and 50% options don't make any sense - assuming that you would need at least 50% coverage for the plot to be classified as that specific land cover type - but it is a good example of the general functionality of rules).  You can also set the rules so that CEO only accepts answers with certain values/strings or does not accept certain answers if the other questions were answered in a certain way.
 
-<img align="center" src="../images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Review` page, you can check that everything looks good and create the project.  Check the box agreeing to the terms and conditions, and click `Create Project`.
 
-<img align="center" src="../images/ceo/CEO_review.png" hspace="15" vspace="10" width="700">
+<img align="center" src="/Users/cew/Documents/GitHub/Liberia_NSC_ForestMonitoringTraining/images/ceo/CEO_review.png" hspace="15" vspace="10" width="700">
 
 At this point, you can still edit the project.  In order to start collecting data, you will need to click `Publish Project` on the next page, but you will now lose your ability to edit the plot and sample design.
 
-<img align="center" src="../images/ceo/CEO_publish.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_publish.png" hspace="15" vspace="10" width="700">
 
 ## Collect Data in the CEO Project
 
 Now that you have published your project, go back to the institution home page and click on your project you just created to start collecting data.  It should be red before you start collecting data, yellow after you start collecting data, and green when you finish collecting data for all plots.
 
-<img align="center" src="../images/ceo/CEO_projectpage2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_projectpage2.png" hspace="15" vspace="10" width="700">
 
 Select `Collect` and click `Go to First Plot`.
 
-<img align="center" src="../images/ceo/CEO_collect.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_collect.png" hspace="15" vspace="10" width="700">
 
 It should take you to the first plot.  Here, you can view the original map classiciations in `Plot Information`, as well as all the imagery that was selected for this project in `Imagery Options`.  
 
-<img align="center" src="../images/ceo/CEO_collect2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="./images/ceo/CEO_collect2.png" hspace="15" vspace="10" width="700">
 
 <img align="center" src="../images/ceo/CEO_collectimagery.png" hspace="15" vspace="10" width="400">
 

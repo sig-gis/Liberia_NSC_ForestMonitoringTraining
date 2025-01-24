@@ -5,7 +5,7 @@ permalink: /04_InterpretationKey
 nav_order: 5
 ---
 
-<img align="center" src="/Users/cew/Documents/GitHub/Liberia_NSC_ForestMonitoringTraining/images/ceo/looking_at_key.png" hspace="10" vspace="20" width="600">
+<img align="center" src="./images/ceo/looking_at_key.png" hspace="10" vspace="20" width="600">
 
 
 # Reminders from Workshop 1 on Interpretation Key Generation
