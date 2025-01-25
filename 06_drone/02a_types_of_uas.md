@@ -29,7 +29,7 @@ In this section, we will go over the types of UAS and their advantages and limit
 #### Example:
 AgEagle eBee X
 
-<img align="center" src="..images/drone/ebeeX.png" hspace="15" vspace="10" width="1000">
+<img align="center" src="images/drone/ebeeX.png" hspace="15" vspace="10" width="1000">
 
 
 
