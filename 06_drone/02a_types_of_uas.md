@@ -22,7 +22,13 @@ In this section, we will go over the types of UAS and their advantages and limit
 * Ability to cover a large area in a single flight
 
 ### Limitations
+* Requires a large area for landing (similar landing pattern to manned aircraft).
+* Struggles in high wind conditions - gusts can affect stability and data collection.
+* Cannot hover, these types of platforms must remain in motion, holding in a circular flight pattern
 
+#### Example:
+AgEagle eBee X
+<img align="center" src="..images/drone/ebeeX-hero-image.png" hspace="15" vspace="10" width="1000">
 
 
 
