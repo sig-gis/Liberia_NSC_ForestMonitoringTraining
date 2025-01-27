@@ -109,12 +109,24 @@ Imagine teaching a child to identify apples:
 ### <span style="color: red;">Sampling design considerations</span> for ML algorithm training
 For training machine learning algorithms, sampling design is critical to ensure that the data used to train the model covers the variability in the dataset, preventing overfitting or underfitting. Sometimes the full data set of samples is split into training and testing subsets to evaluate model performance, but separate sampling design for the validation data can also be done. Anything you want the ML algorithm to learn, should be provided as an example in the training samples.
 
+General rules of thumb to use for sampling design to gather training data for Random Forest:
+- A commonly cited rule is to have at least 10 times as many samples as there are features (variables) in the dataset to provide enough data for the model to learn meaningful patterns.
+    -   Example: For 20 features, aim for at least 200 samples per class
+- Decide on a minimum number of samples per class:
+    -   For simple problems, aim for 50–100 samples per class.
+    -   For complex problems or high-dimensional datasets, aim for 500–1,000 samples per class or more.
+- Classes with fewer samples (minority classes) should have a minimum of 30–50 samples to ensure meaningful learning.
+- Highly variabile classs requires larger sample sizes to capture the diversity.
+
 ## Use 2: Inferring characteristics of a population based on a sample (e.g. sample-based area estimation)
-Historically, maps have been used to quantify the area of each class by pixel counting. Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since classification maps have errors (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm.  Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
+Historically, maps have been used to quantify the area of each class by *pixel counting*. Pixel counting approaches simply sum up the area belonging to each class. 
+ - However, this method is prone to bias due to classification errors (e.g., data noise, pixel mixing, or poor class separation).
+- Pixel counting can result in over- or underestimates, and you cannot quantify this uncertainty.
 
-Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest). They create unbiased estimates of area and can also be used to calculate the error associated with an existing map. These approaches help quanitfy and reduce uncertainty, making the estimates more robust. 
-
-These samples are often called *reference data*. For forest and land cover analysis applications, these sample data are typically collected in a program like CEO. 
+*Sample-based approaches* use manually collected samples and statistical formulas based on the sampling design to estimate class areas.
+- Uses manually collected reference samples (typically collected in a program like CEO) and statistical methods to estimate class areas. 
+- The sample data is used to make estimates for for the whole area of interest.
+- Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
 
 
 ## <span style="color: red;">Sampling design considerations</span> for quantifying the characteristics of a popultation
@@ -125,19 +137,25 @@ In sample-based area estimation, such as estimating forest cover, a representati
 A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at a characteristic of interest with a geographically small area within the population, reducing the total number of points you need to collect to meet your desired level of uncertainty in your estimates.
 
 ## Use 3: Map validation (accuracy assessment)
+- Map validation compares map class labels at sample points to reference data labels, considered the reference data to be "correct" values.
+- The reference labels are typically based on human interpretations of imagery.
+- High agreement between map labels and reference labels indicates the map accurately represents the mapped characteristics.
+- Accuracy is often assessed using a confusion matrix (error matrix). *This will be explained further later in the workshop.*
 
-Map validation can be performed by comparing the map classes of representative sample points to reference labels at those locations, which are collected using human interpretation and are considered to be ‘correct’ labels for these points. If the rates of agreement between the map labels and the interpreter reference labels are very high then we can infer the map is a good representation of the mapped characteristics. 
-
-This type of accuracty assessment is often done using a confusion matrix (also called and error matrix). See further explanation of this process below, but it will be covered in detail at the end of the workshop.
 
 ## <span style="color: red;">Sampling design considerations</span> for map accuracy assessments
-When assessing the accuracy of a map, a random sample allows for a simple analysis in a confusion matrix. However, if you have rare classes you may only have a few points with which to analyze their accuracy in the map. Best practices suggest that sample sizes for each class should be at least 30 to ensure more robust and statistically meaningful results. You may need to gather your validation samples using a stratified approach to achieve this.
+Random Sampling option:
+- Goal: A random sample allows for simple analysis using a confusion matrix.
+- Impact: Rare classes in the map may have too few points for meaningful accuracy analysis.
+- Consideration: You should have at least 30 samples per class for robust and statistically valid results, so you may need to distrinute a lot of random samples to achieve this if you have rare classes.
 
-If you gather your validation samples using a stratified approach, you must account for this in your confusion matrix. These unequal sample sizes that can come with stratified sampling where a minimum sample size was employed, do not reflect the actual proportions of the classes in the map or study area, complicating the calculation of unbiased overall accuracy. 
+Stratified Sampling option:
+- Goal: Ensures sufficient points (e.g., >30) for rare classes by sampling disproportionately across strata.
+- Impact: Stratified sampling introduces unequal sample sizes, so although helpful for class-specific accuracy (allows >30 points per strata), it can skew overall accuracy assessments if not correctly weighted
+- Consideration: In order to adjust for this unequal distribution you must use a slightly more complicated analysis for your overall accuracy, by weighting class-specific accuracy based on the area proportions.
 
-While stratification may be helpful for class-specific accuracy (allows >30 points per strata), it can skew overall accuracy assessments if not correctly weighted to account for the actual area of these rare classes. To compute overall accuracy you must completed a *weighted accuracy assessment*, the accuracy within each class must be weighted by its proportion in the study area (rather than the number of samples).
-
-Note, the samples you are using for map validation **CANNOT** also be used for training the machine learning algorithm or for area estimation. This must be a completely separate set of points. When you validate with training data, the accuracy is typically much higher than it would be for new, unseen data because the model is evaluated on the same information it was trained to replicate.
+Note...
+The samples you are using for training the machine learning algorithm **CANNOT** also be used or for map validation. This must be a completely separate set of points. When you validate with training data, the accuracy is typically much higher than it would be for new, unseen data because the model is evaluated on the same information it was trained to replicate.
 
 
 <br />
@@ -191,6 +209,21 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 
 * Overall accuracy = (True Positive + True Negative) / Sample size
 * The overall accuracy essentially tells us what proportion of the reference data was classified correctly
+
+
+
+# Sources
+- Belgiu, M., & Drăguţ, L. (2016). Random forest in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 114, 24–31. https://doi.org/10.1016/j.isprsjprs.2016.01.011
+
+- Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
+
+- Congalton, R. G., & Green, K. (2009). Assessing the accuracy of remotely sensed data: Principles and practices (2nd ed.). CRC Press.
+
+- Kuhn, M., & Johnson, K. (2013). Applied predictive modeling. Springer. https://doi.org/10.1007/978-1-4614-6849-3
+
+- Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. Remote Sensing of Environment, 148, 42–57. https://doi.org/10.1016/j.rse.2014.02.015
+
+
 
 
 
