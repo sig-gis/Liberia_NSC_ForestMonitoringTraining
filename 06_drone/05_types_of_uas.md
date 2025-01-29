@@ -30,7 +30,7 @@ In this section, we will go over the types of UAS and their advantages and limit
 #### Example:
 AgEagle eBee X
 
-<img align="center" src="images/drone/ebeeX.png" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/ebeeX.png" hspace="15" vspace="10" width="1000">
 
 ## Vertical Take Off and Landing UAS
 ### Characteristics
@@ -51,7 +51,7 @@ AgEagle eBee X
 #### Example:
 WingtraOne
 
-<img align="center" src="images/drone/2021-wingtra-drone-standing-angle-right-1.png" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/2021-wingtra-drone-standing-angle-right-1.png" hspace="15" vspace="10" width="1000">
 
 ## Multi-Rotar UAS
 ### Characteristics
@@ -71,4 +71,4 @@ WingtraOne
 
 #### Example:
 DJI Mavic 3 Enterprise
-<img align="center" src="images/drone/Mavic3E.jpg" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/Mavic3E.jpg" hspace="15" vspace="10" width="1000">

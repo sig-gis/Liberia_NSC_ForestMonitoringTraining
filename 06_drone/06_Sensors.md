@@ -23,4 +23,4 @@ These sensors use pulses of light as lasers to measure distances.  These pulses 
 
 ## Global Shitter vs. Rolling Shutter
 This refers to the way that the camera captures data, it can also be referred to the exposure method.  Rolling shutters capture data by exposing the sensor's pixels row by row, the top top the image is exposed slightly before the bottom of the image.  A global shutter, also known as a mechanical shutter, captures all pixels at once.  Global shutters are more ideal for photogrammetry as there will be less blur in the images.  There are settings in the photogrammetry software that can correct for rolling shutters but even with the correction prducts do not come out as well.  
-<img align="center" src="..images/drone/rolling-vs-global-shutter.2.gif" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/rolling-vs-global-shutter.2.gif" hspace="15" vspace="10" width="1000">
