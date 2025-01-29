@@ -49,6 +49,8 @@ AgEagle eBee X
 * Struggles in high wind conditions
 
 #### Example:
+WingtraOne
+
 <img align="center" src="images/drone/2021-wingtra-drone-standing-angle-right-1.png" hspace="15" vspace="10" width="1000">
 
 ## Multi-Rotar UAS
@@ -68,4 +70,5 @@ AgEagle eBee X
 * More motors mean more maintenance requirements
 
 #### Example:
+DJI Mavic 3 Enterprise
 <img align="center" src="images/drone/Mavic3E.jpg" hspace="15" vspace="10" width="1000">
