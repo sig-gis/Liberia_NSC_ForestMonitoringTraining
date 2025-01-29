@@ -18,7 +18,7 @@ In this section, we will go over the types of UAS and their advantages and limit
 * Ability to glide 
 * Lands similar to manned aircraft by gliding down a "runway"
 * Circles over a fixed location for holding pattern
-### Advantages 
+### Advantages
 * Highly efficient
 * Ability to cover a large area in a single flight
 
