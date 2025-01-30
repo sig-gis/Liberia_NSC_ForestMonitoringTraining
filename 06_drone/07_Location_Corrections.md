@@ -21,3 +21,4 @@ This method of correction is done after flying and corrections are made as an ad
 
 This method makes corrections during the photogrammetry processing step.  To use this method, a surveyor places targets in known locations that are evenly distributed across a project area, a minimum of three targets are required.  
 
+<img align="center" src="../images/drone/GPS_Corrections.jpg" hspace="15" vspace="10" width="1000">
