@@ -49,6 +49,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 ## Emergency Maneuvers
 These occurrences are rare, but can still happen and should be taken into consideration before flying.  Below is a chart with potential emergencies and resolutions:
+
 | Emergency| Resolution|
 | -------- | -------- |
 | Loss of GPS | Return to home function is initiated until link is restored |
