@@ -15,17 +15,16 @@ When flying to collect data to process through photogrammetry there are a few co
 
 ### Imperfect Flying Conditions
 * Rain
-* Low sun angle (Early morning or Late afternoon – these conditions cause shadows)
+* Low sun angle (Early morning or Late afternoon - these conditions cause shadows)
 * High winds (less stable flights, if drone gets pushed around GPS can struggle keeping the system on track)
 
 ### Before Flying
 Before flying there are a few checks that should be completed prior to launch
 * Weather conditions
-* Airspace – not planning to fly in restricted airspace and no other aircraft in the airspace inspect sectional charts and any temporary flight restrictions
-* Inspect Drone – make sure the drone is in working order and there is no damage to any of the components
+* Airspace - not planning to fly in restricted airspace and no other aircraft in the airspace inspect sectional charts and any temporary flight restrictions
+* Inspect Drone - make sure the drone is in working order and there is no damage to any of the components
 
 ##### Assign roles of personnel involved
 * Pilot in Command
 * Visual Observers (Spotters)
-
-Are there clear lines of communication between those involved?
+###### Ensure clear lines of communication between all involved
