@@ -1,9 +1,10 @@
 ---
 layout: page
-title: "Location Corrections"
+title: "Before Flying"
 parent: "6. Drone Flight & Image Processing"
 nav_order: 9
 ---
+# Before Flying 
 
 When flying to collect data to process through photogrammetry there are a few considerations for conditions to produce the best products.  These conditions will not prevent data collection but will make the photogrammetry process difficult and could cause holes in the final products.  
 
