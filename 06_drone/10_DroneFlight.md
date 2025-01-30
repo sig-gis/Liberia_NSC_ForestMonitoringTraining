@@ -28,5 +28,9 @@ nav_order: 9
 3. Continue to lower drone down until you are above landing area
 4. Once drone is in position, hold down on throttle to automatically land drone
 
+#### Best practices
+* Level surface
+* Clear around surface
+* Free of obstacles above
 
 
