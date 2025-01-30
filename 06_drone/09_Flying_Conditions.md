@@ -27,5 +27,4 @@ Before flying there are a few checks that should be completed prior to launch
 ##### Assign roles of personnel involved
 * Pilot in Command
 * Visual Observers (Spotters)
-
-Are there clear lines of communication between those involved?
+##### Ensure clear lines of communication between all involved
