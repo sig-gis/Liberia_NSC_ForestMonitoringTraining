@@ -21,7 +21,7 @@ Drones are regulated by the Liberian Civil Aviation Authority
 *	No flight over crowds and congested areas of cities towns or settlements
 *	Do not fly within 98 feet of building without permission
 *	Do not operate drones under the influence of drugs or alcoholD
-### Do not fly within 660ft (200 meters) of the following (this could be extended based on situations)
+#### Do not fly within 660ft (200 meters) of the following (this could be extended based on situations)
 *	Miliary bases
 *	The Executive mansion
 *	The Foreign Ministry (when President is present)
