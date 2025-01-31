@@ -18,7 +18,7 @@ The design includes several key dedision points such as the:
 - sampling technique (e.g. random, gridded, proportional allocation across strata) 
 - method of sample distribution (tool used to assign sample locations)
 
-<img align="center" src="../images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="./images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
 
 ## How is sampling used?
 Sampling design has uses in many fields, but we will be focusing on three main use cases:
