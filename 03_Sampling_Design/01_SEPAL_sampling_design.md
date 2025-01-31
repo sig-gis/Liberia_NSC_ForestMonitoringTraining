@@ -78,7 +78,7 @@ d. Click **Import**
 
 # 2. Creating a stratified random sample
 
-***NOTE:** You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
+> ***NOTE:** You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
 
 
 We will use SEPAL to create a stratified random sample 
@@ -96,13 +96,13 @@ These directions will provide a stratified random sample of the proper sampling 
 3. Type ‘stratified’ into the search bar or scroll through the different process apps to find “Stratified Area Estimator--Design”
 4. Select **Stratified Area Estimator-Design**. Note that loading the tool takes a few minutes.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
 **_NOTE:_**  Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
 
 
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 5. When the tool loads properly, it will look like the image below. Read some of the information on the **Introduction** page to acquaint yourself with the tool. 
@@ -113,7 +113,7 @@ b. The Description, Background, and ‘How to use the tool’ panels provide mor
 
 c. The Reference and Documents panel provides links to other information about stratified sampling, such as REDD Compass.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
 
 6. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
 7. Select **Map input** on the left side of the screen.
@@ -126,9 +126,9 @@ c. In the **Browse** window that opens up, navigate to the test dataset and sele
 
 d. Then click **Select**.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 
@@ -138,16 +138,18 @@ f. Optionally, you can use a csv with your raster areas instead. We won’t disc
 
 8. Next, click **Strata areas** on the left side of the screen.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
 a. In the **Area calculation** section, select **OFT**. OFT stands for the Open Foris Geospatial Toolkit. Click “Area calculation and legend generation”.
 
-**_NOTE:_**  If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the **Display map** with the **Legend labeling** values returned to make sure they match.
+> **_NOTE:_**  If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the **Display map** with the **Legend labeling** values returned to make sure they match.
+
+<img align="center" src="../images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 b. The “Do you want to display the map” checkbox allows you to display your geotiff under “Display map”. 
 
-**NOTE:** The colors displayed in the SAE-Design tool in this section may be different than what you see elsewhere. Additionally, if your ‘no data’ class is 0, the tool will color this as well.
+> **NOTE:** The colors displayed in the SAE-Design tool in this section may be different than what you see elsewhere. Additionally, if your ‘no data’ class is 0, the tool will color this as well.
 
 c. Click the **Area calculation and legend generation** button. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
 
@@ -203,6 +205,7 @@ iv. If you make a mistake, you may use Backspace on your keyboard to remove the 
 
 c. DO NOT assign your No Data class to either high or low confidence. 
 
+<img align="center" src="../images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 
@@ -225,7 +228,7 @@ e. You can also check the “Do you want to modify the sampling size” box.
 
 f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
 
 11. When you’re ready, click on **Sample allocation** to the left.
 
@@ -237,7 +240,7 @@ i. The resulting **distribution of samples** should look similar to the below im
 
 ii. Sometimes this step fails, no download button will appear, and you will need to refresh the page and restart the process.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="../images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
 
 c. Now fill out the four fields to the right. 
 
