@@ -62,15 +62,15 @@ Sampling design has uses in many fields, but we will be focusing on three main u
 
 There are several different ways to sample an area in order to achieve a representative sample or the landscape and the variations within it. Here are a few ways to distribute samples.
 
-<img align="center" src="../images/ceo/4D_systematicsampling.png"  vspace="10" width="250"> 
+<img align="center" src="./images/ceo/4D_systematicsampling.png"  vspace="10" width="250"> 
 
 **Systematic Sampling**: observations are placed at equal intervals according to a strategy
 
-<img align="center" src="../images/ceo/4E_randomsampling.png"  vspace="10" width="250"> 
+<img align="center" src="./images/ceo/4E_randomsampling.png"  vspace="10" width="250"> 
 
 **Simple Random Sampling**: observations randomly placed
 
-<img align="center" src="../images/ceo/4F_stratifiedsampling.png"  vspace="10" width="250"> 
+<img align="center" src="./images/ceo/4F_stratifiedsampling.png"  vspace="10" width="250"> 
 
 **Stratified Random Sampling**: Using a map to inform the design, a minimum number of observations randomly placed in each category
 
@@ -160,7 +160,7 @@ The samples you are using for training the machine learning algorithm **CANNOT**
 
 <br />
 <br />
-<img align="center" src="../images/sampling/stats_graphic.png"  vspace="10" width="200"> 
+<img align="center" src="./images/sampling/stats_graphic.png"  vspace="10" width="200"> 
 
 
 ## Futher explanation of statistical details 
@@ -175,10 +175,10 @@ We can quantify the accuracy of the map using a confusion matrix (error matrix).
     - True positive and true negative mean that the classification correctly classified the labels (e.g., a flood pixel was correctly classified as flood). 
     - False positive and false negative mean that the classification does not match the truth (e.g., a flood pixel was classified as no-flood) 
 
-<img align="center" src="../images/ceo/7A_confusionmatrix.png"  vspace="10" width="600"> 
+<img align="center" src="./images/ceo/7A_confusionmatrix.png"  vspace="10" width="600"> 
 
 Let’s fill in this confusion matrix with example values if 100 points were collected.
-<img align="center" src="../images/ceo/7B_accuraciestable.png"  vspace="10" width="600"> 
+<img align="center" src="./images/ceo/7B_accuraciestable.png"  vspace="10" width="600"> 
 
 
 **Producer’s Accuracy**
