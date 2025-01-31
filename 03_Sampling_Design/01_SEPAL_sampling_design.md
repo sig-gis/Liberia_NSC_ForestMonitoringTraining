@@ -31,6 +31,7 @@ There are two tools that can be used to upload files. The first is RStudio, and 
 For either approach, first select the purple wrench **Apps** button. If you have an existing tab open, you may need to click the plus sign in the top right.
 
 To use RStudio, choose the **R Studio** application. 
+
 a. You may be prompted to enter your SEPAL username and password to enter R Studio.
 
 <img align="center" src="../images/sampling/sepal_upload/upload_1.png"  vspace="10" width="800" border-radius="50%"> 
@@ -81,8 +82,6 @@ d. Click **Import**
 > ***NOTE:** You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
 
 
-We will use SEPAL to create a stratified random sample 
-
 ## Part 1: Creating a stratified random sample
 We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 1.
 
@@ -91,6 +90,7 @@ We will use SEPAL to create a stratified random sample. To begin, you can use th
 A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
 
 These directions will provide a stratified random sample of the proper sampling size:
+
 1\. First, navigate to https://sepal.io/ and sign in.
 
 2\. Select the **Apps** button (purple wrench).
@@ -102,7 +102,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  <img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
- **_NOTE:_**  Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
+> **_NOTE:_**  Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
 
 
 
@@ -190,8 +190,10 @@ These directions will provide a stratified random sample of the proper sampling 
   i. You can get more information by clicking the “+” button to the right of the box that says **What are the expected accuracies?**
 
   ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
-   1. Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
-   2. Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+   
+   *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
+   
+   * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
 
   iii. Select the value for classes with high expected user accuracy with **the first slider**. This is set to 0.9 by default, and we’ll leave it there.
 
