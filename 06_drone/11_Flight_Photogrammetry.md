@@ -7,7 +7,9 @@ nav_order: 11
 # Flight for Photogrammetry
 
 ## Single Grid
-This type of flight creates a mission that has the drone fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaics and digital elevation models (DTM and DSM).  Data collection for these types of flights are typically nadir (camera pointing straight down).   
+This type of flight creates a mission that has the drone fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaics and digital elevation models (DTM and DSM).  Data collection for these types of flights are typically nadir (camera pointing straight down).
+
+<img align="center" src="../images/drone/overlap.png" hspace="15" vspace="10" width="1000">
 
 ## Double Grid
 Similar to the single grid flight, this type of flight creates a mission that has the drone fly parallel lines however it is different in that the drone does a second parallel grid pattern that is perpendicular to the first.  These flights collected data with a slightly oblique sensor angle.  Products produced from this type of flight is generally 3 dimensional models (point clouds and meshes)
@@ -17,12 +19,12 @@ Similar to the single grid flight, this type of flight creates a mission that ha
 ## Corridor
 Corridor flights are a type of single grid flight that collects data of long stretches and with one or two flight lines.  These types of flights collect data with the sensor in the nadir position.  Products produced are two-dimensional mapping products, like those produced by the single grid flights.  This type of flight is used for inspections of roads or airport runways. 
 
-<img align="center" src="" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/Corridor.png" hspace="15" vspace="10" width="1000">
 
 ## Circular
 This type of flight collects data in an oblique sensor angle with an ellipsoid flight path around an object like a single tree or building.  It is suggested that multiple flights are done using the same ellipsoid at multiple altitudes.  This type of flight produces three dimensional products (point clouds and meshes).
 
-<img align="center" src="" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/Circular_flight.png" hspace="15" vspace="10" width="1000">
 
 ## Free Flight
 This type of flight is not ideal for surveying, data is collected completely manually, data collection intervals and sensor angle are determined by the pilot in command.  However, this type of flight can be useful in complex terrain like urban environments or when infrastructure is a concern.  
