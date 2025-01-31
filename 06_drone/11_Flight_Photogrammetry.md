@@ -9,7 +9,7 @@ nav_order: 11
 ## Single Grid
 This type of flight creates a mission that has the drone fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaics and digital elevation models (DTM and DSM).  Data collection for these types of flights are typically nadir (camera pointing straight down).
 
-<img align="center" src="../images/drone/overlap.png" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/SingleGrid.png" hspace="15" vspace="10" width="1000">
 
 ## Double Grid
 Similar to the single grid flight, this type of flight creates a mission that has the drone fly parallel lines however it is different in that the drone does a second parallel grid pattern that is perpendicular to the first.  These flights collected data with a slightly oblique sensor angle.  Products produced from this type of flight is generally 3 dimensional models (point clouds and meshes)
