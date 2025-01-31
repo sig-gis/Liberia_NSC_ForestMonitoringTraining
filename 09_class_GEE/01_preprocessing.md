@@ -7,41 +7,70 @@ nav_order: 1
 
 # Preprocessing Imagery in GEE
 
+## Set Important Parameters
+
+First, we will define some variables that will be used as parameters later throughout the script. We are bringing them to the beginning of the script so they are easy to change without having to scroll through the script to find them.
+
+These include values related to setting the time period of interest, cloud masking, and smoothing.
+
+<font color = red> script </font>
+
+```javascript
+
+```
+
 ## Create Area of Interest (AOI)
 
 An area of interest can be uploaded from a local shapefile, drawn on the map, or derived from a pre-existing dataset in the Earth Engine catalogue.
 
-For this exercise, we select a six regions from the Suriname `featureCollection` to be our AOI.  We are using these regions because they span a wide variety of land cover types for our classification.
+For this exercise, we will use a union of a `featureCollection` of Liberia's borders to be our AOI. You can also filter for specific provinces by uncommenting the line below.
 
 ```javascript
-//--------------------------------------------------------------
-// Import vector data (area of interest (AOI))
-//--------------------------------------------------------------
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+// Import and Preprocess AOI
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
 
-// Import Suriname country boundary
-var suriname = ee.FeatureCollection('projects/caribbean-trainings/assets/suriname-2023/boundary');
+// import the Liberia borders feature collection
+var Liberia = ee.FeatureCollection("projects/pc556-ncs-liberia-forest-mang/assets/LBR_county_updatedProj")
 
-// Define regions we want as our AOI
-var aoi = suriname
-  .filter(ee.Filter.inList('DISTR_NM', ['Commewijne', 
-                                        'Paramaribo', 
-                                        'Wanica', 
-                                        'Para', 
-                                        'Saramacca', 
-                                        'Brokopondo']));
+// print out the county names
+print('province names:', Liberia.aggregate_array('County').distinct())
+  
+// define an aoi from the feature collection
+var aoi = Liberia
+  // or select one or a few counties
+  // (uncomment this line to select a specific set of provinces)
+  // .filter(ee.Filter.inList('County', ['Bong','Gbarpolu']))
+  // get the union of all selected counties
+  .union();
+  
+// alternatively, use administrative borders from FAO or draw your own
+// https://developers.google.com/earth-engine/datasets/catalog/FAO_GAUL_2015_level1
+// var aoi = geometry;
 
-// Add region features to the map
-Map.addLayer(aoi, {}, 'Suriname AOI', false);
+// Center the Map on the aoi object, with a specified zoom-level (between 1-24)
+// (comment this line out to prevent the map from recentering every time you run the script)
+Map.centerObject(aoi, 7);
 
-// Center the Map on the AOI, with a specified zoom-level 
-// (between 1-24)
-Map.centerObject(aoi, 8);
+// Add the aoi object as a layer to the map
+Map.addLayer(aoi, {}, 'AOI', false);
 ```
+<font color = red> pic of AOI </font>
 
 <img align="center" src="../images/class-gee/aoi.png" hspace="15" vspace="10" width="400">
 
-## Import Landsat Data
+## Import and Preprocess Imagery
 
+Now, we will import all the imagery we will use for our classification, including the LULC map we generate the reference data from and the satellite imagery we run the model on.
+
+### Land Use / Land Cover (LULC)
+
+Let's import the 2014 LULC map.
+
+
+### Optical Imagery
 We create an an archive of Landsat imagery from Landsat missions 5 through 9, which allows us to compare any two years (or other time periods) between 1984 and 2023.  We are leaving out Landsat 7 because many scenes over Suriname have a distinctive striping pattern that is common in a lot of Landsat 7 data due to sensor errors (as you can see, Landsat 7 is commented out in the code).  
 
 <img align="center" src="../images/class-gee/landsat_timeline.png" hspace="15" vspace="10" width="600">
