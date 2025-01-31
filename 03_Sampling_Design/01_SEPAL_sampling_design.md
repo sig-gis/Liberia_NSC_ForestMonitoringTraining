@@ -82,3 +82,145 @@ d. Click Import
 
 We will use SEPAL to create a stratified random sample 
 
+## Part 1: Creating a stratified random sample
+We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 0.
+
+If you have a large area you are stratifying, please first increase the size of your instance (see Module 1 Exercise 1.1 Part 5).
+
+A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented. These factors are required for the standard operating procedures when reporting for REDD+.
+These directions will provide a stratified random sample of the proper sampling size.
+1. First, navigate to https://sepal.io/ and sign in.
+2. Select the Apps button (purple wrench).
+3. Type ‘stratified’ into the search bar or scroll through the different process apps to find “Stratified Area Estimator--Design”
+4. Select Stratified Area Estimator-Design. Note that loading the tool takes a few minutes.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+
+Error Box: Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps. 
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+
+5. When the tool loads properly, it will look like the image below. Read some of the information on the Introduction page to acquaint yourself with the tool. 
+
+a. On the Introduction page, you can change the language from English to French or Spanish.
+
+b. The Description, Background, and ‘How to use the tool’ panels provide more information about the tool.
+
+c. The Reference and Documents panel provides links to other information about stratified sampling, such as REDD Compass.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+6. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
+7. Select Map input on the left side of the screen.
+
+a. For this exercise, we’ll use the classification from Module 2. However, you can substitute another classification, such as the two date detection classification created in Module 3 if you would like.
+
+b. In the Data type section, click Input.
+
+c. In the Browse window that opens up, navigate to the test dataset and select it. 
+
+d. Then click Select.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+
+
+e. Note that the Output folder section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
+
+f. Optionally, you can use a csv with your raster areas instead. We won’t discuss that here.
+
+8. Next, click Strata areas on the left side of the screen.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+a. In the Area calculation section, select OFT. OFT stands for the Open Foris Geospatial Toolkit. Click “Area calculation and legend generation”.
+
+ERROR BOX: If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the Display map with the Legend labeling values returned to make sure they match.
+
+b. The “Do you want to display the map” checkbox allows you to display your geotiff under “Display map”. Note: The colors displayed in the SAE-Design tool in this section may be different than what you see elsewhere. Additionally, if your ‘no data’ class is 0, the tool will color this as well.
+
+c. Click the Area calculation and legend generation button. This will take a few minutes to run. After it completes, notice that it has updated the Legend labeling section of the page.
+
+d. Next, you will need to adjust the class names in the Legend labeling section. Type in the following class names in place of the numeric codes for your Liberia map (see below):
+
+TABLE
+
+e. Now click Submit Legend. The Legend and Areas section will now be populated with the map code, map area, and edited class name.
+
+f. Always compare the Display map with the Legend labeling values returned to make sure they match.
+
+g. You can now Rename and Download the area file if you would like. However it will save automatically to your Sepal workspace.
+
+9. When you’re done, click on Strata selection on the left panel.
+
+a. Now you need to specify the expected accuracies. You will do this for each class.
+
+i. You can get more information by clicking the “+” button to the right of the box that says What are the expected accuracies?
+
+ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
+1. Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
+2. Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+
+iii. Select the value for classes with high expected user accuracy with the first slider. This is set to 0.9 by default, and we’ll leave it there.
+
+iv. Then, select the value for classes with low expected user accuracy with the second slider. This is set to 0.7 by default, and we’ll leave it there as well.
+
+b. Now we need to assign each class to the high or the low expected user accuracy group.
+
+i. Think about your forest and non-forest classes. Which do you think should be high confidence? Which should be low confidence? Why?
+
+ii. Click on the box under “high confidence” and assign your high confidence class(es). For this exercise, please assign both Forest & Non-forest to the high confidence class. If you assign either to the low confidence class, you will not be able to use the CEO-SEPAL bridge in Exercise 4.2.
+
+iii. Then, click on the box under “low confidence” that appears and assign the corresponding class(es).
+
+iv. If you make a mistake, you may use Backspace on your keyboard to remove the classes. Additionally, if you change one of the sliders slightly and, move it back, the class assignments will have been reset and you can restart the process.
+
+c. DO NOT assign your No Data class to either high or low confidence. 
+
+
+
+
+
+10. When you’re satisfied, click on Sampling Size on the left panel.
+
+a. Now we will calculate the required sample size for each strata. 
+
+b. You can click on the “+” button next to Formula to calculate the overall sample size section to get more information.
+
+c. First we need to set the standard error of the expected overall accuracy. It is 0.01 by default, however for this exercise we will set it to 0.05.
+
+i. This value affects the number of samples placed in each map class. The lower the value, the more points there are in the sample design. Test this by changing the error from 0.05 to 0.01, and then change it back to point 0.05. Alternatively, you can click the up/down button to the right of the number.
+
+ii. Note that you can adjust this incrementally with the up/down arrows on the right side of the parameter.
+
+d. Then determine the minimum sample size per strata. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
+
+e. You can also check the “Do you want to modify the sampling size” box.
+
+f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+11. When you’re ready, click on Sample allocation to the left.
+
+a. The final step will select the random points to sample.
+
+b. Select Generate sampling points and wait until the progress bar in the bottom right finishes. Depending on your map, this may take multiple minutes. A map will pop up showing the sample points. You can pan around or zoom in/out within the sample points map.
+
+i. The resulting distribution of samples should look similar to the below image. These values will vary depending on your map and the standard error of expected overall accuracy you set. 
+
+ii. Sometimes this step fails, no download button will appear, and you will need to refresh the page and restart the process.
+
+<img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
+
+c. Now fill out the four fields to the right. 
+
+i. You can add additional data by specifying which country the map is in. Here, Leave the Choose your country name… section blank.
+
+ii. Specify the number of operators, or people who will be doing the classification. Here, leave it set to 1. For CEO, this might be the number of users you think your project will have. 
+
+iii. The size of the interpretation box depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified (Landsat= 30 meters). Here, leave it at 30 m.
