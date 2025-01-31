@@ -83,12 +83,13 @@ d. Click Import
 We will use SEPAL to create a stratified random sample 
 
 ## Part 1: Creating a stratified random sample
-We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 0.
+We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 1.
 
-If you have a large area you are stratifying, please first increase the size of your instance (see Module 1 Exercise 1.1 Part 5).
+<font color=red> If you have a large area you are stratifying, please first increase the size of your instance (see Module 1 Exercise 1.1 Part 5). </font>
 
-A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented. These factors are required for the standard operating procedures when reporting for REDD+.
-These directions will provide a stratified random sample of the proper sampling size.
+A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
+
+These directions will provide a stratified random sample of the proper sampling size:
 1. First, navigate to https://sepal.io/ and sign in.
 2. Select the Apps button (purple wrench).
 3. Type ‘stratified’ into the search bar or scroll through the different process apps to find “Stratified Area Estimator--Design”
@@ -96,8 +97,12 @@ These directions will provide a stratified random sample of the proper sampling 
 
 <img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
 
+|:-------------:|:-------------:|
+|Error Box: Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.           |         |
+|:-------------:|:-:|
 
-Error Box: Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps. 
+
+<box>  </box>
 
 <img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
 
