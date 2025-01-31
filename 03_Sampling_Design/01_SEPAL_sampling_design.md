@@ -141,7 +141,7 @@ f. Optionally, you can use a csv with your raster areas instead. We won’t disc
 
 a. In the Area calculation section, select OFT. OFT stands for the Open Foris Geospatial Toolkit. Click “Area calculation and legend generation”.
 
-ERROR BOX: If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the Display map with the Legend labeling values returned to make sure they match.
+**_NOTE:_**  If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the Display map with the Legend labeling values returned to make sure they match.
 
 b. The “Do you want to display the map” checkbox allows you to display your geotiff under “Display map”. Note: The colors displayed in the SAE-Design tool in this section may be different than what you see elsewhere. Additionally, if your ‘no data’ class is 0, the tool will color this as well.
 
@@ -149,7 +149,23 @@ c. Click the Area calculation and legend generation button. This will take a few
 
 d. Next, you will need to adjust the class names in the Legend labeling section. Type in the following class names in place of the numeric codes for your Liberia map (see below):
 
-TABLE
+|Numeric code           |  Class name       |
+|:-------------:|:-------------:|
+| 0  | nodata |
+| 1  | forest_80 |
+| 2 | forest_30_80 |
+| 3 | forest_30 |
+| 4 | mangroves |
+| 5  | settlements |
+| 7  | water |
+| 8  | grassland |
+| 9  | shrub |
+| 10  | baresoil |
+| 11 | sand |
+| 25 | clouds |
+
+
+
 
 e. Now click Submit Legend. The Legend and Areas section will now be populated with the map code, map area, and edited class name.
 
