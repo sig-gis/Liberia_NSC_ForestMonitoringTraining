@@ -97,8 +97,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
 <img align="center" src="../images/sampling/sepal_upload/upload_x.png"  vspace="10" width="600" border-radius="50%"> 
 
-
-    Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
+**_NOTE:_**  Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
 
 
 
