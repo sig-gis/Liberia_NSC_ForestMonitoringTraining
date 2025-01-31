@@ -32,7 +32,7 @@ For either approach, first select the purple wrench Apps button. If you have an 
 
 To use RStudio, choose the R Studio application. You may be prompted to enter your SEPAL username and password to enter R Studio.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_1.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_1.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 a. This will open an instance of RStudio, an IDE for the R programming language.
@@ -41,11 +41,11 @@ b. You should see a ‘Files’ tab in the lower right window.
 
 If not, you may need to adjust the window layout. To do this, move your mouse to the right-hand side of the window where a four-way arrow will appear. Click and drag your mouse to the left to reveal the right pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_2.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_2.png"  vspace="10" width="600" border-radius="50%"> 
 
 c. Click the Upload button that is located in the lower right side of the R Studio interface (see below).
 
-<img align="center" src="../images/sampling/sepal_upload/upload_3.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_3.png"  vspace="10" width="600" border-radius="50%"> 
 
 d. In the Upload Files window, click Choose File.
 
@@ -53,15 +53,15 @@ e. Navigate to the correct location on your drive, select your map and click Ope
 
 f. Once you’ve selected this file, click OK to complete the upload (see below).
 
-<img align="center" src="../images/sampling/sepal_upload/upload_4.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_4.png"  vspace="10" width="600" border-radius="50%"> 
 
 g. You will see your file appear in the list of files in the lower right-hand pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_5.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_5.png"  vspace="10" width="600" border-radius="50%"> 
 
 h. You may now close the RStudio instance by clicking the tab’s x.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_6.png"  vspace="10" width="300" border-radius="50%"> 
+<img align="center" src="../images/sampling/sepal_upload/upload_6.png"  vspace="10" width="600" border-radius="50%"> 
 
 To use the File transfer manager, select the File transfer management application.
 
