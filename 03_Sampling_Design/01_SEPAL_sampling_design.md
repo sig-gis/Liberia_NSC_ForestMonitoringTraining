@@ -128,11 +128,10 @@ d. Then click **Select**.
 
 <img align="center" src="../images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
 
-<img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
-
-
 
 e. Note that the **Output folder** section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
+
+<img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
 
 f. Optionally, you can use a csv with your raster areas instead. We won’t discuss that here.
 
@@ -203,7 +202,7 @@ iii. Then, click on the box under **“low confidence”** that appears and assi
 
 iv. If you make a mistake, you may use Backspace on your keyboard to remove the classes. Additionally, if you change one of the sliders slightly and, move it back, the class assignments will have been reset and you can restart the process.
 
-c. DO NOT assign your No Data class to either high or low confidence. 
+c. <ins> DO NOT assign your No Data class to either high or low confidence. </ins> 
 
 <img align="center" src="../images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
 
