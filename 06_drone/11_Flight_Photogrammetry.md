@@ -49,6 +49,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 ## Emergency Maneuvers
 These occurrences are rare, but can still happen and should be taken into consideration before flying.  Below is a chart with potential emergencies and resolutions:
+To interupt normal pre-planned flight patterns in DJI products, change the flight mode on the remote controller.
 
 | Emergency| Resolution|
 | -------- | -------- |
