@@ -91,10 +91,14 @@ We will use SEPAL to create a stratified random sample. To begin, you can use th
 A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
 
 These directions will provide a stratified random sample of the proper sampling size:
-1. First, navigate to https://sepal.io/ and sign in.
-2. Select the **Apps** button (purple wrench).
-3. Type ‘stratified’ into the search bar or scroll through the different process apps to find “Stratified Area Estimator--Design”
-4. Select **Stratified Area Estimator-Design**. Note that loading the tool takes a few minutes.
+1\. First, navigate to https://sepal.io/ and sign in.
+
+2\. Select the **Apps** button (purple wrench).
+
+3\. Type ‘stratified’ into the search bar or scroll through the different process apps to find “Stratified Area Estimator--Design”.
+
+4\. Select **Stratified Area Estimator-Design**. Note that loading the tool takes a few minutes.
+
 
  <img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
@@ -105,7 +109,7 @@ These directions will provide a stratified random sample of the proper sampling 
  <img align="center" src="../images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
 
 
-5. When the tool loads properly, it will look like the image below. Read some of the information on the **Introduction** page to acquaint yourself with the tool. 
+5\. When the tool loads properly, it will look like the image below. Read some of the information on the **Introduction** page to acquaint yourself with the tool. 
 
  a. On the **Introduction** page, you can change the language from English to French or Spanish.
 
@@ -115,8 +119,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
 <img align="center" src="../images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
 
-6. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
-7. Select **Map input** on the left side of the screen.
+6\. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
+
+7\. Select **Map input** on the left side of the screen.
 
  a. For this exercise, we’ll use the classification from Module 2. However, you can substitute another classification, such as the two date detection classification created in Module 3 if you would like.
 
@@ -135,7 +140,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  f. Optionally, you can use a csv with your raster areas instead. We won’t discuss that here.
 
-8. Next, click **Strata areas** on the left side of the screen.
+8\. Next, click **Strata areas** on the left side of the screen.
 
  <img align="center" src="../images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
@@ -178,7 +183,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  g. You can now **Rename** and **Download** the area file if you would like. However it will save automatically to your Sepal workspace.
 
-9. When you’re done, click on **Strata selection** on the left panel.
+9\. When you’re done, click on **Strata selection** on the left panel.
 
  a. Now you need to specify the expected accuracies. You will do this for each class.
 
@@ -209,7 +214,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
 
 
-10. When you’re satisfied, click on **Sampling Size** on the left panel.
+10\. When you’re satisfied, click on **Sampling Size** on the left panel.
 
  a. Now we will calculate the required sample size for each strata. 
 
@@ -229,7 +234,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  <img align="center" src="../images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
 
-11. When you’re ready, click on **Sample allocation** to the left.
+11\. When you’re ready, click on **Sample allocation** to the left.
 
  a. The final step will select the random points to sample.
 
