@@ -34,6 +34,13 @@ Ground Sampling Distance refers to the amount of ground/surface area that is cov
 
 <img align="center" src="../images/drone/GSD.png" hspace="15" vspace="10" width="1000">
 
+## Terrain Folling
+
+The drone’s ability to follow variations in terrain (go up and down accordingly) to create consistent overlap and ground sampling distance between all images taken in a flight.  This parameter should be turned on if you are flying in a very hilly area. It is very important to know that buildings, trees, towers, and other objects that are ABOVE the ground are NOT considered part of terrain awareness.  Terrain awareness is based purely on elevation information from Pix4D’s existing maps, and these might not be 100% accurate or precise in your flight AOI.  Leave plenty of buffer between your drone and the surfaces you are flying over to account for these issues.  Not all flight planning platforms have terrain awareness capability, and offline maps have to be downloaded in Pix4Dcapture to activate terrain awareness.  
+ 
+ [Terrain awareness - PIX4Dcapture Pro](https://support.pix4d.com/hc/en-us/articles/8804601034013-Terrain-awareness-PIX4Dcapture-Pro)
+
+<img align="center" src="../images/drone/terrainawareness.png" hspace="15" vspace="10" width="600">
 
 ## Overlap
 Overlap refers to the amount of overlap in coverage of each image collected.  More overlap means longer flight times especially with higher side overlap as more flight lines are added but there is the potential for more tie points between images.
