@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Set Important Parameters
 
-First, we will define some variables that will be used as parameters later throughout the script. We are bringing them to the beginning of the script so they are easy to change without having to scroll through the script to find them.
+First, we  define some variables that will be used as parameters later throughout the script. We are bringing them to the top of the script so they are easy to change without having to scroll through the script to find them.
 
 These include values related to setting the time period of interest, cloud masking, and smoothing.
 
@@ -23,51 +23,59 @@ These include values related to setting the time period of interest, cloud maski
 
 An area of interest can be uploaded from a local shapefile, drawn on the map, or derived from a pre-existing dataset in the Earth Engine catalogue.
 
-For this exercise, we will use a union of a `featureCollection` of Liberia's borders to be our AOI. You can also filter for specific provinces by uncommenting the line below.
+For this exercise, we use a union of a `featureCollection` of Liberia's borders to be our AOI. You can also filter for specific provinces by uncommenting the line below.
 
 ```javascript
-// //////////////////////////////////////////////////////////////////////////////////////////
-// //////////////////////////////////////////////////////////////////////////////////////////
-// Import and Preprocess AOI
-// //////////////////////////////////////////////////////////////////////////////////////////
-// //////////////////////////////////////////////////////////////////////////////////////////
 
-// import the Liberia borders feature collection
-var Liberia = ee.FeatureCollection("projects/pc556-ncs-liberia-forest-mang/assets/LBR_county_updatedProj")
-
-// print out the county names
-print('province names:', Liberia.aggregate_array('County').distinct())
-  
-// define an aoi from the feature collection
-var aoi = Liberia
-  // or select one or a few counties
-  // (uncomment this line to select a specific set of provinces)
-  // .filter(ee.Filter.inList('County', ['Bong','Gbarpolu']))
-  // get the union of all selected counties
-  .union();
-  
-// alternatively, use administrative borders from FAO or draw your own
-// https://developers.google.com/earth-engine/datasets/catalog/FAO_GAUL_2015_level1
-// var aoi = geometry;
-
-// Center the Map on the aoi object, with a specified zoom-level (between 1-24)
-// (comment this line out to prevent the map from recentering every time you run the script)
-Map.centerObject(aoi, 7);
-
-// Add the aoi object as a layer to the map
-Map.addLayer(aoi, {}, 'AOI', false);
 ```
-<font color = red> pic of AOI </font>
 
 <img align="center" src="../images/class-gee/aoi.png" hspace="15" vspace="10" width="400">
 
 ## Import and Preprocess Imagery
 
-Now, we will import all the imagery we will use for our classification, including the LULC map we generate the reference data from and the satellite imagery we run the model on.
+Now, we  import and preprocess all the imagery we will use for our classification, including the LULC map we generate the reference data from and the satellite imagery we run the model on.
 
 ### Land Use / Land Cover (LULC)
 
-Let's import the 2014 LULC map.
+First, let's import the current 2014 LULC map for Liberia. We will use this map to produce reference data for our model and to use as a visual comparison while we go through the model building process.
+
+We need to make sure the `cloud` and `nodata` classes both receive values of 0 and then mask them out to effectively remove them from the map so we do not sample them.
+
+We also symbolize the LULC classes with appropriate colors and add them to the map. 
+
+```javascript
+
+```
+
+<img align="center" src="../images/class-gee/LULC2014.png" hspace="15" vspace="10" width="400">
+
+We can view the LULC class at any point on the map by opening the **Inspector** tab in the upper right hand corner of the screen and clicking somewhere on the map. Then, we can navigate to `Pixels` > `LULC 2014` > `class` to see the LULC class at that point.
+
+<img align="center" src="../images/class-gee/inspector_tab.png" hspace="15" vspace="10" width="300">
+
+### Elevation (DEM)
+
+Next, let's import elevation data, which might be particularly useful in our classification for LULC types that are strongly influence by elevation. We will use the Copernicus 30m resolution DEM. 
+
+Before importing this data set from the GEE data catalogue, we can preview important information about it by searching for 'Copernicus DEM' into the search bar above the code editor and clicking on **Copernicus DEM GLO-30: Global 30m Digital Elevation Model**. We can see how it was produced and who produced it. We can click on **See example** to see an example script using the data set, and we can click on **BANDS** to see the resolution and band descriptions.
+
+<img align="center" src="../images/class-gee/DEM_info.png" hspace="15" vspace="10" width="400">
+
+We symbolize and add this to the map as well.
+
+```javascript
+
+```
+
+### SAR Imagery
+
+Now, we start importing the raw satellite imagery we will use in our model, starting with synthetic aperture radar (SAR) imagery. 
+
+For some background on SAR data, you can go to the Intro to SAR page in the Resources tab of this website.
+
+<font color = red> insert correct link to SAR resources </font>
+
+We need to do some filtering and preprocessing for the SAR imagery before we use it in our model. 
 
 
 ### Optical Imagery
