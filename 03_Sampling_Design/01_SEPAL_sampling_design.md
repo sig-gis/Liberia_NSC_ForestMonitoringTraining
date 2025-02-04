@@ -85,7 +85,7 @@ d. Click **Import**
 ## Part 1: Creating a stratified random sample
 We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 1.
 
-<font color=red> If you have a large area you are stratifying, please first increase the size of your instance (see Module 1 Exercise 1.1 Part 5). </font>
+> <font color=red> If you have a large area you are stratifying, please first increase the size of your instance (see `Terminal` section under [SEPAL documentation](https://docs.sepal.io/en/latest/setup/presentation.html)). </font>
 
 A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
 
@@ -123,11 +123,11 @@ These directions will provide a stratified random sample of the proper sampling 
 
 7\. Select **Map input** on the left side of the screen.
 
- a. For this exercise, we’ll use the classification from Module 2. However, you can substitute another classification, such as the two date detection classification created in Module 3 if you would like.
+ a. For this exercise, we’ll use the <font color=red> previously generated classification map for Liberia</font>. However, you can substitute another classification.
 
  b. In the **Data type** section, click **Input**.
 
- c. In the **Browse** window that opens up, navigate to the test dataset and select it. 
+ c. In the **Browse** window that opens up, navigate to the classification map and select it. 
 
  d. Then click **Select**.
 
@@ -144,20 +144,12 @@ These directions will provide a stratified random sample of the proper sampling 
 
  <img align="center" src="../images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
- a. In the **Area calculation** section, select **OFT**. OFT stands for the Open Foris Geospatial Toolkit. Click “Area calculation and legend generation”.
-
- > **_NOTE:_**  If you choose to use OFT, it will return values for the map that are incorrect if your map stored using certain formats (e.g. signed 8 bit). If this is the case, then please use the R option and it will work correctly. If using OFT, always compare the **Display map** with the **Legend labeling** values returned to make sure they match.
+ a. In the **Area calculation** section, click “Area calculation and legend generation”. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
 
  <img align="center" src="../images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
 
 
- b. The “Do you want to display the map” checkbox allows you to display your geotiff under “Display map”. 
-
- > **NOTE:** The colors displayed in the SAE-Design tool in this section may be different than what you see elsewhere. Additionally, if your ‘no data’ class is 0, the tool will color this as well.
-
- c. Click the **Area calculation and legend generation** button. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
-
- d. Next, you will need to adjust the class names in the **Legend labeling** section. Type in the following class names in place of the numeric codes for your Liberia map:
+ b. Next, you will need to adjust the class names in the **Legend labeling** section. Type in the following class names in place of the numeric codes for your Liberia map:
 
  |Numeric code         |  Class name     |
  |:-------------:|:-------------:|
@@ -177,11 +169,11 @@ These directions will provide a stratified random sample of the proper sampling 
 
 
 
- e. Now click **Submit Legend**. The **Legend and Areas** section will now be populated with the map code, map area, and edited class name.
+ c. Now click **Submit Legend**. The **Legend and Areas** section will now be populated with the map code, map area, and edited class name.
 
- f. Always compare the **Display map** with the **Legend labeling** values returned to make sure they match.
+ d. Always compare the **Display map** with the **Legend labeling** values returned to make sure they match.
 
- g. You can now **Rename** and **Download** the area file if you would like. However it will save automatically to your Sepal workspace.
+ e. You can now **Rename** and **Download** the area file if you would like. However it will save automatically to your Sepal workspace.
 
 9\. When you’re done, click on **Strata selection** on the left panel.
 
@@ -203,13 +195,13 @@ These directions will provide a stratified random sample of the proper sampling 
 
   i. Think about your forest and non-forest classes. Which do you think should be high confidence? Which should be low confidence? Why?
 
-  ii. Click on the box under **“high confidence”** and assign your high confidence class(es). For this exercise, please assign both Forest & Non-forest to the high confidence class. If you assign either to the low confidence class, you will not be able to use the CEO-SEPAL bridge in Exercise 4.2.
+  ii. Click on the box under **“high confidence”** and assign your high confidence class(es). For this exercise, please assign the classes to high-confidence as shown in the image below.
 
   iii. Then, click on the box under **“low confidence”** that appears and assign the corresponding class(es).
 
   iv. If you make a mistake, you may use Backspace on your keyboard to remove the classes. Additionally, if you change one of the sliders slightly and, move it back, the class assignments will have been reset and you can restart the process.
 
- c. <ins> DO NOT assign your No Data class to either high or low confidence. </ins> 
+ c. <ins> DO NOT assign your `nodata` or `clouds` classes to either high or low confidence. </ins> 
 
  <img align="center" src="../images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
 
@@ -230,7 +222,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then determine the **minimum sample size per strata**. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
 
- e. You can also check the “Do you want to modify the sampling size” box.
+ e. You can also check the “Do you want to modify the sampling size” box. <font color='red'> What does this checkbox entail?</font>
 
  f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
