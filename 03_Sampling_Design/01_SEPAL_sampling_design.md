@@ -248,8 +248,8 @@ These directions will provide a stratified random sample of the proper sampling 
 
  <img align="center" src="../images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
 
- c. Now fill out the four fields to the right. 
+ c. Now fill out the three fields to the right. 
 
   i. You can add additional data by specifying the **number of operators**, or people who will be doing the classification. Here, leave it set to 1. For CEO, this might be the number of users you think your project will have. 
 
-  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified (Landsat= 30 meters). Here, leave it at 30 m.
+  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified (Landsat = 30 meters). Here, leave it at 30 m.
