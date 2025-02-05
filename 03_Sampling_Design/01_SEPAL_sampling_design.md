@@ -79,7 +79,9 @@ d. Click **Import**
 
 # 2. Creating a stratified random sample
 
-> ***NOTE:** You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
+> **_NOTE:_** 
+>
+>*You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
 
 
 ## Part 1: Creating a stratified random sample
@@ -101,7 +103,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
  <img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
-> **_NOTE:_**  Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
+> **_NOTE:_**  
+>
+>Sometimes the tool fails to load properly (none of the text loads) as seen below. In this case, please close the tab and repeat the above steps.
 
 
 
@@ -133,11 +137,15 @@ These directions will provide a stratified random sample of the proper sampling 
  <img align="center" src="../images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
 
 
- e. Note that the **Output folder** section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
+ > **_NOTE:_**
+ >
+ > The **Output folder** section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
 
  <img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
 
- f. Optionally, you can use a csv with your raster areas instead. We won’t discuss that here.
+ > **_Optional:_**
+ >
+ > You can use a csv with your raster areas instead. We won’t discuss that here.
 
 8\. Next, click **Strata areas** on the left side of the screen.
 
@@ -182,9 +190,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
   ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
    
-   *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
-   
-   * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+   > *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
+   >
+   > * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
 
   iii. Select the value for classes with high expected user accuracy with **the first slider**. This is set to 0.9 by default, and we’ll leave it there.
 
@@ -217,7 +225,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
   i. This value affects the number of samples placed in each map class. The lower the value, the more points there are in the sample design. Test this by changing the error from 0.05 to 0.01, and then change it back to point 0.05. Alternatively, you can click the up/down button to the right of the number.
 
-  ii. Note that you can adjust this incrementally with the up/down arrows on the right side of the parameter.
+  > **_NOTE:_** 
+  >
+  > You can adjust this incrementally with the up / down arrows on the right side of the parameter.
 
  d. Then determine the **minimum sample size per strata**. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
 
