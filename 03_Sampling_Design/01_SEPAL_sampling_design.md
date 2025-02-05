@@ -10,17 +10,17 @@ nav_order: 2
 These instructions are adapted from [OpenMRV](https://www.openmrv.org/web/guest/w/modules/sepal-ceo/sample-design-and-stratification) and ....
 
 
-Use [this resource](https://docs.google.com/document/d/1IlhoZKPuslPBu968-u3oaErL0sremN1Hekp3cctFQlA/edit?usp=sharing).
+<font color = 'red'> Use [this resource](https://docs.google.com/document/d/1IlhoZKPuslPBu968-u3oaErL0sremN1Hekp3cctFQlA/edit?usp=sharing). SKIP? </font>
 
 
-We will use the SEPAL SAE-Design tool to distribute sample points usind a stratified random sampling approach. The SAE-Design tool will generate a set of stratified random points that are placed in each of the different map classes (which we will now call strata)represented in your map. 
+We will use the SEPAL Stratified Area Estimator (SAE)-Design tool to distribute sample points usind a stratified random sampling approach. The SAE-Design tool will generate a set of stratified random points that are placed in each of the different map classes (which we will now call strata) represented in your map. 
 
 
 ## Pre-requisites
 - A SEPAL account and a Collect Earth Online (CEO) account. 
 - A previously generated map to use for stratification.
-    - For this workshop you will need to first need to download the map to your local machine, and then upload it to SEPAL following the instructions below.
-- If you have a large AOI, you may need to first increase the size of your instance for faster processing.
+    - For this workshop, you will need to first download the map to your local machine, and then upload it to SEPAL following the instructions below.
+- If you have a large Area of Interest (AOI), you may need to first increase the size of your instance for faster processing (see `Terminal` section [here](https://docs.sepal.io/en/latest/setup/presentation.html)).
 
 
 # 1. Uploading your stratification map
@@ -85,7 +85,6 @@ d. Click **Import**
 ## Part 1: Creating a stratified random sample
 We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 1.
 
-> <font color=red> If you have a large area you are stratifying, please first increase the size of your instance (see `Terminal` section under [SEPAL documentation](https://docs.sepal.io/en/latest/setup/presentation.html)). </font>
 
 A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
 
