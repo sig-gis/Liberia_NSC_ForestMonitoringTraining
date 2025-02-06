@@ -33,7 +33,7 @@ SEPAL offers an interactive and intuitive way to create mosaics in any area of i
 
 ## Start
 
-In the window below, click `Add recipe` and type `mosaic` to select the `Optical mosaic` recipe.
+At the top-left of your screen, click the green `Add recipe` button and type `mosaic` to select the `Optical mosaic` recipe.
 
 ![Add recipe](../images/sepal/sepal_prep/sepal_prep_2_5.png)
 ![Mosaic](../images/sepal/sepal_prep/sepal_prep_2_6.png)
@@ -116,20 +116,20 @@ A mosaic uses different raster datasets obtained from multiple sources. SEPAL al
 - **L7**: Landsat 7 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
 - **S2**: Sentinel-2 [Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
 
-Select all available options and click `Done`.
+Let's select L9 Tier 1 and click `Done`.
 ![Source selection](../images/sepal/sepal_prep/sepal_prep_10.png)
 
 ### Scenes
 
 > **Note:** If Sentinel and Landsat data have been selected, you will need to use all scenes. As the tiling system from Sentinel and Landsat data are different, it’s impossible to select scenes using the tool presented in the following sections.
 
-You can select scenes manually or automatically:
+You can select scenes for mosaic manually or automatically:
 
-- `Use all scenes`: Includes all available images.
-- `Select scenes`: Prioritize based on:
-  - **Cloud-free**: Prioritizes images with zero or few clouds.
-  - **Target date**: Prioritizes images that match the target date.
-  - **Balanced**: Maximizes both cloud-free and target date criteria.
+  - **Use all scenes**: Includes all available images based on date parameters.
+  - **Select scenes**: Prioritize based on the following **Priority** options:
+  - _Cloud-free_: Prioritizes images with zero or few clouds.
+  - _Target date_: Prioritizes images that match the target date.
+  - _Balanced_: Maximizes both cloud-free and target date criteria.
 
 ![Scene selection](../images/sepal/sepal_prep/sepal_prep_11.webp)
 
