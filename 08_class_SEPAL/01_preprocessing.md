@@ -9,15 +9,12 @@ nav_order: 1
 
 ## Optical mosaics
 
-A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together.
-This can be achieved on both contiguous rasters (see first image below) and overlapping images (see second image below).
+A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together. This can be achieved on both contiguous rasters (first image below) and overlapping images (second image below).
 
 ![Contiguous rasters](../images/sepal/sepal_prep/sepal_prep_1.webp)
+![Overlapping images](../images/sepal/sepal_prep/sepal_prep_2.webp)
 
 <!-- <img align="center" src="../images/sepal/sepal_prep/sepal_prep_1.webp" name="Contiguous rasters" vspace="10" width="400">  -->
-
-
-![Overlapping images](../images/sepal/sepal_prep/sepal_prep_2.webp)
 
 These overlay areas can be managed in various ways. For example, you can choose to:
 
@@ -26,15 +23,21 @@ These overlay areas can be managed in various ways. For example, you can choose 
 - Average the values of the overlay cells.
 - Take the maximum or minimum value.
 
-In addition, certain corrections can be made to the image to account for clouds, snow, and other factors; these operations are complex and repetitive.
+In addition, corrections can be made to the image to account for clouds, snow, and other factors, but these operations can be complex and repetitive.
 
 SEPAL offers an interactive and intuitive way to create mosaics in any area of interest (AOI).
 
 > **Note:**
 >
-> You won't be able to retrieve the images if your SEPAL and Google Earth Engine (GEE) accounts are not connected. For more information, go to [GEE setup](../setup/gee).
+> In order to be able to retrieve the images, be sure to [connect your SEPAL and Google Earth Engine (GEE) accounts](https://docs.sepal.io/en/latest/setup/gee.html).
 
 ## Start
+
+In the window below, click `Add recipe` and type `mosaic` to select the `Optical mosaic` recipe.
+
+![Add recipe](../images/sepal/sepal_prep/sepal_prep_2_5.png)
+![Mosaic](../images/sepal/sepal_prep/sepal_prep_2_6.png)
+
 
 Once the mosaic recipe is selected, SEPAL will display the recipe process in a new tab (**1**) and the **AOI selection** window will appear in the lower right (**2**).
 
@@ -42,22 +45,22 @@ Once the mosaic recipe is selected, SEPAL will display the recipe process in a n
 
 
 
-The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited convention for your needs. Simply double-click the tab and write a new name. It will default to:
+The first step is to change the name of the recipe - it will be used to identify your files and recipes in SEPAL folders. Double-click the tab and write a new name. It will default to:
 
 ```code
 Optical_mosaic_<start_date>_<end_date>_<band name>
 ```
 
-![Default title](../images/sepal/sepal_prep/sepal_prep_4.webp)
-![Modified title](../images/sepal/sepal_prep/sepal_prep_5.webp)
+But it is recommended to use the following naming convention:
 
-> **Note:**
->
-> The SEPAL team recommends using the following naming convention:
->
-> ```code
-> <aoi name>_<dates>_<measure>
-> ```
+```code
+<aoi name>_<dates>_<measure>
+```
+
+
+![Default title](../images/sepal/sepal_prep/sepal_prep_4.png)
+![Modified title](../images/sepal/sepal_prep/sepal_prep_5.png)
+
 
 ## Parameters
 
@@ -75,40 +78,46 @@ In the lower-right corner, five tabs allow you to customize the mosaic creation:
 
 The data exported by the recipe will be generated from within the bounds of the AOI. There are multiple ways to select the AOI in SEPAL:
 
-- Administrative boundaries.
-- EE Tables.
-- Drawn polygons.
+- Administrative boundaries
+- EE Tables (from GEE assets)
+- Drawn polygons
 
-For more details, see [AOI selection](../feature/aoi_selector).
+For more details, see [AOI selection](https://docs.sepal.io/en/latest/feature/aoi_selector.html).
 
-![Select AOI](../images/sepal/sepal_prep/sepal_prep_7.webp)
+For this workshop, type `Liberia` in the **country** cell under the `AOI` tab. Click `Next`.
+
+![Select AOI](../images/sepal/sepal_prep/sepal_prep_7.png)
 
 ### Date
 
 #### Yearly mosaic
 
-In the `DAT` tab, select a year for the pixels in the mosaic. Then click `Apply`.
+In the `DAT` tab, select a year of the data to be used in the mosaic. Let's select 2024 here. Then click `Next`.
 
-![Year selection](../images/sepal/sepal_prep/sepal_prep_8.webp)
+![Year selection](../images/sepal/sepal_prep/sepal_prep_8.png)
 
 #### Seasonal mosaic
 
-Expand the date selection tool in the `DAT` panel and select a season of interest.
+You can also expand the date selection tool in the `DAT` panel by clicking `More` to select a season of interest.
 
-- Click the **calendar icon** to open the **Date selection** pop-up.
-- Use the slider to define a season around the target date.
-- Adjust past/future season parameters to increase the pool of images.
+- Click the **calendar icon** (**1**) to open the **Date selection** pop-up. The selected data will be the one from which pixels in the mosaic should ideally come from.
+- Use the slider (**2**) to define a season around the target date.
+- Since the number of images in a single season of one year may not be enough to produce a mosaic, we can use two secondary (**3** for `Past season` and **4** for `Future season`) sliders to increase the pool of images.
+- When the selection is done, click `Next`.
 
-![Season selection](../images/sepal/sepal_prep/sepal_prep_9.webp)
+![Season selection](../images/sepal/sepal_prep/sepal_prep_9.png)
 
 ### Sources
 
 A mosaic uses different raster datasets obtained from multiple sources. SEPAL allows you to select data from multiple entry points:
 
-- **L8**: [Landsat 8 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T1)
-- **L7**: [Landsat 7 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C01_T1)
-- **L4-5**: [Landsat 4 & 5 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C01_T1)
-- **A+B**: [Sentinel-2 Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2)
+- **L9**: Landsat 9 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1)
+
+
+- **L8**: [Landsat 8 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1)
+- **L7**: [Landsat 7 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1)
+- **L4-5**: [Landsat 4 & 5 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T1)
+- **A+B**: [Sentinel-2 Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
 
 ![Source selection](../images/sepal/sepal_prep/sepal_prep_10.webp)
 
