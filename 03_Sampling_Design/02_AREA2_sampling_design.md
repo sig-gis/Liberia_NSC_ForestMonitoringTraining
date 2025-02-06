@@ -26,7 +26,7 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 
 <span style="color: blue;">**Note:**</span> You can choose to save a copy of the script to your local repository instead of using the public repository directly. You will still be referencing the files in the public 'projects/AREA2/public:utilities/misc' folder. You may choose to copy this folder to your local repository as well and change the path in the scipt to reference you local location for it.
 
-*The further directions below are directly from https://area2.readthedocs.io/en/latest/getting_started.html*.
+*The further directions below are directly from [https://area2.readthedocs.io/en/latest/getting_started.html](https://area2.readthedocs.io/en/latest/getting_started.html)*.
 
 4\. To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the Run button (located in the Code Editor).
 5\. When running the scripts in AREA 2, a Dialog Pane will appear (E). The Dialog Pane is where you specify the information required for each step of the sampling design, response design, and analysis. Note that after communicating via the Dialog Pane (loading a map for example), **Earth Engine does not indicate if the application running. Therefore, push the buttons only once and wait for the application to respond before continuing.**
@@ -39,9 +39,8 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 # 1. Using the AREA2 Stratified Random Sampling Tool
 For now we have pre-loaded a stratification map as a GEE asset for you. You will learn how to upload your own assets later in the workshop.
 
-1\. Enter the asset path for your land cover stratification map 
-
-*'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014'*.
+1\. Enter the asset path for your land cover stratification map: 
+<span style="color: red;">**projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014**</span> 
 
 2\. This is not a multi-band image so leave the next parameter as 1, and leave the mask value as 0.
 
@@ -93,12 +92,16 @@ Since we are using these points for training a machine learning model and not fo
 
 A large number of points will make the tool run more slowly. Choose a reasonable number of points per strata for this demo.
 
+**Do not put any points in the last class, which is clouds.**
+
 9\. Click *Create Sample* and then add them to the map. You can zoom in on the map to see these samples once they load.
 
 10\. Click *Export samples*. 
 
-11\. Go to the *Tasks* tab at the top right. From there you can download the samples as a CSV to your Google Drive. 
+11\. Go to the *Tasks* tab at the top right. From there you can download the samples as a CSV to your Google Drive and as a GEE asset to your cloud assets folder. **Make sure you give the file/asset an informative name, including points per class and the creation date. You can also add metadata to a GEE asset once it is created.**
 
-The output will look something like this:
+<img align="center" src="../images/sampling/AREA2_gui_exportsamples.png"  vspace="10" width="800">
+
+The output will look something like this in Drive:
 <img align="center" src="../images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
 
