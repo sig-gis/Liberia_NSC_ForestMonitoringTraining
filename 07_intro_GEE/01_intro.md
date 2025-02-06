@@ -5,7 +5,7 @@ parent: "7. Intro to GEE"
 nav_order: 1
 ---
 
-*Objectives: Basics of Google Earth Engine (GEE) for remote sensing data analysis; JavaScript, GEE library*
+*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, GEE library*
 
 ## What is Google Earth Engine?
 
@@ -169,15 +169,13 @@ In order to build a script for your analysis, you will need to use JavaScript. T
 
 ### Variables
 
-<font color = red> change Paramaribo below in text and in script to Monrovia and population to ~1.7 million </font>
-
-In a programming language, variables are used to store data values. In JavaScript, a variable is defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Paramaribo" to the variable named `city`. Note that the text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string. It's a good idea to be consistent: use single quotes or double quotes throughout a given script. Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
+In a programming language, variables are used to store data values. In JavaScript, a variable is defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Monrovia" to the variable named `city`. Note that the text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string. It's a good idea to be consistent: use single quotes or double quotes throughout a given script. Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
 
 ```javascript
-var city = 'Paramaribo';
+var city = 'Monrovia';
 ```
 
-If you print the variable `city`, you will get the value stored in the variable (Paramaribo) printed to the Console.
+If you print the variable `city`, you will get the value stored in the variable (Monrovia) printed to the Console.
 
 ```javascript
 print(city);
@@ -186,7 +184,7 @@ print(city);
 When you assign a text value, the variable is automatically assigned the type *string*. You can also assign numbers to variables and create variables of type *number*. The following code creates a new variable called `population` and assigns a number to it as its value.
 
 ```javascript
-var population = 250000;
+var population = 1700000;
 print(population);
 ```
 
@@ -194,10 +192,8 @@ print(population);
 
 It is useful to be able to store multiple values in a single variable. JavaScript provides a data structure called a "list" that can contain multiple values. We can create a new list by using the brackets [] and adding multiple values separated by a comma.
 
-<font color = red> change the cities below to Monrovia, Gbarnga, Buchanan, Ganta </font>
-
 ```javascript
-var cities = ['Paramaribo', 'Lelydorp', 'Brokopondo', 'Nieuw Nickerie'];
+var cities = ['Monrovia', 'Gbarnga', 'Buchanan', 'Ganta'];
 print(cities);
 ```
 
@@ -205,7 +201,7 @@ If you look at the output in the Console, you'll see "`List`" with an expand arr
 
 ### JavaScript Objects
 
-Lists allow you to store multiple values in a single container variable. While useful, it's not appropriate for storing structured data. It is useful to be able to refer to each element by its name instead of its position. Objects in JavaScript allow you to store key-value pairs, where each value can be referred to by its key. You can create a `dictionary` using the braces {}. The following code creates an object called `cityData` with information about Paramaribo.
+Lists allow you to store multiple values in a single container variable. While useful, it's not appropriate for storing structured data. It is useful to be able to refer to each element by its name instead of its position. Objects in JavaScript allow you to store key-value pairs, where each value can be referred to by its key. You can create a `dictionary` using the braces {}. The following code creates an object called `cityData` with information about Monrovia.
 
 Please note some important things about JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put the semicolon (;) the command is considered complete. This helps format the code to make it more readable. Also note the choice of the variable name `cityData`. The variable contains two words. The first word is in lower case and the first letter of the second word is in upper case. This type of naming scheme of joining multiple words into a single variable name is called a "camel case." While it is not mandatory to name your variables using this scheme, it is considered a good practice to follow. The functions and parameters in the Earth Engine API follow this convention, so your code will be much more readable if you also follow it.
 
@@ -220,8 +216,6 @@ print(cityData);
 
 The object will be printed to the `Console`. You can see that instead of a numeric index, each element has a label. This is known as the key and can be used to retrieve the value of an object.
 
-
-<font color = red> update the image below to show Monrovia, etc </font>
 
 <img align="center" src="../images/intro-gee/fig21.png" vspace="10" width="300">
 
@@ -249,8 +243,6 @@ As you type the code, it's helpful to add some text to explain the code or leave
 
 The Code Editor also provides a shortcut (Ctrl + / on Windows, Cmd + / on Mac) to comment or uncomment multiple lines at once. You can select multiple lines and press the key combination to make them all comments. Press again to reverse the operation. This is useful when debugging code to stop the execution of certain parts of the script.
 
-
-<font color = red> update the image below with the Monrovia script </font>
 
 <img align="center" src="../images/intro-gee/fig23.png" vspace="10" width="600">
 
