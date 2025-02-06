@@ -47,31 +47,36 @@ For now we have pre-loaded a stratification map as a GEE asset for you. You will
 
 3. Set the spatial resolution to 10m. This depends on the pixel size of your selected stratification map.
 
-<img align="center" src="../images/sampling/AREA2_gui_page1.png"  vspace="10" width="800"> 
+4. Click *Load Image*.
 
+<img align="center" src="../images/sampling/AREA2_gui_page1.png"  vspace="10" width="800">
+    
+5. The strata weights and pixel-counting estimations of their area in square meters will be printed to the console panel. **Copy down these values for later use in your accuracy assessment!**
 
+6. Now you will determine the sample size using one of the three methodology options:
+- Arbitrary sample size
+- Target SE of overall accuracy
+- Target SE of area of a class
 
+Based on your selection your screen will update to look like one of the options below.
 
+<img align="center" src="../images/sampling/AREA2_gui_page2_3options.png"  vspace="10" width="800">
 
-# 2. Creating a stratified random sample
+    
+7. Since we are using these samples for training a random forest model, we can skip over the equations used for sample-based area estimation analyses to calculate the appropriate sample size. **For Random Forest, generally, the more points the better. At a minimum you should aim to have 10 times as many points per strata as you do features (bands of imagery the model will observe).** So if our composite image has 20 bands, we should at least have 200 points per strata if we were doing a full classification. If resources allow, more points per strata, especially for those with a lot of variation in their characteristics, will improve the results.
 
-> **_NOTE:_** 
->
->*You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
+So we will use the **Arbitrary sample size** option with this in mind.
 
+    Note: 
+    If you were performing a **sample-based area estimation** with these points, you would likely want to use one of the latter two options. You would use values for expected User's Accuracies and target Standard Error in the same way you just did in SEPAL. 
 
-## Part 1: Creating a stratified random sample
-We will use SEPAL to create a stratified random sample. To begin, you can use the test dataset available in SEPAL or you can use a raster of your classification loaded into SEPAL using the instructions in Part 1.
+    You would also be required to place samples in all areas of the map, even over cloudy strata. For sample-based estimates of the full population it is a rule that all areas must have a non-zero probability of being sampled.
 
-
-A well-prepared sample can provide a robust estimate of the parameters of interest for the population (percent forest cover, for example). The goal of a sample is to provide an unbiased estimate of some population measure (e.g. proportion of area), with the smallest variance possible, given constraints including resource availability. Two things to think about for sample design are: do you have a probability based sample design? That is, does every sample location have some probability of being sampled? And second, is it geographically balanced? That is, are all regions in the study area represented.
-
-These directions will provide a stratified random sample of the proper sampling size:
-
+8. Remember, these are the map values of the stratification map we are using.
 
  |Numeric code         |  Class name     |
  |:-------------:|:-------------:|
- | 0  | nodata |
+ | 0  | no data |
  | 1  | forest_80 |
  | 2 | forest_30_80 |
  | 3 | forest_30 |
@@ -80,27 +85,20 @@ These directions will provide a stratified random sample of the proper sampling 
  | 7  | water |
  | 8  | grassland |
  | 9  | shrub |
- | 10  | baresoil |
+ | 10  | bare soil |
  | 11 | sand |
  | 25 | clouds |
+  
+Since we are using these points for training a machine learning model and not for statistical sample-based estimations, we do not need to include points in the non-relevant classes, such as clouds. Any class you sample now will be a class in your final model.
 
+A large number of points will make the tool run more slowly. Choose a reasonable number of points per strata for this demo.
 
+8. Click *Create Sample* and then add them to the map. You can zoom in on the map to see these samples once they load.
 
-  ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
-   
-   > *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
-   >
-   > * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+9. Click *Export samples*. 
 
-  iii. Select the value for classes with high expected user accuracy with **the first slider**. This is set to 0.9 by default, and we’ll leave it there.
+10. Go to the *Tasks* tab at the top right. From there you can download the samples as a CSV to your Google Drive. 
 
-  iv. Then, select the value for classes with low expected user accuracy with **the second slider**. This is set to 0.7 by default, and we’ll leave it there as well.
-
- 
-
- a. The final step will select the random points to sample.
-
- b. Select **Generate sampling points** and wait until the progress bar in the bottom right finishes. Depending on your map, this may take multiple minutes. A map will pop up showing the sample points. You can pan around or zoom in/out within the sample points map.
-
-  i. The resulting **distribution of samples** should look similar to the below image. These values will vary depending on your map and the standard error of expected overall accuracy you set. 
+The output will look something like this:
+<img align="center" src="../images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
 
