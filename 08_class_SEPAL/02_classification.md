@@ -9,15 +9,11 @@ nav_order: 2
 
 # Classification
 
-*Build supervised classifications of mosaic images to create easy-to-use user interfaces with the Classification recipe*
+With this recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the classifier RandomForest – allowing users to create an easy-to-use user interface to:
 
-## Overview
-
-With this recipe, SEPAL helps users build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the classifiers CART, RandomForest, NaiveBayes, and SVM – allowing users to create an easy-to-use user interface to:
-
-- Select an image to classify.
-- Define the class table.
-- Add training data from external sources and on-the-fly selection.
+- select an image to classify
+- define the class table
+- add training data from external sources and on-the-fly selection.
 
 In combination with other tools of SEPAL, the **Classification** recipe can help you provide accurate land-use maps without writing a single line of code.
 
