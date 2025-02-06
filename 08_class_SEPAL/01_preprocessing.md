@@ -8,15 +8,16 @@ nav_order: 1
 # Preprocessing Imagery in SEPAL
 
 ## Optical mosaics
-*Combine images to create single raster datasets with optical mosaics*
-
-### Overview
 
 A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together.
 This can be achieved on both contiguous rasters (see first image below) and overlapping images (see second image below).
 
-![Contiguous rasters](../_images/cookbook/optical_mosaic/mosaic_contiguous.gif)
-![Overlapping images](../_images/cookbook/optical_mosaic/mosaic_overlay.png)
+![Contiguous rasters](../images/sepal/sepal_prep/sepal_prep_1.webp)
+
+<!-- <img align="center" src="../images/sepal/sepal_prep/sepal_prep_1.webp" name="Contiguous rasters" vspace="10" width="400">  -->
+
+
+![Overlapping images](../images/sepal/sepal_prep/sepal_prep_2.webp)
 
 These overlay areas can be managed in various ways. For example, you can choose to:
 
@@ -37,7 +38,9 @@ SEPAL offers an interactive and intuitive way to create mosaics in any area of i
 
 Once the mosaic recipe is selected, SEPAL will display the recipe process in a new tab (**1**) and the **AOI selection** window will appear in the lower right (**2**).
 
-![Landing page](../_images/cookbook/optical_mosaic/landing.png)
+![Landing page](../images/sepal/sepal_prep/sepal_prep_3.webp)
+
+
 
 The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited convention for your needs. Simply double-click the tab and write a new name. It will default to:
 
@@ -45,8 +48,8 @@ The first step is to change the name of the recipe. This name will be used to id
 Optical_mosaic_<start_date>_<end_date>_<band name>
 ```
 
-![Default title](../_images/cookbook/optical_mosaic/default_title.png)
-![Modified title](../_images/cookbook/optical_mosaic/modified_title.png)
+![Default title](../images/sepal/sepal_prep/sepal_prep_4.webp)
+![Modified title](../images/sepal/sepal_prep/sepal_prep_5.webp)
 
 > **Note:**
 >
@@ -66,7 +69,7 @@ In the lower-right corner, five tabs allow you to customize the mosaic creation:
 - `SCN`: Scene selection parameters.
 - `CMP`: Composition parameters.
 
-![Mosaic parameters](../_images/cookbook/optical_mosaic/no_parameters.png)
+![Mosaic parameters](../images/sepal/sepal_prep/sepal_prep_6.webp)
 
 ### AOI selection
 
@@ -78,7 +81,7 @@ The data exported by the recipe will be generated from within the bounds of the 
 
 For more details, see [AOI selection](../feature/aoi_selector).
 
-![Select AOI](../_images/cookbook/optical_mosaic/aoi.png)
+![Select AOI](../images/sepal/sepal_prep/sepal_prep_7.webp)
 
 ### Date
 
@@ -86,7 +89,7 @@ For more details, see [AOI selection](../feature/aoi_selector).
 
 In the `DAT` tab, select a year for the pixels in the mosaic. Then click `Apply`.
 
-![Year selection](../_images/cookbook/optical_mosaic/select_year.png)
+![Year selection](../images/sepal/sepal_prep/sepal_prep_8.webp)
 
 #### Seasonal mosaic
 
@@ -96,7 +99,7 @@ Expand the date selection tool in the `DAT` panel and select a season of interes
 - Use the slider to define a season around the target date.
 - Adjust past/future season parameters to increase the pool of images.
 
-![Season selection](../_images/cookbook/optical_mosaic/select_season.png)
+![Season selection](../images/sepal/sepal_prep/sepal_prep_9.webp)
 
 ### Sources
 
@@ -107,7 +110,7 @@ A mosaic uses different raster datasets obtained from multiple sources. SEPAL al
 - **L4-5**: [Landsat 4 & 5 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C01_T1)
 - **A+B**: [Sentinel-2 Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2)
 
-![Source selection](../_images/cookbook/optical_mosaic/select_source.png)
+![Source selection](../images/sepal/sepal_prep/sepal_prep_10.webp)
 
 ### Scenes
 
@@ -121,7 +124,7 @@ You can select scenes manually or automatically:
   - **Target date**: Prioritizes images that match the target date.
   - **Balanced**: Maximizes both cloud-free and target date criteria.
 
-![Scene selection](../_images/cookbook/optical_mosaic/scene_method.png)
+![Scene selection](../images/sepal/sepal_prep/sepal_prep_11.webp)
 
 ### Composite
 
@@ -139,7 +142,7 @@ You can select scenes manually or automatically:
 
 Define the compositing method for the final image.
 
-![Composite options](../_images/cookbook/optical_mosaic/composite_options.png)
+![Composite options](../images/sepal/sepal_prep/sepal_prep_12.webp)
 
 ### Analysis
 
@@ -149,7 +152,7 @@ Select scenes and begin the analysis using the top-right menu:
 - `Clear selected scenes` (`trash` icon)
 - `Retrieve mosaic` (`cloud download` icon)
 
-![Analysis menu](../_images/cookbook/optical_mosaic/analysis.png)
+![Analysis menu](../images/sepal/sepal_prep/sepal_prep_13.webp)
 
 ### Retrieve
 
@@ -164,7 +167,7 @@ Export the image to:
 
 > **Note:** If `Google Earth Engine Asset` is not displayed, ensure your GEE account is connected to SEPAL.
 
-![Retrieve pane](../_images/cookbook/optical_mosaic/retrieve.png)
+![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14.webp)
 
 ### Exportation status
 
@@ -174,8 +177,8 @@ Monitor task progress in the **Tasks** tab (bottom-left corner).
 - Check for errors.
 - Monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
 
-![Download process](../_images/cookbook/time_series/download.png)
-![Download complete](../_images/cookbook/time_series/download_complete.png)
+![Download process](../images/sepal/sepal_prep/sepal_prep_15.webp)
+![Download complete](../images/sepal/sepal_prep/sepal_prep_16.webp)
 
 ### Access
 
