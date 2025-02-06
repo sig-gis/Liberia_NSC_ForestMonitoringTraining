@@ -189,7 +189,6 @@ You need to select the band(s) to export with the mosaic. There is no maximum nu
 #### *Dates*
 
 - `dayofyear`: the Julian calendar date (day of the year)
-
 - `dayfromtarget`: the distance to the target date within the season in days
 
 ##### **Scale**
