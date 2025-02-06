@@ -236,6 +236,8 @@ Once downloaded, the data is stored in the `Downloads` folder. You can access it
 
 The data are stored in a folder using the name of the optical mosaic as it was created in the first section of this article. As the number of data is spatially too big to be exported at once, the data are divided into smaller pieces and brought back together in a `<MO name>_<gee tile id>.vrt` file.
 
+![Download process](../images/sepal/sepal_prep/sepal_prep_19.png)
+
 
 > **Tip:**
 >
