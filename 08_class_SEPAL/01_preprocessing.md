@@ -126,70 +126,103 @@ Let's select L9 Tier 1 and click `Done`.
 You can select scenes for mosaic manually or automatically:
 
   - **Use all scenes**: Includes all available images based on date parameters.
-  - **Select scenes**: Prioritize based on the following **Priority** options:
-  - _Cloud-free_: Prioritizes images with zero or few clouds.
-  - _Target date_: Prioritizes images that match the target date.
-  - _Balanced_: Maximizes both cloud-free and target date criteria.
+  - **Select scenes**: select one of the following **Priority** options:
+  - _Cloud free_: prioritizes images with zero or few clouds.
+  - _Target date_: prioritizes images that match the target date.
+  - _Balanced_: maximizes both cloud-free and target date criteria.
 
-![Scene selection](../images/sepal/sepal_prep/sepal_prep_11.webp)
+Let's select **Use all scenes** and click `Apply`.
+
+![Scene selection](../images/sepal/sepal_prep/sepal_prep_11.png)
 
 ### Composite
 
 > **Note:**
 >
-> Default settings:
+> Default options:
 >
 > - **Correction**: `SR`, `BRDF`
-> - **Pixel filters**: None
+> - **Pixel filters**: No filters
 > - **Cloud detection**: `QA bands`, `Cloud score`
 > - **Cloud masking**: `Moderate`
 > - **Cloud buffering**: `None`
 > - **Snow masking**: `On`
 > - **Composing method**: `Medoid`
 
-Define the compositing method for the final image.
+For our workshop, let's keep these at default options, but feel free to test around with the different options and see more information in SEPAL documentation, under [Composite](https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html). Click `Apply`.
 
-![Composite options](../images/sepal/sepal_prep/sepal_prep_12.webp)
+![Composite options](../images/sepal/sepal_prep/sepal_prep_12.png)
 
 ### Analysis
 
-Select scenes and begin the analysis using the top-right menu:
+In the upper-right corner, three tabs are available, which allow you to customize the mosaic scene selection and export the final result:
 
-- `Auto-select scenes` (`magic wand` icon)
-- `Clear selected scenes` (`trash` icon)
-- `Retrieve mosaic` (`cloud download` icon)
+- `Auto-select scenes` *magic wand* icon
+- `Clear selected scenes` *trash bin* icon
+- `Retrieve mosaic` *cloud download* icon
 
-![Analysis menu](../images/sepal/sepal_prep/sepal_prep_13.webp)
+![Analysis menu](../images/sepal/sepal_prep/sepal_prep_13.png)
+
+> **Note:** 
+> 
+> Since we have not selected the option **Select scenes** in the `SCN` tab, `Auto-select scenes` button will be disabled for us and the scene areas will be hidden as no scene selection needs to be performed.
+>
+> If you can’t see the image scene area (such as in the image below), you probably have selected a small AOI. Zoom out on the map and you will see the number of available images in the circles.
+
+![Analysis menu](../images/sepal/sepal_prep/sepal_prep_13_5.png)
 
 ### Retrieve
 
 > **Important:**
 >
-> Exporting requires a small computation quota. See [Resource setup](../setup/resource).
+> Exporting of a `.tiff` file requires a small computation quota (see [Resource setup](https://docs.sepal.io/en/latest/setup/resource.html)).
 
-Export the image to:
+Click the `Retrieve mosaic` button (*cloud download* icon) to open the `Retrieve` pane where you can select the parameters for exporting.
 
-- `SEPAL workspace` (downloads as `.tif` file).
-- `Google Earth Engine Asset`.
+#### Bands
+You need to select the band(s) to export with the mosaic. There is no maximum number of bands, but exporting useless bands will only increase the size and time of the output. To discover the full list of available bands with SEPAL, see Optical Satellite bands, transformations, and indices.
 
-> **Note:** If `Google Earth Engine Asset` is not displayed, ensure your GEE account is connected to SEPAL.
+> **Tip:**
+> 
+> There is no fixed rule to the band selection. Each index is more adapted to a set of analyses in a defined biome. The knowledge of the study area, the evolution expected and the careful selection of an adapted band combination will improve the quality of downstream analysis.
 
-![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14.webp)
+##### Dates
+
+`dayofyear`: the Julian calendar date (day of the year)
+
+`dayfromtarget`: the distance to the target date within the season in days
+
+#### Scale
+You can set a custom scale for exportation by changing the value of the slider in metres (m) (note that requesting a smaller resolution than images’ native resolution will not improve the quality of the output – just its size – keep in mind that the native resolution of Sentinel data is 10 m, while Landsat is 30 m.)
+
+#### Destination
+You can export the image to the SEPAL workspace or to the Google Earth Engine Asset folder. The same image will be exported to both; however, for the former, you will find it in `.tif` format in the `Downloads` folder; for the latter, the image will be exported to your GEE account asset list.
+
+Select `Apply` to start the download process.
+
+> **Note:** If `Google Earth Engine Asset` is not displayed, ensure your [GEE account is connected to SEPAL](https://docs.sepal.io/en/latest/setup/gee.html).
+
+![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14.png)
 
 ### Exportation status
 
-Monitor task progress in the **Tasks** tab (bottom-left corner).
+Monitor task progress in the **Tasks** tab (bottom-left corner of the screen). 
 
-- View task progress.
-- Check for errors.
-- Monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
+If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
 
-![Download process](../images/sepal/sepal_prep/sepal_prep_15.webp)
-![Download complete](../images/sepal/sepal_prep/sepal_prep_16.webp)
+![Download process](../images/sepal/sepal_prep/sepal_prep_15.png)
+![Download process](../images/sepal/sepal_prep/sepal_prep_16.png)
+
+> **Tip:**
+>
+> This operation is running between GEE and SEPAL servers in the background. You can close the SEPAL page without stopping the process.
+
+When the task is finished, the frame will be displayed in green.
+
 
 ### Access
 
-Once downloaded, the data is stored in the `Downloads` folder:
+Once downloaded, the data is stored in the `Downloads` folder. You can access it using the following format:
 
 ```bash
 .
@@ -199,8 +232,11 @@ Once downloaded, the data is stored in the `Downloads` folder:
         └── <MO name>_<gee tile id>.vrt
 ```
 
+The data are stored in a folder using the name of the optical mosaic as it was created in the first section of this article. As the number of data is spatially too big to be exported at once, the data are divided into smaller pieces and brought back together in a `<MO name>_<gee tile id>.vrt` file.
+
+
 > **Tip:**
 >
 > The full folder structure is required to read the `.vrt` file.
 
-Now that you've downloaded the optical mosaic, you can use it in other SEPAL workflows or transfer it to your computer using [FileZilla](../setup.filezilla.html).
+Now that you've downloaded the optical mosaic, you can use it in other SEPAL workflows or transfer it to your computer using [FileZilla](https://filezilla-project.org/).
