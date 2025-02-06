@@ -111,19 +111,17 @@ You can also expand the date selection tool in the `DAT` panel by clicking `More
 
 A mosaic uses different raster datasets obtained from multiple sources. SEPAL allows you to select data from multiple entry points:
 
-- **L9**: Landsat 9 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1)
+- **L9**: Landsat 9 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
+- **L8**: Landsat 8 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
+- **L7**: Landsat 7 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
+- **S2**: Sentinel-2 [Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
 
-
-- **L8**: [Landsat 8 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1)
-- **L7**: [Landsat 7 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1)
-- **L4-5**: [Landsat 4 & 5 Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T1)
-- **A+B**: [Sentinel-2 Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
-
-![Source selection](../images/sepal/sepal_prep/sepal_prep_10.webp)
+Select all available options and click `Done`.
+![Source selection](../images/sepal/sepal_prep/sepal_prep_10.png)
 
 ### Scenes
 
-> **Note:** If Sentinel and Landsat data have been selected, all scenes must be used due to different tiling systems.
+> **Note:** If Sentinel and Landsat data have been selected, you will need to use all scenes. As the tiling system from Sentinel and Landsat data are different, it’s impossible to select scenes using the tool presented in the following sections.
 
 You can select scenes manually or automatically:
 
