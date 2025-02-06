@@ -36,14 +36,13 @@ The processing infrastructure automatically parallelizes analysis across many pr
 <font size=2> Source: Google </font>
 
 
-### Advantages over traditional desktop software
-GEE provides a friendly interface to explore, retrieve and visualize (zoom/pan) satellite imagery without the need to download data, saving us time, disk storage space and network resources. Satellite products usually consist of heavy files in raster (tiff, hd5, etc.) or vectorial (kml, shapefile, xlm, etc.) formats.
+GEE provides a friendly interface to explore, retrieve and visualize satellite imagery without the need to download data.
 
 ### Introduction to JavaScript (JS)
-JavaScript (JS) Application Programming Interface (API) is a programming language to write and debug code, visualize data, and develop online applications in GEE.  The Python language is also available to be used, however this training will be based on JS. In case it is needed, a translation from JS to Python (or vice versa) is easy to be implemented, and there are currently tools available to make this process automatically. In addition, the JS API is the most developed and easiest programming language to utilize when getting started.
+JavaScript (JS) Application Programming Interface (API) is a programming language to write and debug code, visualize data, and develop online applications in GEE. The Python language is also available to be used, however the JS API is the most developed and easiest programming language to utilize when getting started, so we will focus on JS. In case it is needed, a translation from JS to Python (or vice versa) is easy to be implemented, and there are currently tools available to make this process automatically.
 
 ### Analyzing programming structure.
-Learning how to code JavaScript is not complicated.  The online code-editor allows mostly a structured-procedural programming paradigm. It means the code has a simple sintaxis and can be divided into functions. Main JS reserved words and commands that you might end up getting familiar with are:
+The online code-editor allows mostly a structured-procedural programming paradigm. It means the code has a simple sintaxis and can be divided into functions. Main JS reserved words and commands that you might end up getting familiar with are:
 
 - *var*: to declare new variables or functions
 - *Import* and *Export*: to import and export datasets
@@ -61,7 +60,7 @@ Earth Engine's public data archive includes more than forty years of historical 
 - More than 100 data sets added annually
 - 1+ PB of new data every month
 
-(These numbers are always being updated)
+*These numbers are always being updated*
 
 Types of data:
 
@@ -86,14 +85,11 @@ To explore all datasets:
 
 ## Application Programming Interface (API)
 
-An Application Programming Interface (API) is a way to communicate with Earth Engine servers. It allows you to specify which calculation you would like to do and then receive the results. The API is designed so that users don't have to worry about how the computation is distributed across a group of coputers and how the results are assembled. API users simply specify what should be done. This greatly simplifies the code by hiding implementation details from users. It also makes Earth Engine very accessible to users who are not familiar with writing code.
-
-The Earth Engine API is designed to be language independent. Google provides official client libraries for using the API from JavaScript and Python. The API remains pretty much the same no matter what programming language you use. The main difference is the syntax used to call the API functions. Once you learn the syntax of the programming languages, your code can be easily adapted because they all use the same API functions.
+An (API) is a way to communicate with GEE servers. The API is designed so that users don't have to worry about how the computation is distributed across a group of computers and how the results are assembled. As users, we simply specify what should be done, making GEE very accessible to users who are not familiar with writing code.
 
 ## Apps
 
-Codes can be converted into applications maintained on Google Earth Engine. You can also use the Python API to develop a web application, with great control over the app's interface.
-
+Codes can be converted into applications maintained on GEE:
 <img align="center" src="../images/intro-gee/fig4.png" vspace="10" width="600">
 
 <font size=2> Earth Engine Application: MODIS Ocean Temperature - Time Series Inspector. Source: https://google.earthengine.app/view/ocean. </font>
@@ -122,7 +118,9 @@ Examples of applications:
 
 ## Interface
 
-The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
+The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. 
+
+Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
 
 <img align="center" src="../images/intro-gee/fig5.png" vspace="10" width="600">
 
