@@ -22,17 +22,33 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 2. On the left side of your GEE code editor under the scripts tab you will now see **projects/AREA2/public** listed under the **Reader** access repositories. You can click the drop down arrow to view the included scripts.
 <img align="center" src="../images/sampling/AREA2_repository.png"  vspace="10" width="400"> 
 
+3. We will only be using the **Stratified Random Sampling** tool under the Sampling Design subfolder. Double click that script to open it in the code editor.
+
+<span style="color: blue;">**Note:**</span> You can choose to save a copy of the script to your local repository instead of using the public repository directly. You will still be referencing the files in the public 'projects/AREA2/public:utilities/misc' folder. You may choose to copy this folder to your local repository as well and change the path in the scipt to reference you local location for it.
+
 *The further directions below are directly from https://area2.readthedocs.io/en/latest/getting_started.html*.
 
-3. To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the Run button (located in the Code Editor).
-4. When running the scripts in AREA 2, a Dialog Pane will appear (E). The Dialog Pane is where you specify the information required for each step of the sampling design, response design, and analysis. Note that after communicating via the Dialog Pane (loading a map for example), **Earth Engine does not indicate if the application running. Therefore, push the buttons only once and wait for the application to respond before continuing.**
+4. To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the Run button (located in the Code Editor).
+5. When running the scripts in AREA 2, a Dialog Pane will appear (E). The Dialog Pane is where you specify the information required for each step of the sampling design, response design, and analysis. Note that after communicating via the Dialog Pane (loading a map for example), **Earth Engine does not indicate if the application running. Therefore, push the buttons only once and wait for the application to respond before continuing.**
 6. The Console (C) displays output specified by script. If errors occur while running a script, the error messages are displayed here.
 7. The Map (D) is where spatial data is displayed.
 
 <img align="center" src="../images/sampling/AREA2_tool_overview.png"  vspace="10" width="800"> 
 
-# 1. Uploading your stratification map
+
+# 1. Using the AREA2 Stratified Random Sampling Tool
 For now we have pre-loaded a stratification map as a GEE asset for you. You will learn how to upload your own assets later in the workshop.
+
+1. Enter the asset path for your land cover stratification map 
+
+*'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014'*.
+
+2. This is not a multi-band image so leave the next parameter as 1, and leave the mask value as 0.
+
+3. Set the spatial resolution to 10m. This depends on the pixel size of your selected stratification map.
+
+<img align="center" src="../images/sampling/AREA2_gui_page1.png"  vspace="10" width="800"> 
+
 
 
 
