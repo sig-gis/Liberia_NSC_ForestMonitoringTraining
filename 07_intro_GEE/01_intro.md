@@ -7,11 +7,15 @@ nav_order: 1
 
 # Introduction to GEE
 
-Welcome to an Introduction to Google Earth Engine (GEE)! This workshop will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the [EEFA](https://eefabook.org) book .
+Here we will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the [EEFA](https://eefabook.org) book.
 
 ## Pre-configuration
 
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register). You need a [Google account](https://accounts.google.com/signup). Create a GEE account for non-commercial purposes.
+Create a [Google Earth Engine account](https://code.earthengine.google.com/register). 
+
+You will need a [Google account](https://accounts.google.com/signup). 
+
+Create a GEE account for non-commercial purposes.
 
 <font color = red> join a google cloud project? </font>
 
@@ -23,32 +27,14 @@ Create a [Google Earth Engine account](https://code.earthengine.google.com/regis
 
 ## What is Google Earth Engine?
 
-“A planetary-scale platform for Earth science data & analysis”.
+GEE combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. We use GEE to detect changes, map trends, and quantify differences on the Earth's surface. GEE is available for commercial use, but remains free for academic and research use.
 
-Google Earth Engine combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. Scientists, researchers, and developers use Earth Engine to detect changes, map trends, and quantify differences on the Earth's surface. Earth Engine is now available for commercial use, and remains free for academic and research use.
-
-The processing infrastructure automatically parallelizes analysis across many processors on many computers in Google data centers. That results in reduction of processing times by orders of magnitude through the use of cloud-based and distributed computing power. In addition, the data is all centralized in the cloud.
+The processing infrastructure automatically parallelizes analysis across many processors on many computers in Google data centers, reducing  processing times by orders of magnitude. In addition, the data is all centralized in the cloud.
 
 <img align="center" src="../images/intro-gee/fig1.png" vspace="10" width="600">
 
 <font size=2> Source: Google </font>
 
-Goals:
-
-"Our mission is to organize the world's geospatial information and make it universally accessible and useful."
-
-- Facilitate
-- Scalable, script sharing
-- Access to all
-
-Focused on current problems:
-
-- Logging
-- Disasters
-- Climate change
-- Drought
-- Diseases
-- Sustainability
 
 ### Advantages over traditional desktop software
 GEE provides a friendly interface to explore, retrieve and visualize (zoom/pan) satellite imagery without the need to download data, saving us time, disk storage space and network resources. Satellite products usually consist of heavy files in raster (tiff, hd5, etc.) or vectorial (kml, shapefile, xlm, etc.) formats.
@@ -122,18 +108,8 @@ Some of GEE's applications include:
 - Air quality monitoring
 - Surface water mapping
 
-<font color = red> Examples of applications developed by SERVIR based on or using GEE:
 
-- [RAMI](https://rami.servirglobal.net/) - SERVIR-Amazon
-- [RLCMS](https://landcovermapping.org/en/landcover/) - SERVIR-Mekong & SERVIR-HKH
-- [Collect Earth Online](https://collect.earth) - SERVIR Global
-- [HYDRAFloods](https://hydrafloods-servir.adpc.net/map/) - SERVIR-Mekong
-- [EcoDash](http://ecodash-servir.adpc.net/) - SERVIR-Mekong
-- [Wheat Mapping](http://geoapps.icimod.org/afwheat/) - SERVIR-HKH
-- [Fire Forecasting](https://servir-amazonia.earthengine.app/view/aptitud-incendios) - SERVIR-Amazonia
-</font>
-
-General examples of applications:
+Examples of applications:
 
 - [Fire Monitoring in the Amazon](https://gis-acca.users.earthengine.app/view/amazon-fire-tracker) - Monitoring of the Andean Amazon Project
 - [Global Forest Change](https://glad.earthengine.app/view/global-forest-change) - University of Maryland
@@ -146,17 +122,24 @@ General examples of applications:
 
 ## Interface
 
-The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. Once you have followed Google's documentation on registering an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/). When you first visit the Code Editor, you'll see a screen like the one below.
+The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
 
 <img align="center" src="../images/intro-gee/fig5.png" vspace="10" width="600">
 
-The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: In the `Scripts` section you have all your code stored and organized in repositories, folders, subfolders and files. You can organize your scripts by project, and you can also share access or editing permissions with other GEE users. `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. In `Assets` you can store and organize files that you upload from your computer or download from GEE. In the center, you'll find the web-based code editor where you can insert your JavaScript code without any prior software installation. With the `Apps` button, you can develop small automated applications to process and display data in a more user-friendly manner and interface, while the `Run` button executes the code. On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script. We'll see the functionality of these as we go through the next few exercises.
+The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: 
+- In the `Scripts` section you have all your code stored and organized in repositories, folders, subfolders and files. You can organize your scripts by project, and you can also share access or editing permissions with other GEE users. 
+- `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. 
+- In `Assets` you can store and organize files that you upload from your computer or download from GEE. 
+
+In the center, you'll find the web-based code editor where you can insert your JavaScript code without any prior software installation: with the `Apps` button, you can develop small automated applications to process and display data in a more user-friendly manner and interface, while the `Run` button executes the code. 
+
+On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script. We'll see the functionality of these as we go through the next few exercises.
 
 <img align="center" src="../images/intro-gee/fig7.png" vspace="10" width="700">
 
 ## Exercise: my first script
 
-The Code Editor allows you to write JavaScript code and run it. When you are learning a new language for the first time and getting used to a new programming environment, it is customary to make a program to display the words "Hello World". This is a fun way to start coding that shows you how to give input to the program and how to run it. We can also see where the program displays the output. Doing this in JavaScript is pretty simple. Copy the following code in the middle panel.
+The Code Editor allows you to write JavaScript code and run it. Let's try to display the words "Hello World". Copy the following code in the middle panel.
 
 ```javascript
 print('Hello World');
@@ -170,7 +153,7 @@ Now you know where to write your code, how to run it, and where to look for the 
 
 <img align="center" src="../images/intro-gee/fig17.png" vspace="10" width="600">
 
-If this is your first time in Code Editor, a screen will appear to create your home directory: Your home directory is a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it cannot be changed and will always be associated with your account. A good choice for the name would be the username of your Google account.
+If this is your first time in Code Editor, a screen will appear to create your home directory: a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it cannot be changed and will always be associated with your account. A good choice for the name would be the username of your Google account.
 
 <img align="center" src="../images/intro-gee/fig6.png" vspace="10" width="400">
 
