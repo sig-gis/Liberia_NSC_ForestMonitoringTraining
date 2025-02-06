@@ -58,7 +58,7 @@ But it is recommended to use the following naming convention:
 ```
 
 
-![Default title](../images/sepal/sepal_prep/sepal_prep_4.png)
+![Default title](../images/sepal/sepal_prep/sepal_prep_4.png) 
 ![Modified title](../images/sepal/sepal_prep/sepal_prep_5.png)
 
 
@@ -179,23 +179,23 @@ In the upper-right corner, three tabs are available, which allow you to customiz
 
 Click the `Retrieve mosaic` button (*cloud download* icon) to open the `Retrieve` pane where you can select the parameters for exporting.
 
-#### Bands
+##### **Bands**
 You need to select the band(s) to export with the mosaic. There is no maximum number of bands, but exporting useless bands will only increase the size and time of the output. To discover the full list of available bands with SEPAL, see Optical Satellite bands, transformations, and indices.
 
 > **Tip:**
 > 
 > There is no fixed rule to the band selection. Each index is more adapted to a set of analyses in a defined biome. The knowledge of the study area, the evolution expected and the careful selection of an adapted band combination will improve the quality of downstream analysis.
 
-##### Dates
+#### *Dates*
 
-`dayofyear`: the Julian calendar date (day of the year)
+- `dayofyear`: the Julian calendar date (day of the year)
 
-`dayfromtarget`: the distance to the target date within the season in days
+- `dayfromtarget`: the distance to the target date within the season in days
 
-#### Scale
+##### **Scale**
 You can set a custom scale for exportation by changing the value of the slider in metres (m) (note that requesting a smaller resolution than images’ native resolution will not improve the quality of the output – just its size – keep in mind that the native resolution of Sentinel data is 10 m, while Landsat is 30 m.)
 
-#### Destination
+##### **Destination**
 You can export the image to the SEPAL workspace or to the Google Earth Engine Asset folder. The same image will be exported to both; however, for the former, you will find it in `.tif` format in the `Downloads` folder; for the latter, the image will be exported to your GEE account asset list.
 
 Select `Apply` to start the download process.
