@@ -149,7 +149,7 @@ Let's select **Use all scenes** and click `Apply`.
 > - **Snow masking**: `On`
 > - **Composing method**: `Medoid`
 
-For our workshop, let's keep these at default options, but feel free to test around with the different options and see more information in SEPAL documentation, under [Composite](https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html). Click `Apply`.
+For our workshop, we will use the default settings, but we encourage you to explore different options and refer to SEPAL documentation under [Composite] for further details(https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html). Click `Apply`.
 
 ![Composite options](../images/sepal/sepal_prep/sepal_prep_12.png)
 
