@@ -33,7 +33,7 @@ SEPAL offers an interactive and intuitive way to create mosaics in any area of i
 
 ## Start
 
-At the top-left of your screen, click the green `Add recipe` button and type `mosaic` to select the `Optical mosaic` recipe.
+At the top-left of your screen, click the green `Add recipe` button and type **mosaic** to select the `Optical mosaic` recipe.
 
 ![Add recipe](../images/sepal/sepal_prep/sepal_prep_2_5.png)
 ![Mosaic](../images/sepal/sepal_prep/sepal_prep_2_6.png)
@@ -41,7 +41,7 @@ At the top-left of your screen, click the green `Add recipe` button and type `mo
 
 Once the mosaic recipe is selected, SEPAL will display the recipe process in a new tab (**1**) and the **AOI selection** window will appear in the lower right (**2**).
 
-![Landing page](../images/sepal/sepal_prep/sepal_prep_3.webp)
+![Landing page](../images/sepal/sepal_prep/sepal_prep_3.png)
 
 
 
@@ -72,7 +72,7 @@ In the lower-right corner, five tabs allow you to customize the mosaic creation:
 - `SCN`: Scene selection parameters.
 - `CMP`: Composition parameters.
 
-![Mosaic parameters](../images/sepal/sepal_prep/sepal_prep_6.webp)
+![Mosaic parameters](../images/sepal/sepal_prep/sepal_prep_6.png)
 
 ### AOI selection
 
@@ -212,6 +212,9 @@ If you have selected GEE Asset as a destination, then you can also monitor tasks
 
 ![Download process](../images/sepal/sepal_prep/sepal_prep_15.png)
 ![Download process](../images/sepal/sepal_prep/sepal_prep_16.png)
+![Download process](../images/sepal/sepal_prep/sepal_prep_17.png)
+![Download process](../images/sepal/sepal_prep/sepal_prep_18.png)
+
 
 > **Tip:**
 >
