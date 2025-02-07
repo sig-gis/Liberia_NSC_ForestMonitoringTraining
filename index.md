@@ -5,7 +5,10 @@ nav_order: 1
 ---
 
 # Liberia Geospatial Capacity Building Workshops for Forest Monitoring
-This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's [concept note](https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing).
+This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's [concept note and full agenda](https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing).
+
+#### Instructors:
+Crystal Wespestad and Jarrett Barbuto from Spatial Informatics Group, LLC. (SIG)
 
 ## Expected outcomes of the workshop
 
@@ -65,3 +68,17 @@ The lesson content for each workshop can be found in the tabs on the lefthand si
 At the end of the workshop please fill out the form below to provide feedback. It helps us improve future workshops and plan follow up events for you!
 
 [Give Feedback](https://forms.gle/8Jdm1aybL9sqzNEw6){: .btn .btn-purple }
+
+
+# Support
+
+This workshop was created by Spatial Informatics Group, contracted by NovaSphere.
+
+The **MRV for Climate Action** Programme supports partner countries’ national development priorities and capacities to plan, finance, and achieve GHG emission reductions and the implementation of low-carbon solutions to local development challenges.
+
+Towards these goals, Liberia has prepared a "National Evergreen Roadmap” (EG Roadmap) that outlines approaches to accelerate climate actions; strengthen and enhance multi-level climate governance, develop a more effective and efficient MRV system, and mobilize climate finance and investment. The coordinating framework also identifies support for global south-south cooperation.
+
+Under the leadership of the Environmental Protection Agency of Liberia (EPA)—the EG Roadmap is the result of inter-ministerial and non-state actors’ collaboration, and was subsequently validated and endorsed by the participants at the MRV for Climate Action
+Farmington Roundtable held in Monrovia, Jan 18-20, 2023.
+
+Under the leadership of the EPA, the EG Roadmap is now informing the creation and implementation of strategic Transformative Pilots by national key actors and stakeholders.

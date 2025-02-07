@@ -97,7 +97,8 @@ It performs well in predicting most classes, but may struggle with classes that 
 - **Memory-Intensive** – Storing multiple decision trees can be memory-consuming, especially when working with very large datasets.
 - **Less Interpretable Than a Single Decision Tree** – Unlike a simple decision tree, where the decision-making process is easy to follow, Random Forest operates as an ensemble, making it harder to interpret and explain decisions.
 
-
+<br />
+<br />
 
 ## Sources
 - Analytics Vidhya. (2021, June). Understanding Random Forest Algorithm With Examples. Retrieved from https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/
