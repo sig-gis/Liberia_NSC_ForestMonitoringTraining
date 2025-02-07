@@ -10,14 +10,25 @@ nav_order: 2
 
 ### Please complete the following before the workshop:
 
+- Join the workshop Google Group (for file sharing and GEE Cloud Project access)
 - Make a SEPAL account and request additional resources (for days 1 and 5).
 - Create a Collect Earth Online account and join the Liberia workshop institution (for day 2).
 - Download Pix4Dmapper software to your computer, download the Pix4Dcapture app to your phone, and activate your free 14-day Pix4D trial (for days 2, 3, and 4).
 - Install QGIS (for days 2, 3, and 4)
-- Make a Google Earth Engine account (for days 4 and 5).
+- Make a Google Earth Engine account (for days 1, 2, 4, and 5)
+    - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a *Workshop type* GEE Cloud Project of your own 
 - <font color = red> Download Google Earth Pro software to your computer (for day X).  </font>
 
 
+## Workshop Google Group
+
+Sign in to [Google Groups](https://groups.google.com/) or click on the square of 9 dots at the top right of your gmail.
+
+Set the search dropdown to “All groups and messages”.
+
+Search for **Liberia_forest_workshop**.
+
+Click on the group and then click the *Ask to join group* button.
 
 
 ## SEPAL Account

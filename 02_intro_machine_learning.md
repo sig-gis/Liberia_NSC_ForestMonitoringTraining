@@ -18,9 +18,9 @@ It involves training algorithms on large datasets to identify patterns and relat
 
 ## Random Forest
 
-A model is the mathematical function or algorithm that learns patterns from data and makes predictions. One of the things a model can be used fore is **classification**, for our case it will be image classification.
+A model is the mathematical function or algorithm that learns patterns from data and makes predictions. One of the things a model can be used for is **classification**, for our case it will be image classification.
 
-A **Random Forest** is a machine learning model that makes predictions by combining multiple decision trees. It is called a "forest" because it consists of many trees, and each tree votes to make the final decision.
+**Random Forest** is a machine learning model that makes predictions by combining multiple decision trees. It is called a "forest" because it consists of many trees, and each tree votes to make the final decision.
 
 In machine learning, a **classifier** is an algorithm that automatically sorts data into categories or classes. The goal of a classifier is to learn from training data and make accurate predictions about new data.
 
