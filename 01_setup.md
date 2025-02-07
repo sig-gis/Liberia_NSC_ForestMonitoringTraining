@@ -12,7 +12,7 @@ nav_order: 2
 - Make a SEPAL account and request additional resources (for days 1 and 5).
 - Create a Collect Earth Online account and join the Liberia workshop institution (for day 2).
 - Download Pix4Dmapper software to your computer, download the Pix4Dcapture app to your phone, and activate your free 14-day Pix4D trial (for days 2, 3, and 4).
-- <font color = red> Install QGIS? (for day 4) </font>
+- <font color = red> Install QGIS (for days 2, 3, and 4) </font>
 - Make a Google Earth Engine account (for days 4 and 5).
 - <font color = red> Download Google Earth Pro software to your computer (for day X).  </font>
 
@@ -177,6 +177,27 @@ Download it onto your phone and open it.
 
 Sign in with your Pix4D login information you created in step 1.
 
+## QGIS Software
+
+Download and install QGIS on your computer.
+
+Go to the official [QGIS Download Page](https://qgis.org/download/).
+
+Scroll down to the appropriate section based on your operating system (Windows, macOS, Linux).
+
+For Windows: Click on **Long Term Version for Windows**.
+
+For macOS: Select **Long Term Version for Mac OS**.
+
+After downloading the installer:
+
+**Windows**: Double-click the `.exe` file and follow the installation wizard.
+**macOS**: Open the `.dmg` file and drag QGIS to your Applications folder.
+
+Once installed, launch **QGIS** from your applications menu.
+
+QGIS should now be installed on your computer.
+
 ## GEE Account
 
 Make sure you have a Google Earth Engine account and you are able to open the code editor.
@@ -197,7 +218,7 @@ Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
 
 <img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
 
-Open the .exe file that is downloaded.
+Open the `.exe` file that is downloaded.
 
 <img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="600">
 
