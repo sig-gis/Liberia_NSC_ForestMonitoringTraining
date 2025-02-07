@@ -7,9 +7,12 @@ nav_order: 2
 
 # Classification with Random Forest in SEPAL
 
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=HBlYrwmq5ak)*.
+
+
 # Classification
 
-With this recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the classifier RandomForest – allowing users to create an easy-to-use user interface to:
+With this recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the RandomForest classifier – allowing users to create an easy-to-use user interface to:
 
 - select an image to classify
 - define the class table

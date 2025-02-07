@@ -7,6 +7,9 @@ nav_order: 1
 
 # Preprocessing Imagery in SEPAL
 
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=HiFOaXoclHQ)*.
+
+
 ## Optical mosaics
 
 A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together. This can be achieved on both contiguous rasters (first image below) and overlapping images (second image below).

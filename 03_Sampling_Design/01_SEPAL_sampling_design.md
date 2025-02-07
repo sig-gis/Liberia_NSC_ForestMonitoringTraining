@@ -15,6 +15,8 @@ These instructions are adapted from [OpenMRV](https://www.openmrv.org/web/guest/
 
 We will use the SEPAL Stratified Area Estimator (SAE)-Design tool to distribute sample points usind a stratified random sampling approach. The SAE-Design tool will generate a set of stratified random points that are placed in each of the different map classes (which we will now call strata) represented in your map. 
 
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=mbskeQNjj7A&t=4s)*.
+
 
 ## Pre-requisites
 - A SEPAL account and a Collect Earth Online (CEO) account. 
@@ -23,7 +25,7 @@ We will use the SEPAL Stratified Area Estimator (SAE)-Design tool to distribute 
 - If you have a large Area of Interest (AOI), you may need to first increase the size of your instance for faster processing (see `Terminal` section [here](https://docs.sepal.io/en/latest/setup/presentation.html)).
 
 
-# 1. Uploading your stratification map
+## 1. Uploading your stratification map
 You will need to upload a stratification map to SEPAL. 
 
 There are two tools that can be used to upload files. The first is RStudio, and the second is the File transfer Management app.
