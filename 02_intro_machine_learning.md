@@ -5,7 +5,7 @@ permalink: /02_Intro_MachineLearning
 nav_order: 3
 ---
 
-<img align="center" src="../images/ML/ML_machinelearning_graphic.pngpng" hspace="5" vspace="5" width="800">
+<img align="center" src="./images/ML/ML_machinelearning_graphic.pngpng" hspace="5" vspace="5" width="800">
 
 
 # Introduction to Machine Learning
@@ -28,7 +28,7 @@ A **Random Forest Classifier** is a model trained to classify images into catego
 
 It performs well in predicting most classes, but may struggle with classes that have similar characteristics.
 
-<img align="center" src="../images/ML/ML_randomforest_graphic.pngpng" hspace="5" vspace="5" width="700">
+<img align="center" src="./images/ML/ML_randomforest_graphic.pngpng" hspace="5" vspace="5" width="700">
 
 ### General Steps of Random Forest
 
@@ -41,7 +41,7 @@ It performs well in predicting most classes, but may struggle with classes that 
     - All trees are each a bit different as they are trained independently
     - Bootstrap sampling: A different random selection from the training data is used to train each tree
     - Random feature selection: At each node of the tree a random set of input variables (features) is chosen on which to base the decision of that node
-<img align="center" src="../images/ML/ML_randomtrees.png" hspace="5" vspace="5" width="600">
+<img align="center" src="./images/ML/ML_randomtrees.png" hspace="5" vspace="5" width="600">
 
 4. **Predict class labels for an image**
     - Given an image where none or only some of the pixel labels are known, each tree makes a predition for every pixel
@@ -50,7 +50,7 @@ It performs well in predicting most classes, but may struggle with classes that 
     - (e.g., majority answer)
 5. **Evaluate the model using the testing dataset**
 
-<img align="center" src="../images/ML/ML_full_process_graphic.pngpng" hspace="5" vspace="5" width="1000">
+<img align="center" src="./images/ML/ML_full_process_graphic.pngpng" hspace="5" vspace="5" width="1000">
 
 
 ## Other Terms to Know
