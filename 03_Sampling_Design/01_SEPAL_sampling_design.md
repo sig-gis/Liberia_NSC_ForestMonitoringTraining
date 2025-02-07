@@ -8,10 +8,7 @@ nav_order: 2
 
 # Sampling Design using SEPAL
 
-These instructions are adapted from [OpenMRV](https://www.openmrv.org/web/guest/w/modules/sepal-ceo/sample-design-and-stratification) and ....
-
-
-<font color = 'red'> Use [this resource](https://docs.google.com/document/d/1IlhoZKPuslPBu968-u3oaErL0sremN1Hekp3cctFQlA/edit?usp=sharing). SKIP? </font>
+These instructions are adapted from [OpenMRV](https://www.openmrv.org/web/guest/w/modules/sepal-ceo/sample-design-and-stratification).
 
 
 We will use the SEPAL Stratified Area Estimator (SAE)-Design tool to distribute sample points usind a stratified random sampling approach. The SAE-Design tool will generate a set of stratified random points that are placed in each of the different map classes (which we will now call strata) represented in your map. 

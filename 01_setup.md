@@ -17,7 +17,7 @@ nav_order: 2
 - Install QGIS (for days 2, 3, and 4)
 - Make a Google Earth Engine account (for days 1, 2, 4, and 5)
     - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a *Workshop type* GEE Cloud Project of your own 
-- <font color = red> Download Google Earth Pro software to your computer (for day X).  </font>
+- Download Google Earth Pro software to your computer (for CEO interpretation).
 
 
 ## Workshop Google Group
