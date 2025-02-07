@@ -2,6 +2,7 @@
 layout: page
 title:  "Sampling Design using AREA2"
 parent: "3. Sampling Design"
+permalink: /AREA2sampling
 nav_order: 3
 ---
 

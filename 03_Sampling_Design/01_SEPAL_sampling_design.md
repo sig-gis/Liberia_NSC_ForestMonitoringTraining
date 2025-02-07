@@ -2,6 +2,7 @@
 layout: page
 title:  "Sampling Design using SEPAL"
 parent: "3. Sampling Design"
+permalink: /SEPALsampling
 nav_order: 2
 ---
 

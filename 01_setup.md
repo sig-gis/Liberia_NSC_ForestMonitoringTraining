@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Pre-Workshop Setup
+title: "1. Pre-Workshop Set Up"
+permalink: /01_SetUp
 nav_order: 2
 ---
 
