@@ -8,7 +8,7 @@ nav_order: 1
 This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's [concept note and full agenda](https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing).
 
 #### Instructors:
-Crystal Wespestad and Jarrett Barbuto from Spatial Informatics Group, LLC. (SIG)
+Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis.com) from Spatial Informatics Group (SIG)
 
 ## Expected outcomes of the workshop
 
