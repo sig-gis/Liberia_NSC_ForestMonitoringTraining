@@ -46,7 +46,7 @@ On the new page, click `Request additional resources`.
 
 On the new page, fill out each field with the following values: $15, $15, and 30 GB (these are just dollar estimates of the amount of resources you will be using with your analyses on SEPAL - YOU DO NOT HAVE TO PAY THIS AMOUNT).  Also, fill out this brief message with your own information about what you are using SEPAL for:
 
-“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending one of SERVIR's geospatial analysis workshops at the <font color = red> University of Liberia?</font>, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
+“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending one of <font color = red> SERVIR's </font> geospatial analysis workshops at the <font color = red> University of Liberia?</font>, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
 
 <img align="center" src="images/setup/sepal-4.png" vspace="10" width="500">
 
