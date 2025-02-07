@@ -5,7 +5,7 @@ permalink: /02_Intro_MachineLearning
 nav_order: 3
 ---
 
-<img align="center" src="./images/ML/ML_machinelearning_graphic.pngpng" hspace="5" vspace="5" width="800">
+<img align="center" src="./images/ML/ML_machinelearning_graphic.png" hspace="5" vspace="5" width="800">
 
 
 # Introduction to Machine Learning
@@ -53,7 +53,7 @@ A **Random Forest Classifier** is a model trained to classify images into catego
 
 It performs well in predicting most classes, but may struggle with classes that have similar characteristics.
 
-<img align="center" src="./images/ML/ML_randomforest_graphic.pngpng" hspace="5" vspace="5" width="700">
+<img align="center" src="./images/ML/ML_randomforest_graphic.png" hspace="5" vspace="5" width="700">
 
 ### General Steps of Random Forest
 
@@ -75,7 +75,7 @@ It performs well in predicting most classes, but may struggle with classes that 
     - (e.g., majority answer)
 5. **Evaluate the model using the testing dataset**
 
-<img align="center" src="./images/ML/ML_full_process_graphic.pngpng" hspace="5" vspace="5" width="1000">
+<img align="center" src="./images/ML/ML_full_process_graphic.png" hspace="5" vspace="5" width="1000">
 
 
 ## Advantages of Random Forest
