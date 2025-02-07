@@ -38,17 +38,17 @@ Log in to your SEPAL account.
 
 On the lower right corner of the SEPAL page, click on the button that says `$ 0/h`.
 
-<img align="center" src="images/setup/sepal-2.png" vspace="10" width="600">
+<img align="center" src="images/setup/sepal-2.png" vspace="10" width="500">
 
 On the new page, click `Request additional resources`.
 
-<img align="center" src="images/setup/sepal-3.png" vspace="10" width="600">
+<img align="center" src="images/setup/sepal-3.png" vspace="10" width="500">
 
 On the new page, fill out each field with the following values: $15, $15, and 30 GB (these are just dollar estimates of the amount of resources you will be using with your analyses on SEPAL - YOU DO NOT HAVE TO PAY THIS AMOUNT).  Also, fill out this brief message with your own information about what you are using SEPAL for:
 
 “I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending one of SERVIR's geospatial analysis workshops at the <font color = red> University of Liberia?</font>, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
 
-<img align="center" src="images/setup/sepal-4.png" vspace="10" width="600">
+<img align="center" src="images/setup/sepal-4.png" vspace="10" width="500">
 
 Within a few days, SEPAL admins should grant you these resources, which will allow you to use SEPAL apps for free.
 
@@ -113,7 +113,7 @@ On the Account page, click the`Plans and Licenses` tab on the left, then the `Li
 
 Now, it should take you to a page that looks like this.  Click `Get a free trial`.
 
-<img align="center" src="images/setup/pix4d-5.png" vspace="10" width="300">
+<img align="center" src="images/setup/pix4d-5.png" vspace="10" width="340">
 
 Now, on the Licenses page, you should see your 15-day free trial.  You should be able to use Pix4Dmapper for free for 15 days.
 
@@ -137,7 +137,7 @@ On the new page, click `Download`.
 
 Open the `.msi` file that is downloaded.
 
-<img align="center" src="images/setup/pix4d-10.png" vspace="10" width="300">
+<img align="center" src="images/setup/pix4d-10.png" vspace="10" width="400">
 
 Click through the Pix4Dmapper Setup Wizard, and follow instructions on how to install the software.  Unless you want to change them, you can keep most of the default settings.  
 
@@ -225,7 +225,7 @@ Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
 
 Open the `.exe` file that is downloaded.
 
-<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="600">
+<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="400">
 
 Google Earth Pro should now be downloaded to your computer.
 
