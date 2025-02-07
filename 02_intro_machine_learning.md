@@ -1,12 +1,5 @@
 ---
 layout: page
-title:  "Intro to Machine Learning"
-parent: "1. Intro to Machine Learning"
-nav_order: 1
----
-
----
-layout: page
 title: "2. Introduction to Machine Learning"
 permalink: /02_Intro_MachineLearning
 nav_order: 3
