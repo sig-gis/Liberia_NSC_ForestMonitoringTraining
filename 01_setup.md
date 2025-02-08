@@ -58,7 +58,7 @@ On the new page, click `Request additional resources`.
 
 On the new page, fill out each field with the following values: $15, $15, and 30 GB (these are just dollar estimates of the amount of resources you will be using with your analyses on SEPAL - YOU DO NOT HAVE TO PAY THIS AMOUNT).  Also, fill out this brief message with your own information about what you are using SEPAL for:
 
-“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending one of workshop on geospatial analysis of forest change led by Spatial Informatics Group, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
+“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending a workshop on geospatial analysis of forest change led by Spatial Informatics Group, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
 
 <img align="center" src="images/setup/sepal-4.png" vspace="10" width="500">
 
@@ -83,7 +83,7 @@ You should then receive an email with a link to confirm your email.  Click this 
 
 Log in to your CEO account.
 
-On the main CEO page, in the search bar at the top left, search for an institution called “Liberia Geospatial Workshop.” Click `Visit`. <font color = "red"> is it called "The Environmental Protection Agency of Liberia (EPA)." </font>
+On the main CEO page, in the search bar at the top left, search for an institution called “The Environmental Protection Agency of Liberia (EPA).” Click `Visit`. <font color = "red"> is it called "The Environmental Protection Agency of Liberia (EPA)." </font>
 
 <img align="center" src="images/setup/ceo-2.png" vspace="10" width="600">
 
