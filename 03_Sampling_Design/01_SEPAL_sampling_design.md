@@ -149,11 +149,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
 8\. Next, click **Strata areas** on the left side of the screen.
 
- <img align="center" src="./images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
-
  a. In the **Area calculation** section, click “Area calculation and legend generation”. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
 
- <img align="center" src="./images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
 
  b. Next, you will need to adjust the class names in the **Legend labeling** section. Type in the following class names in place of the numeric codes for your Liberia map:
