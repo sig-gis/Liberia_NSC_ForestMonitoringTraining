@@ -17,7 +17,7 @@ nav_order: 2
 - Download Pix4Dmapper software to your computer, download the Pix4Dcapture app to your phone, and activate your free 14-day Pix4D trial (for days 2, 3, and 4).
 - Install QGIS (for days 2, 3, and 4)
 - Make a Google Earth Engine account (for days 1, 2, 4, and 5)
-    - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own 
+    - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own. 
 
 
 ## Workshop Google Group
