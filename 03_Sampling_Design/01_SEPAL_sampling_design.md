@@ -229,7 +229,11 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then determine the **minimum sample size per strata**. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
 
- e. You can also check the “Do you want to modify the sampling size” box. <font color='red'> What does this checkbox entail? Exported with this box selected and not selected, got the same (except for the coordinates) results for both cases. Not explained in the [SEPAL docs here](https://docs.sepal.io/en/latest/workflows/area_estimation.html). **_UPDATE:_** Found that it is used to update the table on the right with the new input in the **Minimum sample size per strata** cell. If unselected, then the number in the table will update automatically. If selected, then need to unselect (and select again) to update the number. </font>
+ e. You can also check the “Do you want to modify the sampling size” box to update the table on the right with the new value entered in the **Minimum sample size per strata** cell.
+
+- If unchecked, the table updates automatically.  
+- If checked, you will need to uncheck and then recheck the box for the number to update.
+
 
  f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
