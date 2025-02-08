@@ -87,7 +87,7 @@ The data exported by the recipe will be generated from within the bounds of the 
 
 For more details, see [AOI selection](https://docs.sepal.io/en/latest/feature/aoi_selector.html).
 
-For this workshop, type `Liberia` in the **country** cell under the `AOI` tab. Click `Next`.
+For this workshop, type `Liberia` in the **country** cell under the `AOI` tab and also select one of the provinces, since a smaller area will export faster for the purposes of this workshop. Click `Next`.
 
 ![Select AOI](../images/sepal/sepal_prep/sepal_prep_7.png)
 
@@ -152,7 +152,7 @@ Let's select **Use all scenes** and click `Apply`.
 > - **Snow masking**: `On`
 > - **Composing method**: `Medoid`
 
-For our workshop, we will use the default settings, but we encourage you to explore different options and refer to SEPAL documentation under [Composite] for further details(https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html). Click `Apply`.
+For our workshop, we will use the default settings, but we encourage you to explore different options and refer to SEPAL documentation under [Composite](https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html) for further details. Click `Apply`.
 
 ![Composite options](../images/sepal/sepal_prep/sepal_prep_12.png)
 
