@@ -7,10 +7,11 @@ nav_order: 1
 
 # Preprocessing Imagery in SEPAL
 
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=N8kIBBE3tdM)*.
 
 
 ## Optical mosaics
+
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=N8kIBBE3tdM)*.
 
 A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together. This can be achieved on both contiguous rasters (first image below) and overlapping images (second image below).
 
@@ -247,3 +248,33 @@ The data are stored in a folder using the name of the optical mosaic as it was c
 > The full folder structure is required to read the `.vrt` file.
 
 Now that you've downloaded the optical mosaic, you can use it in other SEPAL workflows or transfer it to your computer using [FileZilla](https://filezilla-project.org/).
+
+
+## Radar mosaics
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=lip8C4tq7ig)*.
+
+
+The SEPAL recipe for radar mosaics allows users to generate analysis-ready data (ARD) from the Sentinel-1 C-Band synthetic aperture radar (SAR) mission, which can be used in subsequent analysis, such as land cover classification.
+
+##
+
+The following steps demonstrate the default procedure for creating a yearly timescan, useful for tasks such as land cover mapping.
+
+1. Select **Radar mosaic** within SEPAL **Recipes**.
+2. Select your area of interest (AOI) and the year.
+3. Check for orbit coverage.
+
+    - Deselect all processing parameters.
+    - Select **Ascending orbit** and let the mosaic render.
+    - Deselect **Ascending orbit** and select **Descending orbit**. Let the mosaic render.
+    - See if both orbits cover the entire AOI.  
+      - If they do not, select the orbit that covers the entire AOI.  
+      - If they do, select both and let the mosaic render; then, check for artifacts that may originate from using both orbits.
+
+4. Select **Terrain** under **Geometric operations**.
+5. Select **Moderate** under **Outlier removal**.
+6. Export **Median**, **Min**, **Max**, and **STD** layers for both polarization bands **VV** and **VH**.
+
+Follow the video tutorial linked above, which demonstrates these steps in a reproducible way.
+
+
