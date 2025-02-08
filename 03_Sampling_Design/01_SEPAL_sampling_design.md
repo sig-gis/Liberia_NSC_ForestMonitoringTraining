@@ -229,7 +229,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then determine the **minimum sample size per strata**. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
 
- e. You can also check the “Do you want to modify the sampling size” box. <font color='red'> What does this checkbox entail?</font>
+ e. You can also check the “Do you want to modify the sampling size” box. <font color='red'> What does this checkbox entail? Exported with this box selected and not selected, got the same (except for the coordinates) results for both cases. Not explained in the [SEPAL docs here](https://docs.sepal.io/en/latest/workflows/area_estimation.html). **_UPDATE:_** Found that it is used to update the table on the right with the new input in the **Minimum sample size per strata** cell. If unselected, then the number in the table will update automatically. If selected, then need to unselect (and select again) to update the number. </font>
 
  f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
@@ -251,4 +251,6 @@ These directions will provide a stratified random sample of the proper sampling 
 
   i. You can add additional data by specifying the **number of operators**, or people who will be doing the classification. Here, leave it set to 1. For CEO, this might be the number of users you think your project will have. 
 
-  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified (Landsat = 30 meters). Here, leave it at 30 m.
+  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified, which is 10 m in our case. However, as 30 is the lowest option available, we will keep it at 30-m.
+
+d. Finally, download the generated files.
