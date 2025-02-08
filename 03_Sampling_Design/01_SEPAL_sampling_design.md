@@ -188,9 +188,8 @@ These directions will provide a stratified random sample of the proper sampling 
 
   ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
    
-   > *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
-   >
-   > * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+   - Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
+   - Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
 
   iii. Select the value for classes with high expected user accuracy with **the first slider**. This is set to 0.9 by default, and we’ll leave it there.
 
