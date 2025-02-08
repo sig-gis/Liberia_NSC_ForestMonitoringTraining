@@ -43,11 +43,11 @@ c. You should see a `Files` tab in the lower right window.
 
 If not, you may need to adjust the window layout. To do this, move your mouse to the right-hand side of the window where a four-way arrow will appear. Click and drag your mouse to the left to reveal the right pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_2.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_2.png"  vspace="10" width="800" border-radius="50%"> 
 
 d. Click the `Upload` button that is located in the lower right side of the R Studio interface (see below).
 
-<img align="center" src="../images/sampling/sepal_upload/upload_3.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_3.png"  vspace="10" width="800" border-radius="50%"> 
 
 e. In the **Upload Files** window, click **Choose File**.
 
@@ -55,15 +55,15 @@ f. Navigate to the correct location on your drive, select your map and click Ope
 
 g. Once you’ve selected this file, click **OK** to complete the upload.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_4.png"  vspace="10" width="400" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_4.png"  vspace="10" width="400" border-radius="50%"> 
 
 h. You will see your file appear in the list of files in the lower right-hand pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_5.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_5.png"  vspace="10" width="600" border-radius="50%"> 
 
 i. You may now close the RStudio instance by clicking the tab’s **x**.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_6.png"  vspace="10" width="400" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_6.png"  vspace="10" width="400" border-radius="50%"> 
 
 To use the File transfer manager, select the **File transfer management** application.
 
@@ -101,7 +101,7 @@ These directions will provide a stratified random sample of the proper sampling 
 4\. Select **Stratified Area Estimator-Design**. Note that loading the tool takes a few minutes.
 
 
- <img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
 > **_NOTE:_**  
 >
@@ -109,7 +109,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
 
 
- <img align="center" src="../images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 5\. When the tool loads properly, it will look like the image below. Read some of the information on the **Introduction** page to acquaint yourself with the tool. 
@@ -120,7 +120,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  c. The Reference and Documents panel provides links to other information about stratified sampling, such as REDD Compass.
 
-<img align="center" src="../images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="./images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
 
 6\. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
 
@@ -134,14 +134,14 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then click **Select**.
 
- <img align="center" src="../images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
 
 
  > **_NOTE:_**
  >
  > The **Output folder** section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
 
- <img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
 
  > **_Optional:_**
  >
@@ -149,11 +149,11 @@ These directions will provide a stratified random sample of the proper sampling 
 
 8\. Next, click **Strata areas** on the left side of the screen.
 
- <img align="center" src="../images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
  a. In the **Area calculation** section, click “Area calculation and legend generation”. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
 
- <img align="center" src="../images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
 
 
  b. Next, you will need to adjust the class names in the **Legend labeling** section. Type in the following class names in place of the numeric codes for your Liberia map:
@@ -210,7 +210,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  c. <ins> DO NOT assign your `nodata` or `clouds` classes to either high or low confidence. </ins> 
 
- <img align="center" src="../images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 
@@ -235,7 +235,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
- <img align="center" src="../images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
 
 11\. When you’re ready, click on **Sample allocation** to the left.
 
@@ -247,7 +247,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
   ii. Sometimes this step fails, no download button will appear, and you will need to refresh the page and restart the process.
 
- <img align="center" src="../images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
 
  c. Now fill out the three fields to the right. 
 
