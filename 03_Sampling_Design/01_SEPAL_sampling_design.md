@@ -126,7 +126,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
 7\. Select **Map input** on the left side of the screen.
 
- a. For this exercise, we’ll use the <font color=red> previously generated classification map for Liberia</font>. However, you can substitute another classification.
+ a. For this exercise, we’ll use a previously generated 10-m classification map of Liberia for 2014. However, you can substitute another classification.
 
  b. In the **Data type** section, click **Input**.
 

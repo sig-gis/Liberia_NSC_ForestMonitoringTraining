@@ -23,8 +23,8 @@ Create a GEE account for non-commercial purposes.
 
 Follow the steps below if you want to register your own GEE cloud project:
 
-<img align="center" src="../images/setup/setup_gee1.png" vspace="10" width="600">
+<img align="center" src="./images/setup/setup_gee1.png" vspace="10" width="600">
 
-<img align="center" src="../images/setup/setup_gee2.png" vspace="10" width="600">
+<img align="center" src="./images/setup/setup_gee2.png" vspace="10" width="600">
 
-<img align="center" src="../images/setup/setup_gee3.png" vspace="10" width="600">
+<img align="center" src="./images/setup/setup_gee3.png" vspace="10" width="600">
