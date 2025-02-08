@@ -13,11 +13,11 @@ nav_order: 2
 - Join the workshop Google Group (for file sharing and GEE Cloud Project access)
 - Make a SEPAL account and request additional resources (for days 1 and 5).
 - Create a Collect Earth Online account and join the Liberia workshop institution (for day 2).
+- Download Google Earth Pro software to your computer (for CEO interpretation).
 - Download Pix4Dmapper software to your computer, download the Pix4Dcapture app to your phone, and activate your free 14-day Pix4D trial (for days 2, 3, and 4).
 - Install QGIS (for days 2, 3, and 4)
 - Make a Google Earth Engine account (for days 1, 2, 4, and 5)
     - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own 
-- Download Google Earth Pro software to your computer (for CEO interpretation).
 
 
 ## Workshop Google Group
@@ -92,6 +92,26 @@ On the institution’s home page, go to the `Users` tab and click `+ Request Mem
 <img align="center" src="images/setup/ceo-3.png" vspace="10" width="600">
 
 Admins of the institution can then add you as either a member or an admin.
+
+
+## Google Earth Pro Software
+
+<font color = red> needed? </font>
+
+Download Google Earth Pro Software to your computer.
+
+Go to this page:
+[Earth Versions – Google Earth](https://www.google.com/earth/versions/)
+
+Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
+
+<img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
+
+Open the `.exe` file that is downloaded.
+
+<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="400">
+
+Google Earth Pro should now be downloaded to your computer.
 
 
 ## Pix4D Software
@@ -229,22 +249,4 @@ Follow the steps below if you want to register your own GEE cloud project:
 
 
 
-## Google Earth Pro Software
-
-<font color = red> needed? </font>
-
-Download Google Earth Pro Software to your computer.
-
-Go to this page:
-[Earth Versions – Google Earth](https://www.google.com/earth/versions/)
-
-Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
-
-<img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
-
-Open the `.exe` file that is downloaded.
-
-<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="400">
-
-Google Earth Pro should now be downloaded to your computer.
 
