@@ -34,7 +34,7 @@ To use RStudio, choose the **R Studio** application.
 
 a. You may be prompted to enter your SEPAL username and password to enter R Studio.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_1.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_1.png"  vspace="10" width="800" border-radius="50%"> 
 
 
 b. This will open an instance of RStudio, an IDE for the R programming language.
