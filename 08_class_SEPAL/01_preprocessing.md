@@ -7,7 +7,7 @@ nav_order: 1
 
 # Preprocessing Imagery in SEPAL
 
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=HiFOaXoclHQ)*.
+> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=N8kIBBE3tdM)*.
 
 
 ## Optical mosaics
