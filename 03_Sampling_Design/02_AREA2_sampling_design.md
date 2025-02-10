@@ -29,7 +29,7 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 
 *The further directions below are directly from [https://area2.readthedocs.io/en/latest/getting_started.html](https://area2.readthedocs.io/en/latest/getting_started.html)*.
 
-4\. To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the Run button (located in the Code Editor).
+4\. To run a script, highlight it in Script Manager (A), which displays the code in the Code Editor (B), and click the `Run` button (located in the Code Editor).
 5\. When running the scripts in AREA 2, a Dialog Pane will appear (E). The Dialog Pane is where you specify the information required for each step of the sampling design, response design, and analysis. Note that after communicating via the Dialog Pane (loading a map for example), **Earth Engine does not indicate if the application running. Therefore, push the buttons only once and wait for the application to respond before continuing.**
 6\. The Console (C) displays output specified by script. If errors occur while running a script, the error messages are displayed here.
 7\. The Map (D) is where spatial data is displayed.
@@ -47,7 +47,7 @@ For now we have pre-loaded a stratification map as a GEE asset for you. You will
 
 3\. Set the spatial resolution to 10m. This depends on the pixel size of your selected stratification map.
 
-4\. Click *Load Image*.
+4\. Click `Load Image`.
 
 <img align="center" src="./images/sampling/AREA2_gui_page1.png"  vspace="10" width="800">
     
@@ -95,9 +95,9 @@ A large number of points will make the tool run more slowly. Choose a reasonable
 
 **Do not put any points in the last class, which is clouds.**
 
-9\. Click *Create Sample* and then add them to the map. You can zoom in on the map to see these samples once they load.
+9\. Click `Create Sample` and then add them to the map. You can zoom in on the map to see these samples once they load.
 
-10\. Click *Export samples*. 
+10\. Click `Export samples`. 
 
 11\. Go to the *Tasks* tab at the top right. From there you can download the samples as a CSV to your Google Drive and as a GEE asset to your cloud assets folder. **Make sure you give the file/asset an informative name, including points per class and the creation date. You can also add metadata to a GEE asset once it is created.**
 
