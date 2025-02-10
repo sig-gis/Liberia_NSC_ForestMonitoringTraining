@@ -21,7 +21,7 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 ## Getting Started with AREA2
 1\. Add the tool to your personal GEE repository by clicking this link: [https://code.earthengine.google.com/?accept_repo=projects/AREA2/public](https://code.earthengine.google.com/?accept_repo=projects/AREA2/public).
 2\. On the left side of your GEE code editor under the scripts tab you will now see **projects/AREA2/public** listed under the **Reader** access repositories. You can click the drop down arrow to view the included scripts.
-<img align="center" src="../images/sampling/AREA2_repository.png"  vspace="10" width="400"> 
+<img align="center" src="./images/sampling/AREA2_repository.png"  vspace="10" width="400"> 
 
 3\. We will only be using the **Stratified Random Sampling** tool under the Sampling Design subfolder. Double click that script to open it in the code editor.
 
@@ -34,7 +34,7 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 6\. The Console (C) displays output specified by script. If errors occur while running a script, the error messages are displayed here.
 7\. The Map (D) is where spatial data is displayed.
 
-<img align="center" src="../images/sampling/AREA2_tool_overview.png"  vspace="10" width="800"> 
+<img align="center" src="./images/sampling/AREA2_tool_overview.png"  vspace="10" width="800"> 
 
 
 # 1. Using the AREA2 Stratified Random Sampling Tool
@@ -49,7 +49,7 @@ For now we have pre-loaded a stratification map as a GEE asset for you. You will
 
 4\. Click *Load Image*.
 
-<img align="center" src="../images/sampling/AREA2_gui_page1.png"  vspace="10" width="800">
+<img align="center" src="./images/sampling/AREA2_gui_page1.png"  vspace="10" width="800">
     
 5\. The strata weights and pixel-counting estimations of their area in square meters will be printed to the console panel. **Copy down these values for later use in your accuracy assessment!**
 
@@ -60,7 +60,7 @@ For now we have pre-loaded a stratification map as a GEE asset for you. You will
 
 Based on your selection your screen will update to look like one of the options below.
 
-<img align="center" src="../images/sampling/AREA2_gui_page2_3options.png"  vspace="10" width="800">
+<img align="center" src="./images/sampling/AREA2_gui_page2_3options.png"  vspace="10" width="800">
 
     
 7\. Since we are using these samples for training a random forest model, we can skip over the equations used for sample-based area estimation analyses to calculate the appropriate sample size. **For Random Forest, generally, the more points the better. At a minimum you should aim to have 10 times as many points per strata as you do features (bands of imagery the model will observe).** So if our composite image has 20 bands, we should at least have 200 points per strata if we were doing a full classification. If resources allow, more points per strata, especially for those with a lot of variation in their characteristics, will improve the results.
@@ -101,8 +101,8 @@ A large number of points will make the tool run more slowly. Choose a reasonable
 
 11\. Go to the *Tasks* tab at the top right. From there you can download the samples as a CSV to your Google Drive and as a GEE asset to your cloud assets folder. **Make sure you give the file/asset an informative name, including points per class and the creation date. You can also add metadata to a GEE asset once it is created.**
 
-<img align="center" src="../images/sampling/AREA2_gui_exportsamples.png"  vspace="10" width="800">
+<img align="center" src="./images/sampling/AREA2_gui_exportsamples.png"  vspace="10" width="800">
 
 The output will look something like this in Drive:
-<img align="center" src="../images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
+<img align="center" src="./images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
 

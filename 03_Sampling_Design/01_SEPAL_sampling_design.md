@@ -34,7 +34,7 @@ To use RStudio, choose the **R Studio** application.
 
 a. You may be prompted to enter your SEPAL username and password to enter R Studio.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_1.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_1.png"  vspace="10" width="800" border-radius="50%"> 
 
 
 b. This will open an instance of RStudio, an IDE for the R programming language.
@@ -43,11 +43,11 @@ c. You should see a `Files` tab in the lower right window.
 
 If not, you may need to adjust the window layout. To do this, move your mouse to the right-hand side of the window where a four-way arrow will appear. Click and drag your mouse to the left to reveal the right pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_2.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_2.png"  vspace="10" width="800" border-radius="50%"> 
 
 d. Click the `Upload` button that is located in the lower right side of the R Studio interface (see below).
 
-<img align="center" src="../images/sampling/sepal_upload/upload_3.png"  vspace="10" width="800" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_3.png"  vspace="10" width="800" border-radius="50%"> 
 
 e. In the **Upload Files** window, click **Choose File**.
 
@@ -55,15 +55,15 @@ f. Navigate to the correct location on your drive, select your map and click Ope
 
 g. Once you’ve selected this file, click **OK** to complete the upload.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_4.png"  vspace="10" width="400" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_4.png"  vspace="10" width="400" border-radius="50%"> 
 
 h. You will see your file appear in the list of files in the lower right-hand pane.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_5.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_5.png"  vspace="10" width="600" border-radius="50%"> 
 
 i. You may now close the RStudio instance by clicking the tab’s **x**.
 
-<img align="center" src="../images/sampling/sepal_upload/upload_6.png"  vspace="10" width="400" border-radius="50%"> 
+<img align="center" src="./images/sampling/sepal_upload/upload_6.png"  vspace="10" width="400" border-radius="50%"> 
 
 To use the File transfer manager, select the **File transfer management** application.
 
@@ -101,7 +101,7 @@ These directions will provide a stratified random sample of the proper sampling 
 4\. Select **Stratified Area Estimator-Design**. Note that loading the tool takes a few minutes.
 
 
- <img align="center" src="../images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_1.png"  vspace="10" width="600" border-radius="50%"> 
 
 > **_NOTE:_**  
 >
@@ -109,7 +109,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
 
 
- <img align="center" src="../images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_2.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 5\. When the tool loads properly, it will look like the image below. Read some of the information on the **Introduction** page to acquaint yourself with the tool. 
@@ -120,13 +120,13 @@ These directions will provide a stratified random sample of the proper sampling 
 
  c. The Reference and Documents panel provides links to other information about stratified sampling, such as REDD Compass.
 
-<img align="center" src="../images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
+<img align="center" src="./images/sampling/srs_3.png"  vspace="10" width="600" border-radius="50%"> 
 
 6\. The steps necessary to design the stratified area estimator are located on the left side of the screen and they need to be completed sequentially from top to bottom.
 
 7\. Select **Map input** on the left side of the screen.
 
- a. For this exercise, we’ll use the <font color=red> previously generated classification map for Liberia</font>. However, you can substitute another classification.
+ a. For this exercise, we’ll use a previously generated 10-m classification map of Liberia for 2014. However, you can substitute another classification.
 
  b. In the **Data type** section, click **Input**.
 
@@ -134,14 +134,14 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then click **Select**.
 
- <img align="center" src="../images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_4.png"  vspace="10" width="600" border-radius="50%"> 
 
 
  > **_NOTE:_**
  >
  > The **Output folder** section shows you where in your SEPAL workspace all the files generated from this Exercise will be saved.
 
- <img align="center" src="../images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_5.png"  vspace="10" width="600" border-radius="50%"> 
 
  > **_Optional:_**
  >
@@ -149,11 +149,9 @@ These directions will provide a stratified random sample of the proper sampling 
 
 8\. Next, click **Strata areas** on the left side of the screen.
 
- <img align="center" src="../images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
-
  a. In the **Area calculation** section, click “Area calculation and legend generation”. This will take a few minutes to run. After it completes, notice that it has updated the **Legend labeling** section of the page.
 
- <img align="center" src="../images/sampling/srs_x.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_6.png"  vspace="10" width="600" border-radius="50%"> 
 
 
  b. Next, you will need to adjust the class names in the **Legend labeling** section. Type in the following class names in place of the numeric codes for your Liberia map:
@@ -190,9 +188,8 @@ These directions will provide a stratified random sample of the proper sampling 
 
   ii. Specifying the expected user accuracy helps the program determine which classes might need more points relative to their area. 
    
-   > *  Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
-   >
-   > * Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
+   - Some classes are easier to identify--including common classes and classes with clear identifiers like buildings. 
+   - Classes that are hard to identify include rare classes and classes that look very similar to one another. Having more classes with low confidence will increase the sample size.
 
   iii. Select the value for classes with high expected user accuracy with **the first slider**. This is set to 0.9 by default, and we’ll leave it there.
 
@@ -210,7 +207,7 @@ These directions will provide a stratified random sample of the proper sampling 
 
  c. <ins> DO NOT assign your `nodata` or `clouds` classes to either high or low confidence. </ins> 
 
- <img align="center" src="../images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_7.png"  vspace="10" width="600" border-radius="50%"> 
 
 
 
@@ -231,11 +228,15 @@ These directions will provide a stratified random sample of the proper sampling 
 
  d. Then determine the **minimum sample size per strata**. By default it is 100. For the purposes of this test we will set it to 50, but in practice this should be higher.
 
- e. You can also check the “Do you want to modify the sampling size” box. <font color='red'> What does this checkbox entail?</font>
+ e. You can also check the “Do you want to modify the sampling size” box to update the table on the right with the new value entered in the **Minimum sample size per strata** cell.
+
+- If unchecked, the table updates automatically.  
+- If checked, you will need to uncheck and then recheck the box for the number to update.
+
 
  f. If you would like, you can edit the name of the file & download a csv with the sample design. The file contains the table shown above with some additional calculations. However SEPAL will automatically save this file.
 
- <img align="center" src="../images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_8.png"  vspace="10" width="600" border-radius="50%"> 
 
 11\. When you’re ready, click on **Sample allocation** to the left.
 
@@ -247,10 +248,12 @@ These directions will provide a stratified random sample of the proper sampling 
 
   ii. Sometimes this step fails, no download button will appear, and you will need to refresh the page and restart the process.
 
- <img align="center" src="../images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
+ <img align="center" src="./images/sampling/srs_9.png"  vspace="10" width="600" border-radius="50%"> 
 
  c. Now fill out the three fields to the right. 
 
   i. You can add additional data by specifying the **number of operators**, or people who will be doing the classification. Here, leave it set to 1. For CEO, this might be the number of users you think your project will have. 
 
-  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified (Landsat = 30 meters). Here, leave it at 30 m.
+  ii. The **size of the interpretation box** depends on your data and corresponds to CEO’s sample plot. This value should be set to the spatial resolution of the imagery you classified, which is 10 m in our case. However, as 30 is the lowest option available, we will keep it at 30-m.
+
+d. Finally, download the generated files.

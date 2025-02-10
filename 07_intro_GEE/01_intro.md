@@ -5,7 +5,7 @@ parent: "7. Intro to GEE"
 nav_order: 1
 ---
 
-*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, GEE library*
+*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, **GEE library***
 
 ## What is Google Earth Engine?
 
@@ -157,19 +157,23 @@ Congratulations! You have created your first script.
 All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
 
 
-<font color = red> **EDIT HERE ONWARDS** </font>
 
 
 
-# Introduction to Javascript and Earth Engine Concepts
+## Javascript and Earth Engine Concepts
 
-In order to build a script for your analysis, you will need to use JavaScript. This section covers JavaScript syntax and basic data structures in Earth Engine.
+This section covers JavaScript (JS) syntax and basic data structures in Earth Engine.
 
-## Javascript
 
 ### Variables
 
-In a programming language, variables are used to store data values. In JavaScript, a variable is defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Monrovia" to the variable named `city`. Note that the text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string. It's a good idea to be consistent: use single quotes or double quotes throughout a given script. Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
+In JS, variables are used to store data values and are defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Monrovia" to the variable named `city`. 
+
+> **_Note:_**
+>
+> The text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string, but it's good to be consistent throughout a given script. 
+
+Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
 
 ```javascript
 var city = 'Monrovia';
@@ -181,7 +185,9 @@ If you print the variable `city`, you will get the value stored in the variable 
 print(city);
 ```
 
-When you assign a text value, the variable is automatically assigned the type *string*. You can also assign numbers to variables and create variables of type *number*. The following code creates a new variable called `population` and assigns a number to it as its value.
+When you assign a text value, the variable is automatically assigned the type *string*. 
+
+You can also assign numbers to variables and create variables of type *number*. The following code creates a new variable called `population` and assigns a number to it as its value.
 
 ```javascript
 var population = 1700000;
@@ -190,14 +196,18 @@ print(population);
 
 ### Lists
 
-It is useful to be able to store multiple values in a single variable. JavaScript provides a data structure called a "list" that can contain multiple values. We can create a new list by using the brackets [] and adding multiple values separated by a comma.
+It can be useful to store multiple values in a single variable. JS provides a data structure called a "list" that can contain multiple values. We can create a new list by using the brackets [] and adding multiple values separated by a comma.
 
 ```javascript
 var cities = ['Monrovia', 'Gbarnga', 'Buchanan', 'Ganta'];
 print(cities);
 ```
 
-If you look at the output in the Console, you'll see "`List`" with an expand arrow (▹) next to it. Clicking on the arrow will expand the list and show you its contents. You'll notice that along with the four list items, there is a number next to each value. This is the index of each article which allows you to reference each item in the list by a numeric value indicating its position in the list.
+If you look at the output in the Console, you'll see "`List`" with an expand arrow next to it, which if clicked, show you the contents of the list. 
+
+You'll notice that along with the four list items, there is a number next to each value. This is the index of each article which allows you to reference each item in the list by a numeric value indicating its position in the list.
+
+<font color = red> **EDIT HERE ONWARDS** </font>
 
 ### JavaScript Objects
 

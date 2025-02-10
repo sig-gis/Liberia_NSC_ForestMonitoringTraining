@@ -13,11 +13,11 @@ nav_order: 2
 - Join the workshop Google Group (for file sharing and GEE Cloud Project access)
 - Make a SEPAL account and request additional resources (for days 1 and 5).
 - Create a Collect Earth Online account and join the Liberia workshop institution (for day 2).
+- Download Google Earth Pro software to your computer (for CEO interpretation).
 - Download Pix4Dmapper software to your computer, download the Pix4Dcapture app to your phone, and activate your free 14-day Pix4D trial (for days 2, 3, and 4).
 - Install QGIS (for days 2, 3, and 4)
 - Make a Google Earth Engine account (for days 1, 2, 4, and 5)
-    - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own 
-- Download Google Earth Pro software to your computer (for CEO interpretation).
+    - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own. 
 
 
 ## Workshop Google Group
@@ -58,7 +58,7 @@ On the new page, click `Request additional resources`.
 
 On the new page, fill out each field with the following values: $15, $15, and 30 GB (these are just dollar estimates of the amount of resources you will be using with your analyses on SEPAL - YOU DO NOT HAVE TO PAY THIS AMOUNT).  Also, fill out this brief message with your own information about what you are using SEPAL for:
 
-“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending one of workshop on geospatial analysis of forest change led by Spatial Informatics Group, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
+“I am a [YOUR PROFESSION/JOB TITLE] and I work for [YOUR EMPLOYER] in Liberia.  I am attending a workshop on geospatial analysis of forest change led by Spatial Informatics Group, and we will be using SEPAL to learn about sample-based area estimation and accuracy assessment.”
 
 <img align="center" src="images/setup/sepal-4.png" vspace="10" width="500">
 
@@ -83,7 +83,7 @@ You should then receive an email with a link to confirm your email.  Click this 
 
 Log in to your CEO account.
 
-On the main CEO page, in the search bar at the top left, search for an institution called “Liberia Geospatial Workshop.” Click `Visit`. <font color = "red"> is it called "The Environmental Protection Agency of Liberia (EPA)." </font>
+On the main CEO page, in the search bar at the top left, search for an institution called “The Environmental Protection Agency of Liberia (EPA).” Click `Visit`. <font color = "red"> is it called "The Environmental Protection Agency of Liberia (EPA)." </font>
 
 <img align="center" src="images/setup/ceo-2.png" vspace="10" width="600">
 
@@ -92,6 +92,26 @@ On the institution’s home page, go to the `Users` tab and click `+ Request Mem
 <img align="center" src="images/setup/ceo-3.png" vspace="10" width="600">
 
 Admins of the institution can then add you as either a member or an admin.
+
+
+## Google Earth Pro Software
+
+<font color = red> needed? </font>
+
+Download Google Earth Pro Software to your computer.
+
+Go to this page:
+[Earth Versions – Google Earth](https://www.google.com/earth/versions/)
+
+Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
+
+<img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
+
+Open the `.exe` file that is downloaded.
+
+<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="400">
+
+Google Earth Pro should now be downloaded to your computer.
 
 
 ## Pix4D Software
@@ -219,13 +239,14 @@ You will need a [Google account](https://accounts.google.com/signup)(https://acc
 
 Create a GEE account for non-commercial purposes.
 
-<font color = red> join a non-commercial google cloud project? </font>
+Follow the steps below if you want to register your own GEE cloud project:
+
+<img align="center" src="images/setup/setup_gee1.png" vspace="10" width="600">
+
+<img align="center" src="images/setup/setup_gee2.png" vspace="10" width="600">
 
 
-## Google Earth Pro Software
-
-<font color = red> needed? </font>
-
+## Google Earth Pro
 Download Google Earth Pro Software to your computer.
 
 Go to this page:
@@ -235,9 +256,6 @@ Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
 
 <img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
 
-Open the `.exe` file that is downloaded.
 
-<img align="center" src="images/setup/earth-pro-2.png" vspace="10" width="400">
 
-Google Earth Pro should now be downloaded to your computer.
 
