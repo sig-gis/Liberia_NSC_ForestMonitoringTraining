@@ -17,7 +17,14 @@ Log in to CEO.  On the main CEO page, in the search bar at the top left, search 
 
 
 # Potential Uses of CEO
-
+Gathering samples for...
+- **training a machine learning model**
+- **calculating accuracy of a map**
+- performing sample-based area estimation
+- pre-work designing an efficient field campaign
+- comparison to field data
+- validating near-real-time alerts of landscape disturbances
+- ...
 
 
 # CEO Project Creation
@@ -32,6 +39,16 @@ On the institution's home page, click on `Imagery`.
 Click on the `edit` button for the last imagery on the page called "Global Mangrove Forests Distribution".  Here, you can see how to add a new type of imagery to a project.  There are some data sets already available in CEO, like Sentinel and Planet, but you can also import any public GEE `Image` or `ImageCollection` or any private GEE asset.  You just need its asset ID, a start and end date, and some parameters for its visualization.
 
 <img align="center" src="./images/ceo/CEO_imagery2.png" hspace="15" vspace="10" width="700">
+
+### *Tip for visualization parameters*
+Look for the imagery resource on the GEE library. There is often a sample visualization which you can use directly or adapt for your needs by adjusting the visualization using the GEE Map panel. You can adjust the parameters or apply an automatic stretch for your area to get something reasonable, then import the visualization and copy it by clicking the small blue box at the top of the code editor. Do not include the semicolon at the end of the copied parameters.
+
+<img align="center" src="./images/ceo/CEO_GEE_imagery_example.png" hspace="15" vspace="10" width="700">
+
+<img align="center" src="./images/ceo/CEO_GEE_custom_stretch.png" hspace="15" vspace="10" width="700">
+
+<img align="center" src="./images/ceo/CEO_GEE_import_viz_params.png" hspace="15" vspace="10" width="700">
+
 
 ## Create a CEO Project
 
