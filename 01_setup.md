@@ -99,7 +99,7 @@ You should then receive an email with a link to confirm your email.  Click this 
 
 Log in to your CEO account.
 
-On the main CEO page, in the search bar at the top left, search for an institution called “The Environmental Protection Agency of Liberia (EPA).” Click `Visit`. <font color = "red"> is it called "The Environmental Protection Agency of Liberia (EPA)." </font>
+On the main CEO page, in the search bar at the top left, search for an institution called “The Environmental Protection Agency of Liberia (EPA).” Click `Visit`.
 
 <img align="center" src="images/setup/ceo-2.png" vspace="10" width="600">
 
