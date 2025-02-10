@@ -156,7 +156,7 @@ Once installed, launch **QGIS** from your applications menu.
 
 Create a Pix4D account, activate the free 15-day trial, download Pix4Dmapper to your laptop and download Pix4Dcapture to your phone.
 
-<span style="color: red;">**WARNING: STOP HERE**</span> ** until the start of the workshop or just before. You will only have access to Pix4Dmapper for free for 15 days, so if you want to use it at all after the workshop, do not start your free trial early.**
+<span style="color: red;">**WARNING: STOP HERE**</span> **until the start of the workshop or just before. You will only have access to Pix4Dmapper for free for 15 days, so if you want to use it at all after the workshop, do not start your free trial early.**
 
 #### 1. Create a Pix4D account
 
