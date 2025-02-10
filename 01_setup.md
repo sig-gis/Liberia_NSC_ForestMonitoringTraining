@@ -31,6 +31,22 @@ Search for **Liberia_forest_workshop**.
 Click on the group and then click the *Ask to join group* button.
 
 
+## GEE Account
+
+Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
+
+You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
+
+Create a GEE account for non-commercial purposes.
+
+Follow the steps below if you want to register your own GEE cloud project:
+
+<img align="center" src="images/setup/setup_gee1.png" vspace="10" width="600">
+
+<img align="center" src="images/setup/setup_gee2.png" vspace="10" width="600">
+
+
+
 ## SEPAL Account
 
 Create a SEPAL account and request additional resources to be able to access the stratified estimator analysis apps.
@@ -96,8 +112,6 @@ Admins of the institution can then add you as either a member or an admin.
 
 ## Google Earth Pro Software
 
-<font color = red> needed? </font>
-
 Download Google Earth Pro Software to your computer.
 
 Go to this page:
@@ -114,9 +128,35 @@ Open the `.exe` file that is downloaded.
 Google Earth Pro should now be downloaded to your computer.
 
 
+## QGIS Software
+
+Download and install QGIS on your computer.
+
+<img align="center" src="images/setup/qgis-icon.png" vspace="10" width="70">
+
+Go to the official [QGIS Download Page](https://qgis.org/download/)(https://qgis.org/download/).
+
+Scroll down to the appropriate section based on your operating system (Windows, macOS, Linux).
+
+For Windows: 
+- Click on **Long Term Version for Windows**.
+- After downloading the installer, double-click the `.exe` file and follow the installation wizard.
+
+For macOS: 
+- Select **Long Term Version for Mac OS**.
+- After downloading the installer, open the `.dmg` file and drag QGIS to your Applications folder.
+
+Once installed, launch **QGIS** from your applications menu.
+
+**QGIS** should now be installed on your computer.
+
+
+
 ## Pix4D Software
 
 Create a Pix4D account, activate the free 15-day trial, download Pix4Dmapper to your laptop and download Pix4Dcapture to your phone.
+
+<span style="color: red;">**WARNING: STOP HERE**</span> ** until the start of the workshop or just before. You will only have access to Pix4Dmapper for free for 15 days, so if you want to use it at all after the workshop, do not start your free trial early.**
 
 #### 1. Create a Pix4D account
 
@@ -150,6 +190,7 @@ Now, it should take you to a page that looks like this.  Click `Get a free trial
 Now, on the Licenses page, you should see your 15-day free trial.  You should be able to use Pix4Dmapper for free for 15 days.
 
 <img align="center" src="images/setup/pix4d-6.png" vspace="10" width="800">
+
 
 #### 2. Download Pix4Dmapper onto your computer
 
@@ -209,52 +250,8 @@ Download it onto your phone and open it.
 
 Sign in with your Pix4D login information you created in step 1.
 
-## QGIS Software
-
-Download and install QGIS on your computer.
-
-<img align="center" src="images/setup/qgis-icon.png" vspace="10" width="70">
-
-Go to the official [QGIS Download Page](https://qgis.org/download/)(https://qgis.org/download/).
-
-Scroll down to the appropriate section based on your operating system (Windows, macOS, Linux).
-
-For Windows: 
-- Click on **Long Term Version for Windows**.
-- After downloading the installer, double-click the `.exe` file and follow the installation wizard.
-
-For macOS: 
-- Select **Long Term Version for Mac OS**.
-- After downloading the installer, open the `.dmg` file and drag QGIS to your Applications folder.
-
-Once installed, launch **QGIS** from your applications menu.
-
-**QGIS** should now be installed on your computer.
-
-## GEE Account
-
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
-
-You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
-
-Create a GEE account for non-commercial purposes.
-
-Follow the steps below if you want to register your own GEE cloud project:
-
-<img align="center" src="images/setup/setup_gee1.png" vspace="10" width="600">
-
-<img align="center" src="images/setup/setup_gee2.png" vspace="10" width="600">
 
 
-## Google Earth Pro
-Download Google Earth Pro Software to your computer.
-
-Go to this page:
-[Earth Versions – Google Earth](https://www.google.com/earth/versions/)(https://www.google.com/earth/versions/)
-
-Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
-
-<img align="center" src="images/setup/earth-pro-1.png" vspace="10" width="600">
 
 
 
