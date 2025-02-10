@@ -171,7 +171,7 @@ Click `Create an Account`.  Fill out the information and follow instructions to 
 
 You should then receive an email that looks like this.  Activate your account by clicking `confirm`.
 
-<img align="center" src="images/setup/pix4d-2.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-2.png" vspace="10" width="300">
 
 Log in to your Pix4D account again.
 
@@ -214,11 +214,11 @@ Open the `.msi` file that is downloaded.
 
 Click through the Pix4Dmapper Setup Wizard, and follow instructions on how to install the software.  Unless you want to change them, you can keep most of the default settings.  
 
-<img align="center" src="images/setup/pix4d-11.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-11.png" vspace="10" width="350">
 
 When it is done installing, click `Finish`.
 
-<img align="center" src="images/setup/pix4d-12.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-12.png" vspace="10" width="350">
 
 #### 3. Activate  the free 15-day trial
 
@@ -226,25 +226,25 @@ Open Pix4Dmapper on your computer
 
 Sign in with your Pix4D login information you created in step 1.
 
-<img align="center" src="images/setup/pix4d-13.png" vspace="10" width="400">
+<img align="center" src="images/setup/pix4d-13.png" vspace="10" width="350">
 
 Accept the License Agreement.
 
-<img align="center" src="images/setup/pix4d-14.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-14.png" vspace="10" width="500">
 
 Select the free trial you just activated on your Pix4D account.
 
-<img align="center" src="images/setup/pix4d-15.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-15.png" vspace="10" width="500">
 
 You should now see the Pix4Dmapper home screen.
 
-<img align="center" src="images/setup/pix4d-16.png" vspace="10" width="600">
+<img align="center" src="images/setup/pix4d-16.png" vspace="10" width="500">
 
 #### 4. Download Pix4Dcapture onto your phone
 
 In your App Store/Play Store, search for “Pix4Dcapture”.
 
-<img align="center" src="images/setup/pix4d-17.png" vspace="10" width="300">
+<img align="center" src="images/setup/pix4d-17.png" vspace="10" width="200">
 
 Download it onto your phone and open it.
 
