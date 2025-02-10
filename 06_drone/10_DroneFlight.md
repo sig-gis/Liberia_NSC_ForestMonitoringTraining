@@ -17,7 +17,7 @@ nav_order: 10
 
 <img align="center" src="../images/drone/basic_movements_multicopter.png" hspace="15" vspace="10" width="1000">
 
-### Launching and Landing DJI Drones
+### Manually Launching and Landing DJI Drones
 #### Launching:
 1. Push RC controls down and toward the center at a 45⁰ angle
 2. Throttle up drone after propellers start spinning for a few seconds
@@ -32,6 +32,7 @@ nav_order: 10
 * Level surface
 * Clear around surface
 * Free of obstacles above
+
 
 
 

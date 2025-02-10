@@ -24,7 +24,7 @@ In combination with other tools of SEPAL, the **Classification** recipe can help
 
 Once the **Classification** recipe is selected, SEPAL will show the recipe process in a new tab (**1**); the **Image selection** window will appear in the lower right (**2**).
 
-![Landing page](../_images/cookbook/classification/landing.png)
+![Landing page](../images/sepal/sepal_rf/sepal_rf_1.webp)
 
 The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited convention for your needs. Simply double-click the tab and enter a new name. It will default to:
 
@@ -32,8 +32,8 @@ The first step is to change the name of the recipe. This name will be used to id
 Classification_<timestamp>
 ```
 
-![Default title](../_images/cookbook/classification/default_title.png)
-![Modified title](../_images/cookbook/classification/modified_title.png)
+![Default title](../images/sepal/sepal_rf/sepal_rf_2.webp)
+![Modified title](../images/sepal/sepal_rf/sepal_rf_3.webp)
 
 > **Note:**
 >
@@ -53,7 +53,7 @@ In the lower-right corner, the following five tabs are available, allowing you t
 - `AUX`: Auxiliary global dataset to use in the model.
 - `CLS`: Classifier configuration.
 
-![Classification parameters](../_images/cookbook/classification/parameters.png)
+![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.webp)
 
 ### Image selection
 
@@ -69,7 +69,7 @@ The first step consists of selecting the image bands on which to apply the class
 
 Select `Add`. The following screen should be displayed:
 
-![Image source](../_images/cookbook/classification/image_source.png)
+![Image source](../images/sepal/sepal_rf/sepal_rf_5.webp)
 
 #### Image type
 
@@ -115,7 +115,7 @@ In this example, we selected:
 - `swir`
 - `green`
 
-![Native bands](../_images/cookbook/classification/native_bands.png)
+![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
 
 #### Derived bands
 
@@ -127,17 +127,17 @@ Select `Derived bands` at the bottom of the pop-up window and choose the derivin
 >
 > If more than two bands are selected, the operation will be applied to the Cartesian product of the bands.
 
-![Derived bands](../_images/cookbook/classification/derived_bands.png)
+![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.webp)
 
 Once image selection is complete, select `Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash` button removes the image and its bands from the analysis.
 
-![Selected bands](../_images/cookbook/classification/selected_bands.png)
+![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.webp)
 
 ### Legend setup
 
 In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend.
 
-![Legend setup](../_images/cookbook/classification/landing_legend.png)
+![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.webp)
 
 > **Important:**
 >
@@ -151,7 +151,7 @@ Select `Add` to add a new class to your legend. A class consists of:
 - **Value**: Select an integer value (must be unique).
 - **Class name**: Enter a description (cannot be empty).
 
-![Manual legend](../_images/cookbook/classification/create_legend.png)
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.webp)
 
 #### Import legend
 
@@ -169,9 +169,12 @@ code,class,color
 
 Select `Import from CSV` and upload your file.
 
-![Import legend](../_images/cookbook/classification/import_csv.png)
+![Import legend](../images/sepal/sepal_rf/sepal_rf_11.webp)
 
 Once the legend is validated, export it using `Export as CSV`.
+
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.webp)
+
 
 ### Training data
 
@@ -183,7 +186,7 @@ Training data can be added from external sources or collected interactively.
 
 Select `TRN` to open the **Training Data** menu.
 
-![Training menu](../_images/cookbook/classification/training_landing.png)
+![Training menu](../images/sepal/sepal_rf/sepal_rf_13.webp)
 
 Training data can be imported from:
 
@@ -204,7 +207,7 @@ Select `CLS` to configure the classifier. SEPAL supports:
 - Min Distance
 - Decision Tree
 
-![Classifier configuration](../_images/cookbook/classification/cls_less.png)
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_25.webp)
 
 ### Export
 
@@ -214,7 +217,7 @@ Select `CLS` to configure the classifier. SEPAL supports:
 
 Select `Retrieve` to open the **Export** pane and choose the export parameters.
 
-![Export](../_images/cookbook/classification/export.png)
+![Export](../images/sepal/sepal_rf/sepal_rf_29.webp)
 
 The exported image will be stored in the `Downloads` folder.
 
