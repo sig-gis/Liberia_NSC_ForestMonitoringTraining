@@ -23,7 +23,7 @@ These include values related to setting the time period of interest, cloud maski
 
 An area of interest can be uploaded from a local shapefile, drawn on the map, or derived from a pre-existing dataset in the Earth Engine catalogue.
 
-For this exercise, we use a union of a `featureCollection` of Liberia's borders to be our AOI. You can also filter for specific provinces by uncommenting the line below.
+For this exercise, we use a union of a `featureCollection` of Liberia's borders to be our AOI. We can also filter for specific provinces by uncommenting the line below.
 
 ```javascript
 
@@ -43,7 +43,7 @@ Before beginning any remote sensing workflow, image preprocessing is essential. 
 * filter for the area of interest
 * filter for the time period of interest (with consideration for seasonality and data availability)
 * filter for certain image properties (such as orbit direction or sensor angle)
-* filter for the bands of interest (with consideration for what you are trying to map)
+* filter for the bands of interest (with consideration for what we are trying to map)
 * calculate indices
 * smooth noisy imagery (SAR imagery)
 * mask out clouds (optical imagery)
@@ -141,17 +141,17 @@ We will use either Landsat 8 or Sentinel 2 imagery, depending on the dates of in
 
 ### Calculate Indices
 
-The last thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. These index values range from -1 to +1:
+The last thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. Certain land cover types strongly reflect or absorb different wavelengths of light, and we can calculate normalized versions of these spectral differences to highlight certain land cover types. These index values range from -1 to +1:
 
-* **NDVI:** Normalized Difference Vegetation Index - quantifies vegetation by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs)
+* **NDVI:** Normalized Difference Vegetation Index - highlights vegetation health and density; calculated using the NIR and red bands
 
-* **LSWI:** Land Surface Water Index - calculated as a normalized ratio between near infrared (NIR) and short-wave infrared (SWIR), is sensitive to vegetation and soil water content
+* **LSWI:** Land Surface Water Index - highlights vegetation and soil water content; calculated using the NIR and SWIR1 bands
 
-* **NDMI:** Normalized Difference Moisture Index - used to determine vegetation water content (calculated as a ratio between the NIR and SWIR values in traditional fashion)
+* **NDMI:** Normalized Difference Moisture Index - highlights vegetation water content; calculated with the red and SWIR2 bands
 
-* **MNDWI:** Modified Normalized Difference Water Index - uses green and SWIR bands for the enhancement of open water features (diminishes built-up area features that are often correlated with open water in other indices)
+* **MNDWI:** Modified Normalized Difference Water Index - highlights open water; calculated using the geen and SWIR bands
 
-* **EVI:** Enhanced Vegetation Index - 
+* **EVI:** Enhanced Vegetation Index - highlights vegetation health and density; calculated using the NIR, red, and blue bands
 
 *Resource:* For some background on indices, you can go to the Spectral Indices page in the Resources tab of this website.
 <font color = red> insert correct link to resources </font>
@@ -167,10 +167,23 @@ Just to check we did everything correctly, we print out the resolution and the f
 
 <img align="center" src="../images/class-gee/print_images.png" hspace="15" vspace="10" width="200">
 
-You can expand the different levels of properties to get a better sense of what the data look like.
+We can expand the different levels of properties to get a better sense of what the data look like.
 
 <img align="center" src="../images/class-gee/print_images2.png" hspace="15" vspace="10" width="200">
 
-You can also check the band values of every image at specific points by opening on the **Inspector** tab and clicking somewhere on the map.
+We can also check the band values of every image at specific points by opening on the **Inspector** tab and clicking somewhere on the map.
 
 <img align="center" src="../images/class-gee/inspector_tab2.png" hspace="15" vspace="10" width="200">
+
+## Prepare Predictor Image
+
+Now, we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image. Also, if we look back at the resolutions we printed out, we see that the original imagery sources had different pixel sizes. It is best to reduce the resolution of all predictor variables to that of the lowest resolution imagery source. Thus we reduce the resolution to 30m.
+
+```javascript
+```
+
+<img align="center" src="../images/class-gee/predictor_image.png" hspace="15" vspace="10" width="200">
+
+## Prepare Reference Data
+
+Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. 
