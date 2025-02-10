@@ -22,7 +22,7 @@ nav_order: 2
 
 ## Workshop Google Group
 
-Sign in to [Google Groups](https://groups.google.com/) or click on the square of 9 dots at the top right of your gmail.
+Sign in to [Google Groups](https://groups.google.com/)(https://groups.google.com/) or click on the square of 9 dots at the top right of your gmail.
 
 Set the search dropdown to “All groups and messages”.
 
@@ -36,7 +36,7 @@ Click on the group and then click the *Ask to join group* button.
 Create a SEPAL account and request additional resources to be able to access the stratified estimator analysis apps.
 
 Go to this page:
-[S E P A L](https://sepal.io/)
+[S E P A L](https://sepal.io/)(https://sepal.io/)
 
 Click `Launch` and then `Sign Up`.
 
@@ -71,7 +71,7 @@ Within a few days, SEPAL admins should grant you these resources, which will all
 Create a Collect Earth Online Account and request to join the Guyana Workshop institution.
 
 Go to this page:
-[Collect Earth Online Home - Collect Earth Online](https://www.collect.earth/)
+[Collect Earth Online Home - Collect Earth Online](https://www.collect.earth/)(https://www.collect.earth/)
 
 Click `Register` at the top right.
 
@@ -101,7 +101,7 @@ Create a Pix4D account, activate the free 15-day trial, download Pix4Dmapper to 
 #### 1. Create a Pix4D account
 
 Go to this page:
-[Professional photogrammetry and drone mapping software | Pix4D](https://www.pix4d.com/)
+[Professional photogrammetry and drone mapping software | Pix4D](https://www.pix4d.com/)(https://www.pix4d.com/)
 
 Click `Login`.
 
@@ -195,7 +195,7 @@ Download and install QGIS on your computer.
 
 <img align="center" src="images/setup/qgis-icon.png" vspace="10" width="70">
 
-Go to the official [QGIS Download Page](https://qgis.org/download/).
+Go to the official [QGIS Download Page](https://qgis.org/download/)(https://qgis.org/download/).
 
 Scroll down to the appropriate section based on your operating system (Windows, macOS, Linux).
 
@@ -213,9 +213,9 @@ Once installed, launch **QGIS** from your applications menu.
 
 ## GEE Account
 
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register). 
+Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
 
-You will need a [Google account](https://accounts.google.com/signup). 
+You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
 
 Create a GEE account for non-commercial purposes.
 
@@ -229,7 +229,7 @@ Create a GEE account for non-commercial purposes.
 Download Google Earth Pro Software to your computer.
 
 Go to this page:
-[Earth Versions – Google Earth](https://www.google.com/earth/versions/)
+[Earth Versions – Google Earth](https://www.google.com/earth/versions/)(https://www.google.com/earth/versions/)
 
 Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
 
