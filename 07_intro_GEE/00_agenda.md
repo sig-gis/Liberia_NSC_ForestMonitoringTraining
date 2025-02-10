@@ -6,23 +6,25 @@ has_children: True
 nav_order: 8
 ---
 
-# Introduction to Google Earth Engine (GEE)
+# Introduction to GEE
 
-Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
+Here we will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the [EEFA](https://eefabook.org) book.
 
-## Session Agenda
+## Pre-configuration
 
-**Date**: date?
+As mentioned in the pre-workshop set up page, joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own 
 
-**Instructor(s):** Crystal Wespestad
 
-**Contact information**: [who's email](em-trainings@sig-gis.com)
+Create a [Google Earth Engine account](https://code.earthengine.google.com/register). 
 
-|      Time     |                                Topics                               |
-|:-------------:|:-------------------------------------------------------------------:|
-| 09:00 – 09:45 | Welcome and set-up check<br>Google Earth Engine Objects (continued) |
-|  9:45 – 10:45 | Introduction to JavaScript in Google Earth Engine                   |
-| 10:45 – 11:00 |                             Coffee break                            |
-| 11:00 – 12:00 | JavaScript exercises<br>Accessing Images in GEE                     |
-| 12:00 – 13:00 |                                Lunch                                |
-| 13:00 – 15:00 | Accessing Images in GEE<br>Accessing vector data  in GEE            |
+You will need a [Google account](https://accounts.google.com/signup). 
+
+Create a GEE account for non-commercial purposes.
+
+Follow the steps below if you want to register your own GEE cloud project:
+
+<img align="center" src="./images/setup/setup_gee1.png" vspace="10" width="600">
+
+<img align="center" src="./images/setup/setup_gee2.png" vspace="10" width="600">
+
+<img align="center" src="./images/setup/setup_gee3.png" vspace="10" width="600">

@@ -5,59 +5,25 @@ parent: "7. Intro to GEE"
 nav_order: 1
 ---
 
-# Introduction to GEE
-
-Welcome to an Introduction to Google Earth Engine (GEE)! This workshop will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the [EEFA](https://eefabook.org) book .
-
-## Pre-configuration
-
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register). You need a [Google account](https://accounts.google.com/signup). Create a GEE account for non-commercial purposes.
-
-<font color = red> join a google cloud project? </font>
-
-## Objectives
-
-1. Familiarize yourself with the GEE platform and its programming environment.
-2. Understand the fundamentals of programming using the JavaScript language.
-3. Learn the main objects, commands and procedures for retrieving, geoprocessing, visualizing and exporting images.
+*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, **GEE library***
 
 ## What is Google Earth Engine?
 
-“A planetary-scale platform for Earth science data & analysis”.
+GEE combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. We use GEE to detect changes, map trends, and quantify differences on the Earth's surface. GEE is available for commercial use, but remains free for academic and research use.
 
-Google Earth Engine combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysis capabilities. Scientists, researchers, and developers use Earth Engine to detect changes, map trends, and quantify differences on the Earth's surface. Earth Engine is now available for commercial use, and remains free for academic and research use.
-
-The processing infrastructure automatically parallelizes analysis across many processors on many computers in Google data centers. That results in reduction of processing times by orders of magnitude through the use of cloud-based and distributed computing power. In addition, the data is all centralized in the cloud.
+The processing infrastructure automatically parallelizes analysis across many processors on many computers in Google data centers, reducing  processing times by orders of magnitude. In addition, the data is all centralized in the cloud. GEE provides a friendly interface to explore, retrieve and visualize satellite imagery without the need to download data.
 
 <img align="center" src="../images/intro-gee/fig1.png" vspace="10" width="600">
 
 <font size=2> Source: Google </font>
 
-Goals:
 
-"Our mission is to organize the world's geospatial information and make it universally accessible and useful."
-
-- Facilitate
-- Scalable, script sharing
-- Access to all
-
-Focused on current problems:
-
-- Logging
-- Disasters
-- Climate change
-- Drought
-- Diseases
-- Sustainability
-
-### Advantages over traditional desktop software
-GEE provides a friendly interface to explore, retrieve and visualize (zoom/pan) satellite imagery without the need to download data, saving us time, disk storage space and network resources. Satellite products usually consist of heavy files in raster (tiff, hd5, etc.) or vectorial (kml, shapefile, xlm, etc.) formats.
 
 ### Introduction to JavaScript (JS)
-JavaScript (JS) Application Programming Interface (API) is a programming language to write and debug code, visualize data, and develop online applications in GEE.  The Python language is also available to be used, however this training will be based on JS. In case it is needed, a translation from JS to Python (or vice versa) is easy to be implemented, and there are currently tools available to make this process automatically. In addition, the JS API is the most developed and easiest programming language to utilize when getting started.
+JavaScript (JS) is a programming language used to write and debug code, visualize data, and develop online applications in GEE. The Python language is also available, however we will focus on JS as it is the most developed and easiest programming language to use when getting started. In case it is needed, a translation from JS to Python (or vice versa) is easy to be implemented, and there are tools available to do this automatically.
 
-### Analyzing programming structure.
-Learning how to code JavaScript is not complicated.  The online code-editor allows mostly a structured-procedural programming paradigm. It means the code has a simple sintaxis and can be divided into functions. Main JS reserved words and commands that you might end up getting familiar with are:
+### Analyzing programming structure
+The online code-editor allows mostly a structured-procedural programming paradigm. It means the code has a simple sintaxis and can be divided into functions. Main JS reserved words and commands that you will get familiar with are:
 
 - *var*: to declare new variables or functions
 - *Import* and *Export*: to import and export datasets
@@ -75,7 +41,7 @@ Earth Engine's public data archive includes more than forty years of historical 
 - More than 100 data sets added annually
 - 1+ PB of new data every month
 
-(These numbers are always being updated)
+*These numbers are always being updated*
 
 Types of data:
 
@@ -100,14 +66,11 @@ To explore all datasets:
 
 ## Application Programming Interface (API)
 
-An Application Programming Interface (API) is a way to communicate with Earth Engine servers. It allows you to specify which calculation you would like to do and then receive the results. The API is designed so that users don't have to worry about how the computation is distributed across a group of coputers and how the results are assembled. API users simply specify what should be done. This greatly simplifies the code by hiding implementation details from users. It also makes Earth Engine very accessible to users who are not familiar with writing code.
-
-The Earth Engine API is designed to be language independent. Google provides official client libraries for using the API from JavaScript and Python. The API remains pretty much the same no matter what programming language you use. The main difference is the syntax used to call the API functions. Once you learn the syntax of the programming languages, your code can be easily adapted because they all use the same API functions.
+An (API) is a way to communicate with GEE servers. The API is designed so that users don't need to worry about distributing computation across computers and later assembling results. As users, we simply specify what should be done, which makes GEE very accessible to users who are not familiar with writing code.
 
 ## Apps
 
-Codes can be converted into applications maintained on Google Earth Engine. You can also use the Python API to develop a web application, with great control over the app's interface.
-
+Codes can be converted into applications maintained on GEE:
 <img align="center" src="../images/intro-gee/fig4.png" vspace="10" width="600">
 
 <font size=2> Earth Engine Application: MODIS Ocean Temperature - Time Series Inspector. Source: https://google.earthengine.app/view/ocean. </font>
@@ -122,18 +85,8 @@ Some of GEE's applications include:
 - Air quality monitoring
 - Surface water mapping
 
-<font color = red> Examples of applications developed by SERVIR based on or using GEE:
 
-- [RAMI](https://rami.servirglobal.net/) - SERVIR-Amazon
-- [RLCMS](https://landcovermapping.org/en/landcover/) - SERVIR-Mekong & SERVIR-HKH
-- [Collect Earth Online](https://collect.earth) - SERVIR Global
-- [HYDRAFloods](https://hydrafloods-servir.adpc.net/map/) - SERVIR-Mekong
-- [EcoDash](http://ecodash-servir.adpc.net/) - SERVIR-Mekong
-- [Wheat Mapping](http://geoapps.icimod.org/afwheat/) - SERVIR-HKH
-- [Fire Forecasting](https://servir-amazonia.earthengine.app/view/aptitud-incendios) - SERVIR-Amazonia
-</font>
-
-General examples of applications:
+Examples of applications:
 
 - [Fire Monitoring in the Amazon](https://gis-acca.users.earthengine.app/view/amazon-fire-tracker) - Monitoring of the Andean Amazon Project
 - [Global Forest Change](https://glad.earthengine.app/view/global-forest-change) - University of Maryland
@@ -146,23 +99,32 @@ General examples of applications:
 
 ## Interface
 
-The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. Once you have followed Google's documentation on registering an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/). When you first visit the Code Editor, you'll see a screen like the one below.
+The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. 
+
+Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
 
 <img align="center" src="../images/intro-gee/fig5.png" vspace="10" width="600">
 
-The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: In the `Scripts` section you have all your code stored and organized in repositories, folders, subfolders and files. You can organize your scripts by project, and you can also share access or editing permissions with other GEE users. `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. In `Assets` you can store and organize files that you upload from your computer or download from GEE. In the center, you'll find the web-based code editor where you can insert your JavaScript code without any prior software installation. With the `Apps` button, you can develop small automated applications to process and display data in a more user-friendly manner and interface, while the `Run` button executes the code. On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script. We'll see the functionality of these as we go through the next few exercises.
+The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: 
+- In the `Scripts` section you have all your code stored in repositories, folders and files. You can organize your scripts by project, and also share access with other GEE users. 
+- `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. 
+- In `Assets` you can store and organize files that you upload from your computer or download from GEE. 
+
+In the center, you'll find the web-based code editor where you can insert your JS code without any prior software installation. With the `Apps` button, you can develop small automated applications to process and display data in a more user-friendly manner and interface. The `Run` button executes the code. 
+
+On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script.
 
 <img align="center" src="../images/intro-gee/fig7.png" vspace="10" width="700">
 
 ## Exercise: my first script
 
-The Code Editor allows you to write JavaScript code and run it. When you are learning a new language for the first time and getting used to a new programming environment, it is customary to make a program to display the words "Hello World". This is a fun way to start coding that shows you how to give input to the program and how to run it. We can also see where the program displays the output. Doing this in JavaScript is pretty simple. Copy the following code in the middle panel.
+The Code Editor allows you to write JavaScript code and run it. Let's try to display the words "Hello World". Copy the following code in the middle panel.
 
 ```javascript
 print('Hello World');
 ```
 
-The above line of code uses the JavaScript print function (`print`) to print the text "Hello World" to the screen. Once you enter the code, click the `Run` button. The output will be displayed in the top right panel under the `Console` tab.
+The above line of code uses the JS print function (`print`) to print the text "Hello World" to the screen. Once you enter the code, click the `Run` button. The output will be displayed in the top right panel under the `Console` tab.
 
 <img align="center" src="../images/intro-gee/fig16.png" vspace="10" width="600">
 
@@ -170,7 +132,7 @@ Now you know where to write your code, how to run it, and where to look for the 
 
 <img align="center" src="../images/intro-gee/fig17.png" vspace="10" width="600">
 
-If this is your first time in Code Editor, a screen will appear to create your home directory: Your home directory is a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it cannot be changed and will always be associated with your account. A good choice for the name would be the username of your Google account.
+If this is your first time in Code Editor, a screen will appear to create your home directory: a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it cannot be changed and will always be associated with your account. A good choice for the name would be the username of your Google account.
 
 <img align="center" src="../images/intro-gee/fig6.png" vspace="10" width="400">
 
@@ -180,13 +142,9 @@ Once your home folder is created, you will be prompted to enter a new repository
 
 Finally, you will be able to save your script inside the newly created repository. Enter the name of your choice and click `OK`.
 
-<font color = red> edit the following image to create .../liberia? </font>
-
 <img align="center" src="../images/intro-gee/fig19.png" vspace="10" width="400">
 
 Once the script is saved, it will appear in the script manager panel (under `Owner`). Scripts are saved in the cloud and will always be available to you when you open the Code Editor.
-
-<font color = red> edit the following image to be .../liberia? </font>
 
 <img align="center" src="../images/intro-gee/fig20.png" vspace="10" width="400">
 
@@ -197,3 +155,263 @@ Congratulations! You have created your first script.
 <font color = red> edit the following code to be .../liberia </font>
 
 All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
+
+
+
+
+
+## Javascript and Earth Engine Concepts
+
+This section covers JavaScript (JS) syntax and basic data structures in Earth Engine.
+
+
+### Variables
+
+In JS, variables are used to store data values and are defined using the keyword `var` followed by the name of the variable. The following code assigns the text "Monrovia" to the variable named `city`. 
+
+> **_Note:_**
+>
+> The text string in the code must be enclosed in quotes. You can use ' (single quotes) or " (double quotes), and they must match at the beginning and end of every string, but it's good to be consistent throughout a given script. 
+
+Every code line should normally end with a semicolon, although Earth Engine's code editor does not require it.
+
+```javascript
+var city = 'Monrovia';
+```
+
+If you print the variable `city`, you will get the value stored in the variable (Monrovia) printed to the Console.
+
+```javascript
+print(city);
+```
+
+When you assign a text value, the variable is automatically assigned the type *string*. 
+
+You can also assign numbers to variables and create variables of type *number*. The following code creates a new variable called `population` and assigns a number to it as its value.
+
+```javascript
+var population = 1700000;
+print(population);
+```
+
+### Lists
+
+It can be useful to store multiple values in a single variable. JS provides a data structure called a "list" that can contain multiple values. We can create a new list by using the brackets [] and adding multiple values separated by a comma.
+
+```javascript
+var cities = ['Monrovia', 'Gbarnga', 'Buchanan', 'Ganta'];
+print(cities);
+```
+
+If you look at the output in the Console, you'll see "`List`" with an expand arrow next to it, which if clicked, show you the contents of the list. 
+
+You'll notice that along with the four list items, there is a number next to each value. This is the index of each article which allows you to reference each item in the list by a numeric value indicating its position in the list.
+
+<font color = red> **EDIT HERE ONWARDS** </font>
+
+### JavaScript Objects
+
+Lists allow you to store multiple values in a single container variable. While useful, it's not appropriate for storing structured data. It is useful to be able to refer to each element by its name instead of its position. Objects in JavaScript allow you to store key-value pairs, where each value can be referred to by its key. You can create a `dictionary` using the braces {}. The following code creates an object called `cityData` with information about Monrovia.
+
+Please note some important things about JavaScript syntax here. First, we can use multiple lines to define the object. Only when we put the semicolon (;) the command is considered complete. This helps format the code to make it more readable. Also note the choice of the variable name `cityData`. The variable contains two words. The first word is in lower case and the first letter of the second word is in upper case. This type of naming scheme of joining multiple words into a single variable name is called a "camel case." While it is not mandatory to name your variables using this scheme, it is considered a good practice to follow. The functions and parameters in the Earth Engine API follow this convention, so your code will be much more readable if you also follow it.
+
+```javascript
+var cityData = {
+    'city': 'Monrovia',
+    'coordinates': [-10.8119, 6.3161],
+    'population': 1700000
+};
+print(cityData);
+```
+
+The object will be printed to the `Console`. You can see that instead of a numeric index, each element has a label. This is known as the key and can be used to retrieve the value of an object.
+
+
+<img align="center" src="../images/intro-gee/fig21.png" vspace="10" width="300">
+
+### Functions
+
+While using Earth Engine, you will need to define your own functions. The functions take user input, use it to perform some calculations, and send an output. Functions allow you to group a set of operations and repeat the same operations with different parameters without having to rewrite them each time. Functions are defined using the `function` keyword. The following code defines a function called `greeting` that takes input called `name` and returns a greeting prefixed with `Hello`. Note that we can call the function with different inputs and generate different outputs with the same code.
+
+```javascript
+var greet = function(name) {
+    return 'Hallo ' + name;
+};
+print(greet('Wereld'));
+print(greet('Deelnemers'));
+```
+
+<img align="center" src="../images/intro-gee/fig22.png" vspace="10" width="200">
+
+### Comments
+
+As you type the code, it's helpful to add some text to explain the code or leave a note for yourself. It is good programming practice to always add comments in your code explaining each step. In JavaScript, you can prefix any line with two forward slashes // to make it a comment. The interpreter will ignore the comment text and will not execute.
+
+```javascript
+// This is a comment!
+```
+
+The Code Editor also provides a shortcut (Ctrl + / on Windows, Cmd + / on Mac) to comment or uncomment multiple lines at once. You can select multiple lines and press the key combination to make them all comments. Press again to reverse the operation. This is useful when debugging code to stop the execution of certain parts of the script.
+
+
+<img align="center" src="../images/intro-gee/fig23.png" vspace="10" width="600">
+
+### Complete code
+
+
+<font color = red> update the link below </font>
+
+"`2 Introduction to JS`" script from the repository and the `T1 & T2` folder or direct link:
+[https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716](https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716)
+
+## Earth Engine API Basics
+
+The Earth Engine API is extensive, providing objects and methods to do everything from simple math to advanced algorithms for image processing. In the Code Editor, you can switch to the `Docs` tab to see the API functions grouped by object types (or in the [Earth Engine documentation](https://developers.google.com/earth-engine/apidocs)). API functions are prefixed with `ee` (for Earth Engine).
+
+<img align="center" src="../images/intro-gee/fig15.png" vspace="10" width="300">
+
+Fundamental Earth Engine Concepts regarding remote sensing include:
+
+- Image (`ee.Image`): The fundamental raster data type in Earth Engine. Image with a stack of georeferenced bands. Each band has its own Mask, Projection, Resolution, and a list of properties including date, bounding box, etc.
+
+     <img align="center" src="../images/intro-gee/fig8.png" vspace="10" width="150">
+
+- Image Collection (`ee.ImageCollection`): A collection of images
+
+     <img align="center" src="../images/intro-gee/fig9.png" vspace="10" width="150">
+
+- Geometry (`ee.Geometry`): The fundamental vector data type in Earth Engine. Line / Point / Polygon / etc.
+
+     <img align="center" src="../images/intro-gee/fig10.png" vspace="10" width="150">
+
+- Feature (`ee.Feture`): A geometry with properties. Line/Point/Polygon/etc,
+Property List
+
+     <img align="center" src="../images/intro-gee/fig11.png" vspace="10" width="150">
+
+- Features Collection (`ee.FeatureCollection`): A collection of Features (geometries with properties)
+
+     <img align="center" src="../images/intro-gee/fig12.png" vspace="10" width="150">
+
+- Reducers (`ee.Reducer`): Object used for aggregations and numerical calculations (for bands, time series, features...)
+
+     <img align="center" src="../images/intro-gee/fig13.png" vspace="10" width="150">
+     <img align="center" src="../images/intro-gee/fig14.png" vspace="10" width="150">
+
+For more information access the [EE objects and methods site](https://developers.google.com/earth-engine/guides/objects_methods_overview).
+
+Let's learn how to use the API. Suppose you want to add two numbers, represented by the variables a and b , as shown below. Create a new script and enter the following:
+
+```javascript
+var a = 1;
+var b = 2;
+```
+
+Earlier, you learned how to store numbers in variables, but not how to do any calculations. This is because when you use Earth Engine, you don't do addition using JavaScript operators. For example, you would not write `var c = a + b` to add the two numbers. Instead, the Earth Engine API gives you functions to do this, and it is important that you use the API functions whenever you can. It may seem cumbersome at first, but using functions, as we'll describe next, will help you avoid timeouts and create efficient code.
+
+Looking at the `Docs` tab, you will find a group of methods that can be called on an `ee.Number`. Expand to see the various functions available for working with numbers. You will see the function `ee.Number` which creates an Earth Engine number object from a value. In the function list, there is an addition function (`add`) to add two numbers. That's what you use to add `a` and `b`.
+
+<img align="center" src="../images/intro-gee/fig24.png" vspace="10" width="300">
+
+To add `a` and `b`, we first create an `ee.Number` object from the variable a with `ee.Number(a)`. And then we can use the `add(b)` call to add the value of `b` to it. The following code shows the syntax and prints the result, which of course is the value 3.
+
+```javascript
+var result = ee.Number(a).add(b);
+print(result);
+```
+
+You may have already realized that when you learn to program on Earth Engine, you don't need to learn JavaScript or Python in depth, they are just ways to access the Earth Engine API. This API is the same whether it is called from JavaScript or Python.
+
+Here is another example to drive this point home. Let's say you're working on a task that requires you to create a list of years from 1980 to 2020 with an interval of five years. If you are faced with this task, the first step is to switch to the `Docs` tab and open the `ee.List` module. Browse through the features and see if there are any features that can help. You will notice a function `ee.List.sequence`. Clicking on it will bring up the documentation for the function.
+
+<img align="center" src="../images/intro-gee/fig25.png" vspace="10" width="500">
+
+The `ee.List.sequence` function can generate a sequence of numbers from a given start value to the end value. It also has an optional parameter step to indicate the increment between each number. We can create an `ee.List` of numbers representing the years from 1980 to 2020, counting by 5 by 5, by calling this built-in function with the following values: `start` = 1980, `end` = 2020 and `step` = 5.
+
+```javascript
+var yearsList = ee.List.sequence(1980, 2020, 5);
+print(yearsList);
+```
+
+The output printed to the `Console` will show that the yearList variable contains the list of years with the correct interval.
+
+<img align="center" src="../images/intro-gee/fig26.png" vspace="10" width="500">
+
+Now let's look at an example of reduction (`ee.Reducer`). As we saw, `ee.Reducer` is the object used for aggregations and calculations. We create a list with numbers from 1 to 5 and we want to calculate the average of these numbers. For that, we use the `reduce()` function for lists and choose the `ee.Reducer` (look in the `Docs` for the `ee.Reducer.mean()` reducer). Note that we can use the same `ee.List.sequence` function to create the list but without the need to define the `step` since `step` has the value 1 by default.
+
+```javascript
+var numbersList = ee.List.sequence(1, 5);
+
+var mean = numbersList.reduce(ee.Reducer.mean());
+print(mean);
+```
+
+You have just completed a moderately complex programming task with the help of the Earth Engine API.
+
+### Challenge 1
+
+Suppose you have the following two string variables defined in the code below. Use the Earth Engine API to create a new string variable called `result` by combining these two `Strings`. Print it in the `Console`. The printed value should say "Sentinel2A".
+
+```javascript
+var mission = ee.String('Sentinel');
+var satellite = ee.String('2A');
+```
+
+*Hint*: Use the `cat` function of the `ee.String` module to "concatenate" (join) the two `strings`. You will find more information about all the functions available in the `Docs` tab of the Code Editor.
+
+<img align="center" src="../images/intro-gee/fig27.png" vspace="10" width="400">
+
+### Challenge 2
+
+Create a dictionary called `myInformation` using the `ee.Dictionary` object with your personal information: `name`, `age`, and a list of your 3 favorite movies `movies`. Print it in the `Console`.
+
+### Challenge 3
+
+Get the value stored in `age` and save it in a variable with a new name (example: `myAge`). Print it in the `Console`.
+
+*Hint*: Use the `get()` function of the `ee.Dictionary` object.
+
+Notice that the value printed is of type `Computed Object`. That means it's not an EE object yet. If you were to perform a mathematical operation on this number, you would need to "cast" it to the `ee.Number` object.
+
+### Challenge 4
+
+Get the second value from the list below and save it in a variable (example: `secondValue`).
+Divide that number by 2 and save it in a variable (example: `result1`). Print this result to the `Console`.
+
+*Hint*: look up information for the `get()` function of `ee.List`. Note that indexing starts at 0.
+
+*Hint*: Search for the `divide()` function of `ee.Number`. The values of `myList` need to be cast to an `ee.Number` first, before the number functions can be used. Note that we do not need to cast the number 2 in `divide()` - Earth Engine already casts that number to `ee.Number` once we are using an API function (`divide()`).
+
+```javascript
+var myList = ee.List([1, 2, 5, 4]);
+```
+
+### Challenge 5
+
+Multiply the second value of `myList` by 5 and store it in a variable (example: `result2`). Print it in the `Console`.
+
+*Hint*: Search for the `multiply()` function of `ee.Number`. The values of `myList` need to be cast to an `ee.Number` first, before the number functions can be used. Note that we do not need to cast the number 5 in `multiply()` - Earth Engine already casts that number to `ee.Number` once we are using the API function (`multiply()`).
+
+### Challenge 6
+
+Multiply each number in `myList` by 3. Save the result in a new variable called `newList` and print it.
+
+*Hint*: Complete the `triplicate` function below. Use `map()` to apply the function to each item in the list. Don't forget about the casting.
+
+```javascript
+function triplicate(number) {
+   return ; // complete this function.
+}
+```
+
+### Challenge 7
+
+Calculates the sum of all Numbers in `newList`. Save and print that value as `sum`.
+
+### Complete code
+
+
+<font color = red> the code below works, but change info in Challenge 2 to Crystal's and copy all scripts </font>
+
+"`3 Earth Engine API`" script from repository and `T1 & T2` folder or direct link:
+[https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd).

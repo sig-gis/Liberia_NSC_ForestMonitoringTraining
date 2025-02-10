@@ -210,9 +210,10 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 * Overall accuracy = (True Positive + True Negative) / Sample size
 * The overall accuracy essentially tells us what proportion of the reference data was classified correctly
 
+<br />
+<br />
 
-
-# Sources
+## Sources
 - Belgiu, M., & Drăguţ, L. (2016). Random forest in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 114, 24–31. https://doi.org/10.1016/j.isprsjprs.2016.01.011
 
 - Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324

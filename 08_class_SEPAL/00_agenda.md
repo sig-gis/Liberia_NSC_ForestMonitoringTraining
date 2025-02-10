@@ -8,21 +8,17 @@ nav_order: 10
 
 # Classification with SEPAL
 
-Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
+SEPAL (System for Earth Observation Data Access, Processing & Analysis for Land Monitoring) is a cloud-based platform designed to facilitate the processing and analysis of large-scale satellite imagery. It provides users with powerful tools to generate **analysis-ready data (ARD)**, perform **land cover classification**, and conduct **geospatial analysis** efficiently.
 
-## Session Agenda
+![Contiguous rasters](../images/sepal/sepal_logo.png)
 
-**Date**: date?
+With SEPAL, users can:
+- Access and process large remote sensing datasets without requiring high-end local computing resources.
+- Generate **radar mosaics** and **optical composites** for further analysis.
+- Apply advanced machine learning techniques for **land cover classification**.
 
-**Instructor(s):** Crystal Wespestad
 
-**Contact information**: [who's email](em-trainings@sig-gis.com)
+## Objectives
 
-|      Time     |                                Topics                               |
-|:-------------:|:-------------------------------------------------------------------:|
-| 09:00 – 09:45 | Welcome and set-up check<br>Google Earth Engine Objects (continued) |
-|  9:45 – 10:45 | Introduction to JavaScript in Google Earth Engine                   |
-| 10:45 – 11:00 |                             Coffee break                            |
-| 11:00 – 12:00 | JavaScript exercises<br>Accessing Images in GEE                     |
-| 12:00 – 13:00 |                                Lunch                                |
-| 13:00 – 15:00 | Accessing Images in GEE<br>Accessing vector data  in GEE            |
+1. Preprocess high-quality satellite imagery for further classification.
+2. Develop robust classification models for monitoring and assessing land cover and changes.

@@ -5,7 +5,7 @@ nav_order: 17
 ---
 
 # Photos
-[View or Upload Photos](https://drive.google.com/drive/folders/1HPL_hac2O050P-1K7ewO00yvAybS26py?usp=sharing){: .btn .btn-purple }
+Please share your photos, to be used for social media and reports about this workshop. [View or upload photos here](https://drive.google.com/drive/folders/1nDJ5r3WqXMdYD_MBnMEY8ROqkjvt3cqe?usp=sharing)
 
 ## Recent Workshop Highlights
 Photos from recent workshops will be displayed here.
