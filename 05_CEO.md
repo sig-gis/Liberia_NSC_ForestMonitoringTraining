@@ -24,6 +24,7 @@ Gathering samples for...
 - pre-work designing an efficient field campaign
 - comparison to field data
 - validating near-real-time alerts of landscape disturbances
+- creating high quality sample data that can be readily shared with others [DOI creation in CEO](https://www.collect.earth/introducing-dois-for-ceo/)
 - ...
 
 
@@ -48,6 +49,10 @@ Look for the imagery resource on the GEE library. There is often a sample visual
 <img align="center" src="./images/ceo/CEO_GEE_custom_stretch.png" hspace="15" vspace="10" width="700">
 
 <img align="center" src="./images/ceo/CEO_GEE_import_viz_params.png" hspace="15" vspace="10" width="700">
+
+These blogs have further information on adding imagery in CEO:
+- [Setting up multiple imagery sources in CEO](https://www.collect.earth/setting-up-multiple-imagery-sources-in-ceo/)
+- [Using your own data in CEO: Connecting GEE raster data](https://www.collect.earth/connecting-gee-raster-data/)
 
 
 ## Create a CEO Project
@@ -103,6 +108,9 @@ Click `Next`.
 On the `Survey Rules` page, you can create rules related to your survey questions.  For this exercise, we have just created 5 rules that prevent the user from answering 0% for any of the possible land cover classes (this is not a very useful rule since the 0%, 25%, and 50% options don't make any sense - assuming that you would need at least 50% coverage for the plot to be classified as that specific land cover type - but it is a good example of the general functionality of rules).  You can also set the rules so that CEO only accepts answers with certain values/strings or does not accept certain answers if the other questions were answered in a certain way.
 
 <img align="center" src="./images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
+
+*See here for futher details on rules:"* 
+[Blog - Using rules to collect better data in CEO](https://www.collect.earth/using-rules-to-collect-better-data-in-ceo/)
 
 Click `Next`.
 
