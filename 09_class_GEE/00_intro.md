@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "8. Classification with GEE"
-permalink: /07_class_GEE
+title: "9. Classification with GEE"
+permalink: /09_class_GEE
 has_children: True
-nav_order: 9
+nav_order: 10
 ---
 
 # Classification with Google Earth Engine (GEE)
