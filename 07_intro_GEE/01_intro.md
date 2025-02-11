@@ -151,10 +151,7 @@ Once the script is saved, it will appear in the script manager panel (under `Own
 Congratulations! You have created your first script.
 
 # Repository
-
-<font color = red> update the link below </font>
-
-All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
+All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops](https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops).
 
 
 
