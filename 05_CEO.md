@@ -73,11 +73,11 @@ For this workshop, **add YOUR NAME to the beginning of the project name**.  This
 
 Click `Next`.
 
-On the `Imagery Selection` page, you can change the imagery that will be available when collecting data.  You will see the default CEO imagery data sets under `Public Imagery`, as well as the imagery data sets you or someone else manually uploaded to your institution under `Private Institution Imagery `.  Here, we have already imported several useful data sets, such as some elevation, PALSAR and Sentinel 1 radar, and Sentinel 2 optical imagery.
+On the `Imagery Selection` page, you can change the imagery that will be available when collecting data.  You will see the default CEO imagery data sets under `Public Imagery`, as well as the imagery data sets you or someone else manually uploaded to your institution under `Private Institution Imagery `.  
 
 <img align="center" src="./images/ceo/CEO_imageryselection.png" hspace="15" vspace="10" width="700">
 
-On the `Plot Design` page, you cannot currently change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  There are 50 plots centered on our validation points exported from GEE.  They are square and 30m in width because the Landsat data used for our classification has a resolution of 30m.
+On the `Plot Design` page, if you previously selected `Copy Template Plots and Samples` the you cannot change the plot design parameters. See example below of a pre-filled page. 
 
 <img align="center" src="./images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
 
@@ -85,21 +85,39 @@ If `Copy Template Plots and Samples` was not checked, this page would look somet
 
 <img align="center" src="./images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
 
+The Quality Control set-up of your project is also done on this page. Think about: 
+- how your team works together, 
+- how you want to divide the work, 
+- the availability of your interpreters,
+- the current confidenc you have in the training/consitency of your interpreters, and
+- any QA/QC requirements you must follow.
+
+### *Tip About Quality Control*
+- If you have a very large data collection, consider dividing up your points into a series of smaller projects. Then, for the earlier projects, you can implement more intensive QA/QC procedures in the design to use it as a form of training for your team. Reviewing overlapping interpretations together on these smaller projects, will allow you to icrease your team's consistency and lead to having higher confidence in your later interpretations even if those projects do not have as stringent a QA/QC process (e.g. only single interpretations instead of 100% overlapping interpretations).
+- If you set up your project with *Equal Assignments* for the users, and then one interpreter leaves the project before finishing, these points can be interpreted by an Admin User instead. 
+
+
 Click `Next`.
 
-On the `Sample Design` page, you also cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  Each plot corresponds to a single sample located in the center of the plot.
+On the `Sample Design` page, you also cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  Each plot corresponds to a single sample located in the center of the plot. 
 
 <img align="center" src="./images/ceo/CEO_sampledesign.png" hspace="15" vspace="10" width="700">
 
-If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would be able to create multiple samples within each plot.
+Uncheck `Copy Template Plots and Samples` on the **Project Overview** page if you want to use your own CSV, shapefile of points, or CEO built-in option. If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would be able to create multiple samples within each plot.
 
 <img align="center" src="./images/ceo/CEO_sampledesign2.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
-On the `Survey Questions` page, you can create various types of sruvey questions related to your plots and samples. You can create parent and child questions so that certain questions only appear if the parent question was answered in a certain way.  You can also organize your questions into survey cards that are presented separately, which is particularly helpful when looking at land use change for different time periods.
+On the `Survey Questions` page, you can create various types of sruvey questions related to your plots and samples. You can create parent and child questions so that certain questions only appear if the parent question was answered in a certain way.  You can also organize your questions into survey cards that are presented separately. You can somewhat control the possible responses between survey cards using *rules* in the next step, but this is often trickier than using the *parent/child question* option. 
 
-For this exercise, we have two simple survey questions asking about what the land cover type is and what the percentage of that land cover type is.  On the right, you can see an example of what the survey question will look like when collecting data.
+As you design the questions on the left you can see and test what they will look like to the user on the rigth-side panel.
+
+### *Tips for question design*
+- Try to keep your questions short so they are not cut off on smaller screens, e.g. "LC in 2014" instead of "What was the land cover in 2014?"
+- Avoid punctuation if possible, especially commas, to reduce complications in your analysis when you have saved the results as a CSV. 
+- You can use the *Bulk Add* feature or the *Copy Question* option to save time if you have a lot of repeatedly used answer sets or similar questions.
+- Using the *Parent/Child* quesiton option can be helpful for reducing clicks and saving time for interpreters, so you do not have to answer non-relevant questions.
 
 <img align="center" src="./images/ceo/CEO_surveyquestions.png" hspace="15" vspace="10" width="700">
 
@@ -107,11 +125,11 @@ For this exercise, we have two simple survey questions asking about what the lan
 
 Click `Next`.
 
-On the `Survey Rules` page, you can create rules related to your survey questions.  For this exercise, we have just created 5 rules that prevent the user from answering 0% for any of the possible land cover classes (this is not a very useful rule since the 0%, 25%, and 50% options don't make any sense - assuming that you would need at least 50% coverage for the plot to be classified as that specific land cover type - but it is a good example of the general functionality of rules).  You can also set the rules so that CEO only accepts answers with certain values/strings or does not accept certain answers if the other questions were answered in a certain way.
+On the `Survey Rules` page, you can create rules related to your survey questions.  Use rules for quality control. It is best not to assume there will be no human errors. Catching possible errors in the survey design will save a ton of time compared to having to find and fix those errors after the data collection is completed.
 
 <img align="center" src="./images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
 
-*See here for futher details on rules:"* 
+*See here for futher details on rules:* 
 [Blog - Using rules to collect better data in CEO](https://www.collect.earth/using-rules-to-collect-better-data-in-ceo/)
 
 Click `Next`.
@@ -120,7 +138,7 @@ On the `Review` page, you can check that everything looks good and create the pr
 
 <img align="center" src="/Users/cew/Documents/GitHub/Liberia_NSC_ForestMonitoringTraining/images/ceo/CEO_review.png" hspace="15" vspace="10" width="700">
 
-At this point, you can still edit the project.  In order to start collecting data, you will need to click `Publish Project` on the next page, but you will now lose your ability to edit the plot and sample design.
+At this point, you can still edit the project.  In order to start collecting data, you will need to click `Publish Project` on the next page, but you will now lose your ability to edit the plot and sample design. You also will not be able to change the list of interpreters and any other paratmeters you set up under the Quality Control section of the `Plot Design` page.
 
 <img align="center" src="./images/ceo/CEO_publish.png" hspace="15" vspace="10" width="700">
 
