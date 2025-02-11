@@ -219,3 +219,11 @@ Material for this overview was gathered and modified from:
 * https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/
 * https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory
 
+<br />
+<br />
+
+## Exercise
+Next, let's practice out our CEO interpretation skills in the demo project in your CEO institution!
+
+An example Plot Data CSV for making your own project is available [here](https://drive.google.com/drive/folders/13aQi8Sz0vKfKY8wOEAuu6vNWlpG9Vs_m?usp=drive_link).
+
