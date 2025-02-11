@@ -71,7 +71,7 @@ Select `Add`. The following screen should be displayed:
 
 ![Image source](../images/sepal/sepal_rf/sepal_rf_5.webp)
 
-#### Image type
+##### Image type
 
 Users can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
 
@@ -94,17 +94,15 @@ Users can select images from an **Existing recipe** or an exported **GEE asset**
 
 Both methods behave the same way in the interface.
 
-#### Select bands
+##### Select bands
 
-> **Tip:**
->
-> For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow:
+> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow:
 >
 > ```code
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
 > ```
 
-#### Image bands
+##### Image bands
 
 Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
 
@@ -117,7 +115,7 @@ In this example, we selected:
 
 ![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
 
-#### Derived bands
+##### Derived bands
 
 The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
 
@@ -143,7 +141,7 @@ In this step, specify the legend for the output classified image. SEPAL provides
 >
 > Legends created here are fully compatible with other SEPAL functionalities.
 
-#### Manual legend
+##### Manual legend
 
 Select `Add` to add a new class to your legend. A class consists of:
 
@@ -153,7 +151,7 @@ Select `Add` to add a new class to your legend. A class consists of:
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.webp)
 
-#### Import legend
+##### Import legend
 
 You can import a `.csv` file containing legend definitions.
 
