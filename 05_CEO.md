@@ -41,8 +41,8 @@ Click on the `edit` button for the last imagery on the page called "Global Mangr
 
 <img align="center" src="./images/ceo/CEO_imagery2.png" hspace="15" vspace="10" width="700">
 
-### *Tip for visualization parameters*
-Look for the imagery resource on the GEE library. There is often a sample visualization which you can use directly or adapt for your needs by adjusting the visualization using the GEE Map panel. You can adjust the parameters or apply an automatic stretch for your area to get something reasonable, then import the visualization and copy it by clicking the small blue box at the top of the code editor. Do not include the semicolon at the end of the copied parameters.
+### <span style="color: blue;">*Tip for visualization parameters*</span>
+<span style="color: blue;">Look for the imagery resource on the GEE library. There is often a sample visualization which you can use directly or adapt for your needs by adjusting the visualization using the GEE Map panel. You can adjust the parameters or apply an automatic stretch for your area to get something reasonable, then import the visualization and copy it by clicking the small blue box at the top of the code editor. Do not include the semicolon at the end of the copied parameters.</span>
 
 <img align="center" src="./images/ceo/CEO_GEE_imagery_example.png" hspace="15" vspace="10" width="700">
 
@@ -81,7 +81,7 @@ On the `Plot Design` page, if you previously selected `Copy Template Plots and S
 
 <img align="center" src="./images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
 
-If `Copy Template Plots and Samples` was not checked, this page would look something like this, and you would need to upload a .csv file with the points (PLOTID, LON, LAT) that was exported from elsewhere (e.g., GEE, SEPAL, QGIS), a upload a shapefile of plot areas, or use CEO's build in plot design options.
+If `Copy Template Plots and Samples` was not checked, this page would look something like this, and you would need to upload a .csv file with the points (PLOTID, LON, LAT) that was exported from elsewhere (e.g., GEE, SEPAL, QGIS), a upload a shapefile of plot areas, or use CEO's built-in plot design options.
 
 <img align="center" src="./images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
 
@@ -92,18 +92,18 @@ The Quality Control set-up of your project is also done on this page. Think abou
 - the current confidenc you have in the training/consitency of your interpreters, and
 - any QA/QC requirements you must follow.
 
-### *Tip About Quality Control*
-- If you have a very large data collection, consider dividing up your points into a series of smaller projects. Then, for the earlier projects, you can implement more intensive QA/QC procedures in the design to use it as a form of training for your team. Reviewing overlapping interpretations together on these smaller projects, will allow you to icrease your team's consistency and lead to having higher confidence in your later interpretations even if those projects do not have as stringent a QA/QC process (e.g. only single interpretations instead of 100% overlapping interpretations).
-- If you set up your project with *Equal Assignments* for the users, and then one interpreter leaves the project before finishing, these points can be interpreted by an Admin User instead. 
+###  <span style="color: blue;">*Tip About Quality Control*</span>
+- <span style="color: blue;">If you have a very large data collection, consider dividing up your points into a series of smaller projects. Then, for the earlier projects, you can implement more intensive QA/QC procedures in the design to use it as a form of training for your team. Reviewing overlapping interpretations together on these smaller projects, will allow you to icrease your team's consistency and lead to having higher confidence in your later interpretations even if those projects do not have as stringent a QA/QC process (e.g. only single interpretations instead of 100% overlapping interpretations).</span>
+- <span style="color: blue;">If you set up your project with *Equal Assignments* for the users, and then one interpreter leaves the project before finishing, these points can be interpreted by an Admin User instead.</span>
 
 
 Click `Next`.
 
-On the `Sample Design` page, you also cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  Each plot corresponds to a single sample located in the center of the plot. 
+On the `Sample Design` page, you also cannot change the parameters if `Copy Template Plots and Samples` was checked on the `Project Overview` page.   
 
 <img align="center" src="./images/ceo/CEO_sampledesign.png" hspace="15" vspace="10" width="700">
 
-Uncheck `Copy Template Plots and Samples` on the **Project Overview** page if you want to use your own CSV, shapefile of points, or CEO built-in option. If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would be able to create multiple samples within each plot.
+Uncheck `Copy Template Plots and Samples` on the `Project Overview` page if you want to use your own CSV, shapefile of points, or CEO built-in option. If `Copy Template Plots and Samples` was not checked, this page would look like this, and you have the option of multiple samples within each plot.
 
 <img align="center" src="./images/ceo/CEO_sampledesign2.png" hspace="15" vspace="10" width="700">
 
@@ -113,11 +113,11 @@ On the `Survey Questions` page, you can create various types of sruvey questions
 
 As you design the questions on the left you can see and test what they will look like to the user on the rigth-side panel.
 
-### *Tips for Survey Question Design*
-- Try to keep your questions short so they are not cut off on smaller screens, e.g. "LC in 2014" instead of "What was the land cover in 2014?"
-- Avoid punctuation if possible, especially commas, to reduce complications in your analysis when you have saved the results as a CSV. 
-- You can use the *Bulk Add* feature or the *Copy Question* option to save time if you have a lot of repeatedly used answer sets or similar questions.
-- Using the *Parent/Child* quesiton option can be helpful for reducing clicks and saving time for interpreters, so you do not have to answer non-relevant questions.
+### <span style="color: blue;">*Tips for Survey Question Design*</span>
+- <span style="color: blue;">Try to keep your questions short so they are not cut off on smaller screens, e.g. "LC in 2014" instead of "What was the land cover in 2014?"</span>
+- <span style="color: blue;">Avoid punctuation if possible, especially commas, to reduce complications in your analysis when you have saved the results as a CSV.</span>
+- <span style="color: blue;">You can use the *Bulk Add* feature or the *Copy Question* option to save time if you have a lot of repeatedly used answer sets or similar questions.</span>
+- <span style="color: blue;">Using the *Parent/Child* quesiton option can be helpful for reducing clicks and saving time for interpreters, so you do not have to answer non-relevant questions.</span>
 
 <img align="center" src="./images/ceo/CEO_surveyquestions.png" hspace="15" vspace="10" width="700">
 
@@ -143,14 +143,14 @@ At this point, you can still edit the project.  In order to start collecting dat
 <img align="center" src="./images/ceo/CEO_publish.png" hspace="15" vspace="10" width="700">
 
 **Don't forget you still have the Geo-Dashboard to make!**
-You can copy the Geo-Dash from another project or you can make your own by using the `Add Widget` button. Then you can choose the type of widget tool you would like and set the parameters. `Create` the widget and then resize it as you wish.
+Open the Geo-Dash via the Project Edit page through the `Configure Geo-Dash` button. You can copy the Geo-Dash from another project or you can make your own by using the `Add Widget` button. Then you can choose the type of widget tool you would like and set the parameters. `Create` the widget and then resize it as you wish.
 
 <img align="center" src="./images/ceo/CEO_geodash_button.png" hspace="15" vspace="10" width="500">
 
 <img align="center" src="./images/ceo/CEO_geodash_degradation_widget.png" hspace="15" vspace="10" width="500">
 
-### *Tip for the Geo-Dashboard*
-The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.
+### <span style="color: blue;">**Tip for the Geo-Dashboard*</span>
+<span style="color: blue;">*The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.</span>
 
 Publish your project when you have tested it's functionallity using the draft `Collect` button on on the project editing page and have finalized your design. Most features of the project cannot be changed once you publish, but worst case scenario if you make a mistake and need to make a change, you can use the project you made as a starting *Template* for a new project.
 
@@ -182,10 +182,10 @@ Once you have opened Google Earth Pro, click on the clock icon on the toolbar at
 
 Go back to the CEO project. Exambine the available imagey and the Geo-Dashboard until you can answer all the survey questions. 
 
-### *Tip about finalizing an interpretation*
-- Use all the resources available to you. A good interpretation is usually informed by multiple sources, such as the Google Earth Pro imagery, the imagery in CEO from multiple days, and/or the graphs in the Geo-Dashboard. 
-- Follow a standardized procedure for interpretation across your team, referencing your Interpretation Key. See this [recommended interpretation procedure example](https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link) and update it for your needs.
-- **Always record the confidence** of your interpretation (making sure your team is using the 0-100 Confidence values in the same way), and record your reasoning and points of confusion for later reference during QA/QC reviews. The *Confidence Slider* values can be used automatically selecting points for quality review.
+### <span style="color: blue;">*Tip about finalizing an interpretation*</span>
+- <span style="color: blue;">Use all the resources available to you. A good interpretation is usually informed by multiple sources, such as the Google Earth Pro imagery, the imagery in CEO from multiple days, and/or the graphs in the Geo-Dashboard.</span> 
+- <span style="color: blue;">Follow a standardized procedure for interpretation across your team, referencing your Interpretation Key. See this [recommended interpretation procedure example](https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link) and update it for your needs.</span>
+- <span style="color: blue;">**Always record the confidence** of your interpretation (making sure your team is using the 0-100 Confidence values in the same way), and record your reasoning and points of confusion for later reference during QA/QC reviews. The *Confidence Slider* values can be used automatically selecting points for quality review.</span>
 
 Click `Save`.  
 
