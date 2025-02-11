@@ -45,7 +45,7 @@ Click **Run** on the task, filling out the names and locations you want the file
 
 # Create Validation Points in GEE
 
-In the new GEE script you created called **Map Validation - Sample Design**, import the land cover classification asset.  I have made land cover classification asset public, so you can use mine one `users/ebihari/LCclassification2022_Suriname` or your own.
+In the new GEE script you created called **Map Validation - Sample Design**, import the land cover classification asset.  I have made land cover classification asset public, so you can use mine `users/ebihari/LCclassification2022_Suriname`, or your own.
 
 ```javascript
 //--------------------------------------------------------------

@@ -61,7 +61,9 @@ On the institution’s home page, go to the `Projects` tab and click `+ Create N
 
 <img align="center" src="./images/ceo/CEO_projectpage.png" hspace="15" vspace="10" width="700">
 
-On this first `Project Overview` page, under `Select Template`, select the `Suriname land cover map validation` project that is already present in the institution, and click `Load`.  All of the project parameters should now be identical to the project that has already been created.
+On this first `Project Overview` page, under `Select Template`, you can select a project that is already present in the institution or any Public project created by others who use CEO, and click `Load`.  All of the project parameters should now be identical to the project that was copied.  
+
+Under *Copy Options* you can chose to check "Copy Template Plots and Samples" (which will use the same lat/long locations for plot areas and their interal samples), and/or check "Copy Template Widgets" (which will copy the Geodashboard set up), or check neither (which will still copy the imagery selection, survey questions, and rules).
 
 You can also create a project from scratch, but for the sake of simplicity, we will use this project template that has already been made for you.  If you want to model a CEO project off of another project but create entirely new plots/samples or survey questions, you can uncheck `Copy Template Plots and Samples` and `Copy Template Widgets`.
 
@@ -79,7 +81,7 @@ On the `Plot Design` page, you cannot currently change the parameters because `C
 
 <img align="center" src="./images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
 
-If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would need to upload the .csv file with the validation points that was exported from GEE.
+If `Copy Template Plots and Samples` was not checked, this page would look something like this, and you would need to upload a .csv file with the points (PLOTID, LON, LAT) that was exported from elsewhere (e.g., GEE, SEPAL, QGIS), a upload a shapefile of plot areas, or use CEO's build in plot design options.
 
 <img align="center" src="./images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
 
