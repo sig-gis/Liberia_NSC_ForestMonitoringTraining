@@ -50,7 +50,7 @@ Map.addLayer(
     firstImage, // data to visualize
     {
         bands: ['SR_B1'], //  image band to visualize
-        min: 6000, //  range of values for visualization
+        min: 7000, //  range of values for visualization
         max: 12000
     },
     'First Image' //  layer name that appears under "Layers"
@@ -61,12 +61,12 @@ The code here uses the `addLayer` method of the map (`Map`). There are four impo
 
 - `firstImage`: this is the dataset that will be displayed on the map.
 - `bands`: these are the particular bands of the dataset to display on the map (a single band "SR_B1" in our case).
-- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. The minimum (6000) is assigned to black, and the maximum (12000) to white, with values in between mapped linearly to grayscale. Values below 6000 appear black, and above 12000 appear white.
+- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. The minimum (7000) is assigned to black, and the maximum (12000) to white, with values in between mapped linearly to grayscale. Values below 7000 appear black, and above 12000 appear white.
 - `'First Image'`: this is a label for the map layer to display in the Layer Manager. It appears in the layer dropdown at the top right of the map.
 
 When you run the code, you may need to scroll to find the image. Click and drag the map to Liberia or search "Monrovia, Liberia" in the panel at the top of the Code Editor. Use the `zoom` tool to increase or decrease the zoom level.
 
-<font color=red> EDIT HERE ONWARDS </font>
+<font color=red> EDIT the image </font>
 
 <img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400">
 
@@ -76,9 +76,9 @@ Let's explore this image with the `Inspector` tool. When you click on the `Inspe
 
 <img align="center" src="../images/intro-gee/fig29.png" vspace="10" width="300">
 
-- Point: data about the location on the map. This includes geographic location (longitude and latitude) and some information about the map display (zoom level and scale).
-- Pixels: data about the pixel in the layer. If you expand this, you'll see the name of the map layer, a description of the data source, and a bar chart. In our example, we see that `"First Image"` is extracted from an image dataset that contains 19 bands. Below the layer name, the graph shows the pixel value at the location you clicked for each band in the dataset. When you hover over a bar, a panel will appear to display the name of the band and the "band value" (pixel value). To find the pixel value for "SR_B1", hover over the first bar on the left. Alternatively, clicking on the small blue icon to the right of `"First Image"` (B. in the image above) will change the display from a bar graph to a dictionary reporting the pixel value for each band .
-- Objects: data about the source dataset. Here you will find metadata about the image that closely resembles what you retrieved earlier when you told Earth Engine to print the image to the `Console`.
+- `Point`: displays clicked cursor location details, including latitude, longitude, zoom level, and scale.  
+- `Pixels`: provides pixel data for the selected layer, including the layer name, data source, and a bar chart of band values of our `"First Image"` that contains 19 bands. Hover over a bar to see the band name and pixel value. Click the blue icon next to `Layer 1` switch from a bar chart to a dictionary view, reporting pixel value for each band.
+- `Objects`: shows metadata about the source dataset, similar to what appears when printing the image to the `Console`.
 
 We can use color to compare these visual differences in pixel values of each band layer at a time as an RGB composite. This method uses the three primary colors (red, green, and blue) to display the values of each pixel in three bands.
 
@@ -94,6 +94,9 @@ Map.addLayer(
     },
     'True Color');
 ```
+
+
+<font color=red> EDIT HERE ONWARDS </font>
 
 The result resembles the world we see and is called a natural color composite, because it naturally matches the spectral ranges of the bands in the image to display colors. This image, also called a true-color composite, shows the red spectral band with shades of red, the green band with shades of green, and the blue band with shades of blue. We specify the pairing simply through the order of the bands in the list: B4, B3, B2. Because Landsat 9 bands 4, 3, and 2 correspond to the real-world colors of red, green, and blue, the image resembles the world we would see outside an airplane window or from a low-flying drone.
 
