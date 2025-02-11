@@ -152,7 +152,7 @@ Congratulations! You have created your first script.
 
 # Repository
 
-<font color = red> edit the following code to be .../liberia </font>
+<font color = red> update the link below </font>
 
 All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
 
@@ -208,7 +208,6 @@ If you look at the output in the Console, you'll see "`List`" with an expand arr
 
 You'll notice that along with the four list items, there is a number next to each value. This is the index of each article which allows you to reference each item in the list by a numeric value indicating its position in the list.
 
-<font color = red> **EDIT HERE ONWARDS** </font>
 
 ### JavaScript Objects
 
@@ -269,6 +268,7 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 
 
 <font color = red> update the link below </font>
+
 
 "`2 Introduction to JS`" script from the repository and the `T1 & T2` folder or direct link:
 [https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716](https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716)
