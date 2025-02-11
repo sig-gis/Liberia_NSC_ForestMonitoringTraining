@@ -20,6 +20,6 @@ Follow along by copying and pasting each code block in the lesson into your own 
 ## Setup     
 
 1. Log into your Google Earth Engine account and open the code editor.
-2. <font color = red> enter correct link </font> Click this link to accept the GEE script repository as a "reader" - [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops)
+2. Click this link to accept the GEE script repository as a "reader" - [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops)
 3. Create a new script file in your own script repository - name it 'Classification'. Keep in mind a master copy is available in the above script repository.
 4. <font color = red> enter correct link </font> You can look at the full script here - [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)

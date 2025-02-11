@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Challenges
-parent: "8. Classification with GEE"
+parent: "9. Classification with GEE"
 nav_order: 4
 ---
 
