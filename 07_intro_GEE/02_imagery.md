@@ -14,7 +14,7 @@ Imagery in GEE can be accessed either from your local workstation or Earth Engin
 
 ## Importing Raster Data to GEE assets
  
-You can use the Asset Manager to upload image or other georeferenced raster datasets. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
+You can use the Asset Manager to upload image or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
 
 To upload a GeoTIFF using the Code Editor, select the Assets tab in the upper left corner, click **`NEW`**, then select **Image upload**. Click the **`SELECT`** button and navigate to a GeoTIFF on your local file system, or drag and drop your GeoTIFF into this upload dialog.
 
@@ -22,24 +22,24 @@ Give the image an appropriate asset ID (which doesn't already exist) in your use
 
 Click **`UPLOAD`** to start the upload.
 
-<img align="center" src="../images/intro-gee/gee_upload.png" vspace="10" width="600">
+<img align="center" src="../images/intro-gee/gee_upload.png" vspace="10" width="500">
 
-Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning gear GEE icon, next to the task. Once the ingestion is complete, the asset will appear in your user folder with a <img align="center" src="../images/intro-gee/image_icon.png" vspace="10" width="15"> icon.
+Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning GEE icon <img align="center" src="../images/intro-gee/gee_icon.png" vspace="10" width="20">, next to the task. Once the ingestion is complete, the asset will appear in your user folder with a <img align="center" src="../images/intro-gee/image_icon.png" vspace="10" width="15"> icon.
 
 
 
 ## Satellite images through public data catalogue
 
-Satellite imagery is at the heart of the power of Google Earth Engine. This section teaches you how to inspect and view data stored in image bands. We first display individual bands as separate map layers and then explore a method for displaying three different bands on a single composite layer. We compare different types of composites for satellite bands that measure electromagnetic radiation in the visible and non-visible spectrum.
+This section covers inspecting image bands, displaying them as map layers, and creating composite layers with multiple bands, including visible and non-visible spectrum.
 
-First we are going to visualize a Landsat 9 image of September 24, 2022 over Paramaribo. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
+First we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
 
 ```javascript
-var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_229056_20220924');
+var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
 print(firstImage);
 ```
 
-In the `Console`, you must click on the expansion arrows to display the information. We see that this image consists of 19 different bands. For each band, the metadata lists four properties, but for now let's just note that the first property is a name or label for the band in quotes. For example, the name of the first band is “SR_B1”.
+In the `Console`, click on the expansion arrows to display the information. We see that this image consists of 19 different bands. For each band, the metadata lists four properties, but for now let's just note that the first property is a name or label for the band in quotes. For example, the name of the first band is “SR_B1”.
 
 <img align="center" src="../images/intro-gee/fig28.png" vspace="10" width="400">
 
@@ -50,8 +50,8 @@ Map.addLayer(
     firstImage, // data to visualize
     {
         bands: ['SR_B1'], //  image band to visualize
-        min: 6000, //  range of values for visualization (0-255)
-        max: 11000
+        min: 6000, //  range of values for visualization
+        max: 12000
     },
     'First Image' //  layer name that appears under "Layers"
 );
@@ -60,11 +60,13 @@ Map.addLayer(
 The code here uses the `addLayer` method of the map (`Map`). There are four important components of the above command:
 
 - `firstImage`: this is the dataset that will be displayed on the map.
-- `bands`: These are the particular bands of the data set to display on the map. In our example, we show a single band called "SR_B1".
-- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. By default, the minimum provided value (6000) is assigned to black and the maximum provided value (11000) is assigned to white. Values between minimum and maximum are mapped linearly to a grayscale between black and white. Values below 6000 are drawn in black. Values above 11000 are drawn in white. Together, the band, minimum, and maximum parameters define display parameters or instructions for displaying data.
-- `'First Image'`: This is a label for the map layer to display in the Layer Manager. This label appears in the layer dropdown at the top right of the map.
+- `bands`: these are the particular bands of the dataset to display on the map. In our example, we show a single band called "SR_B1".
+- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. By default, the minimum provided value (6000) is assigned to black and the maximum provided value (12000) is assigned to white. Values between minimum and maximum are mapped linearly to a grayscale between black and white. Values below 6000 are drawn in black. Values above 12000 are drawn in white. Together, the band, minimum, and maximum parameters define display parameters or instructions for displaying data.
+- `'First Image'`: this is a label for the map layer to display in the Layer Manager. It appears in the layer dropdown at the top right of the map.
 
-When you run the code, you may not notice the image displayed unless you scroll and find it. To do this, click and drag the map over to Suriname (You can also jump there by typing "Suriname" in the search panel at the top of the Code Editor, where the indicator says "Search places and datasets".. .) Use the zoom tool to increase the zoom level and make the square appear larger.
+When you run the code, you may not notice the image displayed unless you scroll and find it. To do this, click and drag the map over to Liberia (You can also jump there by typing "Monrovia, Liberia" in the search panel at the top of the Code Editor, where the indicator says `"Search places and datasets..."`). Use the `zoom` tool to increase or decrease the zoom level.
+
+<font color=red> EDIT HERE ONWARDS </font>
 
 <img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400">
 
