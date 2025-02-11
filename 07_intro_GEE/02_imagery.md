@@ -7,13 +7,28 @@ nav_order: 2
 
 *Objectives: GEE: uploading imagery to assets, including drone data; publicly available imagery and data sets (e.g. forest change and fire alerts); linking GEE imagery to CEO*
 
+# Imagery in GEE
 
-# Obtaining Imagery in GEE
+Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offerd over forty years of historical imagery and scientific datasets, updated and expanded daily.
 
 
-Earth Engine's public data catalog includes more than forty years of historical imagery and scientific datasets, updated and expanded daily.
+## Importing Raster Data to GEE assets
+ 
+You can use the Asset Manager to upload image or other georeferenced raster datasets. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
 
-## Satellite images
+To upload a GeoTIFF using the Code Editor, select the Assets tab in the upper left corner, click **`NEW`**, then select **Image upload**. Click the **`SELECT`** button and navigate to a GeoTIFF on your local file system, or drag and drop your GeoTIFF into this upload dialog.
+
+Give the image an appropriate asset ID (which doesn't already exist) in your user folder. If you'd like to upload the image into an existing folder or collection, prefix the asset ID with the folder or collection ID, for example `projects/myproject/folder-or-collection-id/new-asset`.
+
+Click **`UPLOAD`** to start the upload.
+
+<img align="center" src="../images/intro-gee/gee_upload.png" vspace="10" width="600">
+
+Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning gear GEE icon, next to the task. Once the ingestion is complete, the asset will appear in your user folder with a <img align="center" src="../images/intro-gee/image_icon.png" vspace="10" width="15"> icon.
+
+
+
+## Satellite images through public data catalogue
 
 Satellite imagery is at the heart of the power of Google Earth Engine. This section teaches you how to inspect and view data stored in image bands. We first display individual bands as separate map layers and then explore a method for displaying three different bands on a single composite layer. We compare different types of composites for satellite bands that measure electromagnetic radiation in the visible and non-visible spectrum.
 
