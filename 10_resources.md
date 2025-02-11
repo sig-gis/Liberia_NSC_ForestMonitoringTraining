@@ -12,7 +12,7 @@ To expand your learning, we recommend the following detailed resources:
 
 - [CEO support page](https://www.collect.earth/ceo-guides/)
 
-- [GEE free textbook for futher learning](https://www.eefabook.org/)
+- [GEE free textbook for further learning](https://www.eefabook.org/)
 - [AREA2 documentation page](https://area2.readthedocs.io/en/latest/)
 
 - [FAO's SEPAL online course](https://www.fao.org/in-action/sepal/certified-course/en)

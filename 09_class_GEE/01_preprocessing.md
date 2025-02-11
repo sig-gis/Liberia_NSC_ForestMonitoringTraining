@@ -7,11 +7,13 @@ nav_order: 1
 
 # Preprocessing Imagery in GEE
 
-## Set Important Parameters
+## Setup
+
+### Set Important Parameters
 
 First, we  define some variables that will be used as parameters later throughout the script. We are bringing them to the top of the script so they are easy to change without having to scroll through the script to find them.
 
-These include values related to setting the time period of interest, the number of reference points, cloud masking, and smoothing.
+These include values related to setting the version number, time period of interest, the number of reference points, cloud masking, and smoothing.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +67,7 @@ var cloudCoverThreshold = 100
 var csQualityThreshold = 0.80
 ```
 
-## Create Area of Interest (AOI)
+### Create Area of Interest (AOI)
 
 An area of interest can be uploaded from a local shapefile, drawn on the map, or derived from a pre-existing dataset in the Earth Engine catalogue.
 
@@ -205,7 +207,7 @@ Map.addLayer(lulc30m, lulcVis, 'LULC 2014 30m', false);
 
 We can view the LULC class at any point on the map by opening the **Inspector** tab in the upper right hand corner of the screen and clicking somewhere on the map. Then, we can navigate to `Pixels` > `LULC 2014` > `class` to see the LULC class at that point.
 
-<img align="center" src="../images/class-gee/inspector_tab.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/inspector_tab.png" hspace="15" vspace="10" width="200">
 
 ### Elevation (DEM)
 
@@ -246,7 +248,7 @@ var demVis = {
 Map.addLayer(dem, demVis, 'DEM', false);
 ```
 
-### SAR Imagery
+### Synthetic Aperture Radar (SAR) Imagery (PALSAR and Sentinel 1)
 
 Now, we start importing the raw satellite imagery we will use in our model, starting with synthetic aperture radar (SAR) imagery. We need to do some filtering and preprocessing for the SAR imagery before we use it in our model. SAR can be more complex to interpret and analyze, but it can be very useful in tropical areas where cloud cover makes optical imagery difficult to use. 
 
@@ -390,12 +392,12 @@ function importPALSAR(date1,date2){
 }
 ```
 
-<img align="center" src="../images/class-gee/SAR.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/SAR.png" hspace="15" vspace="10" width="400">
 
 
-*Tip:* For dates of interest in 2014, you will get an error when trying to add SAR imagery to the map, since it is empty for this year.
+*Hint:* For dates of interest in 2014, you will get an error when trying to add SAR imagery to the map, since it is empty for this year.
 
-### Optical Imagery (Landsat and Sentinel)
+### Optical Imagery (Landsat 8 and Sentinel 2)
 
 Now we will do something very similar with optical imagery. Optical imagery is much more intuitive to interpret and less noisy than SAR, but it is frequently obscured by clouds in tropical regions.
 
@@ -575,7 +577,7 @@ function importHLS(date1,date2){
 }
 ```
 
-<img align="center" src="../images/class-gee/optical.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/optical.png" hspace="15" vspace="10" width="400">
 
 ### Optical Imagery (Planet)
 
@@ -669,9 +671,9 @@ function importPlanet(date1,date2){
 }
 ```
 
-<img align="center" src="../images/class-gee/optical_planet.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/optical_planet.png" hspace="15" vspace="10" width="400">
 
-*Tip:* For dates of interest in 2014, you will get an error when trying to add Planet imagery to the map, since it is empty for this year.
+*Hint:* For dates of interest in 2014, you will get an error when trying to add Planet imagery to the map, since it is empty for this year.
 
 ## Prepare Predictor Image
 
@@ -805,9 +807,9 @@ function calculateSARIndices(image){
 }
 ```
 
-<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
 
-*Tip:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
+*Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
 
 ### Fix Projection Issues
 
@@ -869,9 +871,11 @@ Next, we generate reference data. We can either import the points we generated i
 
 * **training points:** Generate enough training points per class to have at least 10 * p, where p the number of predictor variables (e.g. if your predictor image has 16 bands, generate at least 160 training points per LULC class)
 
-* **testing points:** Generate enough testing points per class so the ratio between training and testing points is √(p):1, where p is the number of predictor variables (e.g. if your predictor image has 16 bands, generate at least 40 tetsing points per class - the ratio between training and testing points should be 4:1, which is an 80% / 20% split)
+* **testing points:** Generate enough testing points per class so the ratio between training and testing points is √(p):1, where p is the number of predictor variables (e.g. if your predictor image has 16 bands, generate at least 40 tetsing points per class - the ratio between training and testing points should be 4:1, which is an 80%-20% split)
 
-In more recent years when SAR and Planet NICFI are available, we have 22 possible predictor bands to use in our model. Based on these rules of thumb, we should have at least 220 training points per class, and at least 48 testing points per class. Thus, 400 total reference points per class go well beyond these minimums if we split them into training and testing data later (generally, more training and testing data is better).
+In more recent years when SAR and Planet NICFI are available, we have 22 possible predictor bands to use in our model. Based on these rules of thumb, we should have at least 220 training points per class, and at least 48 testing points per class. Thus, 400 total reference points per class go well beyond these minimums if we split them into training and testing data later 
+
+*Tip:* Generally, more training and testing data is better, so try to generate as much as you can within your budget and time constraints.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -900,7 +904,7 @@ print('reference points:', refPoints.limit(5))
 
 ```
 
-<img align="center" src="../images/class-gee/reference_pts.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/class-gee/reference_pts.png" hspace="15" vspace="10" width="400">
 
 ## Export
 
