@@ -41,7 +41,7 @@ print(firstImage);
 
 In the `Console`, click on the expansion arrows to display the information. We see that this image consists of 19 different bands. For each band, the metadata lists four properties, but for now let's just note that the first property is a name or label for the band in quotes. For example, the name of the first band is “SR_B1”.
 
-<img align="center" src="../images/intro-gee/fig28.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig28.png" vspace="10" width="500">
 
 Now let's add one of the bands to the map as a layer so we can see it.
 
@@ -60,11 +60,11 @@ Map.addLayer(
 The code here uses the `addLayer` method of the map (`Map`). There are four important components of the above command:
 
 - `firstImage`: this is the dataset that will be displayed on the map.
-- `bands`: these are the particular bands of the dataset to display on the map. In our example, we show a single band called "SR_B1".
-- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. By default, the minimum provided value (6000) is assigned to black and the maximum provided value (12000) is assigned to white. Values between minimum and maximum are mapped linearly to a grayscale between black and white. Values below 6000 are drawn in black. Values above 12000 are drawn in white. Together, the band, minimum, and maximum parameters define display parameters or instructions for displaying data.
+- `bands`: these are the particular bands of the dataset to display on the map (a single band "SR_B1" in our case).
+- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. The minimum (6000) is assigned to black, and the maximum (12000) to white, with values in between mapped linearly to grayscale. Values below 6000 appear black, and above 12000 appear white.
 - `'First Image'`: this is a label for the map layer to display in the Layer Manager. It appears in the layer dropdown at the top right of the map.
 
-When you run the code, you may not notice the image displayed unless you scroll and find it. To do this, click and drag the map over to Liberia (You can also jump there by typing "Monrovia, Liberia" in the search panel at the top of the Code Editor, where the indicator says `"Search places and datasets..."`). Use the `zoom` tool to increase or decrease the zoom level.
+When you run the code, you may need to scroll to find the image. Click and drag the map to Liberia or search "Monrovia, Liberia" in the panel at the top of the Code Editor. Use the `zoom` tool to increase or decrease the zoom level.
 
 <font color=red> EDIT HERE ONWARDS </font>
 
