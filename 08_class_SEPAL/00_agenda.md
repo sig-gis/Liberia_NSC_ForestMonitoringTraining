@@ -10,7 +10,7 @@ nav_order: 10
 
 SEPAL (System for Earth Observation Data Access, Processing & Analysis for Land Monitoring) is a cloud-based platform designed to facilitate the processing and analysis of large-scale satellite imagery. It provides users with powerful tools to generate **analysis-ready data (ARD)**, perform **land cover classification**, and conduct **geospatial analysis** efficiently.
 
-<img align="center" src="../images/sepal/sepal_logo.png" vspace="10" width="300">
+<img align="center" src="./images/sepal/sepal_logo.png" vspace="10" width="300">
 
 With SEPAL, users can:
 - Access and process large remote sensing datasets without requiring high-end local computing resources.

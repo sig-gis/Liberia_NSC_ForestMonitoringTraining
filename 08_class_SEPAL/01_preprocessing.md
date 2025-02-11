@@ -254,7 +254,7 @@ Now that you've downloaded the optical mosaic, you can use it in other SEPAL wor
 > *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=lip8C4tq7ig)*.
 
 
-The SEPAL recipe for radar mosaics allows users to generate analysis-ready data (ARD) from the Sentinel-1 C-Band synthetic aperture radar (SAR) mission, which can be used in subsequent analysis, such as land cover classification.
+In addition to Optical imagery, you can also access Radar imagery through SEPAL. The SEPAL recipe for radar mosaics allows users to generate analysis-ready data (ARD) from the Sentinel-1 C-Band synthetic aperture radar (SAR) mission, which can be used in subsequent analysis, such as land cover classification.
 
 
 The following steps demonstrate the default procedure for creating a yearly timescan, useful for tasks such as land cover mapping.

@@ -7,26 +7,41 @@ nav_order: 2
 
 *Objectives: GEE: uploading imagery to assets, including drone data; publicly available imagery and data sets (e.g. forest change and fire alerts); linking GEE imagery to CEO*
 
+# Imagery in GEE
 
-# Obtaining Imagery in GEE
+Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offerd over forty years of historical imagery and scientific datasets, updated and expanded daily.
 
 
-Earth Engine's public data catalog includes more than forty years of historical imagery and scientific datasets, updated and expanded daily.
+## Importing Raster Data to GEE assets
+ 
+You can use the Asset Manager to upload image or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
 
-## Satellite images
+To upload a GeoTIFF using the Code Editor, select the Assets tab in the upper left corner, click **`NEW`**, then select **Image upload**. Click the **`SELECT`** button and navigate to a GeoTIFF on your local file system, or drag and drop your GeoTIFF into this upload dialog.
 
-Satellite imagery is at the heart of the power of Google Earth Engine. This section teaches you how to inspect and view data stored in image bands. We first display individual bands as separate map layers and then explore a method for displaying three different bands on a single composite layer. We compare different types of composites for satellite bands that measure electromagnetic radiation in the visible and non-visible spectrum.
+Give the image an appropriate asset ID (which doesn't already exist) in your user folder. If you'd like to upload the image into an existing folder or collection, prefix the asset ID with the folder or collection ID, for example `projects/myproject/folder-or-collection-id/new-asset`.
 
-First we are going to visualize a Landsat 9 image of September 24, 2022 over Paramaribo. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
+Click **`UPLOAD`** to start the upload.
+
+<img align="center" src="../images/intro-gee/gee_upload.png" vspace="10" width="500">
+
+Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning GEE icon <img align="center" src="../images/intro-gee/gee_icon.png" vspace="10" width="20">, next to the task. Once the ingestion is complete, the asset will appear in your user folder with a <img align="center" src="../images/intro-gee/image_icon.png" vspace="10" width="15"> icon.
+
+
+
+## Satellite images through public data catalogue
+
+This section covers inspecting image bands, displaying them as map layers, and creating composite layers with multiple bands, including visible and non-visible spectrum.
+
+First we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
 
 ```javascript
-var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_229056_20220924');
+var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
 print(firstImage);
 ```
 
-In the `Console`, you must click on the expansion arrows to display the information. We see that this image consists of 19 different bands. For each band, the metadata lists four properties, but for now let's just note that the first property is a name or label for the band in quotes. For example, the name of the first band is “SR_B1”.
+In the `Console`, click on the expansion arrows to display the information. We see that this image consists of 19 different bands. For each band, the metadata lists four properties, but for now let's just note that the first property is a name or label for the band in quotes. For example, the name of the first band is “SR_B1”.
 
-<img align="center" src="../images/intro-gee/fig28.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig28.png" vspace="10" width="500">
 
 Now let's add one of the bands to the map as a layer so we can see it.
 
@@ -35,8 +50,8 @@ Map.addLayer(
     firstImage, // data to visualize
     {
         bands: ['SR_B1'], //  image band to visualize
-        min: 6000, //  range of values for visualization (0-255)
-        max: 11000
+        min: 7000, //  range of values for visualization
+        max: 12000
     },
     'First Image' //  layer name that appears under "Layers"
 );
@@ -45,11 +60,13 @@ Map.addLayer(
 The code here uses the `addLayer` method of the map (`Map`). There are four important components of the above command:
 
 - `firstImage`: this is the dataset that will be displayed on the map.
-- `bands`: These are the particular bands of the data set to display on the map. In our example, we show a single band called "SR_B1".
-- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. By default, the minimum provided value (6000) is assigned to black and the maximum provided value (11000) is assigned to white. Values between minimum and maximum are mapped linearly to a grayscale between black and white. Values below 6000 are drawn in black. Values above 11000 are drawn in white. Together, the band, minimum, and maximum parameters define display parameters or instructions for displaying data.
-- `'First Image'`: This is a label for the map layer to display in the Layer Manager. This label appears in the layer dropdown at the top right of the map.
+- `bands`: these are the particular bands of the dataset to display on the map (a single band "SR_B1" in our case).
+- `min`, `max`: these represent the lower and upper limits of the values of "SR_B1" to display on the screen. The minimum (7000) is assigned to black, and the maximum (12000) to white, with values in between mapped linearly to grayscale. Values below 7000 appear black, and above 12000 appear white.
+- `'First Image'`: this is a label for the map layer to display in the Layer Manager. It appears in the layer dropdown at the top right of the map.
 
-When you run the code, you may not notice the image displayed unless you scroll and find it. To do this, click and drag the map over to Suriname (You can also jump there by typing "Suriname" in the search panel at the top of the Code Editor, where the indicator says "Search places and datasets".. .) Use the zoom tool to increase the zoom level and make the square appear larger.
+When you run the code, you may need to scroll to find the image. Click and drag the map to Liberia or search "Monrovia, Liberia" in the panel at the top of the Code Editor. Use the `zoom` tool to increase or decrease the zoom level.
+
+<font color=red> EDIT the image </font>
 
 <img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400">
 
@@ -59,9 +76,9 @@ Let's explore this image with the `Inspector` tool. When you click on the `Inspe
 
 <img align="center" src="../images/intro-gee/fig29.png" vspace="10" width="300">
 
-- Point: data about the location on the map. This includes geographic location (longitude and latitude) and some information about the map display (zoom level and scale).
-- Pixels: data about the pixel in the layer. If you expand this, you'll see the name of the map layer, a description of the data source, and a bar chart. In our example, we see that `"First Image"` is extracted from an image dataset that contains 19 bands. Below the layer name, the graph shows the pixel value at the location you clicked for each band in the dataset. When you hover over a bar, a panel will appear to display the name of the band and the "band value" (pixel value). To find the pixel value for "SR_B1", hover over the first bar on the left. Alternatively, clicking on the small blue icon to the right of `"First Image"` (B. in the image above) will change the display from a bar graph to a dictionary reporting the pixel value for each band .
-- Objects: data about the source dataset. Here you will find metadata about the image that closely resembles what you retrieved earlier when you told Earth Engine to print the image to the `Console`.
+- `Point`: displays clicked cursor location details, including latitude, longitude, zoom level, and scale.  
+- `Pixels`: provides pixel data for the selected layer, including the layer name, data source, and a bar chart of band values of our `"First Image"` that contains 19 bands. Hover over a bar to see the band name and pixel value. Click the blue icon next to `Layer 1` switch from a bar chart to a dictionary view, reporting pixel value for each band.
+- `Objects`: shows metadata about the source dataset, similar to what appears when printing the image to the `Console`.
 
 We can use color to compare these visual differences in pixel values of each band layer at a time as an RGB composite. This method uses the three primary colors (red, green, and blue) to display the values of each pixel in three bands.
 
@@ -77,6 +94,9 @@ Map.addLayer(
     },
     'True Color');
 ```
+
+
+<font color=red> EDIT HERE ONWARDS </font>
 
 The result resembles the world we see and is called a natural color composite, because it naturally matches the spectral ranges of the bands in the image to display colors. This image, also called a true-color composite, shows the red spectral band with shades of red, the green band with shades of green, and the blue band with shades of blue. We specify the pairing simply through the order of the bands in the list: B4, B3, B2. Because Landsat 9 bands 4, 3, and 2 correspond to the real-world colors of red, green, and blue, the image resembles the world we would see outside an airplane window or from a low-flying drone.
 
