@@ -158,7 +158,8 @@ We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limit
 // Define area of interest (vector data)
 //--------------------------------------------------------------
 
-var suriname = ee.FeatureCollection('projects/caribbean-trainings/assets/suriname-2023/boundary');
+var liberia = ee.FeatureCollection('projects/pc556-ncs-liberia-forest-mang/assets/liberia_boundary');
+
 // TIP: Centering the map before adding a layer is more efficient 
 // than adding it afterward.
 
