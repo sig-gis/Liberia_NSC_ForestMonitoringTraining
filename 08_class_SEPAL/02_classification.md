@@ -41,7 +41,7 @@ Classification_<timestamp>
 <img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
  -->
 
-> **Note:**
+> **_Note:_**
 >
 >  It is recommended to use the following naming convention:
 >
@@ -66,15 +66,15 @@ In the lower-right corner, the following tabs are available, allowing us to cust
 
 The first step consists of selecting the image bands on which to apply the classifier. The number of selected bands is not limited.
 
-> **Note:**
+> **_Note:_**
 >
 > Increasing the number of bands to analyze will improve the model but slow down the rendering of the final image.
 
-> **Note:**
+> **_Note:_**
 >
 > If multiple images are selected, all selected images should overlap. If the classifier finds masked pixels in one of the bands, it will mask them in the resulting classification.
 
-Select `Add`. The following screen should be displayed:
+Select `+ Add`. The following screen should be displayed:
 
 ![Image source](../images/sepal/sepal_rf/sepal_rf_5.png)
 
@@ -105,7 +105,7 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow: </font>
+> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: </font>
 >
 > ```code
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
@@ -113,7 +113,7 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Image bands </font>**
 
-Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
+Once an asset is selected, SEPAL will load its bands in the interface. Click on the band name to select it. The selected bands are summarized in the expansion panel title (1) and displayed in gold in the panel content (2).
 
 In this example, we selected:
 
@@ -122,21 +122,32 @@ In this example, we selected:
 - `swir`
 - `green`
 
-![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
+![Native bands](../images/sepal/sepal_rf/sepal_rf_6.png)
 
 **<font size = 3> Derived bands </font>**
 
-The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
+SEPAL can also build additional derived bands on-the-fly, so the analysis is not limited to native bands. 
 
-Select `Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands.
+Select `+ Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel (1).
 
 > **_Note:_**
 >
-> If more than two bands are selected, the operation will be applied to the Cartesian product of the bands.
+> If more than two bands are selected, the operation will be applied to the Cartesian product of the bands, meaning that selecting bands A, B and C, and applying the `Difference` derived bands, will add three bands to your analysis:
+> 
+> - A - B
+> - A - C
+> - B - C
 
-![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.webp)
 
-Once image selection is complete, select `Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash` button removes the image and its bands from the analysis.
+![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.png)
+
+> **_Note:_**
+>
+> In the figure, we compute the normalized difference between `nir` and `red` (i.e. the NDVI), but it is also pre-computed in the `Indexes` derived bands.
+>
+
+
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash can` button removes the image and its bands from the analysis.
 
 ![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.webp)
 
@@ -152,7 +163,7 @@ In this step, specify the legend for the output classified image. SEPAL provides
 
 ##### Manual legend
 
-Select `Add` to add a new class to your legend. A class consists of:
+Select `+ Add` to add a new class to your legend. A class consists of:
 
 - **Color**: Click the color square to open the selector.
 - **Value**: Select an integer value (must be unique).
@@ -185,7 +196,7 @@ Once the legend is validated, export it using `Export as CSV`.
 
 ### Training data
 
-> **Note:**
+> **_Note:_**
 >
 > This step is not mandatory.
 
