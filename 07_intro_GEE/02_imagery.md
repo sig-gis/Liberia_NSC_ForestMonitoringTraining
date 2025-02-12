@@ -146,9 +146,9 @@ What coverages stand out in these band combinations?
 
 ## Image Collections & Composites in Earth Engine
 
-Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of Earth images collected (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type with specific Earth Engine API operations. Like individual images, they can be viewed with `Map.addLayer`, filtered with `filter`, and processed with functions using `map`.
+Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of Earth images collected (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type with specific API operations. Like individual images, they can be viewed with `Map.addLayer`, filtered with `filter`, and processed with functions using `map`.
 
-We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Liberia, using the `filterBounds` function and by dates to obtain images from January 2017 to December 2021, using the `filterDate` function.
+We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Liberia, using `filterBounds` and by dates to obtain images from January 2017 to December 2021, using `filterDate`.
 
 <font color=red> EDIT HERE ONWARDS </font>
 
