@@ -50,7 +50,7 @@ A high positive value translats top high presence of vegetaion, while low positi
 
 This index represents chlorophyll sensitivity from true color data.
 
-#### TGI = (Green - (0.39 * Red) - (0.61 * Blue)) / (normalized to the max value of Red, Green and Blue)
+#### TGI = (Green - (0.39 * Red) - (0.61 * Blue)) / (Max. Red + Max. Green + Max. Blue) 
 
 <img align="center" src="../" hspace="15" vspace="10" width="1000">
 
