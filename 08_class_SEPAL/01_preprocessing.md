@@ -62,7 +62,7 @@ But it is recommended to use the following naming convention:
 ```
 
 
-![Default title](../images/sepal/sepal_prep/sepal_prep_4.png) 
+![Default title](../images/sepal/sepal_prep/sepal_prep_4_5.png) 
 ![Modified title](../images/sepal/sepal_prep/sepal_prep_5.png)
 
 
