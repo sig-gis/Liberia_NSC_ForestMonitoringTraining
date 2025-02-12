@@ -297,6 +297,8 @@ Property List
 
 For more information access the [EE objects and methods site](https://developers.google.com/earth-engine/guides/objects_methods_overview).
 
+
+
 ### Practice
 
 Let's learn how to use the API. Suppose you want to add two numbers, stored in variables `a` and `b`. Create a new script and enter the following:
@@ -344,7 +346,13 @@ var mean = numbersList.reduce(ee.Reducer.mean());
 print(mean);
 ```
 
-You have just completed a moderately complex programming task with the help of the Earth Engine API.
+You have just completed a moderately complex programming task with the help of the Earth Engine API!
+
+<br />
+<br />
+<br />
+
+## On your own, try the following Javascripting challenges 
 
 ### Challenge 1
 
@@ -355,7 +363,7 @@ var mission = ee.String('Sentinel');
 var satellite = ee.String('2A');
 ```
 
-> *Hint*: Use the `cat` function of the `ee.String` module to "concatenate" (join) the two `strings`. More information about all functions is available in the `Docs` tab.
+> *Hint*: You could use the `cat` function of the `ee.String` module to "concatenate" (join) the two `strings`. More information about all functions is available in the `Docs` tab.
 
 <img align="center" src="../images/intro-gee/fig27.png" vspace="10" width="400">
 
