@@ -409,7 +409,7 @@ Map.addLayer(
 <font color=red> EDIT THE DATE BELOW </font>
 
 
-Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from September 26, 2022 — taken two days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, the red, green, and blue bands match Landsat 9 (Red: B4, Green: B3, Blue: B2), though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
+Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from September 26, 2022, taken two days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
 
 <font color=red> EDIT THE IMAGE CODE BELOW </font>
 
@@ -485,10 +485,86 @@ Export.image.toDrive({
 
 Check this function's description in the `Docs` tab for more information.
 
-You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from your Google Drive ([https://drive.google.com/drive/my-drive](https://drive.google.com/drive/my-drive)).
+You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from [your Google Drive](https://drive.google.com/drive/my-drive).
 
 ### Complete code
 
 <font color=red> EDIT THE CODES AND PATHS BELOW </font>
 
 Script "`1 Image Visualization - L9 & S2`" from the repository and folder `T3` or direct link: [https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4](https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4).
+
+
+
+## Publicly available datasets 
+
+### (e.g. forest change and fire alerts)
+
+Here's a concise section on publicly available datasets, focusing on forest change and fire alerts in GEE:
+
+---
+
+## Publicly Available Datasets  
+
+<font color=red> ADD SCREENSHOTS FROM GEE X2 </font>
+
+
+Earth Engine also provides access to numerous publicly available datasets that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
+
+### Global Forest Change  
+For example, the **Global Forest Change dataset** tracks forest loss, gain, and disturbance from 2000 onward, derived from Landsat imagery. It can be accessed using the following code snippet:
+
+```javascript
+var gfc = ee.Image("UMD/hansen/global_forest_change_2022_v1_10");
+Map.addLayer(gfc.select('lossyear'), {min: 0, max: 22, palette: ['yellow', 'red']}, 'Forest Loss');
+```
+
+### Fire Alerts  
+The **MODIS and VIIRS fire datasets** can provide near real-time active fire detections. For instance, the MODIS **Fire Information for Resource Management System (FIRMS)** can be added to your map with:
+
+```javascript
+var fires = ee.ImageCollection("MODIS/006/MCD14ML")
+    .filterDate('2024-01-01', '2024-02-01');
+Map.addLayer(fires, {bands: ['MaxFRP'], min: 0, max: 100, palette: ['black', 'orange', 'red']}, 'Active Fires');
+```
+
+These datasets can help detect deforestation, monitor wildfires, and assess land use changes within GEE.
+
+
+## Linking GEE imagery to CEO
+
+<font color=red> ADD A SCREENSHOT FROM GEE  </font>
+
+
+Finally, GEE imagery can be integrated into CEO and can provide the following benefits: 
+- Access near real-time satellite data for interpretation.  
+- Combine high-resolution imagery with CEO’s sampling tools.  
+- Enable collaborative land monitoring and validation.  
+
+Follow the steps below to link GEE imagery to CEO:
+
+1. Create a CEO Project
+   - Sign in to your [CEO](https://collect.earth/) account.  
+   - Create a project, define the survey area, and set up the sampling grid.  
+
+2. Use GEE Base Maps
+   - CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2.
+   - To use custom GEE imagery, we would need to generate a GEE Tile Layer URL. To export imagery as a web tile layer, we would need to use the following script in GEE:
+
+<font color=red> EDIT THE IMAGE CODE BELOW </font>
+
+   ```javascript
+   var image = ee.Image('COPERNICUS/S2_SR/20230901T000000_20230901T235959_T10TFR')
+       .select(['B4', 'B3', 'B2'])
+       .visualize({min: 500, max: 5000, bands: ['B4', 'B3', 'B2']});
+   
+   var mapId = image.getMapId();
+   print('Tile URL:', mapId.urlFormat);
+   ```
+
+   - Copy the `Tile URL` from the Console.
+
+3.Add the GEE Tile Layer in CEO 
+   - In the CEO project settings, go to `Custom Base Maps`.  
+   - Click `Add a New Base Map` and paste your **GEE Tile URL**.  
+   - Save and select it as your imagery source.  
+
