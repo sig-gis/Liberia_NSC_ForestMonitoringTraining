@@ -2,7 +2,7 @@
 layout: page
 title: "Types of UAS Platforms"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 5
+nav_order: 2
 ---
 
 # Types of UAS Platforms

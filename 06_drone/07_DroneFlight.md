@@ -2,7 +2,7 @@
 layout: page
 title: "Manual Drone Flight"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 10
+nav_order: 7
 ---
 # Manual Drone Flight
 
