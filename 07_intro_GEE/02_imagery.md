@@ -178,14 +178,14 @@ var landsat8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
 
 var collection = landsat8
     .filterDate('2017-01-01', '2022-01-01')
-    .filterBounds(suriname);
+    .filterBounds(liberia);
 
 Map.addLayer(collection, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 7000, max: 12000}, 'Landsat 8 Collection');
 
 print(collection);
 ```
 
-The result is images superimposed on each other and a total of 887 images. Take into account that the images that appear at the top are in accordance with the order of the images within the collection. In the `Console` you can look at the order of the images.
+The result is images superimposed on each other and a total of 885 images. Note that the images that appear at the top are in accordance with the order of the images within the collection. In the `Console` you can look at the order of the images.
 
 <img align="center" src="../images/intro-gee/fig37.png" vspace="10" width="500">
 
@@ -196,17 +196,17 @@ We can filter the collection by cloud cover as well. For that, we add one more f
 ```javascript
 var collection = landsat8
     .filterDate('2017-01-01', '2022-01-01')
-    .filterBounds(suriname)
+    .filterBounds(liberia)
     .filter(ee.Filter.lt('CLOUD_COVER', 30));
 ```
 
-We use the `ee.Filter.lt` to get images that have cloud cover "less than" 30%. Notice that we now have 200 images.
+We use the `ee.Filter.lt` to get images that have cloud cover "less than" 30%. Notice that we now have 268 images.
 
 <img align="center" src="../images/intro-gee/fig38.png" vspace="10" width="500">
 
 <img align="center" src="../images/intro-gee/fig40.png" vspace="10" width="400">
 
-Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and completely block or obscure the spectral response of the Earth's surface. Working with pixels that are contaminated by clouds can significantly influence the accuracy and information content of products derived from a variety of remote sensing activities, including land cover classification, vegetation modeling, and especially change detection, where undetected clouds can be mapped as false changes. Therefore, the information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from subsequent processing steps.
+Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and completely block or obscure the Earth's surface. Working with pixels that are contaminated by clouds can influence accuracy and information content of products derived from remote sensing activities, including land cover classification, vegetation modeling, and change detection, where undetected clouds can be mapped as false changes. Therefore, information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from processing.
 
 First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. Please note: Landsat Collection 1 and Collection 2 Tier 2 science products have different scale factors, fill values, and different data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
 
