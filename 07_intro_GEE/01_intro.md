@@ -263,7 +263,7 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 ### Complete code
 
 "`2 Introduction to JS`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
-[https://code.earthengine.google.com/8491a50e5cb7aaa7272d44c12262784a](https://code.earthengine.google.com/8491a50e5cb7aaa7272d44c12262784a)
+[https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563](https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563)
 
 ## Earth Engine API Basics
 
@@ -422,6 +422,4 @@ Calculate the sum of all Numbers in `newList`. Save and print that value as `sum
 
 ### Complete code
 
-"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
-
-[https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd)
+"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link: [https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267](https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267)
