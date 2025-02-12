@@ -5,7 +5,6 @@ parent: "7. Intro to GEE"
 nav_order: 1
 ---
 
-*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, **GEE library***
 
 ## What is Google Earth Engine?
 
