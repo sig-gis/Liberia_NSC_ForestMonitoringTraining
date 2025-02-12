@@ -41,7 +41,7 @@ Classification_<timestamp>
 <img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
  -->
 
-> **Note:**
+> **_Note:_**
 >
 >  It is recommended to use the following naming convention:
 >
@@ -66,15 +66,15 @@ In the lower-right corner, the following tabs are available, allowing us to cust
 
 The first step consists of selecting the image bands on which to apply the classifier. The number of selected bands is not limited.
 
-> **Note:**
+> **_Note:_**
 >
 > Increasing the number of bands to analyze will improve the model but slow down the rendering of the final image.
 
-> **Note:**
+> **_Note:_**
 >
 > If multiple images are selected, all selected images should overlap. If the classifier finds masked pixels in one of the bands, it will mask them in the resulting classification.
 
-Select `Add`. The following screen should be displayed:
+Select `+ Add`. The following screen should be displayed:
 
 ![Image source](../images/sepal/sepal_rf/sepal_rf_5.png)
 
@@ -105,64 +105,86 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow: </font>
->
-> ```code
-> projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
-> ```
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: CHANGE THE ASSET NAME BELOW TOO </font>
+
+```code
+projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
+```
 
 **<font size = 3> Image bands </font>**
 
-Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
+Once an asset is selected, SEPAL will load its bands in the interface. Click on the band name to select it. The selected bands are summarized in the expansion panel title (1) and displayed in gold in the panel content (2).
 
 In this example, we selected:
+
+<font color = red> THE BAND NAMES - CORRECT? </font>
 
 - `red`
 - `nir`
 - `swir`
 - `green`
 
-![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
+
+![Native bands](../images/sepal/sepal_rf/sepal_rf_6.png)
 
 **<font size = 3> Derived bands </font>**
 
-The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
+SEPAL can build additional derived bands on-the-fly, so the analysis is not limited to native bands. 
 
-Select `Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands.
+Select the green `+ Derived bands` and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel (1).
 
 > **_Note:_**
 >
-> If more than two bands are selected, the operation will be applied to the Cartesian product of the bands.
+> If more than two bands are selected, the operation will be applied to the Cartesian product of the bands, meaning that selecting bands A, B and C, and applying the `Difference` derived bands, will add three bands to your analysis:
+> 
+> - A - B
+> - A - C
+> - B - C
 
-![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.webp)
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
 
-Once image selection is complete, select `Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash` button removes the image and its bands from the analysis.
+![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.png)
 
-![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.webp)
+> **_Note:_**
+>
+> In the figure, we compute the normalized difference between `nir` and `red` (i.e. the NDVI), but it is also pre-computed in the `Indexes` derived bands.
+>
+
+
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. Instead, click `> Next` to continue to next step.
+
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
+
+![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.png)
 
 ### Legend setup
 
-In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend.
+In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend - manually or by importing a `csv` table.
 
-![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.webp)
+![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.png)
 
 > **Important:**
 >
 > Legends created here are fully compatible with other SEPAL functionalities.
 
-##### Manual legend
+**<font size = 3> Manual legend </font>**
 
-Select `Add` to add a new class to your legend. A class consists of:
+Select `+ Add` to add a new class to your legend. A class consists of:
 
-- **Color**: Click the color square to open the selector.
-- **Value**: Select an integer value (must be unique).
-- **Class name**: Enter a description (cannot be empty).
+- *Color (1)*: click the color square to open the selector (must be unique)
+- *Value (2)*: select an integer value (must be unique)
+- *Class name (3)*: enter a description (cannot be empty)
 
-![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.webp)
+You can select `HEX` (4) to display the hexadecimal value of the selected color. It can also be used to insert a known color palette by utilizing its values.
 
-##### Import legend
+If unsure which colors to use for each class, apply colors using a preselected GEE color map (5). It will color all classes in your panel.
 
-You can import a `.csv` file containing legend definitions.
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.png)
+
+**<font size = 3> Import legend </font>**
+
+You can also import a `.csv` file containing pre-made legend definitions.
 
 Example `.csv` format:
 
@@ -174,18 +196,34 @@ code,class,color
 40,Cropland,#f096ff
 ```
 
-Select `Import from CSV` and upload your file.
+Example 2:
 
-![Import legend](../images/sepal/sepal_rf/sepal_rf_11.webp)
+```csv
+code,class,red,blue,green
+10,Tree cover,0,100,0
+20,Shrubland,255,187,34
+30,Grassland,255,255,76
+40,Cropland,240,150,255
+```
 
-Once the legend is validated, export it using `Export as CSV`.
+Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
-![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.webp)
+![Import legend](../images/sepal/sepal_rf/sepal_rf_11.png)
 
+Click `✓ Apply` to validate your selection. At this stage, you would still be able to modify the legend if needed. When done, `✓ Done` to validate this step. 
+
+
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
+
+#### Export legend
+
+Once the legend is validated, select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
+
+<font color = red> EDIT HERE ONWARDS </font>
 
 ### Training data
 
-> **Note:**
+> **_Note:_**
 >
 > This step is not mandatory.
 
@@ -193,7 +231,7 @@ Training data can be added from external sources or collected interactively.
 
 Select `TRN` to open the **Training Data** menu.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_13.webp)
+![Training menu](../images/sepal/sepal_rf/sepal_rf_13.png)
 
 Training data can be imported from:
 
