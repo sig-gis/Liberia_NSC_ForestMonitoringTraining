@@ -72,6 +72,17 @@ Highlight the cell and drag down and then across to fill in the rest of the cell
 
 The other rest of the cells have been set up automatically to calculate the user's and producer's accuracy of each class. The rows under the table show the weighted accuracies of each class, which are just calculated by multiplying the classes producer's accuracies by their area proportions. The weighted accuracies are simply added up to produce the overall weighted accuracy. The equation is:
 
+<img align="center" src="../images/accuracy/awa_formula1
+.png" hspace="15" vspace="10" width="700">
+
+Or, in other terms:
+
+<img align="center" src="../images/accuracy/awa_formula2
+.png" hspace="15" vspace="10" width="700">
+
+<img align="center" src="../images/accuracy/accuracy_step3
+.png" hspace="15" vspace="10" width="700">
+
 $$
 AWA = \sum \left( w_i \times \frac{N_{ii}}{N_i} \right)
 $$ 
@@ -87,16 +98,7 @@ $$
 $$
 N_{i} = total\ number\ of\ testing\ points\ in\ class
 $$
-
-Or, in other terms:
-
 $$
 Area\ Weighted\ Accuracy = \sum \left( weight \times \frac{true\ positives}{true\ positives + false\ negatives} \right)
 $$ 
-
-<img align="center" src="../images/accuracy/accuracy_step3
-.png" hspace="15" vspace="10" width="600">
-
-
-
 
