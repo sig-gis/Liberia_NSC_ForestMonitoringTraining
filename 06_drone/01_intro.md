@@ -20,9 +20,10 @@ Welcome to Drone Flight and Image Processing! In this portion of the workshop, w
 4. Download all the files from this Google Drive folder onto your computer -[https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
 
 ## Objectives 
-1. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.
-2. Understand the basics of conducting a drone flight.
-3. Understand the basics of doing drone image processing, including making orthomoasics and digital surface models.
+1. Understand types of drones and sensors for photogrammetry
+2. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.
+3. Understand the basics of conducting a drone flight.
+4. Understand the basics of doing drone image processing, including making orthomoasics and digital surface models.
 
 # Vocabulary
 
