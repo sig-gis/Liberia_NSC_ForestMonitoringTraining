@@ -424,7 +424,7 @@ print("Pixel Counts as FeatureCollection", pixelCounts_fc);
 
 ## Export
 
-The last thing we do is export the classified testing points to our asset library for proper accuracy assessment and the classification map for easy visualization. We also export the testing points and class areas to our Google Drive 
+The last thing we do is export the classified testing points to our asset library for proper accuracy assessment and the classification map for easy visualization. We also export the testing points and class areas to our Google Drive for use in the accuracy assessment.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////

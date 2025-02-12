@@ -2,18 +2,18 @@
 layout: page
 title:  "Accuracy Assessment"
 parent: "10. Accuracy Assessment"
-nav_order: 2
+nav_order: 1
 ---
 
 # Run Accuracy Assessment in Google Sheets
 
-For this section, copy the files from the [Suriname workshop Google Drive](https://drive.google.com/drive/u/2/folders/1czeYS5ZdCimR7tlQg-dE7QK8d08mzzIX) to your own Google Drive and work in Google Sheets.  The files we will be using for this section are your CEO validation data (.csv) and your GEE pixel count data (.csv).
+For this section, copy the [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) to your own Google Drive and work in Google Sheets.  The files we will be using for this section are your classified testing points (.csv) and your pixel areas (.csv).
 
  If you want to work on your own computer in Microsoft Excel, make sure you have all relevant files downloaded to your computer. 
 
 ## Error Matrix
 
-Open the CEO validation data .csv file in Google Sheets.  Open the sheet called `error matrix empty`.
+Open the sheet called `accuracyAssessment_30m_2014_v1.xlsx`.
 
 <img align="center" src="../images/ceo/GS_errormatrixempty.png" hspace="15" vspace="10" width="650">
 
