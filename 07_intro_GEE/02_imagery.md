@@ -447,11 +447,10 @@ You can print the image’s projection and scale. Since different bands may have
 var projection = firstImageS2.select('B2').projection();
 print(projection);
 ```
-<font color=red> EDIT THE IMAGE BELOW. CHECK, EPSG:32621? </font>
 
-On the Console we see that the Sentinel-2 image is in the EPSG:32621 projection.
+On the Console we see that the Sentinel-2 image is in the EPSG:32629 projection.
 
-<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="500">
+<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="300">
 
 We can also print the image’s scale (spatial resolution). The `ee.Projection` object has a `nominalScale()` function that returns the linear scale in meters of the units of this projection, as measured at the point of true scale. The type of object that is returned is a Float number.
 
@@ -466,16 +465,13 @@ With this, we see on the Console that the scale is what we expected, 10 meters.
 
 The GEE API provides export functions that allow exporting an image in different ways: to Google Drive, as an EE Asset (not leaving the Earth Engine environment), and to Google Cloud. If we want to work with the image outside of GEE, we can use the `Export.image.toDrive` function.
 
-<font color=red> EDIT THE CODE IN THE FILE NAME BELOW </font>
-
-
 ```javascript
 Export.image.toDrive({
   image: firstImageS2.int16(),
   scale: 10,
   region: area,
   description: 'sentinel2image',
-  fileNamePrefix: 'S2 Monrovia 220926',
+  fileNamePrefix: 'S2 Monrovia 220329',
   maxPixels: 1e13
 })
 ```
@@ -493,14 +489,6 @@ Script "`1 Image Visualization - L9 & S2`" from the repository and folder `T3` o
 
 
 ## Publicly available datasets 
-
-### (e.g. forest change and fire alerts)
-
-Here's a concise section on publicly available datasets, focusing on forest change and fire alerts in GEE:
-
----
-
-## Publicly Available Datasets  
 
 Earth Engine also provides access to [numerous publicly available datasets](https://developers.google.com/earth-engine/datasets) that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
 
