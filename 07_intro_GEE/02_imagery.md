@@ -130,6 +130,8 @@ What coverages stand out in these band combinations?
 
 ### Complete code
 
+<font color=red> EDIT THE CODE BELOW </font>
+
 "`4 Image Visualization - Landsat 9`" script from repository and `T1 & T2` folder or direct link:
 [https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b](https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b).
 
@@ -316,7 +318,7 @@ Map.addLayer(firstPreprocessed,
              'First preprocessed image');
 ```
 
-<font color=red> EDIT HERE ONWARDS </font>
+<font color=red> EDIT IMAGES HERE ONWARDS </font>
 
 <img align="center" src="../images/intro-gee/fig41.png" vspace="10" width="500">
 
@@ -354,7 +356,7 @@ Export.image.toDrive({
   image: composite.toFloat(),
   description: 'medianL8composite_2017-2021',
   fileNamePrefix: 'medianL8composite_2017-2021',
-  region: suriname,
+  region: liberia,
   scale: 30,
   maxPixels: 1e13
 });
@@ -363,14 +365,16 @@ Export.image.toDrive({
 Export.image.toAsset({
   image: composite,
   description: 'medianL8composite_2017-2021',
-  assetId: 'projects/caribbean-trainings/assets/suriname-2023/images/medianL8composite_2017-2021', //! UPDATE TO YOUR OWN PATH.
-  region: suriname,
+  assetId: 'projects/trainings/assets/liberia/images/medianL8composite_2017-2021', //! UPDATE TO YOUR OWN PATH
+  region: liberia,
   scale: 30,
   maxPixels: 1e13
 });
 ```
 
 ### Complete code
+
+<font color=red> EDIT THE CODE BELOW </font>
 
 Script "`6 ImageCollections & Composite`" in the repository and folder `T3` or direct link: [https://code.earthengine.google.com/56778dd1a508c78473589e3045840577](https://code.earthengine.google.com/56778dd1a508c78473589e3045840577)
 
