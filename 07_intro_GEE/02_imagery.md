@@ -535,5 +535,5 @@ Finally, we can add the GEE Tile Layer in CEO:
    - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
    - Save and select it as your imagery source.  
 
-<font color=red> ADD 1-2 SCREENSHOTS FROM CEO  </font>
+<font color=red> ADD 1-2 SCREENSHOTS FROM CEO?  </font>
 
