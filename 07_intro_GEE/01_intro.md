@@ -49,9 +49,9 @@ To explore all datasets:
 
 <font size=2> Source: Google </font>
 
-## Application Programming Interface (API)
+## Ways to Access GEE
 
-An (API) is a way to communicate with GEE servers. The API is designed so that users don't need to worry about distributing computation across computers and later assembling results. As users, we simply specify what should be done, which makes GEE very accessible to users who are not familiar with writing code.
+GEE is a powerful tool but it is also designed to be accessible to users who are not familiar with writing code. Apps or graphical user interfaces with visible code are useful for this purpose. When the user needs more control and options for development, the Code Editor is the better option.
 
 ## Apps
 
@@ -74,14 +74,16 @@ Examples of GEE Apps:
 
 ## The GEE Code Editor
 
-The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. 
+The Code Editor is an integrated development environment for the Earth Engine JavaScript API (Application Programming Interface). The API is a "tool kit" that lets you access and work with large amounts of satellite imagery and geographical data stored on Google's servers, without having to know or set up the techincal background. 
+
+The Google Earth Engine Code Editor is essentially a web-based interface that allows users to write and execute code using the Earth Engine API. The Code Editor offers an easy way to write, debug, run, and manage code. 
 
 Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
 
 <img align="center" src="../images/intro-gee/fig5.png" vspace="10" width="600">
 
 The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: 
-- In the `Scripts` section you have all your code stored in repositories, folders and files. You can organize your scripts by project, and also share access with other GEE users. 
+- In the `Scripts` section you have all your code stored in repositories, folders, and files. You can organize your scripts by project, and also share access with other GEE users. 
 - `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. 
 - In `Assets` you can store and organize files that you upload from your computer or download from GEE. 
 
@@ -89,7 +91,8 @@ In the center, you'll find the web-based code editor where you can insert your J
 
 On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script.
 
-<img align="center" src="../images/intro-gee/fig7.png" vspace="10" width="700">
+<img align="center" src="../images/intro-gee/fig7eng.png" vspace="10" width="700">
+
 
 ### Introduction to JavaScript (JS) for the Code Editor
 JavaScript (JS) is a programming language used to write and debug code, visualize data, and develop online applications in GEE. The Python language is also available, however we will focus on JS as it is the most developed and easiest programming language to use when getting started. 
@@ -120,7 +123,7 @@ Now you know where to write your code, how to run it, and where to look for the 
 
 <img align="center" src="../images/intro-gee/fig17.png" vspace="10" width="600">
 
-If this is your first time in Code Editor, a screen will appear to create your home directory: a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it cannot be changed and will always be associated with your account. A good choice for the name would be the username of your Google account.
+If this is your first time in Code Editor, a screen will appear to create your home directory: a unique ID. From here you can create folders and code repositories. You can choose a name of your choice, but remember that it **cannot be changed** and will always be associated with your account. A good choice for the name would be the username of your Google account.
 
 <img align="center" src="../images/intro-gee/fig6.png" vspace="10" width="400">
 
@@ -140,6 +143,8 @@ Congratulations! You have created your first script.
 
 # Repository
 All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops](https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops).
+
+Once you click this link it will be added to your account under the *Reader* repositories in the `Scripts` panel.
 
 
 
@@ -228,13 +233,12 @@ The following code defines a function called `greeting` that takes input called 
 
 ```javascript
 var greet = function(name) {
-    return 'Hallo ' + name;
+    return 'Hello ' + name;
 };
-print(greet('Wereld'));
-print(greet('Deelnemers'));
+print(greet('World'));
+print(greet('Participants'));
 ```
-
-<img align="center" src="../images/intro-gee/fig22.png" vspace="10" width="200">
+See how the function *greet* is applied twice, with two different input parameters? What are the two different outputs?
 
 ### Comments
 
@@ -251,8 +255,7 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 
 ### Complete code
 
-"`2 Introduction to JS`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
-[https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563](https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563)
+"`2 Introduction to JS`" script from the repository and the `07_intro_to_GEE/01_intro` folder.
 
 ## Earth Engine API Basics
 
