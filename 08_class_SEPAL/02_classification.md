@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Random Forest Classification"
-parent: "9. Classification with SEPAL"
+parent: "8. Classification with SEPAL"
 nav_order: 2
 ---
 
@@ -12,21 +12,21 @@ nav_order: 2
 
 # Classification
 
-With this recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the RandomForest classifier – allowing users to create an easy-to-use user interface to:
+With **Classification** recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the RandomForest classifier – allowing us access to a user-friendly interface to:
 
 - select an image to classify
 - define the class table
 - add training data from external sources and on-the-fly selection.
 
-In combination with other tools of SEPAL, the **Classification** recipe can help you provide accurate land-use maps without writing a single line of code.
+In combination with other tools of SEPAL, the **Classification** recipe can help develop accurate land cover maps without writing a single line of code.
 
 ## Start
 
 Once the **Classification** recipe is selected, SEPAL will show the recipe process in a new tab (**1**); the **Image selection** window will appear in the lower right (**2**).
 
-![Landing page](../images/sepal/sepal_rf/sepal_rf_1.webp)
+![Landing page](../images/sepal/sepal_rf/sepal_rf_1.png)
 
-The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited convention for your needs. Simply double-click the tab and enter a new name. It will default to:
+The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited naming convention - double-click the tab and enter a new name. It will default to:
 
 ```code
 Classification_<timestamp>
@@ -35,9 +35,15 @@ Classification_<timestamp>
 ![Default title](../images/sepal/sepal_rf/sepal_rf_2.webp)
 ![Modified title](../images/sepal/sepal_rf/sepal_rf_3.webp)
 
+<!-- 
+<img align="center" src="../images/intro-gee/sepal_rf_2.webp" vspace="10" width="300">
+
+<img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
+ -->
+
 > **Note:**
 >
-> The SEPAL team recommends using the following naming convention:
+>  It is recommended to use the following naming convention:
 >
 > ```code
 > <image_name>_<classification>_<measures>
@@ -45,7 +51,7 @@ Classification_<timestamp>
 
 ## Parameters
 
-In the lower-right corner, the following five tabs are available, allowing you to customize the classification:
+In the lower-right corner, the following tabs are available, allowing us to customize the classification:
 
 - `IMG`: Image to classify.
 - `LEG`: Legend of the classification system.
@@ -53,9 +59,10 @@ In the lower-right corner, the following five tabs are available, allowing you t
 - `AUX`: Auxiliary global dataset to use in the model.
 - `CLS`: Classifier configuration.
 
-![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.webp)
+![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.png)
 
 ### Image selection
+
 
 The first step consists of selecting the image bands on which to apply the classifier. The number of selected bands is not limited.
 
@@ -65,44 +72,46 @@ The first step consists of selecting the image bands on which to apply the class
 
 > **Note:**
 >
-> If multiple images are selected, all selected images should overlap. If masked pixels are found in one of the bands, the classifier will mask them.
+> If multiple images are selected, all selected images should overlap. If the classifier finds masked pixels in one of the bands, it will mask them in the resulting classification.
 
 Select `Add`. The following screen should be displayed:
 
-![Image source](../images/sepal/sepal_rf/sepal_rf_5.webp)
+![Image source](../images/sepal/sepal_rf/sepal_rf_5.png)
 
-##### Image type
 
-Users can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
+**<font size = 3> Image type </font>**
 
-**Existing recipe:**
 
-- **Advantages:**
+We can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
+
+##### Existing recipe:
+
+- Advantages:
   - All computed bands from SEPAL can be used.
   - Any modification to the existing recipe will propagate in the final classification.
-- **Disadvantages:**
+- Disadvantages:
   - The initial recipe will be computed at each rendering step, slowing down the classification process and potentially breaking on-the-fly rendering due to GEE timeout errors.
 
-**GEE asset:**
+##### GEE asset:
 
-- **Advantages:**
+- Advantages:
   - Can be shared with other users.
   - The computation will be faster, as the image has already been exported.
-- **Disadvantages:**
+- Disadvantages:
   - Only the exported bands will be available.
   - The `Image` needs to be re-exported to propagate changes.
 
 Both methods behave the same way in the interface.
 
-##### Select bands
+**<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow:
+> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow: </font>
 >
 > ```code
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
 > ```
 
-##### Image bands
+**<font size = 3> Image bands </font>**
 
 Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
 
@@ -115,13 +124,13 @@ In this example, we selected:
 
 ![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
 
-##### Derived bands
+**<font size = 3> Derived bands </font>**
 
 The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
 
 Select `Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands.
 
-> **Note:**
+> **_Note:_**
 >
 > If more than two bands are selected, the operation will be applied to the Cartesian product of the bands.
 

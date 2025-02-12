@@ -23,9 +23,10 @@ Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis
 - A 2014 forest extent map that can be further refined after the workshop
 - An example of analysis using drone imagery 
 
-
+#### Note...
 The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
+A quick resource page of **all important links for this workshop** can be found **[here](https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing)**.
 
 ## Agenda
 

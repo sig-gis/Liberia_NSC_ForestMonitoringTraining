@@ -20,31 +20,10 @@ Welcome to Drone Flight and Image Processing! In this portion of the workshop, w
 4. Download all the files from this Google Drive folder onto your computer -[https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
 
 ## Objectives 
-1. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.
-2. Understand the basics of conducting a drone flight.
-3. Understand the basics of doing drone image processing, including making orthomoasics and digital surface models.
-
-# Background 
-
-## RGB image processing workflow:
-
-Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
-
-1. Keypoint extraction
-2. Keypoint matching (creating tie points)
-3. Point cloud creation
-4. Mesh creation
-5. DSM creation
-6. Orthomosaic creation
-
-First, the software finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
-
-<img align="center" src="../images/drone/SfM_workflow.png" hspace="15" vspace="10" width="700">
-
-Javadnejad, F. (2018). Small Unmanned Aircraft Systems (UAS) for Engineering Inspections and Geospatial Mapping.
-
-*Read more about SfM in this paper:
-Westoby, M.J. et al., 2012. ‘Structure-from-Motion’ photogrammetry: a low-cost, effective tool for geoscience applications, Geomorphology 179, 300-314.*
+1. Understand types of drones and sensors for photogrammetry
+2. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.
+3. Understand the basics of conducting a drone flight.
+4. Understand the basics of doing drone image processing, including making orthomoasics and digital surface models.
 
 # Vocabulary
 

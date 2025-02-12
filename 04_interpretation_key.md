@@ -40,7 +40,7 @@ Key areas that can always be improved and should be revisited:
 
 Time to discuss the key and make improvements together.
 
-<img align="center" src="../images/ceo/LC_example_interpretationkey_improvements.png" hspace="5" vspace="5" width="1000">
+<img align="center" src="./images/ceo/LC_example_interpretationkey_improvements.png" hspace="5" vspace="5" width="1000">
 
 | **Interpretation Elements** | **Description** |
 |---|---|

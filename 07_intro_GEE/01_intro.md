@@ -5,7 +5,6 @@ parent: "7. Intro to GEE"
 nav_order: 1
 ---
 
-*Objectives: Basics of Google Earth Engine (GEE) for RS data analysis; JS, **GEE library***
 
 ## What is Google Earth Engine?
 
@@ -151,10 +150,7 @@ Once the script is saved, it will appear in the script manager panel (under `Own
 Congratulations! You have created your first script.
 
 # Repository
-
-<font color = red> update the link below </font>
-
-All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname](https://code.earthengine.google.com/?accept_repo=users/an-sig/suriname).
+All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops](https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops).
 
 
 
@@ -266,12 +262,8 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 
 ### Complete code
 
-
-<font color = red> update the link below </font>
-
-
-"`2 Introduction to JS`" script from the repository and the `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716](https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716)
+"`2 Introduction to JS`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
+[https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563](https://code.earthengine.google.com/122e87f09abb6f4f028ce2ac88a5f563)
 
 ## Earth Engine API Basics
 
@@ -430,7 +422,4 @@ Calculate the sum of all Numbers in `newList`. Save and print that value as `sum
 
 ### Complete code
 
-<font color = red> update the link below </font>
-
-"`3 Earth Engine API`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd).
+"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link: [https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267](https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267)

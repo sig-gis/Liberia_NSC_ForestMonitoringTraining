@@ -5,8 +5,6 @@ parent: "7. Intro to GEE"
 nav_order: 2
 ---
 
-*Objectives: GEE: uploading imagery to assets, including drone data; publicly available imagery and data sets (e.g. forest change and fire alerts); linking GEE imagery to CEO*
-
 # Imagery in GEE
 
 Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offerd over forty years of historical imagery and scientific datasets, updated and expanded daily.
@@ -32,7 +30,7 @@ Once you have started the upload, an "Asset ingestion" task appears on the `Task
 
 This section covers inspecting image bands, displaying them as map layers, and creating composite layers with multiple bands, including visible and non-visible spectrum.
 
-First we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
+First, we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
 
 ```javascript
 var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
@@ -66,13 +64,12 @@ The code here uses the `addLayer` method of the map (`Map`). There are four impo
 
 When you run the code, you may need to scroll to find the image. Click and drag the map to Liberia or search "Monrovia, Liberia" in the panel at the top of the Code Editor. Use the `zoom` tool to increase or decrease the zoom level.
 
-<font color=red> EDIT the image </font>
 
-<img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="500">
 
 Can you recognize any features in the image?
 
-Let's explore this image with the `Inspector` tool. When you click on the `Inspector` tab on the right hand side of the Code Editor, your cursor should now look like a crosshair. When you click on a location on the image, the `Inspector` panel will report data for that location in three categories as follows:
+Let's explore this image with the `Inspector` tool. Click the `Inspector` tab on the right side of the Code Editor, your cursor should now look like a crosshair. Clicking on a location will display data in the `Inspector` panel under three categories:
 
 <img align="center" src="../images/intro-gee/fig29.png" vspace="10" width="300">
 
@@ -96,11 +93,11 @@ Map.addLayer(
 ```
 
 
-<font color=red> EDIT HERE ONWARDS </font>
 
-The result resembles the world we see and is called a natural color composite, because it naturally matches the spectral ranges of the bands in the image to display colors. This image, also called a true-color composite, shows the red spectral band with shades of red, the green band with shades of green, and the blue band with shades of blue. We specify the pairing simply through the order of the bands in the list: B4, B3, B2. Because Landsat 9 bands 4, 3, and 2 correspond to the real-world colors of red, green, and blue, the image resembles the world we would see outside an airplane window or from a low-flying drone.
 
-<img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="400">
+The result resembles the world we see and is called a natural color composite because it matches the spectral ranges of the bands to display colors. Also known as a true-color composite, it shows the red band in red, the green band in green, and the blue band in blue. We specify the pairing by Landsat 9 band order: B4, B3, B2, which correspond to real-world red, green, and blue, respectively.
+
+<img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="500">
 
 Now, we can add two more layers, but with false colors, using the `SR_5`, `SR_4`, `SR_3` and `SR_6`, `SR_5`, `SR_4` bands.
 
@@ -126,34 +123,126 @@ Map.addLayer(
 
 What coverages stand out in these band combinations?
 
-<img align="center" src="../images/intro-gee/fig32.png" vspace="10" width="400">
-<img align="center" src="../images/intro-gee/fig33.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig32.png" vspace="10" width="500">
+<img align="center" src="../images/intro-gee/fig33.png" vspace="10" width="500">
 
 ### Complete code
 
-"`4 Image Visualization - Landsat 9`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/86e9cf5640f967eae536df99349b2c65](https://code.earthengine.google.com/86e9cf5640f967eae536df99349b2c65).
-
-### Example with Landsat 9 and Sentinel-2
-
-"`4 Image Visualization - L9 & S2`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/8909f4360f49c80071c830c2fd66738a](https://code.earthengine.google.com/8909f4360f49c80071c830c2fd66738a).
+"`1 Image Visualization - Landsat 9`" script from repository and `07_intro_to_GEE/02_imagery` folder or direct link:
+[https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa](https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa)
 
 
+## Adding another satellite image to the map
+
+Now, we will add the same Landsat 9 image and a new Sentinel-2 image for comparison.  
+
+First, we define the Landsat 9 image variable, print it to the Console, and set the map center using `Map.setCenter`, which requires `longitude`, `latitude`, and `zoom level`. Then, we add the image to the map using the True Color band combination.
+
+```javascript
+var firstImageL9 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
+print(firstImageL9);
+
+Map.setCenter(-55.3807, 5.7495, 9);
+
+Map.addLayer(
+    firstImageL9,
+    {
+        bands: ['SR_B4', 'SR_B3', 'SR_B2'],
+        min: 7000,
+        max: 12000
+    },
+    'True Color L9');
+```
+
+
+Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from March 29, 2022, taken eight days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
+
+
+```javascript
+var firstImageS2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20220329T105629_20220329T111136_T29NLH');
+print(firstImageS2);
+
+Map.addLayer(
+    firstImageS2,
+    {
+        bands: ['B4', 'B3', 'B2'],
+        min: 0,
+        max: 2000
+    },
+    'True Color S2');
+```
+
+In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets ([USGS Landsat 9 Level 2, Collection 2, Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2)  & [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)) and see the different band designations. Inspect the metadata for both images in the Console as well.
+
+<img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
+
+
+On the map, note the color differences, which may result from differences in spectral resolution, processing steps, and other factors. Why does the Sentinel-2 image cover a smaller area than Landsat 9? Zoom in to compare pixel sizes and observe the spatial resolution difference. Landsat 9 has a 30 m resolution, covering a larger area at the cost of detail, while Sentinel-2 has a 10 m resolution, offering finer detail but covering a smaller area.
+
+<img align="center" src="../images/intro-gee/fig46.png" vspace="10" width="500">
+
+<img align="center" src="../images/intro-gee/fig47.png" vspace="10" width="500">
+
+## Projection and Scale
+
+You can print the image’s projection and scale. Since different bands may have different spatial resolutions, a specific band must be selected for projection details. Below, we use the `select()` function to choose band 2 of the Sentinel-2 image, returning an image with just that band. Then, we apply the `projection()` function, which returns an `ee.Projection` object. Printing this variable in the Console reveals the image’s projection.
+
+```javascript
+var projection = firstImageS2.select('B2').projection();
+print(projection);
+```
+
+On the Console we see that the Sentinel-2 image is in the EPSG:32629 projection.
+
+<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="300">
+
+We can also print the image’s scale (spatial resolution). The `ee.Projection` object has a `nominalScale()` function that returns the linear scale in meters of the units of this projection, as measured at the point of true scale. The type of object that is returned is a Float number.
+
+```javascript
+var scale = projection.nominalScale();
+print(scale);
+```
+
+With this, we see on the Console that the scale is what we expected, 10 meters.
+
+## Exporting an image
+
+The GEE API provides export functions that allow exporting an image in different ways: to Google Drive, as an EE Asset (not leaving the Earth Engine environment), and to Google Cloud. If we want to work with the image outside of GEE, we can use the `Export.image.toDrive` function.
+
+```javascript
+Export.image.toDrive({
+  image: firstImageS2.int16(),
+  scale: 10,
+  region: area,
+  description: 'sentinel2image',
+  fileNamePrefix: 'S2 Monrovia 220329',
+  maxPixels: 1e13
+})
+```
+
+Check this function's description in the `Docs` tab for more information.
+
+You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from [your Google Drive](https://drive.google.com/drive/my-drive).
+
+### Complete code
+
+Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d](https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d)
 
 
 ## Image Collections & Composites in Earth Engine
 
-Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of images collected from the Earth (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type that has specific operations available in the Earth Engine API. Like individual images, they can be viewed with `Map.addLayer`, filtered using the `filter` function, and mapped functions with `map`.
+Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of Earth images collected (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type with specific API operations. Like individual images, they can be viewed with `Map.addLayer`, filtered with `filter`, and processed with functions using `map`.
 
-We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Suriname, using the `filterBounds` function and by dates to obtain images from January 2017 to December 2021, using the `filterDate` function.
+We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Liberia, using `filterBounds` and by dates to obtain images from January 2017 to December 2021, using `filterDate`.
+
 
 ```javascript
 //--------------------------------------------------------------
 // Define area of interest (vector data)
 //--------------------------------------------------------------
 
-var suriname = ee.FeatureCollection('projects/caribbean-trainings/assets/suriname-2023/boundary');
+var liberia = ee.FeatureCollection('projects/pc556-ncs-liberia-forest-mang/assets/liberia_boundary');
+
 // TIP: Centering the map before adding a layer is more efficient 
 // than adding it afterward.
 
@@ -172,14 +261,14 @@ var landsat8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2');
 
 var collection = landsat8
     .filterDate('2017-01-01', '2022-01-01')
-    .filterBounds(suriname);
+    .filterBounds(liberia);
 
 Map.addLayer(collection, {bands: ['SR_B4', 'SR_B3', 'SR_B2'], min: 7000, max: 12000}, 'Landsat 8 Collection');
 
 print(collection);
 ```
 
-The result is images superimposed on each other and a total of 887 images. Take into account that the images that appear at the top are in accordance with the order of the images within the collection. In the `Console` you can look at the order of the images.
+The result is images superimposed on each other and a total of 885 images. Note that the images that appear at the top are in accordance with the order of the images within the collection. In the `Console` you can look at the order of the images.
 
 <img align="center" src="../images/intro-gee/fig37.png" vspace="10" width="500">
 
@@ -190,19 +279,23 @@ We can filter the collection by cloud cover as well. For that, we add one more f
 ```javascript
 var collection = landsat8
     .filterDate('2017-01-01', '2022-01-01')
-    .filterBounds(suriname)
+    .filterBounds(liberia)
     .filter(ee.Filter.lt('CLOUD_COVER', 30));
 ```
 
-We use the `ee.Filter.lt` to get images that have cloud cover "less than" 30%. Notice that we now have 200 images.
+We use the `ee.Filter.lt` to get images with cloud cover "less than" 30%, resulting in 268 images.
 
 <img align="center" src="../images/intro-gee/fig38.png" vspace="10" width="500">
 
 <img align="center" src="../images/intro-gee/fig40.png" vspace="10" width="400">
 
-Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and completely block or obscure the spectral response of the Earth's surface. Working with pixels that are contaminated by clouds can significantly influence the accuracy and information content of products derived from a variety of remote sensing activities, including land cover classification, vegetation modeling, and especially change detection, where undetected clouds can be mapped as false changes. Therefore, the information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from subsequent processing steps.
+Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and block or obscure the Earth's surface. Working with pixels contaminated by clouds can influence accuracy and information content of products derived from remote sensing activities, including land cover classification, vegetation modeling, and change detection, where undetected clouds can be mapped as false changes. Therefore, information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from processing.
 
-First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. Please note: Landsat Collection 1 and Collection 2 Tier 2 science products have different scale factors, fill values, and different data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
+First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. 
+
+> Note: 
+>
+> Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
 
 We create a function for the application of the scale factors:
 
@@ -273,7 +366,7 @@ var preprocessed = collection.map(applyScaleFactors)
                              .map(maskL8sr);
 ```
 
-We can compare the effects of cloud masking by comparing the same image before and after the process:
+We can compare cloud masking effects by comparing the same image before and after processing:
 
 ```javascript
 // ---------------------------------------------------------------
@@ -348,7 +441,7 @@ Export.image.toDrive({
   image: composite.toFloat(),
   description: 'medianL8composite_2017-2021',
   fileNamePrefix: 'medianL8composite_2017-2021',
-  region: suriname,
+  region: liberia,
   scale: 30,
   maxPixels: 1e13
 });
@@ -357,8 +450,8 @@ Export.image.toDrive({
 Export.image.toAsset({
   image: composite,
   description: 'medianL8composite_2017-2021',
-  assetId: 'projects/caribbean-trainings/assets/suriname-2023/images/medianL8composite_2017-2021', //! UPDATE TO YOUR OWN PATH.
-  region: suriname,
+  assetId: 'projects/trainings/assets/liberia/images/medianL8composite_2017-2021', //! UPDATE TO YOUR OWN PATH
+  region: liberia,
   scale: 30,
   maxPixels: 1e13
 });
@@ -366,209 +459,83 @@ Export.image.toAsset({
 
 ### Complete code
 
-Script "`6 ImageCollections & Composite`" in the repository and folder `T3` or direct link: [https://code.earthengine.google.com/56778dd1a508c78473589e3045840577](https://code.earthengine.google.com/56778dd1a508c78473589e3045840577)
+Script "`3 ImageCollections & Composite`" in the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a](https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a)
 
 
 
-## Adding another satellite image to the map
 
-We have seen how to visualize an image and the different band combinations that we can elect when visualizing an image. With the following code snippets, we will add to the map the same Landsat 9 image we worked with previously and a new Sentinel-2 image for comparison.
 
-Start by defining the variable for the Landsat 9 image, printing it to the Console, and setting a center for the map. Note that the we will use a new center map function: `Map.setCenter`. This function centers the map based on a center point and it requires 3 arguments: `longitude`, `latitude`, and `zoom level`. Then, we add the image to the map using the True Color band combination.
+## Publicly available datasets 
+
+Earth Engine also provides access to [numerous publicly available datasets](https://developers.google.com/earth-engine/datasets) that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
+
+### Global Forest Change  
+For example, the **Global Forest Change dataset** tracks forest loss, gain, and disturbance from 2000 onward, derived from Landsat imagery. It can be accessed using the following code snippet:
 
 ```javascript
-var firstImageL9 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_229056_20220924');
-print(firstImageL9);
+var liberia = ee.FeatureCollection('projects/pc556-ncs-liberia-forest-mang/assets/liberia_boundary');
 
-Map.setCenter(-55.3807, 5.7495, 9);
+var gfc = ee.Image("UMD/hansen/global_forest_change_2022_v1_10").clip(liberia);
 
-Map.addLayer(
-    firstImageL9,
-    {
-        bands: ['SR_B4', 'SR_B3', 'SR_B2'],
-        min: 7000,
-        max: 12000
-    },
-    'True Color L9');
+Map.addLayer(gfc.select('lossyear'), {min: 0, max: 22, palette: ['yellow', 'red']}, 'Forest Loss');
 ```
 
-Next, we will define a variable `firstImageS2` which will store an `ee.Image` object of a Sentinel-2 scene from September 26, 2022 -  an image taken 2 days after the Landsat 9 image. We print and add this image to the map also using the True Color band combination. In this case, the red, green, and blue band designations for Sentinel-2 are the same as for Landsat 9 (Red is band 4, Green is band 3, and Blue is band 20). This won't always be the case. The Sentinel-2 band names do not have the prefix `SR_` appended to it.
+<img align="center" src="../images/intro-gee/gee_gfc.png" vspace="10" width="500">
+
+
+### Fire Alerts  
+The **MODIS and VIIRS fire** datasets can provide near real-time active fire detections. For instance, **[Fire Information for Resource Management System (FIRMS)](https://developers.google.com/earth-engine/datasets/catalog/FIRMS
+)** can be added to your map with:
+
 
 ```javascript
-var firstImageS2 = ee.Image('COPERNICUS/S2_SR/20220926T140709_20220926T141005_T21NXG');
-print(firstImageS2);
-
-Map.addLayer(
-    firstImageS2,
-    {
-        bands: ['B4', 'B3', 'B2'],
-        min: 600,
-        max: 3000
-    },
-    'True Color S2');
-```
-
-In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets ([USGS Landsat 9 Level 2, Collection 2, Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2)  & [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)) and see the different band designations. Inspect the metadata for both images in the Console as well.
-
-<img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
-
-On the map, note the difference in image colors. This can be due to differences in spectral resolutions, processing steps, and other factors. Why does the Sentinel-2 image cover a smaller area compared to the Landsat 9 image? Zoom in until you can see both images' pixel sizes. Do you note the difference in spatial resolution? Remember, Landsat 9 images have a 30 m spatial resolution whereas Sentinel-2 images have a 10 m spatial resolution. Landsat 9 covers a larger area but at the cost of the spatial resolution. Sentinel-2 has a higher spatial resolution but at the cost of covering a smaller area.
-
-<img align="center" src="../images/intro-gee/fig46.png" vspace="10" width="500">
-
-<img align="center" src="../images/intro-gee/fig47.png" vspace="10" width="500">
-
-## Projection and Scale
-
-You can also print the projection and scale of the image. Different bands might have different spatial resolutions, because of that, we need to select a specific band to display the projection information. Below, we select band 2 of the Sentinel-2 image using the `select()` function. This function returns an image with just one band (in this case, band 2). Then we apply a `projection()` function. This function returns a `ee.Projection` object. We can print this variable in the Console to see which projection the image is in.
-
-```javascript
-var projection = firstImageS2.select('B2').projection();
-print(projection);
-```
-
-On the Console we see that the Sentinel-2 image is in the EPSG:32621 projection.
-
-<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="500">
-
-We can also print the scale of the image (spatial resolution). A `ee.Projection` object has a function called `nominalScale()` that returns the linear scale in meters of the units of this projection, as measured at the point of true scale. The type of object that it is returned is a Float number.
-
-```javascript
-var scale = projection.nominalScale();
-print(scale);
-```
-
-With this, we see on the Console that the scale is what we expected, 10 meters.
-
-## Exporting an image
-
-The GEE API provides export functions that allow us to export an image in different ways: to Google Drive, as and EE Asset (not leaving the Earth Engine environment), and to Google Cloud. If we want to work with the image outside of GEE, we can use the `Export.image.toDrive` function.
-
-```javascript
-Export.image.toDrive({
-  image: firstImageS2.int16(),
-  scale: 10,
-  region: area,
-  description: 'sentinel2image',
-  fileNamePrefix: 'S2 Paramaribo 220926',
-  maxPixels: 1e13
-})
-```
-
-Check this function's description in the `Docs` tab for more information.
-
-You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from your Google Drive ([https://drive.google.com/drive/my-drive](https://drive.google.com/drive/my-drive)).
-
-### Complete code
-
-Script "`1 Image Visualization - L9 & S2`" from the repository and folder `T3` or direct link: [https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4](https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4).
-
-
-# Preprocessing Imagery in GEE
-
-
-This exercise will walk us through retrieving and visualizing Landsat 8 data collections. Create a new repository called ‘training-servir-gee’.
-
-<img align="center" src="../images/intro-gee-images/03_new.png" hspace="15" vspace="10" width="600">
-
-Figure 3. Creating a new script.
-
-We set the name for our new script ‘sat_image_processing’.
-
-<img align="center" src="../images/intro-gee-images/04_name.png" hspace="15" vspace="10" width="400">
-
-Figure 4. Naming a new script
-
-We look for Landsat 8 surface reflectance (SR) Collection 2 Tier 1 data. Collection 1 is already deprecated and Tier 1 comprises the highest radiometric and terrain correction quality.
-
-<img align="center" src="../images/intro-gee-images/05_landsat_options.png" hspace="15" vspace="10" width="600">
-
-Figure 5. Catalog search bar showing Landsat datasets.
-
-<img align="center" src="../images/intro-gee-images/06_desc.png" hspace="15" vspace="10" width="600">
-
-Figure 6. Landsat 8 description.
-
-Lets hit the ‘Import’ button, and change the name of the collection to ‘*landsat8_sr*’. Now let's download the boundary shapefile of Guyana. We are going to upload this file into the Assets section to have our country boundary available. First you can add a new project pressing the *ADD A PROJECT* button within the Assets section:
-
-<img align="center" src="../images/intro-gee-images/07_newpro.png" hspace="15" vspace="10" width="300">
-
-Figure 7. Adding a new project
-
-You can provide a name or id for the new cloud project,and then press ‘Select’.
-
-<img align="center" src="../images/intro-gee-images/08_cloud_pro.png" hspace="15" vspace="10" width="600">
-
-Figure 8. Cloud project set-up window.
-
-Now press the *New* button and select the *Shape files* options within the *Table Upload* section.
-
-<img align="center" src="../images/intro-gee-images/09_newshape.png" hspace="15" vspace="10" width="600">
-
-Figure 9. Uploading a new shapefile into the Assets.
-
-When selecting the shapefile, make sure to select all of its components, but ignore the *qpj* file. For example, avoid errors like “The file named "guyana_boundary.qpj" does not have a correct extension” or “the shapefile must be accompanied by ‘dbf”
-
-<img align="center" src="../images/intro-gee-images/10_newShapefile pro.png" hspace="15" vspace="10" width="600">
-
-Figure 10. Shapefile properties.
-
-The two-arrows icon permits us to refresh the view in case you don’t see the uploaded file. We click on the file name to open it:
-
-<img align="center" src="../images/intro-gee-images/11_shp_load.png" hspace="15" vspace="10" width="600">
-
-Figure 11. Shapefile loaded.
-
-Click on ‘*Import*’ and change the name to *guyana_bou*. Now let’s work filtering our current image collection over three aspects: temporal, spatial, and spectral.
-
-<img align="center" src="../images/intro-gee-images/12_type.png" hspace="15" vspace="10" width="300">
-
-Figure 12. Typing an existent variable name
-
-When typing you can press *Ctrl* + *spacebar* to autocomplete names of existent variables, or *Ctrl* + *spacebar* after inserting a point to observe a list of available functions
-
-<img align="center" src="../images/intro-gee-images/13_ctrol.png" hspace="15" vspace="10" width="600">
-
-Figure 13. Keyboard shortcut
-
-<img align="center" src="../images/intro-gee-images/14_func.png" hspace="15" vspace="10" width="600">
-
-Figure 14. Available functions listed.
-
-The following code selects 3 months of Landsat 8 imagery over Guyana territory. Immediately we apply a scale factor.
-
-```javascript
-landsat8_sr = landsat8_sr
-            	.filterDate('2022-10-01', '2022-12-31')
-            	.filterBounds(guyana_bou)
-
-// Applies scaling factors needed for Landsat collection 02
-function applyScaleFactors(image) {
-  var opticalBands = image.select('SR_B.').multiply(0.0000275).add(-0.2);
-  var thermalBands = image.select('ST_B.*').multiply(0.00341802).add(149.0);
-  return image.addBands(opticalBands, null, true)
-          	.addBands(thermalBands, null, true);
-}
-
-
-landsat8_sr = landsat8_sr.map(applyScaleFactors);
-We can also select only the required bands, e.g. excluding the first band of coastal aerosol.  The visualization setting must be described.
-
-var visualization = {
-  bands: ['SR_B4', 'SR_B3', 'SR_B2'],
-  min: 0.0,
-  max: 0.3,
+var firms = ee.ImageCollection('FIRMS').filter(
+    ee.Filter.date('2022-03-01', '2022-04-10'));
+var fires = firms.select('T21');
+var firesVis = {
+  min: 325.0,
+  max: 400.0,
+  palette: ['red', 'orange', 'yellow'],
 };
-
-Map.centerObject(guyana_bou, 6)
-
-Now we visualize the layers created using the 
-Map.addLayer(guyana_bou, {}, 'guyana', 0)
-Map.addLayer(landsat8_sr, visualization, 'True Color (432)');
+Map.addLayer(fires, firesVis, 'Fires');
 ```
 
-<img align="center" src="../images/intro-gee-images/15_land.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/intro-gee/gee_firms.png" vspace="10" width="500">
 
-Figure 15. True color Landsat 8 collection 2 mosaic for Guyana.
 
-We have added the layer of surface reflectance (SR) values for 3 months to visualize. You can check the code link at [https://code.earthengine.google.com/c242421f3cc5229e8e24bd019b8f6ceb](https://code.earthengine.google.com/c242421f3cc5229e8e24bd019b8f6ceb).
+These datasets can help detect deforestation, monitor wildfires, and assess land use changes within GEE.
+
+
+## Linking GEE imagery to CEO
+
+GEE imagery can be integrated into CEO and can provide the following benefits: 
+- Access near real-time satellite data for interpretation.  
+- Combine high-resolution imagery with CEO’s sampling tools.  
+- Enable collaborative land monitoring and validation.  
+
+While CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2, we can also use custom GEE imagery.
+
+To export imagery as a web tile layer, we first need to generate a GEE Tile Layer URL using the following script in GEE:
+
+   ```javascript
+   var image = ee.Image('COPERNICUS/S2_SR/20220329T105629_20220329T111136_T29NLH')
+       .select(['B4', 'B3', 'B2'])
+       .visualize({min: 0, max: 2000, bands: ['B4', 'B3', 'B2']});
+   
+   var mapId = image.getMapId();
+   print('Tile URL:', mapId.urlFormat);
+   ```
+
+
+Then, copy the `Tile URL` from the Console.
+
+<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500">
+
+
+Finally, we can add the GEE Tile Layer in CEO:
+   - In the CEO project settings, go to `Custom Base Maps`.  
+   - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
+   - Save and select it as your imagery source.  
+
+<font color=red> ADD 1-2 SCREENSHOTS FROM CEO  </font>
+

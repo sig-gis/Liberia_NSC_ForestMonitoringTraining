@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "9. Classification with SEPAL"
-permalink: /09_class_SEPAL
+title: "8. Classification with SEPAL"
+permalink: /08_class_SEPAL
 has_children: True
-nav_order: 10
+nav_order: 9
 ---
 
 # Classification with SEPAL

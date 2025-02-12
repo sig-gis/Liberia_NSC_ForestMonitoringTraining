@@ -2,7 +2,7 @@
 layout: page
 title: "Before Flying"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 9
+nav_order: 6
 ---
 # Before Flying 
 
