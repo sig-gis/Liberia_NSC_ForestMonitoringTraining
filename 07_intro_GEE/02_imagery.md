@@ -532,23 +532,14 @@ These datasets can help detect deforestation, monitor wildfires, and assess land
 
 ## Linking GEE imagery to CEO
 
-<font color=red> ADD A SCREENSHOT FROM GEE  </font>
-
-
 Finally, GEE imagery can be integrated into CEO and can provide the following benefits: 
 - Access near real-time satellite data for interpretation.  
 - Combine high-resolution imagery with CEO’s sampling tools.  
 - Enable collaborative land monitoring and validation.  
 
-Follow the steps below to link GEE imagery to CEO:
+While CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2, we can also use custom GEE imagery.
 
-1. Create a CEO Project
-   - Sign in to your [CEO](https://collect.earth/) account.  
-   - Create a project, define the survey area, and set up the sampling grid.  
-
-2. Use GEE Base Maps
-   - CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2.
-   - To use custom GEE imagery, we would need to generate a GEE Tile Layer URL. To export imagery as a web tile layer, we would need to use the following script in GEE:
+First, we need to generate a GEE Tile Layer URL. To export imagery as a web tile layer, we would need to use the following script in GEE:
 
 <font color=red> EDIT THE IMAGE CODE BELOW </font>
 
@@ -563,8 +554,12 @@ Follow the steps below to link GEE imagery to CEO:
 
    - Copy the `Tile URL` from the Console.
 
-3.Add the GEE Tile Layer in CEO 
+<font color=red> ADD A SCREENSHOT FROM GEE  </font>
+
+Then, we can add the GEE Tile Layer in CEO:
    - In the CEO project settings, go to `Custom Base Maps`.  
-   - Click `Add a New Base Map` and paste your **GEE Tile URL**.  
+   - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
    - Save and select it as your imagery source.  
+
+<font color=red> ADD 1-2 SCREENSHOTS FROM CEO  </font>
 
