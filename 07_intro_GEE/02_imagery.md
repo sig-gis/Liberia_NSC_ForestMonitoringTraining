@@ -406,23 +406,20 @@ Map.addLayer(
     'True Color L9');
 ```
 
-<font color=red> EDIT THE DATE BELOW </font>
 
+Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from March 29, 2022, taken eight days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
 
-Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from September 26, 2022, taken two days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
-
-<font color=red> EDIT THE IMAGE CODE BELOW </font>
 
 ```javascript
-var firstImageS2 = ee.Image('COPERNICUS/S2_SR/20220926T140709_20220926T141005_T21NXG');
+var firstImageS2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20220329T105629_20220329T111136_T29NLH');
 print(firstImageS2);
 
 Map.addLayer(
     firstImageS2,
     {
         bands: ['B4', 'B3', 'B2'],
-        min: 600,
-        max: 3000
+        min: 0,
+        max: 2000
     },
     'True Color S2');
 ```
