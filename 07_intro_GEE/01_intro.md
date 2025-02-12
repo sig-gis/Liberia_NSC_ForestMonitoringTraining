@@ -262,12 +262,8 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 
 ### Complete code
 
-
-<font color = red> update the link below </font>
-
-
-"`2 Introduction to JS`" script from the repository and the `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716](https://code.earthengine.google.com/5f07daa42a251db03cf84bc5ebe99716)
+"`2 Introduction to JS`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
+[https://code.earthengine.google.com/8491a50e5cb7aaa7272d44c12262784a](https://code.earthengine.google.com/8491a50e5cb7aaa7272d44c12262784a)
 
 ## Earth Engine API Basics
 
@@ -426,7 +422,6 @@ Calculate the sum of all Numbers in `newList`. Save and print that value as `sum
 
 ### Complete code
 
-<font color = red> update the link below </font>
+"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link:
 
-"`3 Earth Engine API`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd).
+[https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd](https://code.earthengine.google.com/fc67eeca8496c9647ea68c1dd235f3cd)
