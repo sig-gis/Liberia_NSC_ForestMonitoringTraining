@@ -179,8 +179,6 @@ In the Console, can you see the difference in band quantity? Open the Earth Engi
 
 On the map, note the color differences, which may result from differences in spectral resolution, processing steps, and other factors. Why does the Sentinel-2 image cover a smaller area than Landsat 9? Zoom in to compare pixel sizes and observe the spatial resolution difference. Landsat 9 has a 30 m resolution, covering a larger area at the cost of detail, while Sentinel-2 has a 10 m resolution, offering finer detail but covering a smaller area.
 
-<font color=red> EDIT THE IMAGES BELOW </font>
-
 <img align="center" src="../images/intro-gee/fig46.png" vspace="10" width="500">
 
 <img align="center" src="../images/intro-gee/fig47.png" vspace="10" width="500">
@@ -406,8 +404,6 @@ Map.addLayer(firstPreprocessed,
              preprocessedVisParams, 
              'First preprocessed image');
 ```
-
-<font color=red> EDIT IMAGES HERE ONWARDS </font>
 
 <img align="center" src="../images/intro-gee/fig41.png" vspace="10" width="500">
 
