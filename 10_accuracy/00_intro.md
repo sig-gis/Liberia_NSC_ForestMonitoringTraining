@@ -20,6 +20,6 @@ Follow along by copying the files editing the spreadsheets based on each step in
 
 Copy this [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) into your own Google Drive. The files we will be using for this section are your classified testing points (.csv), your pixel areas (.csv), and an accuracy assessment worksheet (.xlsx).
 
-<img align="center" src="../images/accuracy/filespace.png" hspace="15" vspace="10" width="500">
+<img align="center" src="./images/accuracy/filespace.png" hspace="15" vspace="10" width="500">
 
 If you want to work on your own computer in Microsoft Excel, make sure you have all relevant files downloaded to your computer. 
