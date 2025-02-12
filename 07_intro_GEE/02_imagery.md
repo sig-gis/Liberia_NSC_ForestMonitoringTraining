@@ -7,22 +7,22 @@ nav_order: 2
 
 # Imagery in GEE
 
-Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offerd over forty years of historical imagery and scientific datasets, updated and expanded daily.
+Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offers over forty years of historical imagery and scientific datasets, updated and expanded daily.
 
 
 ## Importing Raster Data to GEE assets
  
-You can use the Asset Manager to upload image or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
+You can use the Asset Manager to upload images or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
 
 To upload a GeoTIFF using the Code Editor, select the Assets tab in the upper left corner, click **`NEW`**, then select **Image upload**. Click the **`SELECT`** button and navigate to a GeoTIFF on your local file system, or drag and drop your GeoTIFF into this upload dialog.
 
 Give the image an appropriate asset ID (which doesn't already exist) in your user folder. If you'd like to upload the image into an existing folder or collection, prefix the asset ID with the folder or collection ID, for example `projects/myproject/folder-or-collection-id/new-asset`.
 
-Click **`UPLOAD`** to start the upload.
+Click `UPLOAD`.
 
 <img align="center" src="../images/intro-gee/gee_upload.png" vspace="10" width="500">
 
-Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning GEE icon <img align="center" src="../images/intro-gee/gee_icon.png" vspace="10" width="20">, next to the task. Once the ingestion is complete, the asset will appear in your user folder with a <img align="center" src="../images/intro-gee/image_icon.png" vspace="10" width="15"> icon.
+Once you have started the upload, an "Asset ingestion" task appears on the `Tasks` tab at the right side of the Code Editor. Hovering over the task in the task manager shows a **?** icon which you can use to check the upload status. To cancel an upload, click on the spinning GEE icon <img align="center" src="../images/intro-gee/gee_icon.png" vspace="10" width="20">, next to the task. Once the ingestion is complete, the asset will appear in your specified assets folder.
 
 
 
