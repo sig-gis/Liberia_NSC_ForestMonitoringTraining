@@ -105,17 +105,20 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: CHANGE THE ASSET NAME BELOW TOO </font>
->
-> ```code
-> projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
-> ```
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: CHANGE THE ASSET NAME BELOW TOO </font>
+
+```code
+projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
+```
 
 **<font size = 3> Image bands </font>**
 
 Once an asset is selected, SEPAL will load its bands in the interface. Click on the band name to select it. The selected bands are summarized in the expansion panel title (1) and displayed in gold in the panel content (2).
 
 In this example, we selected:
+
+<font color = red> THE BAND NAMES - CORRECT? </font>
+
 
 - `red`
 - `nir`
@@ -128,7 +131,7 @@ In this example, we selected:
 
 **<font size = 3> Derived bands </font>**
 
-SEPAL can also build additional derived bands on-the-fly, so the analysis is not limited to native bands. 
+SEPAL can build additional derived bands on-the-fly, so the analysis is not limited to native bands. 
 
 Select `+ Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel (1).
 
