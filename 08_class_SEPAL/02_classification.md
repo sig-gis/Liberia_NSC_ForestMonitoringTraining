@@ -12,21 +12,21 @@ nav_order: 2
 
 # Classification
 
-With this recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the RandomForest classifier – allowing users to create an easy-to-use user interface to:
+With **Classification** recipe, we can build supervised classifications of any mosaic image. It is built on top of the most advanced tools available on Google Earth Engine (GEE) – including the RandomForest classifier – allowing us access to a user-friendly interface to:
 
 - select an image to classify
 - define the class table
 - add training data from external sources and on-the-fly selection.
 
-In combination with other tools of SEPAL, the **Classification** recipe can help you provide accurate land-use maps without writing a single line of code.
+In combination with other tools of SEPAL, the **Classification** recipe can help develop accurate land cover maps without writing a single line of code.
 
 ## Start
 
 Once the **Classification** recipe is selected, SEPAL will show the recipe process in a new tab (**1**); the **Image selection** window will appear in the lower right (**2**).
 
-![Landing page](../images/sepal/sepal_rf/sepal_rf_1.webp)
+![Landing page](../images/sepal/sepal_rf/sepal_rf_1.png)
 
-The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited convention for your needs. Simply double-click the tab and enter a new name. It will default to:
+The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited naming convention - double-click the tab and enter a new name. It will default to:
 
 ```code
 Classification_<timestamp>
@@ -34,6 +34,11 @@ Classification_<timestamp>
 
 ![Default title](../images/sepal/sepal_rf/sepal_rf_2.webp)
 ![Modified title](../images/sepal/sepal_rf/sepal_rf_3.webp)
+
+<img align="center" src="../images/intro-gee/sepal_rf_2.webp" vspace="10" width="300">
+
+<img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
+
 
 > **Note:**
 >
