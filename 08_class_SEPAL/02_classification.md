@@ -35,14 +35,15 @@ Classification_<timestamp>
 ![Default title](../images/sepal/sepal_rf/sepal_rf_2.webp)
 ![Modified title](../images/sepal/sepal_rf/sepal_rf_3.webp)
 
+<!-- 
 <img align="center" src="../images/intro-gee/sepal_rf_2.webp" vspace="10" width="300">
 
 <img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
-
+ -->
 
 > **Note:**
 >
-> The SEPAL team recommends using the following naming convention:
+>  It is recommended to use the following naming convention:
 >
 > ```code
 > <image_name>_<classification>_<measures>
@@ -50,7 +51,7 @@ Classification_<timestamp>
 
 ## Parameters
 
-In the lower-right corner, the following five tabs are available, allowing you to customize the classification:
+In the lower-right corner, the following tabs are available, allowing us to customize the classification:
 
 - `IMG`: Image to classify.
 - `LEG`: Legend of the classification system.
@@ -58,7 +59,7 @@ In the lower-right corner, the following five tabs are available, allowing you t
 - `AUX`: Auxiliary global dataset to use in the model.
 - `CLS`: Classifier configuration.
 
-![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.webp)
+![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.png)
 
 ### Image selection
 
@@ -70,36 +71,39 @@ The first step consists of selecting the image bands on which to apply the class
 
 > **Note:**
 >
-> If multiple images are selected, all selected images should overlap. If masked pixels are found in one of the bands, the classifier will mask them.
+> If multiple images are selected, all selected images should overlap. If the classifier finds masked pixels in one of the bands, it will mask them in the resulting classification.
 
 Select `Add`. The following screen should be displayed:
 
-![Image source](../images/sepal/sepal_rf/sepal_rf_5.webp)
+![Image source](../images/sepal/sepal_rf/sepal_rf_5.png)
 
-##### Image type
+<font size = 5> Image type </font>
 
-Users can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
+**Image type**
 
-**Existing recipe:**
 
-- **Advantages:**
+We can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
+
+##### Existing recipe:
+
+- Advantages:
   - All computed bands from SEPAL can be used.
   - Any modification to the existing recipe will propagate in the final classification.
-- **Disadvantages:**
+- Disadvantages:
   - The initial recipe will be computed at each rendering step, slowing down the classification process and potentially breaking on-the-fly rendering due to GEE timeout errors.
 
-**GEE asset:**
+##### GEE asset:
 
-- **Advantages:**
+- Advantages:
   - Can be shared with other users.
   - The computation will be faster, as the image has already been exported.
-- **Disadvantages:**
+- Disadvantages:
   - Only the exported bands will be available.
   - The `Image` needs to be re-exported to propagate changes.
 
 Both methods behave the same way in the interface.
 
-##### Select bands
+**Select bands**
 
 > *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow:
 >
@@ -107,7 +111,7 @@ Both methods behave the same way in the interface.
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
 > ```
 
-##### Image bands
+**Image bands**
 
 Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
 
@@ -120,7 +124,7 @@ In this example, we selected:
 
 ![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
 
-##### Derived bands
+**Derived bands**
 
 The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
 
