@@ -201,21 +201,21 @@ You can also import a `.csv` file containing pre-made legend definitions.
 Example `.csv` format:
 
 ```csv
-code,class,color
-10,Tree cover,#006400
-20,Shrubland,#ffbb22
-30,Grassland,#ffff4c
-40,Cropland,#f096ff
+color,value,label
+#006400,1,"forest_80"
+#228B22,2,"forest_30_80"
+#32CD32,3,"forest_30"
+#2E8B57,4,"mangroves"
 ```
 
 Example 2:
 
 ```csv
-code,class,red,blue,green
-10,Tree cover,0,100,0
-20,Shrubland,255,187,34
-30,Grassland,255,255,76
-40,Cropland,240,150,255
+red,blue,green,code,class
+0,100,0,1,"forest_80",
+34,139,34,2,"forest_30_80"
+50,205,50,3,"forest_30"
+46,139,87,4,"mangroves"
 ```
 
 Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
