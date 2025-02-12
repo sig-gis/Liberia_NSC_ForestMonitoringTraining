@@ -17,20 +17,6 @@ The processing infrastructure automatically parallelizes analysis across many pr
 <font size=2> Source: Google </font>
 
 
-
-### Introduction to JavaScript (JS)
-JavaScript (JS) is a programming language used to write and debug code, visualize data, and develop online applications in GEE. The Python language is also available, however we will focus on JS as it is the most developed and easiest programming language to use when getting started. In case it is needed, a translation from JS to Python (or vice versa) is easy to be implemented, and there are tools available to do this automatically.
-
-### Analyzing programming structure
-The online code-editor allows mostly a structured-procedural programming paradigm. It means the code has a simple sintaxis and can be divided into functions. Main JS reserved words and commands that you will get familiar with are:
-
-- *var*: to declare new variables or functions
-- *Import* and *Export*: to import and export datasets
-- *addLayer*: to visualize new data layers.
-- *function*: to create a new function that performs a specific task
-- *map*: to apply a function over an image collection
-- *clip*: to shape a raster or vector layer by a geometry or polygon
-
 ## Data Catalog
 
 Earth Engine's public data archive includes more than forty years of historical imagery and scientific data sets, updated and expanded daily.
@@ -74,18 +60,8 @@ Codes can be converted into applications maintained on GEE:
 
 <font size=2> Earth Engine Application: MODIS Ocean Temperature - Time Series Inspector. Source: https://google.earthengine.app/view/ocean. </font>
 
-Some of GEE's applications include:
 
-- Land Use Land Cover Classification
-- Forest loss mapping
-- Land Use Land Cover Change Detection
-- Crop mapping
-- Fire mapping
-- Air quality monitoring
-- Surface water mapping
-
-
-Examples of applications:
+Examples of GEE Apps:
 
 - [Fire Monitoring in the Amazon](https://gis-acca.users.earthengine.app/view/amazon-fire-tracker) - Monitoring of the Andean Amazon Project
 - [Global Forest Change](https://glad.earthengine.app/view/global-forest-change) - University of Maryland
@@ -96,7 +72,7 @@ Examples of applications:
 - [Malaria Risk Mapping](http://www.shrinkingthemalariamap.org/) - University of California San Francisco
 - [MapBiomas](https://mapbiomas.org)
 
-## Interface
+## The GEE Code Editor
 
 The Code Editor is an integrated development environment for the Earth Engine JavaScript API. It offers an easy way to write, debug, run, and manage code. 
 
@@ -114,6 +90,19 @@ In the center, you'll find the web-based code editor where you can insert your J
 On the right, we have three main panels: `Inspector`, `Console` and `Tasks`. In the Console area we can see code errors or printed values, this allows us to debug our script.
 
 <img align="center" src="../images/intro-gee/fig7.png" vspace="10" width="700">
+
+### Introduction to JavaScript (JS) for the Code Editor
+JavaScript (JS) is a programming language used to write and debug code, visualize data, and develop online applications in GEE. The Python language is also available, however we will focus on JS as it is the most developed and easiest programming language to use when getting started. 
+
+JS has a simple syntax and can be divided into functions. Main JS reserved words and commands that you will want to be familiar with are:
+
+- *var*: to declare new variables or functions
+- *Import* and *Export*: to import and export datasets
+- *addLayer*: to visualize new data layers in the map panel.
+- *function*: to create a new function that performs a specific task
+- *map*: to apply a function to all images in an image collection
+- *clip*: to cut a raster or vector layer by a geometry or polygon
+
 
 ## Exercise: my first script
 
