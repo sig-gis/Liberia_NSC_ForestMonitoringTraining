@@ -150,8 +150,6 @@ Depending on how long a remote sensing platform has been in operation, there may
 
 We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Liberia, using `filterBounds` and by dates to obtain images from January 2017 to December 2021, using `filterDate`.
 
-<font color=red> EDIT HERE ONWARDS </font>
-
 
 ```javascript
 //--------------------------------------------------------------
@@ -208,7 +206,7 @@ We use the `ee.Filter.lt` to get images that have cloud cover "less than" 30%. N
 
 Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and completely block or obscure the Earth's surface. Working with pixels that are contaminated by clouds can influence accuracy and information content of products derived from remote sensing activities, including land cover classification, vegetation modeling, and change detection, where undetected clouds can be mapped as false changes. Therefore, information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from processing.
 
-First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. Please note: Landsat Collection 1 and Collection 2 Tier 2 science products have different scale factors, fill values, and different data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
+First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. Note: Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
 
 We create a function for the application of the scale factors:
 
@@ -317,6 +315,8 @@ Map.addLayer(firstPreprocessed,
              preprocessedVisParams, 
              'First preprocessed image');
 ```
+
+<font color=red> EDIT HERE ONWARDS </font>
 
 <img align="center" src="../images/intro-gee/fig41.png" vspace="10" width="500">
 
