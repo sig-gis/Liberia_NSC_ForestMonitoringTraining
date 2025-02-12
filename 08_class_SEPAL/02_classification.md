@@ -168,8 +168,6 @@ In this step, specify the legend for the output classified image. SEPAL provides
 >
 > Legends created here are fully compatible with other SEPAL functionalities.
 
-<font color = red> EDIT HERE ONWARDS </font>
-
 **<font size = 3> Manual legend </font>**
 
 Select `+ Add` to add a new class to your legend. A class consists of:
@@ -186,7 +184,7 @@ If unsure which colors to use for each class, apply colors using a preselected G
 
 **<font size = 3> Import legend </font>**
 
-You can import a `.csv` file containing legend definitions.
+You can also import a `.csv` file containing pre-made legend definitions.
 
 Example `.csv` format:
 
@@ -198,17 +196,30 @@ code,class,color
 40,Cropland,#f096ff
 ```
 
-Select `Import from CSV` and upload your file.
+Example 2:
+
+```csv
+code,class,red,blue,green
+10,Tree cover,0,100,0
+20,Shrubland,255,187,34
+30,Grassland,255,255,76
+40,Cropland,240,150,255
+```
+
+Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
 ![Import legend](../images/sepal/sepal_rf/sepal_rf_11.png)
 
-Once the legend is validated, export it using `Export as CSV`.
+Click `✓ Apply` to validate your selection. At this stage, you would still be able to modify the legend if needed. When done, `✓ Done` to validate this step. 
+
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
 
 #### Export legend
 
 Once the legend is validated, select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
+
+<font color = red> EDIT HERE ONWARDS </font>
 
 ### Training data
 
