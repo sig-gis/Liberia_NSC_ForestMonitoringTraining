@@ -63,6 +63,7 @@ In the lower-right corner, the following tabs are available, allowing us to cust
 
 ### Image selection
 
+
 The first step consists of selecting the image bands on which to apply the classifier. The number of selected bands is not limited.
 
 > **Note:**
@@ -77,9 +78,8 @@ Select `Add`. The following screen should be displayed:
 
 ![Image source](../images/sepal/sepal_rf/sepal_rf_5.png)
 
-<font size = 5> Image type </font>
 
-**Image type**
+**<font size = 3> Image type </font>**
 
 
 We can select images from an **Existing recipe** or an exported **GEE asset**. Both should be an `ee.Image`, rather than a `Time series` or `ee.ImageCollection`.
@@ -103,15 +103,15 @@ We can select images from an **Existing recipe** or an exported **GEE asset**. B
 
 Both methods behave the same way in the interface.
 
-**Select bands**
+**<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow:
+> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020. Use the following asset name if you want to reproduce our workflow: </font>
 >
 > ```code
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
 > ```
 
-**Image bands**
+**<font size = 3> Image bands </font>**
 
 Once an asset is selected, SEPAL will load its bands in the interface. Simply click on the band name to select them. Selected bands are displayed in gold.
 
@@ -124,13 +124,13 @@ In this example, we selected:
 
 ![Native bands](../images/sepal/sepal_rf/sepal_rf_6.webp)
 
-**Derived bands**
+**<font size = 3> Derived bands </font>**
 
 The analysis is not limited to native bands. SEPAL can also build additional derived bands on-the-fly.
 
 Select `Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands.
 
-> **Note:**
+> **_Note:_**
 >
 > If more than two bands are selected, the operation will be applied to the Cartesian product of the bands.
 
