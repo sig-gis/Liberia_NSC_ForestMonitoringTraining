@@ -71,4 +71,3 @@ To interupt normal pre-planned flight patterns in DJI products, change the fligh
 | Loss of data link connection | Return to home function is initiated until link is restored |
 | Bird Intrusion | Manual flight is utilized to avoid intrusion |
 | Manned Aircraft Intrusion | Manual flight is utilized to avoid intrusion |
-
