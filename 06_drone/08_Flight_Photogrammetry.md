@@ -58,7 +58,9 @@ Overlap refers to the amount of overlap in coverage of each image collected.  Mo
 * 85% frontal and 60% side (if flying multiple flight lines) overlap
 
 ## Speed 
-Flight speed refers to the rate of travel of the drone.  Higher speeds allow the drone to cover more area but use more battery.  Higher speed can also cause motion blur in images especially when there are high winds.  Ideal speed is typically specific to each system.
+Flight speed refers to the rate of travel of the drone.  Higher speeds allow the drone to cover more area but use more battery.  Higher speed can also cause motion blur in images especially when there are high winds.  Ideal speed is typically specific to each system, for the DJI Mavic 3 Enterprise, collecting images at 15 mph is the recommended speed.  
+
+#
 
 ## Emergency Maneuvers
 These occurrences are rare, but can still happen and should be taken into consideration before flying.  Below is a chart with potential emergencies and resolutions:
