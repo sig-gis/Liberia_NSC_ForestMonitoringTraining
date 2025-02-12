@@ -201,34 +201,47 @@ You can set a custom scale for exportation by changing the value of the slider i
 ##### **Destination**
 You can export the image to the SEPAL workspace or to the Google Earth Engine Asset folder. The same image will be exported to both; however, for the former, you will find it in `.tif` format in the `Downloads` folder; for the latter, the image will be exported to your GEE account asset list.
 
-Select `Apply` to start the download process.
 
 > **Note:** If `Google Earth Engine Asset` is not displayed, ensure your [GEE account is connected to SEPAL](https://docs.sepal.io/en/latest/setup/gee.html).
 
 ![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14.png)
 
+Select `Google Earth Engine Asset` and enter the directory where you want to export the assets. See the example below:
+
+```
+projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_lc
+```
+
+Select `Retrieve` to start the download process.
+
+![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14_5.png)
+
+
 ### Exportation status
 
-Monitor task progress in the **Tasks** tab (bottom-left corner of the screen). 
+Monitor task progress in the **Tasks** tab (bottom-left corner of the screen). When the task is finished, the frame will be displayed in green.
 
-If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
 
 ![Download process](../images/sepal/sepal_prep/sepal_prep_15.png)
 ![Download process](../images/sepal/sepal_prep/sepal_prep_16.png)
 ![Download process](../images/sepal/sepal_prep/sepal_prep_17.png)
-![Download process](../images/sepal/sepal_prep/sepal_prep_18.png)
+
 
 
 > **Tip:**
 >
 > This operation is running between GEE and SEPAL servers in the background. You can close the SEPAL page without stopping the process.
 
-When the task is finished, the frame will be displayed in green.
+
+If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
+
+![Download process](../images/sepal/sepal_prep/sepal_prep_18.png)
+
 
 
 ### Access
 
-Once downloaded, the data is stored in the `Downloads` folder. You can access it using the following format:
+If exported to SEPAL workspace, the data is stored in the `Downloads` folder. You can access it using the following format:
 
 ```bash
 .
@@ -238,16 +251,10 @@ Once downloaded, the data is stored in the `Downloads` folder. You can access it
         └── <MO name>_<gee tile id>.vrt
 ```
 
-The data are stored in a folder using the name of the optical mosaic as it was created in the first section of this article. As the number of data is spatially too big to be exported at once, the data are divided into smaller pieces and brought back together in a `<MO name>_<gee tile id>.vrt` file.
-
-![Download process](../images/sepal/sepal_prep/sepal_prep_19.png)
+If exported as GEE asset, you can find it in your asset folder under the name of the optical mosaic as it was created in the first section of this article. 
 
 
-> **Tip:**
->
-> The full folder structure is required to read the `.vrt` file.
-
-Now that you've downloaded the optical mosaic, you can use it in other SEPAL workflows or transfer it to your computer using [FileZilla](https://filezilla-project.org/).
+Now that you've downloaded the optical mosaic, you can use it in other SEPAL workflows.
 
 
 ## Radar mosaics
