@@ -433,11 +433,11 @@ var optical = ee.Image(
         .gte(ee.Date('2013-01-01').millis())),
     // call function to import and preprocess Landsat 8
     importL8(d1,d2),
-    // if the date range is 2016-present, use Sentinel 2
+    // if the date range is 2016-present, use HLS
     ee.Algorithms.If(
       ee.Date(d1).millis()
         .gte(ee.Date('2016-01-01').millis()),   
-      // call function to import and preprocess Sentinel 2
+      // call function to import and preprocess HLS
       importHLS(d1,d2), 
     // if the date range is outside of 2013-present, return an empty image
     ee.Image(0)            
@@ -515,17 +515,6 @@ function importHLS(date1,date2){
     // select and rename desired bands
     .select(['B2',    'B3',    'B4',    'B5',    'B6',    'B7',   'Fmask'], 
             ['blue',  'green', 'red',   'NIR',   'SWIR1', 'SWIR2','Fmask'])
-    // .map(function(image) {
-    //   var missingBands = ['redEdge1','redEdge2','redEdge3','redEdge4']
-    //   // Create an image with missing bands as null (or use a fill value like 0)
-    //   var emptyBands = missingBands.map(function(band) {
-    //     return ee.Image(0).rename(band).toFloat();
-    //   });
-    //   return image
-    //     .addBands(ee.Image(emptyBands))
-    //     .select(['blue','green','red','redEdge1','redEdge2','redEdge3','NIR','redEdge4','SWIR1','SWIR2','Fmask']); 
-    // })
-    
   // import the Sentinel 2 HLS image collection
   var s2Collection = ee.ImageCollection("NASA/HLS/HLSS30/v002")
     // .select(['B2',  'B3',   'B4', 'B5',      'B6',      'B7',      'B8', 'B8A',     'B11',  'B12',  'Fmask'], 
@@ -540,7 +529,7 @@ function importHLS(date1,date2){
   print('HLS resolution (m):',hlsCollection.first().select(1).projection().nominalScale())
   print("Example HLS images:", hlsCollection.limit(3))
   
-  // do some preprocessing to make an image from the Sentinel 8 image collection
+  // do some preprocessing to make an image from the HLS image collection
   var hls = hlsCollection
     // select images that intersect with your AOI
     .filterBounds(aoi)
@@ -565,14 +554,13 @@ function importHLS(date1,date2){
       return image.updateMask(mask);
     })
     // select the bands of interest
-    // .select(['blue','green','red','redEdge1','redEdge2','redEdge3','NIR','redEdge4','SWIR1','SWIR2'])
     .select(['blue','green','red','NIR','SWIR1','SWIR2'])
     // get the median for the time period of interest
     .median()
     // clip to the AOI
     .clip(aoi)
   
-  // return the composited and cleaned Sentinel 2 image
+  // return the composited and cleaned HLS image
   return(hls)
 }
 ```
@@ -758,7 +746,6 @@ function calculateOpticalIndices(image){
   var mndwi = image.normalizedDifference(['green', 'SWIR2']).rename('MNDWI');
   
   // for the more complicated indices, we define the input bands separately first
-  // for the SAR bands, we need to convert from decibels to a linear scale for the calculations
   var nir = image.select('NIR');
   var red = image.select('red');
   var blue = image.select('blue');
@@ -790,6 +777,8 @@ function calculateSARIndices(image){
   // make sure the image is recognized as an image
   ee.Image(image)
   
+  // calculate the indices and rename them
+
   // for the more complicated indices, we define the input bands separately first
   // for the SAR bands, we need to convert from decibels to a linear scale for the calculations
   var vv = ee.Image(10).pow(image.select('VV').divide(10));
@@ -884,12 +873,17 @@ In more recent years when SAR and Planet NICFI are available, we have 22 possibl
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// create a stratified random samplebased on the reclassified LULC map
+// create a stratified random sampleb ased on the LULC map
   var refPoints = lulc10m.stratifiedSample({
+    // number of points per class
     numPoints: classPointsNum,
+    // the band with the LULC classes in it
     classBand: 'class',
+    // resolution of the LULC map
     scale: 10,
+    // set the seed so you regenerate the same exact points every time
     seed: 111,
+    // (uncomment if you want a custom number of points per class)
     // classValues:classValuesList,
     // classPoints:classPointsList, 
     dropNulls:true, 
