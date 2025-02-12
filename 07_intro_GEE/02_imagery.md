@@ -66,9 +66,8 @@ The code here uses the `addLayer` method of the map (`Map`). There are four impo
 
 When you run the code, you may need to scroll to find the image. Click and drag the map to Liberia or search "Monrovia, Liberia" in the panel at the top of the Code Editor. Use the `zoom` tool to increase or decrease the zoom level.
 
-<font color=red> EDIT the image </font>
 
-<img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig30.png" vspace="10" width="500">
 
 Can you recognize any features in the image?
 
@@ -96,11 +95,11 @@ Map.addLayer(
 ```
 
 
-<font color=red> EDIT HERE ONWARDS </font>
 
-The result resembles the world we see and is called a natural color composite, because it naturally matches the spectral ranges of the bands in the image to display colors. This image, also called a true-color composite, shows the red spectral band with shades of red, the green band with shades of green, and the blue band with shades of blue. We specify the pairing simply through the order of the bands in the list: B4, B3, B2. Because Landsat 9 bands 4, 3, and 2 correspond to the real-world colors of red, green, and blue, the image resembles the world we would see outside an airplane window or from a low-flying drone.
 
-<img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="400">
+The result resembles the world we see and is called a natural color composite because it matches the spectral ranges of the bands to display colors. Also known as a true-color composite, it shows the red band in red, the green band in green, and the blue band in blue. We specify the pairing by Landsat 9 band order: B4, B3, B2, which correspond to real-world red, green, and blue, respectively.
+
+<img align="center" src="../images/intro-gee/fig31.png" vspace="10" width="500">
 
 Now, we can add two more layers, but with false colors, using the `SR_5`, `SR_4`, `SR_3` and `SR_6`, `SR_5`, `SR_4` bands.
 
@@ -126,13 +125,16 @@ Map.addLayer(
 
 What coverages stand out in these band combinations?
 
-<img align="center" src="../images/intro-gee/fig32.png" vspace="10" width="400">
-<img align="center" src="../images/intro-gee/fig33.png" vspace="10" width="400">
+<img align="center" src="../images/intro-gee/fig32.png" vspace="10" width="500">
+<img align="center" src="../images/intro-gee/fig33.png" vspace="10" width="500">
 
 ### Complete code
 
 "`4 Image Visualization - Landsat 9`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/86e9cf5640f967eae536df99349b2c65](https://code.earthengine.google.com/86e9cf5640f967eae536df99349b2c65).
+[https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b](https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b).
+
+<font color=red> UPDATE THE CODE BELOW </font>
+
 
 ### Example with Landsat 9 and Sentinel-2
 
@@ -144,9 +146,12 @@ What coverages stand out in these band combinations?
 
 ## Image Collections & Composites in Earth Engine
 
-Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of images collected from the Earth (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type that has specific operations available in the Earth Engine API. Like individual images, they can be viewed with `Map.addLayer`, filtered using the `filter` function, and mapped functions with `map`.
+Depending on how long a remote sensing platform has been in operation, there may be thousands or millions of Earth images collected (e.g. Landsat). In Earth Engine, these are organized into `ee.ImageCollection`, a specialized data type with specific Earth Engine API operations. Like individual images, they can be viewed with `Map.addLayer`, filtered with `filter`, and processed with functions using `map`.
 
-We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Suriname, using the `filterBounds` function and by dates to obtain images from January 2017 to December 2021, using the `filterDate` function.
+We are going to filter the Landsat 8 Collection 2, Tier 1, Level 2, to the limits of Liberia, using the `filterBounds` function and by dates to obtain images from January 2017 to December 2021, using the `filterDate` function.
+
+<font color=red> EDIT HERE ONWARDS </font>
+
 
 ```javascript
 //--------------------------------------------------------------
