@@ -128,8 +128,7 @@ What coverages stand out in these band combinations?
 
 ### Complete code
 
-"`1 Image Visualization - Landsat 9`" script from repository and `07_intro_to_GEE/02_imagery` folder or direct link:
-[https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa](https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa)
+"`1 Image Visualization - Landsat 9`" script from our repository in the `07_intro_to_GEE/02_imagery` folder.
 
 
 ## Adding another satellite image to the map
@@ -399,7 +398,7 @@ var preprocessedVisParams = {
 };
 
 
-// Agregar imagen al mapa.
+// Add the processed image to the map.
 Map.addLayer(firstPreprocessed, 
              preprocessedVisParams, 
              'First preprocessed image');
@@ -419,7 +418,7 @@ Now, we can create a median composite:
 // .min(); .max(); .mean(); .median()
 
 // We will work with the Median composite.
-var composite = preprocessed.median().clip(suriname);
+var composite = preprocessed.median().clip(liberia);
 
 // Add the composite to the map.
 Map.addLayer(composite, preprocessedVisParams, 'Median Composite');
@@ -459,8 +458,7 @@ Export.image.toAsset({
 
 ### Complete code
 
-Script "`3 ImageCollections & Composite`" in the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a](https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a)
-
+Script "`3 ImageCollections & Composite`" is in the repository under this folder `07_intro_to_GEE/02_imagery`.
 
 
 
