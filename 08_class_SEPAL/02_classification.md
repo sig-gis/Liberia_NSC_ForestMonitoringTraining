@@ -105,7 +105,7 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: </font>
+> *Tip:* for this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: CHANGE THE ASSET NAME BELOW TOO </font>
 >
 > ```code
 > projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
@@ -121,6 +121,8 @@ In this example, we selected:
 - `nir`
 - `swir`
 - `green`
+
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
 
 ![Native bands](../images/sepal/sepal_rf/sepal_rf_6.png)
 
@@ -138,6 +140,7 @@ Select `+ Derived bands` at the bottom of the pop-up window and choose the deriv
 > - A - C
 > - B - C
 
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
 
 ![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.png)
 
@@ -147,15 +150,19 @@ Select `+ Derived bands` at the bottom of the pop-up window and choose the deriv
 >
 
 
-Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash can` button removes the image and its bands from the analysis.
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. Instead, click `> Next` to continue to next step.
 
-![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.webp)
+<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
+
+![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.png)
 
 ### Legend setup
 
+<font color = red> EDIT HERE ONWARDS </font>
+
 In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend.
 
-![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.webp)
+![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.png)
 
 > **Important:**
 >
@@ -169,7 +176,7 @@ Select `+ Add` to add a new class to your legend. A class consists of:
 - **Value**: Select an integer value (must be unique).
 - **Class name**: Enter a description (cannot be empty).
 
-![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.webp)
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.png)
 
 ##### Import legend
 
@@ -187,11 +194,11 @@ code,class,color
 
 Select `Import from CSV` and upload your file.
 
-![Import legend](../images/sepal/sepal_rf/sepal_rf_11.webp)
+![Import legend](../images/sepal/sepal_rf/sepal_rf_11.png)
 
 Once the legend is validated, export it using `Export as CSV`.
 
-![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.webp)
+![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
 
 
 ### Training data
@@ -204,7 +211,7 @@ Training data can be added from external sources or collected interactively.
 
 Select `TRN` to open the **Training Data** menu.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_13.webp)
+![Training menu](../images/sepal/sepal_rf/sepal_rf_13.png)
 
 Training data can be imported from:
 
