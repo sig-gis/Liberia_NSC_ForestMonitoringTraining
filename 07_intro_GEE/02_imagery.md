@@ -5,8 +5,6 @@ parent: "7. Intro to GEE"
 nav_order: 2
 ---
 
-*Objectives: GEE: uploading imagery to assets, including drone data; publicly available imagery and data sets (e.g. forest change and fire alerts); linking GEE imagery to CEO*
-
 # Imagery in GEE
 
 Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offerd over forty years of historical imagery and scientific datasets, updated and expanded daily.
@@ -32,7 +30,7 @@ Once you have started the upload, an "Asset ingestion" task appears on the `Task
 
 This section covers inspecting image bands, displaying them as map layers, and creating composite layers with multiple bands, including visible and non-visible spectrum.
 
-First we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
+First, we are going to visualize a Landsat 9 image of March 21, 2022 over Monrovia. You can explore the image in several ways. To get started, you can retrieve metadata (descriptive data about the image) by printing the image.
 
 ```javascript
 var firstImage = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
@@ -130,20 +128,107 @@ What coverages stand out in these band combinations?
 
 ### Complete code
 
-<font color=red> EDIT THE CODE BELOW </font>
-
-"`4 Image Visualization - Landsat 9`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b](https://code.earthengine.google.com/c0049790a1b8a13f57c6c44820fe3e2b).
-
-<font color=red> UPDATE THE CODE BELOW </font>
+"`1 Image Visualization - Landsat 9`" script from repository and `07_intro_to_GEE/02_imagery` folder or direct link:
+[https://code.earthengine.google.com/127ca2e3e14899193b53d2bd8b1cdf0e](https://code.earthengine.google.com/127ca2e3e14899193b53d2bd8b1cdf0e)
 
 
-### Example with Landsat 9 and Sentinel-2
+## Adding another satellite image to the map
 
-"`4 Image Visualization - L9 & S2`" script from repository and `T1 & T2` folder or direct link:
-[https://code.earthengine.google.com/8909f4360f49c80071c830c2fd66738a](https://code.earthengine.google.com/8909f4360f49c80071c830c2fd66738a).
+Now, we will add the same Landsat 9 image and a new Sentinel-2 image for comparison.  
+
+First, we define the Landsat 9 image variable, print it to the Console, and set the map center using `Map.setCenter`, which requires `longitude`, `latitude`, and `zoom level`. Then, we add the image to the map using the True Color band combination.
+
+```javascript
+var firstImageL9 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
+print(firstImageL9);
+
+Map.setCenter(-55.3807, 5.7495, 9);
+
+Map.addLayer(
+    firstImageL9,
+    {
+        bands: ['SR_B4', 'SR_B3', 'SR_B2'],
+        min: 7000,
+        max: 12000
+    },
+    'True Color L9');
+```
 
 
+Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from March 29, 2022, taken eight days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
+
+
+```javascript
+var firstImageS2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20220329T105629_20220329T111136_T29NLH');
+print(firstImageS2);
+
+Map.addLayer(
+    firstImageS2,
+    {
+        bands: ['B4', 'B3', 'B2'],
+        min: 0,
+        max: 2000
+    },
+    'True Color S2');
+```
+
+In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets ([USGS Landsat 9 Level 2, Collection 2, Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2)  & [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)) and see the different band designations. Inspect the metadata for both images in the Console as well.
+
+<img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
+
+
+On the map, note the color differences, which may result from differences in spectral resolution, processing steps, and other factors. Why does the Sentinel-2 image cover a smaller area than Landsat 9? Zoom in to compare pixel sizes and observe the spatial resolution difference. Landsat 9 has a 30 m resolution, covering a larger area at the cost of detail, while Sentinel-2 has a 10 m resolution, offering finer detail but covering a smaller area.
+
+<font color=red> EDIT THE IMAGES BELOW </font>
+
+<img align="center" src="../images/intro-gee/fig46.png" vspace="10" width="500">
+
+<img align="center" src="../images/intro-gee/fig47.png" vspace="10" width="500">
+
+## Projection and Scale
+
+You can print the image’s projection and scale. Since different bands may have different spatial resolutions, a specific band must be selected for projection details. Below, we use the `select()` function to choose band 2 of the Sentinel-2 image, returning an image with just that band. Then, we apply the `projection()` function, which returns an `ee.Projection` object. Printing this variable in the Console reveals the image’s projection.
+
+```javascript
+var projection = firstImageS2.select('B2').projection();
+print(projection);
+```
+
+On the Console we see that the Sentinel-2 image is in the EPSG:32629 projection.
+
+<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="300">
+
+We can also print the image’s scale (spatial resolution). The `ee.Projection` object has a `nominalScale()` function that returns the linear scale in meters of the units of this projection, as measured at the point of true scale. The type of object that is returned is a Float number.
+
+```javascript
+var scale = projection.nominalScale();
+print(scale);
+```
+
+With this, we see on the Console that the scale is what we expected, 10 meters.
+
+## Exporting an image
+
+The GEE API provides export functions that allow exporting an image in different ways: to Google Drive, as an EE Asset (not leaving the Earth Engine environment), and to Google Cloud. If we want to work with the image outside of GEE, we can use the `Export.image.toDrive` function.
+
+```javascript
+Export.image.toDrive({
+  image: firstImageS2.int16(),
+  scale: 10,
+  region: area,
+  description: 'sentinel2image',
+  fileNamePrefix: 'S2 Monrovia 220329',
+  maxPixels: 1e13
+})
+```
+
+Check this function's description in the `Docs` tab for more information.
+
+You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from [your Google Drive](https://drive.google.com/drive/my-drive).
+
+### Complete code
+
+Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/6142d34b15cecc5a6cee0e9a220ea87f](https://code.earthengine.google.com/6142d34b15cecc5a6cee0e9a220ea87f)
 
 
 ## Image Collections & Composites in Earth Engine
@@ -378,113 +463,9 @@ Export.image.toAsset({
 
 ### Complete code
 
-<font color=red> EDIT THE CODE BELOW </font>
-
-Script "`6 ImageCollections & Composite`" in the repository and folder `T3` or direct link: [https://code.earthengine.google.com/56778dd1a508c78473589e3045840577](https://code.earthengine.google.com/56778dd1a508c78473589e3045840577)
+Script "`3 ImageCollections & Composite`" in the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/e1d41c8fa22903096188db603aaeb502](https://code.earthengine.google.com/e1d41c8fa22903096188db603aaeb502)
 
 
-
-## Adding another satellite image to the map
-
-Now, we will add the same Landsat 9 image and a new Sentinel-2 image for comparison.  
-
-First, we define the Landsat 9 image variable, print it to the Console, and set the map center using `Map.setCenter`, which requires `longitude`, `latitude`, and `zoom level`. Then, we add the image to the map using the True Color band combination.
-
-```javascript
-var firstImageL9 = ee.Image('LANDSAT/LC09/C02/T1_L2/LC09_200056_20220321');
-print(firstImageL9);
-
-Map.setCenter(-55.3807, 5.7495, 9);
-
-Map.addLayer(
-    firstImageL9,
-    {
-        bands: ['SR_B4', 'SR_B3', 'SR_B2'],
-        min: 7000,
-        max: 12000
-    },
-    'True Color L9');
-```
-
-
-Next, we define a variable `firstImageS2` to store an `ee.Image` of a Sentinel-2 scene from March 29, 2022, taken eight days after the Landsat 9 image. We print and add it to the map using the True Color band combination. For Sentinel-2, red (B4), green (B3), and blue (B2) bands match Landsat 9, though this isn’t always the case. Unlike Landsat 9, Sentinel-2 band names lack the `SR_` prefix.
-
-
-```javascript
-var firstImageS2 = ee.Image('COPERNICUS/S2_SR_HARMONIZED/20220329T105629_20220329T111136_T29NLH');
-print(firstImageS2);
-
-Map.addLayer(
-    firstImageS2,
-    {
-        bands: ['B4', 'B3', 'B2'],
-        min: 0,
-        max: 2000
-    },
-    'True Color S2');
-```
-
-In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets ([USGS Landsat 9 Level 2, Collection 2, Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2)  & [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)) and see the different band designations. Inspect the metadata for both images in the Console as well.
-
-<font color=red> EDIT THE IMAGE BELOW </font>
-
-<img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
-
-
-On the map, note the color differences, which may result from differences in spectral resolution, processing steps, and other factors. Why does the Sentinel-2 image cover a smaller area than Landsat 9? Zoom in to compare pixel sizes and observe the spatial resolution difference. Landsat 9 has a 30 m resolution, covering a larger area at the cost of detail, while Sentinel-2 has a 10 m resolution, offering finer detail but covering a smaller area.
-
-<font color=red> EDIT THE IMAGES BELOW </font>
-
-<img align="center" src="../images/intro-gee/fig46.png" vspace="10" width="500">
-
-<img align="center" src="../images/intro-gee/fig47.png" vspace="10" width="500">
-
-## Projection and Scale
-
-You can print the image’s projection and scale. Since different bands may have different spatial resolutions, a specific band must be selected for projection details. Below, we use the `select()` function to choose band 2 of the Sentinel-2 image, returning an image with just that band. Then, we apply the `projection()` function, which returns an `ee.Projection` object. Printing this variable in the Console reveals the image’s projection.
-
-```javascript
-var projection = firstImageS2.select('B2').projection();
-print(projection);
-```
-
-On the Console we see that the Sentinel-2 image is in the EPSG:32629 projection.
-
-<img align="center" src="../images/intro-gee/fig48.png" vspace="10" width="300">
-
-We can also print the image’s scale (spatial resolution). The `ee.Projection` object has a `nominalScale()` function that returns the linear scale in meters of the units of this projection, as measured at the point of true scale. The type of object that is returned is a Float number.
-
-```javascript
-var scale = projection.nominalScale();
-print(scale);
-```
-
-With this, we see on the Console that the scale is what we expected, 10 meters.
-
-## Exporting an image
-
-The GEE API provides export functions that allow exporting an image in different ways: to Google Drive, as an EE Asset (not leaving the Earth Engine environment), and to Google Cloud. If we want to work with the image outside of GEE, we can use the `Export.image.toDrive` function.
-
-```javascript
-Export.image.toDrive({
-  image: firstImageS2.int16(),
-  scale: 10,
-  region: area,
-  description: 'sentinel2image',
-  fileNamePrefix: 'S2 Monrovia 220329',
-  maxPixels: 1e13
-})
-```
-
-Check this function's description in the `Docs` tab for more information.
-
-You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from [your Google Drive](https://drive.google.com/drive/my-drive).
-
-### Complete code
-
-<font color=red> EDIT THE CODES AND PATHS BELOW </font>
-
-Script "`1 Image Visualization - L9 & S2`" from the repository and folder `T3` or direct link: [https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4](https://code.earthengine.google.com/690d887ea9224bec426df51f278e9ab4).
 
 
 
@@ -507,7 +488,7 @@ Map.addLayer(gfc.select('lossyear'), {min: 0, max: 22, palette: ['yellow', 'red'
 
 
 ### Fire Alerts  
-The **MODIS and VIIRS fire datasets** can provide near real-time active fire detections. For instance, the MODIS **[Fire Information for Resource Management System (FIRMS)](https://developers.google.com/earth-engine/datasets/catalog/FIRMS
+The **MODIS and VIIRS fire** datasets can provide near real-time active fire detections. For instance, **[Fire Information for Resource Management System (FIRMS)](https://developers.google.com/earth-engine/datasets/catalog/FIRMS
 )** can be added to your map with:
 
 
