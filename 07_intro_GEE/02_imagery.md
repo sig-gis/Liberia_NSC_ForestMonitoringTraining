@@ -71,7 +71,7 @@ When you run the code, you may need to scroll to find the image. Click and drag 
 
 Can you recognize any features in the image?
 
-Let's explore this image with the `Inspector` tool. When you click on the `Inspector` tab on the right hand side of the Code Editor, your cursor should now look like a crosshair. When you click on a location on the image, the `Inspector` panel will report data for that location in three categories as follows:
+Let's explore this image with the `Inspector` tool. Click the `Inspector` tab on the right side of the Code Editor, your cursor should now look like a crosshair. Clicking on a location will display data in the `Inspector` panel under three categories:
 
 <img align="center" src="../images/intro-gee/fig29.png" vspace="10" width="300">
 
@@ -200,7 +200,7 @@ var collection = landsat8
     .filter(ee.Filter.lt('CLOUD_COVER', 30));
 ```
 
-We use the `ee.Filter.lt` to get images that have cloud cover "less than" 30%. Notice that we now have 268 images.
+We use the `ee.Filter.lt` to get images with cloud cover "less than" 30%, resulting in 268 images.
 
 <img align="center" src="../images/intro-gee/fig38.png" vspace="10" width="500">
 
@@ -283,7 +283,7 @@ var preprocessed = collection.map(applyScaleFactors)
                              .map(maskL8sr);
 ```
 
-We can compare the effects of cloud masking by comparing the same image before and after the process:
+We can compare cloud masking effects by comparing the same image before and after processing:
 
 ```javascript
 // ---------------------------------------------------------------
