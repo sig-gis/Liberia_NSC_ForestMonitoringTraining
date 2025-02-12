@@ -14,8 +14,8 @@ Follow along by copying and pasting each code block in the lesson into your own 
 
 ## Objectives
 1. Understand the general process for training and applying a model in Google Earth Engine on satellite data
-2. Adapt the provided workflow for a different areas of interest and time periods
-3. Experiment with different ways to improve accuracy of your classification
+2. Be able to adapt the provided workflow for different areas of interest and time periods
+3. Experiment with different ways to improve the accuracy of your classification
 
 ## Setup     
 
