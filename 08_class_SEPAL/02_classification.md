@@ -161,9 +161,11 @@ Select the following indices:
 
 Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g.Landsat and Sentinel), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
-<font color = red> CHANGE THE ASSET ID IN THE IMAGE BELOW </font>
-
 ![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.png)
+
+
+
+<font color = red> EDIT HERE ONWARDS </font>
 
 ### Legend setup
 
