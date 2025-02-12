@@ -502,58 +502,72 @@ Here's a concise section on publicly available datasets, focusing on forest chan
 
 ## Publicly Available Datasets  
 
-<font color=red> ADD SCREENSHOTS FROM GEE X2 </font>
-
-
-Earth Engine also provides access to numerous publicly available datasets that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
+Earth Engine also provides access to [numerous publicly available datasets](https://developers.google.com/earth-engine/datasets) that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
 
 ### Global Forest Change  
 For example, the **Global Forest Change dataset** tracks forest loss, gain, and disturbance from 2000 onward, derived from Landsat imagery. It can be accessed using the following code snippet:
 
 ```javascript
-var gfc = ee.Image("UMD/hansen/global_forest_change_2022_v1_10");
+var liberia = ee.FeatureCollection('projects/pc556-ncs-liberia-forest-mang/assets/liberia_boundary');
+
+var gfc = ee.Image("UMD/hansen/global_forest_change_2022_v1_10").clip(liberia);
+
 Map.addLayer(gfc.select('lossyear'), {min: 0, max: 22, palette: ['yellow', 'red']}, 'Forest Loss');
 ```
 
+<img align="center" src="../images/intro-gee/gee_gfc.png" vspace="10" width="500">
+
+
 ### Fire Alerts  
-The **MODIS and VIIRS fire datasets** can provide near real-time active fire detections. For instance, the MODIS **Fire Information for Resource Management System (FIRMS)** can be added to your map with:
+The **MODIS and VIIRS fire datasets** can provide near real-time active fire detections. For instance, the MODIS **[Fire Information for Resource Management System (FIRMS)](https://developers.google.com/earth-engine/datasets/catalog/FIRMS
+)** can be added to your map with:
+
 
 ```javascript
-var fires = ee.ImageCollection("MODIS/006/MCD14ML")
-    .filterDate('2024-01-01', '2024-02-01');
-Map.addLayer(fires, {bands: ['MaxFRP'], min: 0, max: 100, palette: ['black', 'orange', 'red']}, 'Active Fires');
+var firms = ee.ImageCollection('FIRMS').filter(
+    ee.Filter.date('2022-03-01', '2022-04-10'));
+var fires = firms.select('T21');
+var firesVis = {
+  min: 325.0,
+  max: 400.0,
+  palette: ['red', 'orange', 'yellow'],
+};
+Map.addLayer(fires, firesVis, 'Fires');
 ```
+
+<img align="center" src="../images/intro-gee/gee_firms.png" vspace="10" width="500">
+
 
 These datasets can help detect deforestation, monitor wildfires, and assess land use changes within GEE.
 
 
 ## Linking GEE imagery to CEO
 
-Finally, GEE imagery can be integrated into CEO and can provide the following benefits: 
+GEE imagery can be integrated into CEO and can provide the following benefits: 
 - Access near real-time satellite data for interpretation.  
 - Combine high-resolution imagery with CEO’s sampling tools.  
 - Enable collaborative land monitoring and validation.  
 
 While CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2, we can also use custom GEE imagery.
 
-First, we need to generate a GEE Tile Layer URL. To export imagery as a web tile layer, we would need to use the following script in GEE:
-
-<font color=red> EDIT THE IMAGE CODE BELOW </font>
+To export imagery as a web tile layer, we first need to generate a GEE Tile Layer URL using the following script in GEE:
 
    ```javascript
-   var image = ee.Image('COPERNICUS/S2_SR/20230901T000000_20230901T235959_T10TFR')
+   var image = ee.Image('COPERNICUS/S2_SR/20220329T105629_20220329T111136_T29NLH')
        .select(['B4', 'B3', 'B2'])
-       .visualize({min: 500, max: 5000, bands: ['B4', 'B3', 'B2']});
+       .visualize({min: 0, max: 2000, bands: ['B4', 'B3', 'B2']});
    
    var mapId = image.getMapId();
    print('Tile URL:', mapId.urlFormat);
    ```
 
-   - Copy the `Tile URL` from the Console.
 
-<font color=red> ADD A SCREENSHOT FROM GEE  </font>
+Then, copy the `Tile URL` from the Console.
 
-Then, we can add the GEE Tile Layer in CEO:
+<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500">
+
+
+Finally, we can add the GEE Tile Layer in CEO:
    - In the CEO project settings, go to `Custom Base Maps`.  
    - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
    - Save and select it as your imagery source.  
