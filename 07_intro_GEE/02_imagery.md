@@ -129,7 +129,7 @@ What coverages stand out in these band combinations?
 ### Complete code
 
 "`1 Image Visualization - Landsat 9`" script from repository and `07_intro_to_GEE/02_imagery` folder or direct link:
-[https://code.earthengine.google.com/127ca2e3e14899193b53d2bd8b1cdf0e](https://code.earthengine.google.com/127ca2e3e14899193b53d2bd8b1cdf0e)
+[https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa](https://code.earthengine.google.com/7988e6bdd5b6af5184411ee9a17187aa)
 
 
 ## Adding another satellite image to the map
@@ -226,7 +226,7 @@ You will see that once you run the code, the `Tasks` tab will flash orange and y
 
 ### Complete code
 
-Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/6142d34b15cecc5a6cee0e9a220ea87f](https://code.earthengine.google.com/6142d34b15cecc5a6cee0e9a220ea87f)
+Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d](https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d)
 
 
 ## Image Collections & Composites in Earth Engine
@@ -459,7 +459,7 @@ Export.image.toAsset({
 
 ### Complete code
 
-Script "`3 ImageCollections & Composite`" in the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/e1d41c8fa22903096188db603aaeb502](https://code.earthengine.google.com/e1d41c8fa22903096188db603aaeb502)
+Script "`3 ImageCollections & Composite`" in the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a](https://code.earthengine.google.com/6cc0b9f059a8b90924a2df5ffcc5c08a)
 
 
 
