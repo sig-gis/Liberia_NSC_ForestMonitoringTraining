@@ -7,6 +7,8 @@ nav_order: 1
 
 # Preprocessing Imagery in GEE
 
+Open up the script you named `preprocessing`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`.
+
 ## Setup
 
 ### Set Important Parameters
@@ -943,4 +945,4 @@ Now, when we run our script, a new export task will show up in the **Tasks** tab
 
 <img align="center" src="../images/class-gee/export.png" hspace="15" vspace="10" width="200">
 
-Code checkpoint: <font color = red> insert correct link </font>
+Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`
