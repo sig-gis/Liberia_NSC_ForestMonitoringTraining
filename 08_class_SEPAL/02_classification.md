@@ -119,7 +119,6 @@ In this example, we selected:
 
 <font color = red> THE BAND NAMES - CORRECT? </font>
 
-
 - `red`
 - `nir`
 - `swir`
@@ -133,7 +132,7 @@ In this example, we selected:
 
 SEPAL can build additional derived bands on-the-fly, so the analysis is not limited to native bands. 
 
-Select `+ Derived bands` at the bottom of the pop-up window and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel (1).
+Select the green `+ Derived bands` and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel (1).
 
 > **_Note:_**
 >
@@ -161,9 +160,7 @@ Once image selection is complete, select `✓ Apply`. The images and bands will 
 
 ### Legend setup
 
-<font color = red> EDIT HERE ONWARDS </font>
-
-In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend.
+In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend - manually or by importing a `csv` table.
 
 ![Legend setup](../images/sepal/sepal_rf/sepal_rf_9.png)
 
@@ -171,17 +168,23 @@ In this step, specify the legend for the output classified image. SEPAL provides
 >
 > Legends created here are fully compatible with other SEPAL functionalities.
 
-##### Manual legend
+<font color = red> EDIT HERE ONWARDS </font>
+
+**<font size = 3> Manual legend </font>**
 
 Select `+ Add` to add a new class to your legend. A class consists of:
 
-- **Color**: Click the color square to open the selector.
-- **Value**: Select an integer value (must be unique).
-- **Class name**: Enter a description (cannot be empty).
+- *Color (1)*: click the color square to open the selector (must be unique)
+- *Value (2)*: select an integer value (must be unique)
+- *Class name (3)*: enter a description (cannot be empty)
+
+You can select `HEX` (4) to display the hexadecimal value of the selected color. It can also be used to insert a known color palette by utilizing its values.
+
+If unsure which colors to use for each class, apply colors using a preselected GEE color map (5). It will color all classes in your panel.
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.png)
 
-##### Import legend
+**<font size = 3> Import legend </font>**
 
 You can import a `.csv` file containing legend definitions.
 
@@ -203,6 +206,9 @@ Once the legend is validated, export it using `Export as CSV`.
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
 
+#### Export legend
+
+Once the legend is validated, select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
 
 ### Training data
 
