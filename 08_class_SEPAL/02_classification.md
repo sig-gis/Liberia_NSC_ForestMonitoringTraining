@@ -212,6 +212,7 @@ Click `^` and select `Import from CSV` to upload your file. You can select the c
 
 Click `✓ Apply` to validate your selection. At this stage, you would still be able to modify the legend if needed. When done, `✓ Done` to validate this step. 
 
+<font color = red> UPDATE THE LEGEND </font>
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
 
@@ -219,7 +220,6 @@ Click `✓ Apply` to validate your selection. At this stage, you would still be 
 
 Once the legend is validated, select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
 
-<font color = red> EDIT HERE ONWARDS </font>
 
 ### Training data
 
@@ -227,9 +227,9 @@ Once the legend is validated, select `^` and export it using `Export as CSV`. A 
 >
 > This step is not mandatory.
 
-Training data can be added from external sources or collected interactively.
+Training data can be added from external sources or collected interactively. Select `TRN` to open the **Training Data** menu.
 
-Select `TRN` to open the **Training Data** menu.
+<font color = red> EDIT THE IMAGE W CLASSES AND COLORS </font>
 
 ![Training menu](../images/sepal/sepal_rf/sepal_rf_13.png)
 
@@ -239,6 +239,23 @@ Training data can be imported from:
 - Google Earth Engine tables
 - Sampled classifications
 - Existing SEPAL recipes
+
+We will use the first option, but see more details on each option in the [SEPAL Documentation](https://docs.sepal.io/en/latest/cookbook/classification.html).
+
+<font color = red> INCLUDE THE DESCRIPTION OF ONE OF THE OPTIONS HERE </font>
+
+
+### Auxiliary datasets
+
+You can also select `AUX` to include more information that could be useful to the classification model but is not always included in satellite image bands, such as **elevation** data. Three sources are currently available on SEPAL:
+ - **Latitude:** On-the-fly latitude dataset built from the coordinates of each pixel’s center.
+
+ - **Terrain:** From the [NASA SRTM Digital Elevation 30 m dataset](https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003), SEPAL will use the `Elevation`, `Slope` and `Aspect` bands. It will also add an `Eastness` and `Northness` band derived from `Aspect`.
+
+ - **Water:** From the [JRC Global Surface Water Mapping Layers, v1.3 dataset](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater), SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
+
+ ![AUX](../images/sepal/sepal_rf/sepal_rf_22.png)
+
 
 ### Classifier configuration
 
@@ -252,17 +269,56 @@ Select `CLS` to configure the classifier. SEPAL supports:
 - Min Distance
 - Decision Tree
 
+ ![Classifiers](../images/sepal/sepal_rf/sepal_rf_23.png)
+
+> **_Note:_**
+>
+>Customizing the classifier is a section designed for advanced users. Make sure that you thoroughly understand how the classifier you’re using works before changing its parameters.
+>
+> The default values if a Random Forest Classifier using 25 trees.
+
+You may click `More` on the lower-left side of the panel to customize your classifier.
+
+ ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24.png)
+
+<font color = red> INCLUDE MORE DETAIL ON CLASSIFICATION HERE </font>
+
+
 ![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_25.webp)
+
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_26.webp)
+
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_27.png)
+
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_28.webp)
+
 
 ### Export
 
 > **Important:**
 >
-> Exporting requires a small computation quota.
+> Exporting requires a small computation quota, which can be added through the `Terminal` (see  [**Terminal** section here](https://docs.sepal.io/en/latest/setup/presentation.html)).
 
-Select `Retrieve` to open the **Export** pane and choose the export parameters.
+Selecting the *cloud download* icon (**1**) to access the `Retrieve` pane to open the **Export** pane and choose the export parameters:
+ - Select the band to export (**2**). There is no maximum number of bands; however, exporting useless bands will only increase the size and time of the output.
+ 
+ - You can set a custom scale for exportation (**3**) by changing the value of the slider in metres (m).
+ 
+ > **_Note:_** 
+ >
+ > Requesting a smaller resolution than images’ native resolution (10 m for Sentinel, 30 m for Landsat) will not improve the quality of the output.
 
-![Export](../images/sepal/sepal_rf/sepal_rf_29.webp)
+You can export the image to:
+ - SEPAL workspace: will  be in `.tif` format in the Downloads folder
+  - Google Earth Engine Asset: will be exported to your GEE account asset list.
 
-The exported image will be stored in the `Downloads` folder.
+Select `Apply` to start the download process.
+
+![Export](../images/sepal/sepal_rf/sepal_rf_29.png)
+
+You can follow the progress of exportation in `Tasks` tab in the lower left of your screen.
+
+![Export](../images/sepal/sepal_rf/sepal_rf_30.png)
+![Export](../images/sepal/sepal_rf/sepal_rf_31.png)
+
 

@@ -2,7 +2,7 @@
 layout: page
 title: "UAS Products & Data Analysis"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 9
+nav_order: 10
 ---
 # Products
 
@@ -42,12 +42,16 @@ This index enhances the ability to detect coloration differences between plants 
 
 #### VARI = (Green - Red) / (Green + Red - Blue)
 
+<img align="center" src="../" hspace="15" vspace="10" width="1000">
+
 A high positive value translats top high presence of vegetaion, while low positive values indicate moderate vegetation cover.  Negative values translate to non-vegetated areas like bare earth or water.  
 
 ### Triangular Greenness Index (TGI)
 
 This index represents chlorophyll sensitivity from true color data.
 
-#### TGI = (Green - (0.39 * Red) - (0.61 * Blue)) / (normalized to the max value of Red, Green and Blue)
+#### TGI = (Green - (0.39 * Red) - (0.61 * Blue)) / (Max. Red + Max. Green + Max. Blue) 
+
+<img align="center" src="../" hspace="15" vspace="10" width="1000">
 
 Higher positive values indicate green, healthy vegetation while negative values indicate areas with little to no vegetation.  Relatively lower positive values may indicate potentially stressed plants.  

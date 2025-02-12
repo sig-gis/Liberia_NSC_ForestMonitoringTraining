@@ -227,3 +227,5 @@ Next, let's practice out our CEO interpretation skills in the demo project in yo
 
 An example Plot Data CSV for making your own project is available [here](https://drive.google.com/drive/folders/13aQi8Sz0vKfKY8wOEAuu6vNWlpG9Vs_m?usp=drive_link).
 
+Demo CEO project: "Workshop2_validation_DEMO"
+- [https://app.collect.earth/review-project?projectId=49814](https://app.collect.earth/review-project?projectId=49814)
