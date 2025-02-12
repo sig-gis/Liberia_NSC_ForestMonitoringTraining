@@ -42,10 +42,12 @@ This index enhances the ability to detect coloration differences between plants 
 
 #### VARI = (Green - Red) / (Green + Red - Blue)
 
+A high positive value translats top high presence of vegetaion, while low positive values indicate moderate vegetation cover.  Negative values translate to non-vegetated areas like bare earth or water.  
+
 ### Triangular Greenness Index (TGI)
 
 This index represents chlorophyll sensitivity from true color data.
 
 #### TGI = (Green - (0.39 * Red) - (0.61 * Blue)) / (normalized to the max value of Red, Green and Blue)
 
-
+Higher positive values indicate green, healthy vegetation while negative values indicate areas with little to no vegetation.  Relatively lower positive values may indicate potentially stressed plants.  
