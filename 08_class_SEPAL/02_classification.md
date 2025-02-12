@@ -28,6 +28,9 @@ Once the **Classification** recipe is selected, SEPAL will show the recipe proce
 
 The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited naming convention - double-click the tab and enter a new name. It will default to:
 
+<font color = red> CHANGE RECIPE NAME </font>
+
+
 ```code
 Classification_<timestamp>
 ```
@@ -105,7 +108,7 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014:
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014 <font color = red> DO WE NEED TO SET IT TO "ANYONE CAN READ"? </font>:
 
 ```code
 projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_lc
