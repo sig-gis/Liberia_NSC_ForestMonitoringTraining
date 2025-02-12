@@ -11,6 +11,19 @@ As mentioned earlier, it is most appropriate to do an Area Weighted Accuracy (AW
 * larger land cover classes contribute more to overall accuracy
 * bias toward small classes is reduced, unlike standard overall accuracy measures
 
+Area weighted accuracy is calculated by multiplying each class's area proportion by its producer's accuracy (true positives divided by total number of testing points in the class). All the classes' weighted accuracies are then added up to produce the overall weighted accuracy. The equation is:
+
+<img align="center" src="../images/accuracy/awa_formula1
+.png" hspace="15" vspace="10" width="700">
+
+Or, in other terms:
+
+<img align="center" src="../images/accuracy/awa_formula2
+.png" hspace="15" vspace="10" width="700">
+
+<img align="center" src="../images/accuracy/accuracy_step3
+.png" hspace="15" vspace="10" width="700">
+
 *Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the Accuracy Assessment page of this website.
 <font color = red> insert correct link to SAR resources </font>
 
@@ -70,18 +83,7 @@ Highlight the cell and drag down and then across to fill in the rest of the cell
 <img align="center" src="../images/accuracy/accuracy_step2
 .png" hspace="15" vspace="10" width="600">
 
-The other rest of the cells have been set up automatically to calculate the user's and producer's accuracy of each class. The rows under the table show the weighted accuracies of each class, which are just calculated by multiplying the classes producer's accuracies by their area proportions. The weighted accuracies are simply added up to produce the overall weighted accuracy. The equation is:
-
-<img align="center" src="../images/accuracy/awa_formula1
-.png" hspace="15" vspace="10" width="700">
-
-Or, in other terms:
-
-<img align="center" src="../images/accuracy/awa_formula2
-.png" hspace="15" vspace="10" width="700">
-
-<img align="center" src="../images/accuracy/accuracy_step3
-.png" hspace="15" vspace="10" width="700">
+The other rest of the cells have been set up automatically to calculate the user's and producer's accuracy of each class. The rows under the table show the weighted accuracies of each class, which are just calculated by multiplying the classes producer's accuracies by their area proportions. The weighted accuracies are simply added up to produce the overall weighted accuracy. The equation is.
 
 $$
 AWA = \sum \left( w_i \times \frac{N_{ii}}{N_i} \right)
