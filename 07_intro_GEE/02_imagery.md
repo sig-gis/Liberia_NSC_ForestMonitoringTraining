@@ -504,7 +504,9 @@ Map.addLayer(fires, firesVis, 'Fires');
 These datasets can help detect deforestation, monitor wildfires, and assess land use changes within GEE.
 
 
-## Linking GEE imagery to CEO
+# Linking GEE imagery to CEO
+
+*The following is adapted from a CEO blog, see the [source](https://www.collect.earth/connecting-gee-raster-data/) for further details.* 
 
 GEE imagery can be integrated into CEO and can provide the following benefits: 
 - Access near real-time satellite data for interpretation.  
@@ -512,6 +514,40 @@ GEE imagery can be integrated into CEO and can provide the following benefits:
 - Enable collaborative land monitoring and validation.  
 
 While CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2, we can also use custom GEE imagery.
+
+
+The first step for connecting your GEE imagery with CEO is to determine the **Asset ID** for your Image Asset or Image Collection asset. If you are using your own imagery, be sure that the imagery is either shared publicly or if your asset must stay private, that you have given read access to “gateway1 [AT] ceo-production.iam.gserviceaccount [DOT COM]”.
+
+<img align="center" src="../images/intro-gee/gee_assetpath.png" vspace="10" width="400">
+
+
+You can find the Asset ID for your own data by clicking on the asset to bring up the Asset Details pane. The Asset ID is located on the left side as “Image ID”.
+
+If you are using data from the Data Catalog, you can find the Asset ID on the information page under “Earth Engine Snippet” between the quotation marks.
+
+<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500">
+
+
+The second piece of information you will need are the **visualization parameters**. CEO uses GEE’s image visualization parameters to display your Image Asset or Image Collection Asset. The most important of these parameters are “bands”, “min” and “max”. 
+
+The final piece of information, needed for Image Collection Assets only, is your **start date and end date** (if using an image collection).
+
+
+So, in CEO...
+Click `Add New Imagery` on your main institution page. Once you select either “GEE Image Asset” or “GEE Image Collection Asset” as the Type, the basic steps to connect your Image Asset to CEO are:
+
+- Add the imagery title, which will be the displayed name of the imagery.
+- Add your Asset ID.
+- Add your Visualization Parameters in JSON format.
+    - For example, {“bands”:[“R”,”G”,”B”],”min”:90,”max”:210}
+    - You should NOT have a “;” character after the right bracket. This may give an error “Invalid JSON in the ‘Visualization Parameters’ field” or may cause the imagery to not load properly.
+- For Image Collection Assets, you will also need to specify your Start Date and End Date.
+
+
+
+### Bonus: GEE imagery as a CEO basemap
+
+The following is an example of using a single Sentinel-2 image to replace the basemap of your CEO project.
 
 To export imagery as a web tile layer, we first need to generate a GEE Tile Layer URL using the following script in GEE:
 
@@ -535,5 +571,5 @@ Finally, we can add the GEE Tile Layer in CEO:
    - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
    - Save and select it as your imagery source.  
 
-<font color=red> ADD 1-2 SCREENSHOTS FROM CEO?  </font>
+<font color=red> ADD 1-2 SCREENSHOTS FROM CEO  </font>
 
