@@ -12,7 +12,7 @@ Here we will provide an overview of the Google Earth Engine cloud-based geospati
 
 ## Pre-configuration
 
-As mentioned in the pre-workshop set up page, joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own 
+As mentioned in the pre-workshop set up page, joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees* type GEE Cloud Project of your own. 
 
 
 Create a [Google Earth Engine account](https://code.earthengine.google.com/register). 

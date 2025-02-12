@@ -105,7 +105,7 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Sentinel-2 mosaic of Eastern Province in Zambia during the dry season from 2012 to 2020: CHANGE THE ASSET NAME BELOW TOO </font>
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. <font color = red> It's a Landsat mosaic of Liberia for 2024 (or 2014?): CHANGE THE ASSET NAME BELOW TOO </font>
 
 ```code
 projects/sepal-cookbook/assets/classification/zmb-eastern_2012_2021
