@@ -96,7 +96,7 @@ For this workshop, type `Liberia` in the **country** cell under the `AOI` tab an
 
 #### Yearly mosaic
 
-In the `DAT` tab, select a year of the data to be used in the mosaic. Let's select 2024 here. Then click `Next`.
+In the `DAT` tab, select a year of the data to be used in the mosaic. Let's select 2014 here. Then click `Next`.
 
 ![Year selection](../images/sepal/sepal_prep/sepal_prep_8.png)
 
@@ -118,9 +118,10 @@ A mosaic uses different raster datasets obtained from multiple sources. SEPAL al
 - **L9**: Landsat 9 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
 - **L8**: Landsat 8 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
 - **L7**: Landsat 7 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
+- **L4-5**: Landsat 4 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T1), [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T2), and Landsat 5 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T1), [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T2)
 - **S2**: Sentinel-2 [Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
 
-Let's select L9 Tier 1 and click `Done`.
+Let's select L8 Tier 1 and click `Done`.
 ![Source selection](../images/sepal/sepal_prep/sepal_prep_10.png)
 
 ### Scenes
