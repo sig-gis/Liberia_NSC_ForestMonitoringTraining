@@ -9,15 +9,15 @@ nav_order: 4
 
 ## SEPAL vs. GEE
 
-| :SEPAL       | GEE         |
+| SEPAL        | GEE          |
 |:-------------|:-------------|
-| <font color = green> **pro -** </font> quick to learn | **con -** takes more time to learn |
-| <font color = green> **pro -** </font> no programming experience needed | **con -** requires understanding of programming basics |
-| **con -** complicated workflow using multiple different tools | <font color = green> **pro -** </font> simple worflow that can be done in 2 scripts |
-| **con -** limited choices for input data | <font color = green> **pro -** </font> can import any data sets from personal computer or GEE Data Catalogue (PALSAR, Harmonized Landsat Sentinel) |
-| **con -** limited choices for pre- and post-processing | <font color = green> **pro -** </font> can access all pre- and post-processing GEE tools (smoothing, cloud masking, calculating indices) |
-| **con -** limited options for altering model parameters | <font color = green> **pro -** </font> many options for altering model parameters (multiprobability mode, variable importance) |
-| **con -** difficult to rerun to test out different versions | <font color = green> **pro -** </font> easy to rerun to test out different versions |
+| **<font color = green> pro - </font>** quick to learn | **<font color = red> con - </font>** takes more time to learn |
+| **<font color = green> pro - </font>** no programming experience needed | **<font color = red> con - </font>** requires understanding of programming basics |
+| **<font color = red> con - </font>** complicated workflow using multiple different tools | **<font color = green> pro - </font>** simple worflow that can be done in 2 scripts |
+| **<font color = red> con - </font>** limited choices for input data | **<font color = green> pro - </font>** can import any data sets from personal computer or GEE Data Catalogue (PALSAR, Harmonized Landsat Sentinel) |
+| **<font color = red> con - </font>** limited choices for pre- and post-processing | **<font color = green> pro - </font>** can access all pre- and post-processing GEE tools (smoothing, cloud masking, calculating indices) |
+| **<font color = red> con - </font>** limited options for altering model parameters | **<font color = green> pro - </font>** many options for altering model parameters (multiprobability mode, variable importance) |
+| **<font color = red> con - </font>** difficult to rerun to test out different versions | **<font color = green> pro - </font>** easy to rerun to test out different versions |
 
 
 ## Ways to Improve Accuracy
