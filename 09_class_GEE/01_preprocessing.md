@@ -119,22 +119,8 @@ If we wanted to filter for a specific province, we can check the province names 
 
 # <img align="center" src="../images/class-gee/print_provinces.png" hspace="15" vspace="10" width="200">
 
-## Import and Preprocess Imagery
 
-Now, we  import and preprocess all the `ImageCollections` we will use for our classification, including the LULC map we generated the reference data from and the satellite imagery on which we will run the model.
-
-Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represents the kind of information we need for our anlaysis. Many of the Image Collections in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still typically need to do the following:
-* filter for the area of interest
-* filter for the time period of interest (with consideration for seasonality and data availability)
-* filter for certain image properties (such as orbit direction or sensor angle)
-* filter for the bands of interest (with consideration for what we are trying to map)
-* calculate indices
-* smooth noisy imagery (SAR imagery)
-* mask out clouds (optical imagery)
-
-It is generally better to do as much filtering as we can at the beginning of our analysis to reduce the size of our data sets. This reduces the computational demands of the script.
-
-### Land Use / Land Cover (LULC)
+## Using the Original Land Use / Land Cover (LULC) Map
 
 First, let's import the current 2014 LULC map for Liberia. We will use this map to produce reference data for our model and to use as a visual comparison while we go through the model building process.
 > *Note: We do not NEED an origianl LULC map, but it is a quick way for us to quickly get relatively trustworthy samples for the purposes of this workshop.*
@@ -146,7 +132,7 @@ We will also symbolize the LULC classes with appropriate colors and add them to 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
-// Import and Preprocess Imagery
+// Import and Prepare the Original LULC Map for Sample Extraction
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -212,6 +198,21 @@ We can view the LULC class at any point on the map by opening the **Inspector** 
 
 <img align="center" src="../images/class-gee/inspector_tab.png" hspace="15" vspace="10" width="200">
 
+## Import and Preprocess Imagery
+
+Now, we  import and preprocess all the `ImageCollections` we will use for our classification, including the LULC map we generated the reference data from and the satellite imagery on which we will run the model.
+
+Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represents the kind of information we need for our anlaysis. Many of the Image Collections in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still typically need to do the following:
+* filter for the area of interest
+* filter for the time period of interest (with consideration for seasonality and data availability)
+* filter for certain image properties (such as orbit direction or sensor angle)
+* filter for the bands of interest (with consideration for what we are trying to map)
+* calculate indices
+* smooth noisy imagery (SAR imagery)
+* mask out clouds (optical imagery)
+
+It is generally better to do as much filtering as we can at the beginning of our analysis to reduce the size of our data sets. This reduces the computational demands of the script.
+
 ### Elevation (DEM)
 
 Next, let's import elevation data, which might be particularly useful in our classification for LULC types that are strongly influence by elevation. We will use the Copernicus 30m resolution DEM. 
@@ -223,6 +224,12 @@ Before importing this data set from the GEE data catalogue, we can preview impor
 We symbolize and add this to the map as well.
 
 ```javascript
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+// Import and Preprocess Imagery
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+
 // DEM 
 // ------------------------------------------------------------------------------------------
 
