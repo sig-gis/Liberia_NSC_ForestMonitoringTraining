@@ -34,7 +34,7 @@ AgEagle eBee X
 
 <img align="center" src="../images/drone/ebeeX.png" hspace="15" vspace="10" width="1000">
 
-## Vertical Take Off and Landing UAS
+## Vertical Take Off and Landing UAS (VTOL)
 
 ### Characteristics
 * Rigid wings, fuselage and propellers
