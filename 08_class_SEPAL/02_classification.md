@@ -24,7 +24,9 @@ In combination with other tools of SEPAL, the **Classification** recipe can help
 
 Once the **Classification** recipe is selected, SEPAL will show the recipe process in a new tab (**1**); the **Image selection** window will appear in the lower right (**2**).
 
-![Landing page](../images/sepal/sepal_rf/sepal_rf_1.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_1.png" vspace="10" width="400">
+
+<!-- ![Landing page](../images/sepal/sepal_rf/sepal_rf_1.png) -->
 
 The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited naming convention - double-click the tab and enter a new name. It will default to:
 
@@ -34,12 +36,6 @@ Classification_<timestamp>
 
 ![Default title](../images/sepal/sepal_rf/sepal_rf_2.png)
 ![Modified title](../images/sepal/sepal_rf/sepal_rf_3.png)
-
-<!-- 
-<img align="center" src="../images/intro-gee/sepal_rf_2.webp" vspace="10" width="300">
-
-<img align="center" src="../images/intro-gee/sepal_rf_3.webp" vspace="10" width="300">
- -->
 
 > **_Note:_**
 >
@@ -219,13 +215,14 @@ red,blue,green,code,class
 
 Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
-![Import legend](../images/sepal/sepal_rf/sepal_rf_11.png)
+
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="300">
+
 
 Click `✓ Apply` to validate your selection. At this stage, you would still be able to modify the legend if needed. When done, `✓ Done` to validate this step. 
 
-<font color = red> UPDATE THE LEGEND </font>
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_12.png" vspace="10" width="300">
 
-![Manual legend](../images/sepal/sepal_rf/sepal_rf_12.png)
 
 #### Export legend
 
@@ -240,7 +237,8 @@ If you added the legend manually, then you can select `^` and export it using `E
 
 Training data can be added from external sources or collected interactively. Select `TRN` to open the **Training Data** menu.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_13.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_13.png" vspace="10" width="400">
+
 
 Training data can be imported from:
 
@@ -253,24 +251,29 @@ We will use the first option, but see more details on each option in the [SEPAL 
 
 Click `+ Add` and select `CSV File` in the pop-out window. 
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_14.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14.png" vspace="10" width="400">
+
 
 Upload the `csv` file with training data: `CE_2025-02-08_300pts.csv` and click `> Next`.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_14_5.png)
+
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14_5.png" vspace="10" width="400">
 
 In the next window, confirm that the columns point coordinates are assigned correctly. Click `> Next`.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_15.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_15.png" vspace="10" width="300">
+
 
 
 Next, SEPAL will request the columns specifying the class value (not the name). Only the single column is supported so far. Select the column from your file that embeds the class values. This is `map_class` in our case. Click `> Next`.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_16.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_16.png" vspace="10" width="400">
+
 
 SEPAL will provide a summary of classes in the legend of the classification and the number of training points added by your file.
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_17.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_17.png" vspace="10" width="400">
+
 
 Selecting the `Done` button will complete the uploading procedure.
 
@@ -292,13 +295,15 @@ You can select `AUX` to include more information that could be useful to the cla
 
  - **Water:** From the [JRC Global Surface Water Mapping Layers, v1.3 dataset](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater), SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
 
- ![AUX](../images/sepal/sepal_rf/sepal_rf_22.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22.png" vspace="10" width="300">
+
 
 Let's select `Terrain` and click `Apply`.
 
 Again, the classifier begins processing and will display the results after a few minutes.  
 
-![Training menu](../images/sepal/sepal_rf/sepal_rf_22_5.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22_5.png" vspace="10" width="400">
+
 
 
 The classification results appear on the screen because the Random Forest classification algorithm is the default in SEPAL. You can use the default parameters, or you can adjust the Random Forest settings or choose a different classifier.
@@ -322,7 +327,7 @@ Select `CLS` to configure the classifier. SEPAL supports:
 - Min Distance
 - Decision Tree
 
- ![Classifiers](../images/sepal/sepal_rf/sepal_rf_23.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_23.png" vspace="10" width="500">
 
 
 You may click `More` on the lower-left side of the panel to customize your classifier. Let's increase the `Number of trees` to `200`, `Seed` to `234`, and click `Apply`.
@@ -334,7 +339,8 @@ You may click `More` on the lower-left side of the panel to customize your class
 
 Click the `Layers` button at the top right of your screen:
 
- ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24_5.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_5.png" vspace="10" width="300">
+
 
 While using the `GRID` option (**1**), drag and drop the `Planet` imagery to the top right of the screen and the `Google Satellite` imagery to the bottom right, as shown in the Figure below. Click `Close`.
 
@@ -347,23 +353,24 @@ You can now visualize the classification map along with high-resolution imagery 
 
 For misclassified areas, you can add more training points by clicking `Enable reference data collection` at the top right of your screen. The pointer of the mouse will become a cursor `+`.
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_7.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_7.png" vspace="10" width="300">
+
 
 You can click in any of the panes (not restricted to the left `Recipe` pane), as long as it is within the border of the AOI. Once you have clicked on either screen, a point will appear as white pin, and the legend will appear on the right side of the screen, allowing you to select the class that the point belongs to. If added by accident, you can click `x Remove` to delete the point.
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_8.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_8.png" vspace="10" width="400">
 
-<font color = red> INCLUDE MORE DETAIL ON CLASSIFICATION HERE </font>
 
 You can also modify the existing points by clicking on each point and selecting the new corresponding class from the list.
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_9.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_9.png" vspace="10" width="400">
+
 
 ### Checking validity
 
 SEPAL embeds information to help the user understand if the amount of training data is sufficient to produce an accurate classification model. In the `Recipe` window, select the sandwich menu to change the Band combination to `Class probability`.
 
-![Validity](../images/sepal/sepal_rf/sepal_rf_25.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_25.png" vspace="10" width="500">
 
 
 You will now see the probability of the model (i.e. the confidence level of the level with output class for each pixel):
@@ -406,8 +413,6 @@ If you have selected GEE Asset as a destination, then you can also monitor tasks
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_30.png" vspace="10" width="500">
 
-
-<font color = red> UPDATE THE FOLLOWING IMAGE ONCE DONE </font>
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_31.png" vspace="10" width="500">
 
