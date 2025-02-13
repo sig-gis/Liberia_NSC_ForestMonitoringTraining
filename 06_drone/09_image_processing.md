@@ -65,7 +65,7 @@ The next thing you must do is select the images you want to use for this project
 
 Click `Add Images`
 
-Select ALL images taken in your drone flight
+Select ALL images taken in your drone flight, the Mavic 3 E automatically makes folders on the SD card for each flight with the time, date and flight number.
 
 <img align="center" src="../images/drone/pix4d_addimages.png" hspace="15" vspace="10" width="600">
 
