@@ -34,10 +34,11 @@ We can quantify the accuracy of the map using a confusion matrix (error matrix).
     - True positive and true negative mean that the classification correctly classified the labels (e.g., a flood pixel was correctly classified as flood). 
     - False positive and false negative mean that the classification does not match the truth (e.g., a flood pixel was classified as no-flood) 
 
-<img align="center" src="./images/accuracy/confusionmatrix.png"  vspace="10" width="600"> 
+<img align="center" src="../images/accuracy/confusionmatrix.png" hspace="15" vspace="10" width="500">
 
-Let’s fill in this confusion matrix with example values if 100 points were collected.
-<img align="center" src="./images/accuracy/accuraciestable.png"  vspace="10" width="600"> 
+Let’s fill in this confusion matrix with example values if 100 points were collected. 
+
+<img align="center" src="../images/accuracy/accuraciestable.png" hspace="15" vspace="10" width="500">
 
 
 **Producer’s Accuracy**
