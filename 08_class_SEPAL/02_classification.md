@@ -28,15 +28,12 @@ Once the **Classification** recipe is selected, SEPAL will show the recipe proce
 
 The first step is to change the name of the recipe. This name will be used to identify your files and recipes in SEPAL folders. Use the best-suited naming convention - double-click the tab and enter a new name. It will default to:
 
-<font color = red> CHANGE RECIPE NAME </font>
-
-
 ```code
 Classification_<timestamp>
 ```
 
-![Default title](../images/sepal/sepal_rf/sepal_rf_2.webp)
-![Modified title](../images/sepal/sepal_rf/sepal_rf_3.webp)
+![Default title](../images/sepal/sepal_rf/sepal_rf_2.png)
+![Modified title](../images/sepal/sepal_rf/sepal_rf_3.png)
 
 <!-- 
 <img align="center" src="../images/intro-gee/sepal_rf_2.webp" vspace="10" width="300">
@@ -51,6 +48,8 @@ Classification_<timestamp>
 > ```code
 > <image_name>_<classification>_<measures>
 > ```
+>
+> For example, `landsat_classiciation_2014_liberia`.
 
 ## Parameters
 
@@ -277,11 +276,16 @@ Selecting the `Done` button will complete the uploading procedure.
 
 ![Training menu](../images/sepal/sepal_rf/sepal_rf_17_5.png)
 
+At this stage, the classifier begins processing and will display the results after a few minutes.  
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_17_6.png)
+
+You can now zoom in to visualize the map in better detail. However, you can also add more data to your classification model to improve it.
 
 
 ### Auxiliary datasets
 
-You can also select `AUX` to include more information that could be useful to the classification model but is not always included in satellite image bands, such as **elevation** data. Three sources are currently available on SEPAL:
+You can select `AUX` to include more information that could be useful to the classification model but is not always included in satellite image bands, such as **elevation** data. Three sources are currently available on SEPAL:
  - **Latitude:** On-the-fly latitude dataset built from the coordinates of each pixel’s center.
 
  - **Terrain:** From the [NASA SRTM Digital Elevation 30 m dataset](https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003), SEPAL will use the `Elevation`, `Slope` and `Aspect` bands. It will also add an `Eastness` and `Northness` band derived from `Aspect`.
@@ -290,8 +294,23 @@ You can also select `AUX` to include more information that could be useful to th
 
  ![AUX](../images/sepal/sepal_rf/sepal_rf_22.png)
 
+Let's select `Terrain` and click `Apply`.
+
+Again, the classifier begins processing and will display the results after a few minutes.  
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_22_5.png)
+
+
+The classification results appear on the screen because the Random Forest classification algorithm is the default in SEPAL. You can use the default parameters, or you can adjust the Random Forest settings or choose a different classifier.
 
 ### Classifier configuration
+
+> **_Note:_**
+>
+>Customizing the classifier is a section designed for advanced users. Make sure that you thoroughly understand how the classifier you’re using works before changing its parameters.
+>
+> The default values if a Random Forest Classifier using 25 trees.
+
 
 Select `CLS` to configure the classifier. SEPAL supports:
 
@@ -305,26 +324,54 @@ Select `CLS` to configure the classifier. SEPAL supports:
 
  ![Classifiers](../images/sepal/sepal_rf/sepal_rf_23.png)
 
-> **_Note:_**
->
->Customizing the classifier is a section designed for advanced users. Make sure that you thoroughly understand how the classifier you’re using works before changing its parameters.
->
-> The default values if a Random Forest Classifier using 25 trees.
 
-You may click `More` on the lower-left side of the panel to customize your classifier.
+You may click `More` on the lower-left side of the panel to customize your classifier. Let's increase the `Number of trees` to `200`, `Seed` to `234`, and click `Apply`.
 
  ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24.png)
 
+### Validating and improving the classification results
+
+Click the `Layers` button at the top right of your screen:
+
+ ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24_5.png)
+
+While using the `GRID` option (**1**), drag and drop the `Planet` imagery to the top right of the screen and the `Google Satellite` imagery to the bottom right, as shown in the Figure below. Click `Close`.
+
+ ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24_6.png)
+
+You can now visualize the classification map along with high-resolution imagery to check for reliability visually.
+
+ ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24_6_5.png)
+
+
+For misclassified areas, you can add more training points by clicking `Enable reference data collection` at the top right of your screen. The pointer of the mouse will become a cursor `+`.
+
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_7.png)
+
+You can click in any of the panes (not restricted to the left `Recipe` pane), as long as it is within the border of the AOI. Once you have clicked on either screen, a point will appear as white pin, and the legend will appear on the right side of the screen, allowing you to select the class that the point belongs to. If added by accident, you can click `x Remove` to delete the point.
+
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_8.png)
+
 <font color = red> INCLUDE MORE DETAIL ON CLASSIFICATION HERE </font>
 
+You can also modify the existing points by clicking on each point and selecting the new corresponding class from the list.
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_25.webp)
+![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_24_9.png)
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_26.webp)
+### Checking validity
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_27.png)
+SEPAL embeds information to help the user understand if the amount of training data is sufficient to produce an accurate classification model. In the `Recipe` window, select the sandwich menu to change the Band combination to `Class probability`.
 
-![Classifier configuration](../images/sepal/sepal_rf/sepal_rf_28.webp)
+![Validity](../images/sepal/sepal_rf/sepal_rf_25.png)
+
+
+You will now see the probability of the model (i.e. the confidence level of the level with output class for each pixel):
+- if the value is high (for example, > 80%), then the pixel can be considered valid
+- if the value is low (< 80 %), the model needs more training data or extra bands to improve the analysis
+
+In the example image, the water body is classified as `water`, with a confidence of over 80%, which is higher than other classes around it.
+
+![Validity](../images/sepal/sepal_rf/sepal_rf_26.png)
 
 
 ### Export
@@ -333,10 +380,10 @@ You may click `More` on the lower-left side of the panel to customize your class
 >
 > Exporting requires a small computation quota, which can be added through the `Terminal` (see  [**Terminal** section here](https://docs.sepal.io/en/latest/setup/presentation.html)).
 
-Selecting the *cloud download* icon (**1**) to access the `Retrieve` pane to open the **Export** pane and choose the export parameters:
- - Select the band to export (**2**). There is no maximum number of bands; however, exporting useless bands will only increase the size and time of the output.
+Selecting the *cloud download* icon to access the `Retrieve` pane to open the **Export** pane and choose the export parameters:
+ - Select the band to export. There is no maximum number of bands; however, exporting useless bands will only increase the size and time of the output.
  
- - You can set a custom scale for exportation (**3**) by changing the value of the slider in metres (m).
+ - You can set a custom scale for exportation by changing the value of the slider in metres (m).
  
  > **_Note:_** 
  >
@@ -346,13 +393,18 @@ You can export the image to:
  - SEPAL workspace: will  be in `.tif` format in the Downloads folder
   - Google Earth Engine Asset: will be exported to your GEE account asset list.
 
-Select `Apply` to start the download process.
+Select the options as shown in the image below and click `Retrieve` to start the download process.
 
 ![Export](../images/sepal/sepal_rf/sepal_rf_29.png)
 
-You can follow the progress of exportation in `Tasks` tab in the lower left of your screen.
+You can follow the progress of exportation in `Tasks` tab in the lower left of your screen. 
+
+If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
+
 
 ![Export](../images/sepal/sepal_rf/sepal_rf_30.png)
+
+<font color = red> UPDATE THE FOLLOWING IMAGE ONCE DONE </font>
 ![Export](../images/sepal/sepal_rf/sepal_rf_31.png)
 
 
