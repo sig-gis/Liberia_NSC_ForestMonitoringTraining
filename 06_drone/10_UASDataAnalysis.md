@@ -10,13 +10,19 @@ nav_order: 10
 
 This is a high resolution geometrically corrected (orthorectified) image created by stitching together the overlapping images captured by the UAS.  These images have a uniform scale and accurate georeferencing meaning it is free of distortions caused by perspective differences. True color orthomosaics are three band rasters with a band for Red, Green and Blue.
 
+<img align="center" src="../images/drone/OrthoEx.png" hspace="15" vspace="10" width="1000">
+
 ## Digital Surface Model (DSM)
 
 This is a type of elevation model represents the earth’s surface including features such as vegetation, buildings and infrastructure.  It captures the highest elevation return. The raster pixel values represent elevation above sea level. DSMs are single band rasters with the pixel value representing elevation.
 
+<img align="center" src="../images/drone/DSMex.png" hspace="15" vspace="10" width="1000">
+
 ## Digital Terrain Model (DTM)
 
 This type of elevation model represents the bare-earth surface with vegetation, buildings and other objects removed.  These are created by filtering out non-ground points from the point cloud in the photogrammetry processing.  The raster pixel values represent elevation above sea level.  DTMs are single band rasters with the pixel value representing elevation.
+
+<img align="center" src="../images/drone/DTMex.png" hspace="15" vspace="10" width="1000">
 
 # Data Analysis
 
