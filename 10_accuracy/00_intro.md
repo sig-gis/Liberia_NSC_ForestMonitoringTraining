@@ -20,7 +20,7 @@ Follow along by copying the files editing the spreadsheets based on each step in
 
 Copy this [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) into your own Google Drive. The files we will be using for this section are your classified testing points (.csv), your pixel areas (.csv), and an accuracy assessment worksheet (.xlsx).
 
-<img align="center" src="../images/accuracy/filespace.png" hspace="15" vspace="10" width="400">
+<img align="center" src="./images/accuracy/filespace.png" hspace="15" vspace="10" width="400">
 
 If you want to work on your own computer in Microsoft Excel, make sure you have all relevant files downloaded to your computer. 
 
@@ -34,11 +34,11 @@ We can quantify the accuracy of the map using a confusion matrix (error matrix).
 * True positive and true negative mean that the classification correctly classified the labels (e.g., a flood pixel was correctly classified as flood). 
 * False positive and false negative mean that the classification does not match the truth (e.g., a flood pixel was classified as no-flood) 
 
-<img align="center" src="../images/accuracy/confusionmatrix.png" hspace="15" vspace="10" width="600">
+<img align="center" src="./images/accuracy/confusionmatrix.png" hspace="15" vspace="10" width="600">
 
 Let’s fill in this confusion matrix with example values if 100 points were collected.
 
-<img align="center" src="../images/accuracy/accuraciestable.png" hspace="15" vspace="10" width="600">
+<img align="center" src="./images/accuracy/accuraciestable.png" hspace="15" vspace="10" width="600">
 
 **Producer’s Accuracy**
 
