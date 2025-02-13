@@ -260,6 +260,11 @@ There are several components of the Quality Check you will want to examine.
 
 There are several other components of the report which you may want to examine now or after you have implemented GCPs. The components shown here were chosen because they allow you to quickly assess the quality of your project and if it is worth completing the rest of the processing. As long as there are no serious issues, you can proceed.
 
+## 3.2 Processing Extent
+In some cases the edges of the imagery will have a lot of errors and no data "holes".  To accomodate this it helps to create a processing extent, this step reduces the "holes" around edges.  To do this step click the map view pull down in the top ribbon and you can either import a polygon or draw your own extent
+
+<img align="center" src="images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
+
 ## 3.2 Ray Cloud
 
 After Initial Processing is complete, you can access the `rayCloud` view from the tab on the left side of the main screen. This is called a “ray cloud” and it contains lots of important features that you should become familiar with. Each of the spheres at the top of the pyramid-like structures represents a camera position. The blue spheres are the initial camera position from GPS coordinates the camera recorded during the flight. The green spheres are optimized camera positions the program calculates. The red spheres are the initial camera positions for uncalibrated cameras which Pix4D could not find optimized positions for. Because imagery relating to uncalibrated cameras will have generated potential warnings in the quality report and affected your output negatively, you may want to disable cameras or remove the bad images. 
