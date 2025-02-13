@@ -188,7 +188,7 @@ Select `+ Add` to add a new class to your legend. A class consists of:
 
 You can select `HEX` (4) to display the hexadecimal value of the selected color. It can also be used to insert a known color palette by utilizing its values.
 
-If unsure which colors to use for each class, apply colors using a preselected GEE color map (5). It will color all classes in your panel.
+If unsure which colors to use for each class, apply colors using a preselected [GEE color map](https://github.com/gee-community/ee-palettes) (5). It will color all classes in your panel.
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.png)
 
@@ -217,6 +217,8 @@ red,blue,green,code,class
 ```
 
 Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
+
+<font color = red> note for Crystal: the csv file is in the `SEPAL - training and testing data - raw` Google Drive folder </font>
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="400">

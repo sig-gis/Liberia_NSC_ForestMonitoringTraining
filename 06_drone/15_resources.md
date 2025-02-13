@@ -23,3 +23,5 @@ Here are some places you can find free, open-source drone imagery to play around
 Here are some tips from Pix4D on how to improve drone image products in areas with dense vegetation (e.g. forests):
 
 [How to improve the outputs of dense vegetation areas using PIX4Dmapper?](https://support.pix4d.com/hc/en-us/articles/202560159-How-to-improve-the-outputs-of-dense-vegetation-areas-using-PIX4Dmapper)
+
+[Pix4Dmapper documentation and Knowledgebase](https://support.pix4d.com/hc/pix4dmapper)
