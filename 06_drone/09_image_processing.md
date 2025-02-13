@@ -11,9 +11,9 @@ nav_order: 9
 
 Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
 
-### General software workflow
+### General Pix4Dmapper workflow
 
-First, the software finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
+After loading the drone images into the software, it finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
 
 1. Keypoint extraction
 2. Keypoint matching (creating tie points)
@@ -29,7 +29,7 @@ Javadnejad, F. (2018). Small Unmanned Aircraft Systems (UAS) for Engineering Ins
 *Read more about SfM in this paper:
 Westoby, M.J. et al., 2012. ‘Structure-from-Motion’ photogrammetry: a low-cost, effective tool for geoscience applications, Geomorphology 179, 300-314.*
 
-# Part 2 - Drone Image Processing
+# Drone Image Processing
 
 In this exercise, we will go over the steps to analyze drone images in Pix4Dmapper.
 
@@ -53,7 +53,7 @@ This goes with the location of the imagery as well. Make sure it is located on t
 
 Select `New Project`
 
-Name the project `CIAT Campus`
+Name the project `Campus`
 
 Create a folder called `Drone Training`
 
@@ -65,7 +65,7 @@ The next thing you must do is select the images you want to use for this project
 
 Click `Add Images`
 
-Select ALL images taken in your drone flight
+Select ALL images taken in your drone flight, the Mavic 3 E automatically makes folders on the SD card for each flight with the time, date and flight number.
 
 <img align="center" src="../images/drone/pix4d_addimages.png" hspace="15" vspace="10" width="600">
 
@@ -99,7 +99,7 @@ The type of imagery you are processing will determine which workflow you use and
 
 RGB 
 * Orthomosaics
-* DSM/DTM 
+* DSM/DTM (Elevation Models)
 * Point Cloud 
 
 Multispectral 
@@ -111,6 +111,9 @@ Thermal
 * Temperature indices 
 
 Also keep in mind that the specific sensor you used to collect your imagery will determine your process. Some sensors calibrate while in flight (such as the senseFly ThermoMAP), while many others do not and will require calibration in Pix4D. Also, you will need to know if your sensor is recording absolute temperature (senseFly ThermoMAP) or relative temperature (FLIR Vue Pro), as this will determine how thermal indices are calculated.
+
+### Make sure the box next to "Start Processing Now" is not checked
+This will automatically start the photogrammetry process and you will not be able to change additional settings or select extra outputs
 
 ## 1.6 Main Screen
  
@@ -178,7 +181,7 @@ Pix4D Documentation:
 
 During the calibration process, the raw images are adjusted based on the actual camera settings and environmental conditions that occurred during the flight based on the location of the keypoint images. 
 
-* Adjusting the `Calibration Method` defines how the software optimizes the internal and external camera parameters based on geolocation accuracy. The `Standard` calibration setting is default and the `Alternative` and `Accurate` settings are used when the geolocation accuracy is high and very high, respectively. For this exercise, use the `Alternative` calibration setting, as it favors projects with less oblique imagery with good accuracy and low texture.
+* Adjusting the `Calibration Method` defines how the software optimizes the internal and external camera parameters based on geolocation accuracy. The `Standard` calibration setting is default and the `Alternative` and `Accurate` settings are used when the geolocation accuracy is high and very high, respectively. 
 
 Set the parameters to the following:
 
