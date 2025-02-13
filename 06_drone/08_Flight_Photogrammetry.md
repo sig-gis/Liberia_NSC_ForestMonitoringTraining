@@ -62,7 +62,111 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 # Automated Flight with the DJI Mavic 3 Enterprise
 
+## 1. Open DJI Pilot 2 App on Remote Control
 
+<img align="center" src="../images/drone/RC_Screenshots/01_DJIPilot2App.jpg" hspace="15" vspace="10" width="1000">
+
+## 2. Select "Flight Route" on DJI Pilot 2
+
+<img align="center" src="../images/drone/RC_Screenshots/02_DJIPilotHomeScreen.jpg" hspace="15" vspace="10" width="1000">
+
+## 3. Create a Route by selecting the plus icon in the top left of the screen or if no other routes have been flown select the "Create Route" icon in the center of the screen
+
+<img align="center" src="../images/drone/RC_Screenshots/03_CreateRoute.jpg" hspace="15" vspace="10" width="1000">
+
+## 4. Select "Area Route" 
+
+<img align="center" src="../images/drone/RC_Screenshots/04_SelectRouteType.jpg" hspace="15" vspace="10" width="1000">
+
+## 5. Plan a flight by using your finger to create the mapping area by tapping verticies on the map
+
+<img align="center" src="../images/drone/RC_Screenshots/05_FlightPlanInterface.jpg" hspace="15" vspace="10" width="1000">
+
+## 6. Finalize mapping area by pressing the blue check mark in the top left corner of the map
+
+<img align="center" src="../images/drone/RC_Screenshots/06_DefinedFlightArea.jpg" hspace="15" vspace="10" width="1000">
+
+## 7. Ensure that the drone is connected to the RC and press "OK"
+
+<img align="center" src="../images/drone/RC_Screenshots/07_ConectingtoDrone.jpg" hspace="15" vspace="10" width="1000">
+
+## 8. Give the route a name
+
+<img align="center" src="../images/drone/RC_Screenshots/08_NameFlight.jpg" hspace="15" vspace="10" width="1000">
+
+## 9. Select the "Ortho Collection" option
+
+<img align="center" src="../images/drone/RC_Screenshots/09_OrthoCollection.jpg" hspace="15" vspace="10" width="1000">
+
+## 10. Select "AGL" for the Altitude Mode option
+### This ensure that the drone will use terrain following when collecting images
+
+<img align="center" src="../images/drone/RC_Screenshots/10_AltitudeModeAGL.jpg" hspace="15" vspace="10" width="1000">
+
+## 11. Download the DSM files from the internet
+### Elevation data can also be downloaded prior flight either to an SD card or to the RC itself.  The SD card option will allow the user to download multiple areas or larger areas. 
+
+<img align="center" src="../images/drone/RC_Screenshots/11_DEMDownload.jpg" hspace="15" vspace="10" width="1000">
+
+## 12. Adjust the flight altitude
+### This can be done by either changing the "Ortho GSD (Ground Sampling Distance)" or the "Terrain Follow Altitude" (this value also known as Above Ground Level or AGL)
+
+<img align="center" src="../images/drone/RC_Screenshots/12_GSD_RC.jpg" hspace="15" vspace="10" width="1000">
+
+## 13. Adjust flight speed
+### Remember slower is better, 15 mph is recommended
+
+<img align="center" src="../images/drone/RC_Screenshots/13_Speed.jpg" hspace="15" vspace="10" width="1000">
+
+## 14. Select "Advanced Settings" for more flight options
+
+<img align="center" src="../images/drone/RC_Screenshots/14_AdvancedSettingsSelect.jpg" hspace="15" vspace="10" width="1000">
+
+## 15. In "Advanced Settings", set the overlap parameters and change the "Photo Mode" to "Distance Interval Shot"
+### You can choose either option here but I found when testing these that "Distance Interval Shot" gave a better result over "Time Interval Shot"
+
+<img align="center" src="../images/drone/RC_Screenshots/15_AdvancedSettings.jpg" hspace="15" vspace="10" width="1000">
+
+## 16. Close the "Advanced Settings" and open the Syetems settings by clicking the three dots in the upper right corner of the screen
+
+<img align="center" src="../images/drone/RC_Screenshots/16_CloseSettings_OpenRTK.jpg" hspace="15" vspace="10" width="1000">
+
+## 17. Select the GPS settings on the right side of the screen by clicking the satellite icon
+
+<img align="center" src="../images/drone/RC_Screenshots/17_ConnectRTK1.jpg" hspace="15" vspace="10" width="1000">
+
+## 18. Ensure "RTK Positioning" is turned on and select the RTK Service Type which will be "D-RTK2 Mobile Station"
+
+<img align="center" src="../images/drone/RC_Screenshots/18_RTKSelect.jpg" hspace="15" vspace="10" width="1000">
+
+## 19. Ensure connection is made with station 
+
+<img align="center" src="../images/drone/RC_Screenshots/19_RTKSelect2.jpg" hspace="15" vspace="10" width="1000">
+
+## 20. If there is another D-RTK2 Mobile station near by make sure to select the correct one
+
+<img align="center" src="../images/drone/RC_Screenshots/19_RTKSelect2.jpg" hspace="15" vspace="10" width="1000">
+
+#### **Note the connection to the D-RTK Mobile Station is over wifi, ensure that the connection is strong and that the RC does not wander too far from the station*
+
+<img align="center" src="../images/drone/RC_Screenshots/20_RTKSelect3.jpg" hspace="15" vspace="10" width="1000">
+
+## 21. Set the "Course Angle" fpr most efficient flight
+
+<img align="center" src="../images/drone/RC_Screenshots/Course_Angle.gif" hspace="15" vspace="10" width="1000">
+
+#### This is important if there are high winds, it is best practice to fly with the wind or against it as to not have a cross wind that could push the drone off its flight path.
+#### **This is not as important for multirotor systems like the Mavic 3 Enterprise but should still be taken into consideration*
+
+## 22. Start the autonomous flight by closing all settings and clicking the blue play button in the upper left corner
+
+<img align="center" src="../images/drone/RC_Screenshots/22_StartMission.jpg" hspace="15" vspace="10" width="1000">
+
+#### You will then be prompted to go through a pre-flight check before uploading the mission to the drone and autonomous flight occurs.
+
+## 23. Upon completition of the flight the drone will automatically fly back to the launch site and land. 
+
+<img align="center" src="../images/drone/RC_Screenshots/LandingVid.gif" hspace="15" vspace="10" width="1000">
 
 ## Emergency Maneuvers
 These occurrences are rare, but can still happen and should be taken into consideration before flying.  Below is a chart with potential emergencies and resolutions:
@@ -75,3 +179,5 @@ To interupt normal pre-planned flight patterns in DJI products, change the fligh
 | Loss of data link connection | Return to home function is initiated until link is restored |
 | Bird Intrusion | Manual flight is utilized to avoid intrusion |
 | Manned Aircraft Intrusion | Manual flight is utilized to avoid intrusion |
+
+<img align="center" src="../" hspace="15" vspace="10" width="1000">
