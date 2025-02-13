@@ -8,15 +8,15 @@ nav_order: 10
 
 ## True Color Orthomosaic
 
-This is a high resolution geometrically corrected (orthorectified) image created by stitching together the overlapping images captured by the UAS.  These images have a uniform scale and accurate georeferencing meaning it is free of distortions caused by perspective differences. 
+This is a high resolution geometrically corrected (orthorectified) image created by stitching together the overlapping images captured by the UAS.  These images have a uniform scale and accurate georeferencing meaning it is free of distortions caused by perspective differences. True color orthomosaics are three band rasters with a band for Red, Green and Blue.
 
-## Digital Surface Model
+## Digital Surface Model (DSM)
 
-This is a type of elevation model represents the earth’s surface including features such as vegetation, buildings and infrastructure.  It captures the highest elevation return. The raster pixel values represent elevation above sea level.
+This is a type of elevation model represents the earth’s surface including features such as vegetation, buildings and infrastructure.  It captures the highest elevation return. The raster pixel values represent elevation above sea level. DSMs are single band rasters with the pixel value representing elevation.
 
-## Digital Terrain Model
+## Digital Terrain Model (DTM)
 
-This type of elevation model represents the bare-earth surface with vegetation, buildings and other objects removed.  These are created by filtering out non-ground points from the point cloud in the photogrammetry processing.  The raster pixel values represent elevation above sea level.
+This type of elevation model represents the bare-earth surface with vegetation, buildings and other objects removed.  These are created by filtering out non-ground points from the point cloud in the photogrammetry processing.  The raster pixel values represent elevation above sea level.  DTMs are single band rasters with the pixel value representing elevation.
 
 # Data Analysis
 
@@ -44,7 +44,7 @@ This index enhances the ability to detect coloration differences between plants 
 
 <img align="center" src="../" hspace="15" vspace="10" width="1000">
 
-A high positive value translats top high presence of vegetaion, while low positive values indicate moderate vegetation cover.  Negative values translate to non-vegetated areas like bare earth or water.  
+A high positive value translates to high presence of vegetaion, while low positive values indicate moderate vegetation cover.  Negative values translate to non-vegetated areas like bare earth or water.  
 
 ### Triangular Greenness Index (TGI)
 
