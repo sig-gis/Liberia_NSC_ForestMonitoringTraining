@@ -227,6 +227,9 @@ Monitor task progress in the **Tasks** tab (bottom-left corner of the screen). W
 ![Download process](../images/sepal/sepal_prep/sepal_prep_16.png)
 ![Download process](../images/sepal/sepal_prep/sepal_prep_17.png)
 
+##### **Note on Exporting Data**
+Tests showed exporting 2014 L8 T1 took about 25 minutes, and exporting 2024 L8 T1, L9 T1, and S2 took about 4 hours.
+
 
 
 > **Tip:**
