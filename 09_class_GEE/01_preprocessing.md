@@ -85,7 +85,7 @@ For this exercise, we use a union of a `featureCollection` of a simple polygon a
 // import the simple Liberia feature collection
 var Liberia = ee.FeatureCollection("projects/pc556-ncs-liberia-forest-mang/assets/Liberia_simple")
   
-// define an aoi from the feature collection
+// define an aoi from the feature collection, grouping the provinces
 var aoi = Liberia
   .union();
   
@@ -121,9 +121,9 @@ If we wanted to filter for a specific province, we can check the province names 
 
 ## Import and Preprocess Imagery
 
-Now, we  import and preprocess all the `ImageCollection`s we will use for our classification, including the LULC map we generate the reference data from and the satellite imagery we run the model on.
+Now, we  import and preprocess all the `ImageCollections` we will use for our classification, including the LULC map we generated the reference data from and the satellite imagery on which we will run the model.
 
-Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represent the kind of information we need for our anlaysis. Many of the `ImageCollection` in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still need to do seom of the following:
+Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represents the kind of information we need for our anlaysis. Many of the Image Collections in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still typically need to do the following:
 * filter for the area of interest
 * filter for the time period of interest (with consideration for seasonality and data availability)
 * filter for certain image properties (such as orbit direction or sensor angle)
@@ -137,10 +137,11 @@ It is generally better to do as much filtering as we can at the beginning of our
 ### Land Use / Land Cover (LULC)
 
 First, let's import the current 2014 LULC map for Liberia. We will use this map to produce reference data for our model and to use as a visual comparison while we go through the model building process.
+> *Note: We do not NEED an origianl LULC map, but it is a quick way for us to quickly get relatively trustworthy samples for the purposes of this workshop.*
 
 We need to make sure the cloud and nodata classes both receive values of 0 and then mask them out to effectively remove them from the map so we do not sample them.
 
-We also symbolize the LULC classes with appropriate colors and add them to the map. 
+We will also symbolize the LULC classes with appropriate colors and add them to the map. 
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -154,7 +155,7 @@ We also symbolize the LULC classes with appropriate colors and add them to the m
 
 // import images
 var lulc10m = ee.Image(
-  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014')
+  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014') //we will use this one with 10m resolution
 var lulc30m = ee.Image(
   'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_30m_2014')
 
@@ -250,21 +251,24 @@ var demVis = {
 Map.addLayer(dem, demVis, 'DEM', false);
 ```
 
-### Synthetic Aperture Radar (SAR) Imagery (PALSAR and Sentinel 1)
+### Synthetic Aperture Radar (SAR) Imagery (PALSAR and Sentinel-1)
 
 Now, we start importing the raw satellite imagery we will use in our model, starting with synthetic aperture radar (SAR) imagery. We need to do some filtering and preprocessing for the SAR imagery before we use it in our model. SAR can be more complex to interpret and analyze, but it can be very useful in tropical areas where cloud cover makes optical imagery difficult to use. 
 
-*Resource:* For some background on SAR data, you can go to the Intro to SAR page in the Resources tab of this website.
-<font color = red> insert correct link to SAR resources </font>
+>*Details on SAR:* 
+>>*Resource:* For some background on SAR data, you can go to the [compiled set of SAR resource pages](https://learnsar.open.uaf.edu/sar-resources/), also in the Resources tab of this website.
 
-In general, for forest mapping in tropical West Africa, the following types of SAR images are most useful, so we will use most these to guide our decisions:
-* Descending orbit pass 
-* Interferometric Wide swath mode
-* Moderate Incidence Angles (20° to 45°)
-* C-band SAR and L-Band (e.g. Sentinel-1, ALOS PALSAR)
-* VV/VH & HH/HV dual polarization
+>>In general, for forest mapping in tropical West Africa, the following types of SAR images are most useful, so we will use these to guide our decisions:
+>>* Descending orbit pass 
+>>* Interferometric Wide swath mode
+>>* Moderate Incidence Angles (20° to 45°)
+>>* C-band SAR and L-Band (e.g. Sentinel-1, ALOS PALSAR)
+>>* VV/VH & HH/HV dual polarization
 
-In this part of the script, we do several things. We will use both PALSAR and Sentinel-1 so that we can work with both L and C-band SAR data (which are best for forest related analyses). However, both of these data sets are only available starting in 2015, so we write functions for the importing and preprocessing of each data set, and then we call these functions only if our time period of interest is after 2015. Within each importing and preprocessing function, we:
+In this part of the script, we do several things. We will use both PALSAR (Phased Array L-band Synthetic Aperture Radar) and Sentinel-1 so that we can work with both L and C-band SAR data (both good for forest related analyses). 
+> L-band provides better penetration depth into vegetation, while C-band provides higher spatial resolution. 
+
+However, both of these data sets are only available starting in 2015, so we write functions for the importing and preprocessing of each data set, and then we call these functions only if our time period of interest is after 2015. Within each importing and preprocessing function, we:
 
 * filter for images that match our area of interest 
 * filter for our dates of interest
