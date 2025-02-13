@@ -287,6 +287,9 @@ However, both of these data sets are only available starting in 2015, so we writ
 * scale values to decibels (if needed)
 * smooth out the image (using a focal mean function).
 
+
+**Note**: Parts of the following script will produce an error if your year of interest defined at the top of your script is before 2015, because Sentinel-1 data is not available until then.
+
 ```javascript
 // SAR
 // ------------------------------------------------------------------------------------------
@@ -408,15 +411,14 @@ function importPALSAR(date1,date2){
 <img align="center" src="../images/class-gee/SAR.png" hspace="15" vspace="10" width="400">
 
 
-*Hint:* For dates of interest in 2014, you will get an error when trying to add SAR imagery to the map, since it is empty for this year.
 
-### Optical Imagery (Landsat 8 and Sentinel 2)
+### Optical Imagery (Landsat 8 and Sentinel-2)
 
 Now we will do something very similar with optical imagery. Optical imagery is much more intuitive to interpret and less noisy than SAR, but it is frequently obscured by clouds in tropical regions.
 
 <img align="center" src="../images/class-gee/landsat_sentinel_timeline.png" hspace="15" vspace="10" width="600">
 
-We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depending on the dates of interest. HLS combines Landsat and Sentinel imagery to create cloud-free imagery with a higher spatial coverage and higher temporal resolution than is otherwise possible with only one of these sensors. It is only available starting in 2016, so we write functions for the importing and preprocessing of each data set, and then we call the Landsat function if our time period of interest is before 2016 and call the HLS function if our time period of interest is after 2016. Within each importing and preprocessing function, we:
+We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depending on the dates of interest. HLS combines Landsat and Sentinel-2 imagery to create cloud-free imagery with a higher spatial coverage and higher temporal resolution than is otherwise possible with only one of these sensors. It is only available starting in 2016, so we write functions for the importing and preprocessing of each data set, and then we call the Landsat function if our time period of interest is before 2016 and call the HLS function if our time period of interest is after 2016. Within each importing and preprocessing function, we:
 
 * filter for images that match our area of interest
 * filter for our dates of interest
@@ -582,7 +584,7 @@ function importHLS(date1,date2){
 
 ### Optical Imagery (Planet)
 
-Last, let's import Planet NICFI imagery as well. Although it only has red, green, blue, and NIR bands, all of which are also present in the Landsat and Sentinel, adding this data set might strengthen the model.
+Last, let's import Planet NICFI imagery. Although it only has red, green, blue, and NIR bands, all of which are also present in the Landsat and Sentinel, adding this data set may strengthen the model.
 
 Planet NICFI biannual to monthly mosaics are only available starting in 2015, so we write functions for the importing and preprocessing of the data set, and then we call the function only if our time period of interest is after 2015. Within each importing and preprocessing function, we:
 
