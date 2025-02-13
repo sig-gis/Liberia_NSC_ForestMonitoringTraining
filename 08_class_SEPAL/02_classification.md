@@ -327,7 +327,8 @@ Select `CLS` to configure the classifier. SEPAL supports:
 
 You may click `More` on the lower-left side of the panel to customize your classifier. Let's increase the `Number of trees` to `200`, `Seed` to `234`, and click `Apply`.
 
- ![Classifiers](../images/sepal/sepal_rf/sepal_rf_24.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24.png" vspace="10" width="500">
+
 
 ### Validating and improving the classification results
 
@@ -395,16 +396,18 @@ You can export the image to:
 
 Select the options as shown in the image below and click `Retrieve` to start the download process.
 
-![Export](../images/sepal/sepal_rf/sepal_rf_29.png)
+
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_29.png" vspace="10" width="500">
 
 You can follow the progress of exportation in `Tasks` tab in the lower left of your screen. 
 
 If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
 
 
-![Export](../images/sepal/sepal_rf/sepal_rf_30.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_30.png" vspace="10" width="500">
+
 
 <font color = red> UPDATE THE FOLLOWING IMAGE ONCE DONE </font>
-![Export](../images/sepal/sepal_rf/sepal_rf_31.png)
 
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_31.png" vspace="10" width="500">
 
