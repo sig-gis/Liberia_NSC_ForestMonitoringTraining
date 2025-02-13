@@ -31,8 +31,8 @@ Map validation can be performed by comparing the map classes of representative s
 ### Confusion Matrix
 
 We can quantify the accuracy of the map using a confusion matrix (error matrix). The reference data dictates the actual value (the truth) while the left shows the prediction (or map classification).
-    - True positive and true negative mean that the classification correctly classified the labels (e.g., a flood pixel was correctly classified as flood). 
-    - False positive and false negative mean that the classification does not match the truth (e.g., a flood pixel was classified as no-flood) 
+* True positive and true negative mean that the classification correctly classified the labels (e.g., a flood pixel was correctly classified as flood). 
+* False positive and false negative mean that the classification does not match the truth (e.g., a flood pixel was classified as no-flood) 
 
 <img align="center" src="../images/accuracy/confusionmatrix.png" hspace="15" vspace="10" width="600">
 
