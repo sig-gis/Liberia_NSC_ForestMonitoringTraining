@@ -15,9 +15,8 @@ Welcome to Drone Flight and Image Processing! In this portion of the workshop, w
 ### **[Detailed instructions on pre-workshop setup](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**  
 
 1. Make sure you have [Pix4Dmapper](https://www.pix4d.com/download/pix4dmapper/) installed on your computer.
-2. Make sure you have [Pix4Dcapture](https://play.google.com/store/apps/details?id=com.pix4d.capturepro) installed on your phone.
-3. Make sure you have made a Pix4D account and activated your [14-day free Pix4Dmapper trial](https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4Dmapper).
-4. Download all the files from this Google Drive folder onto your computer -[https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
+2. Make sure you have made a Pix4D account and activated your [14-day free Pix4Dmapper trial](https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4Dmapper).
+3. Download all the files from this Google Drive folder onto your computer -[https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
 
 ## Objectives 
 1. Understand types of drones and sensors for photogrammetry
