@@ -181,7 +181,7 @@ Pix4D Documentation:
 
 During the calibration process, the raw images are adjusted based on the actual camera settings and environmental conditions that occurred during the flight based on the location of the keypoint images. 
 
-* Adjusting the `Calibration Method` defines how the software optimizes the internal and external camera parameters based on geolocation accuracy. The `Standard` calibration setting is default and the `Alternative` and `Accurate` settings are used when the geolocation accuracy is high and very high, respectively. For this exercise, use the `Alternative` calibration setting, as it favors projects with less oblique imagery with good accuracy and low texture.
+* Adjusting the `Calibration Method` defines how the software optimizes the internal and external camera parameters based on geolocation accuracy. The `Standard` calibration setting is default and the `Alternative` and `Accurate` settings are used when the geolocation accuracy is high and very high, respectively. 
 
 Set the parameters to the following:
 
