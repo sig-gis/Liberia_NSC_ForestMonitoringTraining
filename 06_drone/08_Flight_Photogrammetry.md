@@ -27,7 +27,7 @@ This type of flight collects data in an oblique sensor angle with an ellipsoid f
 <img align="center" src="../images/drone/Circular_flight.png" hspace="15" vspace="10" width="1000">
 
 ### Free Flight
-This type of flight is not ideal for surveying, data is collected completely manually, data collection intervals and sensor angle are determined by the pilot in command.  However, this type of flight can be useful in complex terrain like urban environments or when infrastructure is a concern.  
+This type of flight is not ideal for surveying or photogrammetry, data is collected completely manually, data collection intervals and sensor angle are determined by the pilot in command.  However, this type of flight can be useful in complex terrain like urban environments or when infrastructure is a concern.  
 
 ## Ground Sampling Distance (GSD)
 Ground Sampling Distance refers to the amount of ground/surface area that is covered by a single image in a flight measured in cm/pixel.  Ground sampling distance determines the altitude that the flight will be flown.  Higher ground sampling distance refers to a high flight altitude and lower image resolution and typically a shorter flight time to cover an area.  Lower ground sampling distance translates to lower flight altitude and higher resolution images but typically increases flight time.  Depending on the type of terrain being surveyed, different ground sampling distance is recommended, for example forested areas it is recommended to fly a higher ground sampling distance.  
