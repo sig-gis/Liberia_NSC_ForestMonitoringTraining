@@ -36,10 +36,9 @@ We can quantify the accuracy of the map using a confusion matrix (error matrix).
 
 <img align="center" src="../images/accuracy/confusionmatrix.png" hspace="15" vspace="10" width="500">
 
-Let’s fill in this confusion matrix with example values if 100 points were collected. 
+Let’s fill in this confusion matrix with example values if 100 points were collected.
 
 <img align="center" src="../images/accuracy/accuraciestable.png" hspace="15" vspace="10" width="500">
-
 
 **Producer’s Accuracy**
 

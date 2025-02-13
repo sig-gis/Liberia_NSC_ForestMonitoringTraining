@@ -357,7 +357,7 @@ var varRelImportanceChart = ui.Chart.feature.byProperty({
 print(varRelImportanceChart);
 ```
 
-<img align="center" src="../images/class-gee/variableimportance.png" hspace="15" vspace="10" width="500">
+<img align="center" src="../images/class-gee/variableimportance.png" hspace="15" vspace="10" width="600">
 
 Now, we could refine the model by removing variables one by one, starting with the ones with lowest importance and seeing how many you can remove before it dramatically reduces accuracy. You can do this earlier in the script with the `.removeAll()` function, recording the variable importances and resulting accuracies at each removal. Usually, you will see a sharp decrease in accuracy after removing certain variables, indicating which variables should be kept in the model.
 
