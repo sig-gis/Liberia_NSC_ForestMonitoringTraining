@@ -11,9 +11,9 @@ nav_order: 9
 
 Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
 
-### General software workflow
+### General Pix4Dmapper workflow
 
-First, the software finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
+After loading the drone images into the software, it finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
 
 1. Keypoint extraction
 2. Keypoint matching (creating tie points)
@@ -29,7 +29,7 @@ Javadnejad, F. (2018). Small Unmanned Aircraft Systems (UAS) for Engineering Ins
 *Read more about SfM in this paper:
 Westoby, M.J. et al., 2012. ‘Structure-from-Motion’ photogrammetry: a low-cost, effective tool for geoscience applications, Geomorphology 179, 300-314.*
 
-# Part 2 - Drone Image Processing
+# Drone Image Processing
 
 In this exercise, we will go over the steps to analyze drone images in Pix4Dmapper.
 
@@ -53,7 +53,7 @@ This goes with the location of the imagery as well. Make sure it is located on t
 
 Select `New Project`
 
-Name the project `CIAT Campus`
+Name the project `Campus`
 
 Create a folder called `Drone Training`
 
