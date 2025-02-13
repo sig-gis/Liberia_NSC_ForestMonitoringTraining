@@ -230,7 +230,7 @@ Click `✓ Apply` to validate your selection. At this stage, you would still be 
 
 #### Export legend
 
-Once the legend is validated, select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
+If you added the legend manually, then you can select `^` and export it using `Export as CSV`. A file will be downloaded to you computer named `<recipe_name>_legend.csv`.
 
 
 ### Training data
@@ -240,8 +240,6 @@ Once the legend is validated, select `^` and export it using `Export as CSV`. A 
 > This step is not mandatory.
 
 Training data can be added from external sources or collected interactively. Select `TRN` to open the **Training Data** menu.
-
-<font color = red> EDIT THE IMAGE W CLASSES AND COLORS </font>
 
 ![Training menu](../images/sepal/sepal_rf/sepal_rf_13.png)
 
@@ -254,7 +252,31 @@ Training data can be imported from:
 
 We will use the first option, but see more details on each option in the [SEPAL Documentation](https://docs.sepal.io/en/latest/cookbook/classification.html).
 
-<font color = red> INCLUDE THE DESCRIPTION OF ONE OF THE OPTIONS HERE </font>
+Click `+ Add` and select `CSV File` in the pop-out window. 
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_14.png)
+
+Upload the `csv` file with training data: `CE_2025-02-08_300pts.csv` and click `> Next`.
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_14_5.png)
+
+In the next window, confirm that the columns point coordinates are assigned correctly. Click `> Next`.
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_15.png)
+
+
+Next, SEPAL will request the columns specifying the class value (not the name). Only the single column is supported so far. Select the column from your file that embeds the class values. This is `map_class` in our case. Click `> Next`.
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_16.png)
+
+SEPAL will provide a summary of classes in the legend of the classification and the number of training points added by your file.
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_17.png)
+
+Selecting the `Done` button will complete the uploading procedure.
+
+![Training menu](../images/sepal/sepal_rf/sepal_rf_17_5.png)
+
 
 
 ### Auxiliary datasets
