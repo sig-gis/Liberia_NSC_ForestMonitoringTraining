@@ -27,10 +27,12 @@ It involves training algorithms on large datasets to identify patterns and relat
 - Decision Tree – A model that makes predictions by splitting data into branches based on feature values.
     - Random Forest is an ensemble learning method that builds multiple decision trees and combines their outputs for better accuracy and robustness.
 
-- Features - The input variables used in a machine learning model to make predictions. Features provide the information that models use to learn patterns and make predictions.
+- Features (Variables) - The input variables used in a machine learning model to make predictions. Features provide the information that models use to learn patterns and make predictions.
+    - Here, we will use the term *variable*, although you will see both terms used in the literature.
     - In our case, the *features* are the available *bands* of the composite image we give the ML model.
 
-- Feature Importance – A score that indicates how valuable each feature is in making predictions.
+- Feature Importance (Variable Importance) – A score that indicates how valuable each feature is in making predictions.
+    - Here, we will use the term *variable importance*, although you will see both terms used in the literature.
 
 - Overfitting - This happens when a machine learning model learns too much detail and noise from the training data, making it perform very well on the training set but poorly on new (unseen) data. This means the model is too specific to the training data and does not generalize well.
     - Random Forest is quite resistant to overfitting, but it is still possible if: 
