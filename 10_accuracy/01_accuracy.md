@@ -26,7 +26,8 @@ Or, in other terms:
 Open the spreadsheets called 
 1. `accuracyAssessment_30m_2014_v1.xlsx`
 2. `classAreas_30m_2014_v1`
-3. `testPointsClassified_30m_2014_v1`. 
+3. `testPointsClassified_30m_2014_v1`
+
 In the accuracy assessment worksheet, you will work in the first three tabs labelled **empty**, copying and pasting data and code code into the appropriate cells. You can check your work by looking at the last three tabs, which have been filled out for you.
 
 <img align="center" src="../images/accuracy/sheets1.png" hspace="15" vspace="10" width="600">
