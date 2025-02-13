@@ -7,11 +7,11 @@ nav_order: 4
 
 # Location Corrections
 
-Most drones utilize GPS for location, however without correction, the drones GPS units are not very accurate.  There are a few methods to correct for this issue.
+Most drones utilize GPS for location, however without correction, the drones internal GPS units are not very accurate.  There are a few methods to correct for this issue.
 
 ### Real Time Kinematics (RTK)
 
-This method of corrections makes location correction in real time when the drone is flying.  This method requires a GPS base station in a fixed location near the flight and an additional unit on the drone.  While flying the base station communicates with the flight control device and overhead satellites to properly triangluate the drones location
+This method of corrections makes location correction in real time when the drone is flying.  This method requires a GPS base station in a fixed location near the flight location and an additional unit on the drone.  While flying the base station communicates with the flight control device and overhead satellites to properly triangluate the drones location.
 
 ### Post Processing Kinematics (PPK)
 
