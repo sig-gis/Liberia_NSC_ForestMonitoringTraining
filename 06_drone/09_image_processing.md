@@ -99,7 +99,7 @@ The type of imagery you are processing will determine which workflow you use and
 
 RGB 
 * Orthomosaics
-* DSM/DTM 
+* DSM/DTM (Elevation Models)
 * Point Cloud 
 
 Multispectral 
@@ -111,6 +111,9 @@ Thermal
 * Temperature indices 
 
 Also keep in mind that the specific sensor you used to collect your imagery will determine your process. Some sensors calibrate while in flight (such as the senseFly ThermoMAP), while many others do not and will require calibration in Pix4D. Also, you will need to know if your sensor is recording absolute temperature (senseFly ThermoMAP) or relative temperature (FLIR Vue Pro), as this will determine how thermal indices are calculated.
+
+### Make sure the box next to "Start Processing Now" is not checked
+This will automatically start the photogrammetry process and you will not be able to change additional settings or select extra outputs
 
 ## 1.6 Main Screen
  
