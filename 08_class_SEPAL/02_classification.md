@@ -24,7 +24,7 @@ In combination with other tools of SEPAL, the **Classification** recipe can help
 
 Once the **Classification** recipe is selected, SEPAL will show the recipe process in a new tab (**1**); the **Image selection** window will appear in the lower right (**2**).
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_1.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_1.png" vspace="10" width="500">
 
 <!-- ![Landing page](../images/sepal/sepal_rf/sepal_rf_1.png) -->
 
@@ -57,7 +57,8 @@ In the lower-right corner, the following tabs are available, allowing us to cust
 - `AUX`: Auxiliary global dataset to use in the model.
 - `CLS`: Classifier configuration.
 
-![Classification parameters](../images/sepal/sepal_rf/sepal_rf_4.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_4.png" vspace="10" width="300">
+
 
 ### Image selection
 
@@ -122,7 +123,8 @@ In this example, we selected:
 - `swir1`
 - `swir2`
 
-![Native bands](../images/sepal/sepal_rf/sepal_rf_6.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_6.png" vspace="10" width="500">
+
 
 **<font size = 3> Derived bands </font>**
 
@@ -130,7 +132,8 @@ SEPAL can build additional derived bands on-the-fly, so the analysis is not limi
 
 Select the green `+ Derived bands` and choose the deriving method. The selected method will be applied to the selected bands and its name will be added in the expansion panel.
 
-![Derived bands](../images/sepal/sepal_rf/sepal_rf_7.png)
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_7.png" vspace="10" width="500">
+
 
 
 > **_Note:_**
@@ -153,13 +156,13 @@ Select the following indices:
 - `evi`
 - `mvi`
 
-![Derived bands](../images/sepal/sepal_rf/sepal_rf_7_5.png)
-
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_7_5.png" vspace="10" width="500">
 
 
 Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g.Landsat and Sentinel), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
-![Selected bands](../images/sepal/sepal_rf/sepal_rf_8.png)
+
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_8.png" vspace="10" width="400">
 
 
 
@@ -216,12 +219,12 @@ red,blue,green,code,class
 Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="300">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="400">
 
 
 Click `✓ Apply` to validate your selection. At this stage, you would still be able to modify the legend if needed. When done, `✓ Done` to validate this step. 
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_12.png" vspace="10" width="300">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_12.png" vspace="10" width="350">
 
 
 #### Export legend
@@ -237,7 +240,7 @@ If you added the legend manually, then you can select `^` and export it using `E
 
 Training data can be added from external sources or collected interactively. Select `TRN` to open the **Training Data** menu.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_13.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_13.png" vspace="10" width="450">
 
 
 Training data can be imported from:
@@ -251,28 +254,28 @@ We will use the first option, but see more details on each option in the [SEPAL 
 
 Click `+ Add` and select `CSV File` in the pop-out window. 
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14.png" vspace="10" width="500">
 
 
 Upload the `csv` file with training data: `CE_2025-02-08_300pts.csv` and click `> Next`.
 
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14_5.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_14_5.png" vspace="10" width="500">
 
 In the next window, confirm that the columns point coordinates are assigned correctly. Click `> Next`.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_15.png" vspace="10" width="300">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_15.png" vspace="10" width="400">
 
 
 
 Next, SEPAL will request the columns specifying the class value (not the name). Only the single column is supported so far. Select the column from your file that embeds the class values. This is `map_class` in our case. Click `> Next`.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_16.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_16.png" vspace="10" width="500">
 
 
 SEPAL will provide a summary of classes in the legend of the classification and the number of training points added by your file.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_17.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_17.png" vspace="10" width="500">
 
 
 Selecting the `Done` button will complete the uploading procedure.
@@ -295,14 +298,14 @@ You can select `AUX` to include more information that could be useful to the cla
 
  - **Water:** From the [JRC Global Surface Water Mapping Layers, v1.3 dataset](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater), SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22.png" vspace="10" width="300">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22.png" vspace="10" width="350">
 
 
 Let's select `Terrain` and click `Apply`.
 
 Again, the classifier begins processing and will display the results after a few minutes.  
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22_5.png" vspace="10" width="400">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_22_5.png" vspace="10" width="450">
 
 
 
@@ -353,7 +356,7 @@ You can now visualize the classification map along with high-resolution imagery 
 
 For misclassified areas, you can add more training points by clicking `Enable reference data collection` at the top right of your screen. The pointer of the mouse will become a cursor `+`.
 
-<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_7.png" vspace="10" width="300">
+<img align="center" src="../images/sepal/sepal_rf/sepal_rf_24_7.png" vspace="10" width="100">
 
 
 You can click in any of the panes (not restricted to the left `Recipe` pane), as long as it is within the border of the AOI. Once you have clicked on either screen, a point will appear as white pin, and the legend will appear on the right side of the screen, allowing you to select the class that the point belongs to. If added by accident, you can click `x Remove` to delete the point.
