@@ -11,14 +11,16 @@ nav_order: 9
 
 Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
 
+### General software workflow
+
+First, the software finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
+
 1. Keypoint extraction
 2. Keypoint matching (creating tie points)
 3. Point cloud creation
 4. Mesh creation
 5. DSM creation
 6. Orthomosaic creation
-
-First, the software finds key points in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
 
 <img align="center" src="../images/drone/SfM_workflow.png" hspace="15" vspace="10" width="700">
 
