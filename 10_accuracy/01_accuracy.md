@@ -80,7 +80,7 @@ Highlight the cell and drag down and then across to fill in the rest of the cell
 <img align="center" src="../images/accuracy/accuracy_step2
 .png" hspace="15" vspace="10" width="600">
 
-The other rest of the cells have been set up automatically to calculate the user's and producer's accuracy of each class. The rows under the table show the weighted accuracies of each class, which are just calculated by multiplying the classes producer's accuracies by their area proportions. The weighted accuracies are simply added up to produce the overall weighted accuracy. The equation is.
+The other rest of the cells have been set up automatically to calculate the user's and producer's accuracy of each class. The rows under the table show the weighted accuracies of each class, which are just calculated by multiplying the classes producer's accuracies by their area proportions. The weighted accuracies are simply added up to produce the overall weighted accuracy.
 
 <img align="center" src="../images/accuracy/accuracy_step3
 .png" hspace="15" vspace="10" width="700">
