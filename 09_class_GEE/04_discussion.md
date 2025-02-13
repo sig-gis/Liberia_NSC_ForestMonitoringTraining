@@ -14,9 +14,9 @@ nav_order: 4
 | quick to learn | takes more time to learn |
 | no programming experience needed | requires understanding of programming basics |
 | complicated workflow using multiple different tools | simple worflow that can be done in 2 scripts |
-| limited choices for input data | can import any data sets from personal computer or GEE Data Catalogue |
-| limited choices for pre- and post-processing | can access all pre- and post-processing GEE tools |
-| limited options for altering model parameters | many options for altering model parameters |
+| limited choices for input data | can import any data sets from personal computer or GEE Data Catalogue (PALSAR, Harmonized Landsat Sentinel) |
+| limited choices for pre- and post-processing | can access all pre- and post-processing GEE tools (smoothing, cloud masking, calculating indices) |
+| limited options for altering model parameters | many options for altering model parameters (multiprobability mode, variable importance) |
 | difficult to rerun to test out different versions | easy to rerun to test out different versions |
 
 
