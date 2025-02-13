@@ -164,7 +164,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 #### You will then be prompted to go through a pre-flight check before uploading the mission to the drone and autonomous flight occurs.
 
-## 23. Upon completition of the flight the drone will automatically fly back to the launch site and land. 
+## 23. Upon completition of the Route the drone will automatically fly back to the launch site and land. 
 
 <img align="center" src="../images/drone/RC_Screenshots/LandingVid.gif" hspace="15" vspace="10" width="1000">
 
@@ -179,5 +179,3 @@ To interupt normal pre-planned flight patterns in DJI products, change the fligh
 | Loss of data link connection | Return to home function is initiated until link is restored |
 | Bird Intrusion | Manual flight is utilized to avoid intrusion |
 | Manned Aircraft Intrusion | Manual flight is utilized to avoid intrusion |
-
-<img align="center" src="../" hspace="15" vspace="10" width="1000">
