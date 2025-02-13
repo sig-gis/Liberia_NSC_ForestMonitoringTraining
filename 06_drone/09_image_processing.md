@@ -265,7 +265,7 @@ In some cases the edges of the imagery will have a lot of errors and no data "ho
 
 <img align="center" src="images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
 
-## 3.2 Ray Cloud
+## 3.3 Ray Cloud
 
 After Initial Processing is complete, you can access the `rayCloud` view from the tab on the left side of the main screen. This is called a “ray cloud” and it contains lots of important features that you should become familiar with. Each of the spheres at the top of the pyramid-like structures represents a camera position. The blue spheres are the initial camera position from GPS coordinates the camera recorded during the flight. The green spheres are optimized camera positions the program calculates. The red spheres are the initial camera positions for uncalibrated cameras which Pix4D could not find optimized positions for. Because imagery relating to uncalibrated cameras will have generated potential warnings in the quality report and affected your output negatively, you may want to disable cameras or remove the bad images. 
 
@@ -277,7 +277,7 @@ The image depicts rays coming from each of the cameras. These rays can be displa
 
 <img align="center" src="../images/drone/pix4d_raycloud_cameras.png" hspace="15" vspace="10" width="600">
 
-## 3.3 Disable Uncalibrated Images
+## 3.4 Disable Uncalibrated Images
 
 To disable a camera manually, click on the red dot. The red color changes to pale red and you can see the image on the right side of the screen that is causing issues. Select `Disable` and it will no longer consider the image in the process. 
 
@@ -289,7 +289,7 @@ After disabling a camera, it will be a translucent red as opposed to an opaque r
 
 Alternatively, you can address calibration issues by clicking the red sphere, figuring out which image is related to the uncalibrated camera, and removing that image from the project data folder. You will then need to begin another processing run with these images removed. Once problem images are removed, you should not have an issue with uncalibrated cameras again for that group of images.  
 
-## 3.4 Manual Tie Points
+## 3.5 Manual Tie Points
 
 Pix4D Documentation: 
 [How to add / import and mark manual tie points (MTPs) in the rayCloud (pix4d.com)](https://support.pix4d.com/hc/en-us/articles/202560349-How-to-add-import-and-mark-manual-tie-points-MTPs-in-the-rayCloud)
