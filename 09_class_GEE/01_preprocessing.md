@@ -119,22 +119,8 @@ If we wanted to filter for a specific province, we can check the province names 
 
 # <img align="center" src="../images/class-gee/print_provinces.png" hspace="15" vspace="10" width="200">
 
-## Import and Preprocess Imagery
 
-Now, we  import and preprocess all the `ImageCollections` we will use for our classification, including the LULC map we generated the reference data from and the satellite imagery on which we will run the model.
-
-Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represents the kind of information we need for our anlaysis. Many of the Image Collections in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still typically need to do the following:
-* filter for the area of interest
-* filter for the time period of interest (with consideration for seasonality and data availability)
-* filter for certain image properties (such as orbit direction or sensor angle)
-* filter for the bands of interest (with consideration for what we are trying to map)
-* calculate indices
-* smooth noisy imagery (SAR imagery)
-* mask out clouds (optical imagery)
-
-It is generally better to do as much filtering as we can at the beginning of our analysis to reduce the size of our data sets. This reduces the computational demands of the script.
-
-### Land Use / Land Cover (LULC)
+## Using the Original Land Use / Land Cover (LULC) Map
 
 First, let's import the current 2014 LULC map for Liberia. We will use this map to produce reference data for our model and to use as a visual comparison while we go through the model building process.
 > *Note: We do not NEED an origianl LULC map, but it is a quick way for us to quickly get relatively trustworthy samples for the purposes of this workshop.*
@@ -146,7 +132,7 @@ We will also symbolize the LULC classes with appropriate colors and add them to 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
-// Import and Preprocess Imagery
+// Import and Prepare the Original LULC Map for Sample Extraction
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -212,6 +198,21 @@ We can view the LULC class at any point on the map by opening the **Inspector** 
 
 <img align="center" src="../images/class-gee/inspector_tab.png" hspace="15" vspace="10" width="200">
 
+## Import and Preprocess Imagery
+
+Now, we  import and preprocess all the `ImageCollections` we will use for our classification, including the LULC map we generated the reference data from and the satellite imagery on which we will run the model.
+
+Before beginning any remote sensing workflow, image preprocessing is essential. We have to ensure we use high quality data that represents the kind of information we need for our anlaysis. Many of the Image Collections in the GEE catalogue have undergone the more complex pieces of preprocessing, such as georeferencing and terrain, radiometric, and atmospheric correction. However, we still typically need to do the following:
+* filter for the area of interest
+* filter for the time period of interest (with consideration for seasonality and data availability)
+* filter for certain image properties (such as orbit direction or sensor angle)
+* filter for the bands of interest (with consideration for what we are trying to map)
+* calculate indices
+* smooth noisy imagery (SAR imagery)
+* mask out clouds (optical imagery)
+
+It is generally better to do as much filtering as we can at the beginning of our analysis to reduce the size of our data sets. This reduces the computational demands of the script.
+
 ### Elevation (DEM)
 
 Next, let's import elevation data, which might be particularly useful in our classification for LULC types that are strongly influence by elevation. We will use the Copernicus 30m resolution DEM. 
@@ -223,6 +224,12 @@ Before importing this data set from the GEE data catalogue, we can preview impor
 We symbolize and add this to the map as well.
 
 ```javascript
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+// Import and Preprocess Imagery
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+
 // DEM 
 // ------------------------------------------------------------------------------------------
 
@@ -279,6 +286,9 @@ However, both of these data sets are only available starting in 2015, so we writ
 * clip th eimage to the AOI
 * scale values to decibels (if needed)
 * smooth out the image (using a focal mean function).
+
+
+**Note**: Parts of the following script will produce an error if your year of interest defined at the top of your script is before 2015, because Sentinel-1 data is not available until then.
 
 ```javascript
 // SAR
@@ -401,15 +411,14 @@ function importPALSAR(date1,date2){
 <img align="center" src="../images/class-gee/SAR.png" hspace="15" vspace="10" width="400">
 
 
-*Hint:* For dates of interest in 2014, you will get an error when trying to add SAR imagery to the map, since it is empty for this year.
 
-### Optical Imagery (Landsat 8 and Sentinel 2)
+### Optical Imagery (Landsat 8 and Sentinel-2)
 
 Now we will do something very similar with optical imagery. Optical imagery is much more intuitive to interpret and less noisy than SAR, but it is frequently obscured by clouds in tropical regions.
 
 <img align="center" src="../images/class-gee/landsat_sentinel_timeline.png" hspace="15" vspace="10" width="600">
 
-We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depending on the dates of interest. HLS combines Landsat and Sentinel imagery to create cloud-free imagery with a higher spatial coverage and higher temporal resolution than is otherwise possible with only one of these sensors. It is only available starting in 2016, so we write functions for the importing and preprocessing of each data set, and then we call the Landsat function if our time period of interest is before 2016 and call the HLS function if our time period of interest is after 2016. Within each importing and preprocessing function, we:
+We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depending on the dates of interest. HLS combines Landsat and Sentinel-2 imagery to create cloud-free imagery with a higher spatial coverage and higher temporal resolution than is otherwise possible with only one of these sensors. It is only available starting in 2016, so we write functions for the importing and preprocessing of each data set, and then we call the Landsat function if our time period of interest is before 2016 and call the HLS function if our time period of interest is after 2016. Within each importing and preprocessing function, we:
 
 * filter for images that match our area of interest
 * filter for our dates of interest
@@ -575,7 +584,7 @@ function importHLS(date1,date2){
 
 ### Optical Imagery (Planet)
 
-Last, let's import Planet NICFI imagery as well. Although it only has red, green, blue, and NIR bands, all of which are also present in the Landsat and Sentinel, adding this data set might strengthen the model.
+Last, let's import Planet NICFI imagery. Although it only has red, green, blue, and NIR bands, all of which are also present in the Landsat and Sentinel, adding this data set may strengthen the model.
 
 Planet NICFI biannual to monthly mosaics are only available starting in 2015, so we write functions for the importing and preprocessing of the data set, and then we call the function only if our time period of interest is after 2015. Within each importing and preprocessing function, we:
 
