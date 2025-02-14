@@ -7,7 +7,7 @@ nav_order: 2
 
 # Classification with Random Forest in GEE
 
-Open up a new script and name it `1 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/1 classification`.
+Open up a new script and name it `2 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.
 
 ## Setup
 
@@ -254,7 +254,7 @@ We also print out the prediction bands and the decision trees of the random fore
 
 <img align="center" src="../images/class-gee/trees.png" hspace="15" vspace="10" width="400">
 
-## Deploy Classifier
+## Deploy the Classifier
 
 Second, we actually deploy the classifier on the full predictor image to get a classification map. We also apply a focal mode function to reduce speckling and reproject to our desired resolution (the final resolution should be no lower than the lowest resolution predictor variable dataset). 
 

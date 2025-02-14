@@ -7,7 +7,7 @@ nav_order: 1
 
 # Preprocessing Imagery in GEE
 
-Open up the script you named `preprocessing`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`.
+Open up the script you named `1 preprocessing`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/1 preprocessing`.
 
 ## Setup
 
