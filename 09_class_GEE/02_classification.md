@@ -71,13 +71,13 @@ Map.addLayer(aoi, {}, 'AOI', false);
 // ------------------------------------------------------------------------------------------
 
 var refPoints = ee.FeatureCollection(
-  "projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass")
+  "projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_"+d1.slice(0,4)+"_400PerClass")
 
 // Predictor Variable Image
 // ------------------------------------------------------------------------------------------
 
 var predImage = ee.Image(
-  "projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014")
+  "projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_"+d1.slice(0,4))
 
 // add to map
 Map.addLayer(predImage, {bands:['red','green','blue'],min:0,max:0.3}, 
