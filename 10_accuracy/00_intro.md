@@ -72,11 +72,17 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 * The overall accuracy essentially tells us what proportion of the reference data was classified correctly
 * On a confusion matrix, it is the... *sum of all on-the-diagonal values*.
 
-### Unbiased Area Estimation
 
+### Differences between Accuracy Assessment and Unbiased Area Estimation
+>Note: Unbiased Area Estimation is another potential use for the samples you collect in CEO. The term is often confused with accuracy assessment because it is a similar process, but the final result is differet. For unbiased area estimation the goal is an estimate of area for each class +/- a caluclated uncertainty. For accuracy assessment, the goal is a calculation of the quality of a map.
+
+
+ 
+ 
+## Unbiased Area Estimation
 Often we create classification or change maps to estimate the amount of area that has a certain land cover type or underwent a certain type of change.  
 
-Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since classification maps have errors (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm.  Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
+Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since **classification maps have errors** (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm. Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
 
-Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest).  They create unbiased estimates of area and can also be used to calculate the error associated with your map.  These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
+Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest). They create unbiased estimates of area and can also be used to calculate the error associated with your map. These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
 
