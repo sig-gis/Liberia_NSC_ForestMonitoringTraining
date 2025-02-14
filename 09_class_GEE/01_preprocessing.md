@@ -678,8 +678,12 @@ function importPlanet(date1,date2){
 *Hint:* For dates of interest in 2014, you will get an error when trying to add Planet imagery to the map, since it is empty for this year.
 
 ## Prepare Predictor Image
+The *Predictor Image* is the image data that is being analyzed by the model to generate a prediction. Said another way, it is the satellite imagery for the year for which we are trying to produce a LULC map.
 
-Now, we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image. 
+Now that we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image, the Predictor Image. 
+
+>**Note:**
+>> The **Training Image** and the **Predictor Image** may be the same or different. In our case we are using the same image from which we are extracting the variables for the training samples, as we are for giving the Random Forest for the prediction of all the pixels. However, as long as the bands are the same between the two images, you can use training data from one image and apply it to a different image (e.g., use training points from a 2016 Training Image to classify a 2018 Preditor Image). You could not train a Random Forest classifier on a Training Image with fewer variables than the Predictor Image and expect it to be able to utilize all the information (e.g. training on 2014 with only Landsat and use the Random Forest classifier on a 2018 image with Landsat, Sentinel-2, and SAR).
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -696,8 +700,7 @@ var predImage = dem
 ```
 
 ### Calculate Indices
-
-The next thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. Certain land cover types strongly reflect or absorb different wavelengths of light, and we can calculate normalized versions of these spectral differences to highlight certain land cover types. Most of these index values range from -1 to +1:
+The next thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. Certain land cover types strongly reflect or absorb different wavelengths of light, and we can calculate normalized versions of these spectral differences to highlight certain land cover types. Most of these index values range from -1 to +1.
 
 * **NDVI:** Normalized Difference Vegetation Index - highlights vegetation health and density; calculated using the NIR and red bands
 
@@ -809,8 +812,6 @@ function calculateSARIndices(image){
 }
 ```
 
-<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
-
 *Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
 
 ### Fix Projection Issues
@@ -835,8 +836,15 @@ predImage = predImage
     
 // print
 print('predictor image:', predImage)
-    
-// add to map
+```
+
+## Checking Our Work
+
+Let's print out some of our results to double check we did everything correctly.
+
+Add a few of the indeces we made to use for input variables of the predictor image.
+```javascript
+// add some of the features (a.k.a. variables or bands) from the preditor image to the map
 var ndviVis = {
   bands:['NDVI'],
   min:0,
@@ -850,8 +858,9 @@ var rviVis = {
   palette: ['black', 'white']};
 Map.addLayer(predImage, rviVis,'RVI',false);
 ```
+<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
 
-Just to check we did everything correctly, we print out the resolution and the first few images in each `imageCollection` to the **Console** tab.
+Now, let's examine what we have printed to the **Console** tab. We printed out the resolution and the first few images in each `imageCollection`.
 
 <img align="center" src="../images/class-gee/print_images.png" hspace="15" vspace="10" width="200">
 
@@ -863,13 +872,16 @@ We can also check the band values of every image at specific points by opening o
 
 <img align="center" src="../images/class-gee/inspector_tab2.png" hspace="15" vspace="10" width="200">
 
-We also print the merged predictor image to make sure all the other bands were added and the indices were calculated correctly.
+We also printed the merged predictor image to make sure all the other bands were added and the indices were calculated correctly.
 
 <img align="center" src="../images/class-gee/predictor_image.png" hspace="15" vspace="10" width="200">
 
+
 ## Prepare Reference Points
 
-Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. We create a stratified random sample based on the 2014 LULC map, allocating 400 points to each class (excluding clouds and no data). The general rules of thumb for the number of reference data points are: 
+Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. 
+
+We will create a stratified random sample based on the 2014 LULC map, allocating 400 points to each class (excluding clouds and no data). The general rules of thumb for the number of reference data points are: 
 
 * **training points:** Generate enough training points per class to have at least 10 * p, where p the number of predictor variables (e.g. if your predictor image has 16 bands, generate at least 160 training points per LULC class)
 
@@ -886,9 +898,9 @@ In more recent years when SAR and Planet NICFI are available, we have 22 possibl
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// create a stratified random sampleb ased on the LULC map
+// create a stratified random sample based on the LULC map
   var refPoints = lulc10m.stratifiedSample({
-    // number of points per class
+    // number of points per class, set as a variable at the beginning of the script
     numPoints: classPointsNum,
     // the band with the LULC classes in it
     classBand: 'class',
@@ -915,7 +927,9 @@ print('reference points:', refPoints.limit(5))
 
 ## Export
 
-The last thing we do is export the reference points and predictor image to run the classification in a separate script. While we could do all the preprocessing and analysis steps in a single script, we would get an error that our user memory limit was exceeded, meaning that the script was too computationally expensive to do all in one go. This is because we are trying to run a computationally expensive preprocessing and machine learning functions on a large image with high saptial resolution and many prediction bands. 
+The last thing we do is export the **Reference Points** and **Predictor Image** (*for this demo it is being used as our **Training Image** too*) to run the classification in a separate script. These Reference Points have yet to be split up into training and testing data, and they are simple class labels without the extracted variable information from the Training Image yet.
+
+ While we could do all the preprocessing and analysis steps in a single script, we would get an error that our user memory limit was exceeded, meaning that the script was too computationally expensive to do all in one go. This is because we are trying to run a computationally expensive preprocessing and machine learning functions on a large image with high saptial resolution and many prediction bands. 
 
 When exporting, make sure to change the `assetId` to a path that is in your own asset library.
 
@@ -957,3 +971,9 @@ Now, when we run our script, a new export task will show up in the **Tasks** tab
 <img align="center" src="../images/class-gee/export.png" hspace="15" vspace="10" width="200">
 
 Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`
+
+If your export is taking a long time, you can use the following pre-prepared results files from the workshop asset repository for the later steps.
+
+[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass)
+
+[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014)
