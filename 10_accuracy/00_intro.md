@@ -42,9 +42,10 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 
 **Producer’s Accuracy**
 
-* The percentage of time a class identified on the ground is classified into the same category on the map. The producer’s accuracy is the map accuracy from the point of view of the map maker (producer) and is calculated as the number of correctly identified pixels of a given class divided by the total number of pixels in that reference class. The producer's accuracy tells us that for a given class in the reference pixels, how many pixels on the map were classified correctly.  **The percentage of time a class identified on the ground is classified into the same category on the map.**
-* Producer's Accuracy (for flood) = True Positive / (True Positive +False Positive)
-* Producer's Accuracy (for no-flood) = True Negative / (True Negative +False Negative)
+* The percentage of time a class identified on the ground (or by a human interpreter with remote sensing imagery) is classified into the same category on the map. The producer’s accuracy is the map accuracy from the point of view of the map maker (producer) and is calculated as the **number of correctly identified pixels of a given class divided by the total number of pixels in that reference class**. The producer's accuracy tells us that for a given class in the reference pixels, how many pixels on the map were classified correctly.  **The percentage of time a class identified on the ground is classified into the same category on the map.**
+* Producer's Accuracy (for flood) = True Positive / (True Positive + False Positive)
+* Producer's Accuracy (for no-flood) = True Negative / (True Negative + False Negative)
+* On a confusion matrix, for each class it is the... *on-the-diagonal value* / *column's sum*.
 
 **Omission Error**
 
@@ -57,6 +58,7 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 * The percentage of time a class identified on the map is classified into the same category on the ground. The user’s accuracy is the accuracy from the point of view of a map user, not the map maker, and is calculated as the number correctly identified in a given map class divided by the number claimed to be in that map class. The user’s accuracy essentially tells us how often the class on the map is actually that class on the ground.  **The percentage of time a class identified on the map is classified into the same category on the ground.**
 * User's Accuracy (for flood) = True Positive / (True Positive +False Negative)
 * User's Accuracy (for no-flood) = True Negative / (True Negative +False Positive)
+* On a confusion matrix, for each class it is the... *on-the-diagonal value* / *row's sum*.
 
 **Commission Error**
 
@@ -68,12 +70,19 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 
 * Overall accuracy = (True Positive + True Negative) / Sample size
 * The overall accuracy essentially tells us what proportion of the reference data was classified correctly
+* On a confusion matrix, it is the... *sum of all on-the-diagonal values*.
 
-### Unbiased Area Estimation
 
+### Differences between Accuracy Assessment and Unbiased Area Estimation
+>Note: Unbiased Area Estimation is another potential use for the samples you collect in CEO. The term is often confused with accuracy assessment because it is a similar process, but the final result is differet. For unbiased area estimation the goal is an estimate of area for each class +/- a caluclated uncertainty. For accuracy assessment, the goal is a calculation of the quality of a map.
+
+
+ 
+ 
+## Unbiased Area Estimation
 Often we create classification or change maps to estimate the amount of area that has a certain land cover type or underwent a certain type of change.  
 
-Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since classification maps have errors (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm.  Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
+Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since **classification maps have errors** (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm. Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
 
-Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest).  They create unbiased estimates of area and can also be used to calculate the error associated with your map.  These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
+Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest). They create unbiased estimates of area and can also be used to calculate the error associated with your map. These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
 
