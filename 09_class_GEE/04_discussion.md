@@ -23,7 +23,8 @@ nav_order: 4
 ## Ways to Improve Accuracy
 
 ### 1. Preprocessing
-* increase the number of training and testing points
+* increase the number of training and testing points 
+    * overall and/or using a stratified approach with more points in classes with low accuracies
 * change or combine cloud masking strategies
 * composite imagery for more than 1 year
 * merge or separate classes of interest (e.g. one combined forest class instead of separated forest classes, separate wetlands class)
