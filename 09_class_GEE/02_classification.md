@@ -45,7 +45,7 @@ var modeRadius = 2;
 
 ### Import Data
 
-We have already preprocessed and exported all data sets we need to run the classification, so now we just import them into this script and add them all to the map. This includes the AOI, the reference points, the predictor image, and the original 2014 LULC maps.
+We have already preprocessed and exported all data sets we need to run the classification, so now we just import them into this script and add them all to the map. This includes the AOI, the reference points, the predictor image (also being used as the training image), and the original 2014 LULC maps.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -138,9 +138,14 @@ Map.addLayer(lulc30m, lulcVis, 'LULC 2014 30m', false);
 var lulc = lulc10m;
 ```
 
+*If you are getting an error about Planet at this point, why might that be?*
+
+
 ## Prepare Training and Testing Points
 
-Next, we extract all the values from the predictor image to the reference points, and then separate the points into a training and testing set in a 80%-20% split (which yields approximately 320 training points and 80 testing points per LULC class). This meets the minimum requirements of the 10*p training and √(p):1 testing rules of thumb (which would dictate at least 220 training and 48 testing points per class). 
+Next, we extract all the values from the **Training Image** (remember this is the same as the file we saved as our Predictor Image, both 2014) to the reference points, and then separate the points into a training and testing set in a 80%-20% split (which yields approximately 320 training points and 80 testing points per LULC class). 
+
+This meets the minimum requirements of the 10*p training and √(p):1 testing rules of thumb. That is assuming we are using our most complicated image with lots of variable bands (which would dictate at least 220 training and 48 testing points per class). For 2014 we only have Landsat, so we could technically have fewer points, but we will keep it at 400 since this would work for all of our images and more points only help.
 
 We split the data by generating a new property in the reference data points which consists of random numbers with values between 0 and 1 (in binary numbers). Then, we separate out the points with a value greater than 0.8 and less than 0.8 in the random column - which statistically should give us about an 80%-20% split.
 
@@ -151,7 +156,7 @@ We split the data by generating a new property in the reference data points whic
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// extract the predictor image band values reference points
+// extract the training image band values at the reference point locations
 refPoints = predImage.sampleRegions({
       collection: refPoints, 
       properties: [classBand], 
@@ -173,6 +178,8 @@ print('reference points:', refPoints.limit(5))
 
 // Divide reference points into training and testing points
 // Create random column in reference points
+// Note: There is an equal number of points per class label, 
+//    so a fully random selection of the 80/20 works fine instead of getting 80/20 per class
 refPoints = refPoints.randomColumn();
 
 // set aside 80% of data for training 
@@ -198,7 +205,9 @@ Map.addLayer(testPoints, {color: 'white'}, 'testing points', false);
 
 *Tip:* For most models (with between 10 and 50 predictor bands), the data splitting ratio will fall somewhere between a 75%-25% split and a 90%-10% split. You should always strive to generate as much reference data as you can within your human and computational resource limits.
 
-## Train Classifier
+Your training and testing sample points are now ready! They have both class labels and extracted band information from the Training Image. They will serve as examples for Random Forest of what spectral information of those classes look like. 
+
+## Train the Classifier
 
 Now, we run the classification in two separate steps - training and deployment:
 1. **train** the classifier on the training points
@@ -208,7 +217,7 @@ As discussed before, the random forest model repeatedly selects a random subset 
 
 <img align="center" src="../images/class-gee/randomforest.png" hspace="15" vspace="10" width="600">
 
-*Resource:* For some background on random forest, you can go to the [Machine Learning page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/02_Intro_MachineLearning) in this website, and another brief intro can be found at this [website](https://www.ibm.com/think/topics/random-forest).
+*Resource:* For some background on Random Forest, you can go to the [Machine Learning page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/02_Intro_MachineLearning) in this website, and another brief intro can be found at this [website](https://www.ibm.com/think/topics/random-forest).
 
 First, we select the predictor variables we want the classifier to use. This is where we can remove bands as we refine the model. We remove any `constant` bands which are leftover artifacts from our exported image. Then, we train the `ee.Classifier.smileRandomForest()` classifier with 200 trees, the prepped training points, the selected LULC class band, and the selected prediction bands. 
 
@@ -222,7 +231,7 @@ First, we select the predictor variables we want the classifier to use. This is 
 // Define prediction bands
 // Get all image bands from the predictor image and remove any you want to leave out
 var predBands =  predImage.bandNames()
-  .removeAll(['constant','constant_1','constant_2']) 
+  .removeAll(['constant','constant_1','constant_2']) //adjust as needed, the constant bands are for the demo
 
 // print prediction bands
 print('prediction bands:', predBands)
