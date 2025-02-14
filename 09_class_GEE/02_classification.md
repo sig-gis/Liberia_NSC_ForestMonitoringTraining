@@ -276,18 +276,18 @@ var RFclassification = predImage
     scale: resolution})
   .clip(aoi)
 
-// Add to map
+// Add the classified image to the map
 Map.addLayer(RFclassification, lulcVis, 
             'RF classification');
 ```
 
 <img align="center" src="../images/class-gee/classification1.png" hspace="15" vspace="10" width="600">
 
-*Tip:* When you add the final classification to the map, it might give you an error for trying to load in the entire AOI at once. We are asking the script to do many computationally expensive calculations (random forest, focal mode, etc.) at and then render the products of those calculations directly onto the map in high resolution. The solution to this is exporting the final image and then reimporting it to put it onto the map, which is much less computationally expensive. If you just want to look at the map, you can even comment out the unneeded parts of the script to make the image load even faster.
+*Tip:* When you add the final classification to the map, it might give you an error for trying to load in the entire AOI at once. We are asking the script to do many computationally expensive calculations (random forest, focal mode, etc.) and then render the products of those calculations directly onto the map in high resolution. The solution to this is exporting the final image and then reimporting it to put it onto the map, which is much less computationally expensive. Zooming in to a smaller area can also help. If you just want to look at the map, you can even comment out the unneeded parts of the script to make the image load even faster.
 
 ## Assess Accuracy
 
-Now, we take a look at the accuracies of each individual class. We first classify the testing points and then extract the error matrix, for which we just provide the property names of the "true" and "predicted" values (which are the original extracted LULC values and the LULC values predicted by the model). We print the error matrix and the lists of user's and producer's accuracies, but we do **not** print the overall accuracy. This simple way to calculate accuracy, where we divide the number of correctly classified points by the total number of points, is **not appropriate** here because our original sample was a stratified random sample. We need to do a weighted accuracy assessment, where we weight the class accuracies based on their predicted areas, and then aggregate them. We will do this separately in a spreadsheet.
+Now, we take a look at the accuracies of each individual class. We first classify the testing points and then extract the error matrix, for which we just provide the property names of the "true" and "predicted" values (which are the original extracted LULC values and the LULC values predicted by the model). We print the error matrix and the lists of user's and producer's accuracies, but we do **not** print the overall accuracy. This simple way to calculate accuracy, where we divide the number of correctly classified points by the total number of points, is **not appropriate** here because our original sample was a **stratified** random sample. We need to do a **weighted** accuracy assessment, where we weight the class accuracies based on their predicted areas, and then aggregate them. We will do this separately in a spreadsheet.
 
 *Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the [Accuracy Assessment page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/10_accuracy) in this website.
 
@@ -319,9 +319,26 @@ print('Users Accuracy:', confusionMatrix.consumersAccuracy());
 
 <img align="center" src="../images/class-gee/accuracy.png" hspace="15" vspace="10" width="200">
 
+For helpful reference, these are the labels associated wih your class numbers.
+
+ |Numeric code         |  Class name     |
+ |:-------------:|:-------------:|
+ | 0  | nodata |
+ | 1  | forest_80 |
+ | 2 | forest_30_80 |
+ | 3 | forest_30 |
+ | 4 | mangroves |
+ | 5  | settlements |
+ | 7  | water |
+ | 8  | grassland |
+ | 9  | shrub |
+ | 10  | baresoil |
+ | 11 | sand |
+
+
 ## Assess Variable Importance
 
-Lastly, we take a look at variable importance. The `ee.Classifier.smileRandomForest()` function automatically calculates variable importance based on the Gini Impurity Index, which measures how much each predictor variable reduces impurity in classes at each split (node) in the decision trees. We scale these so all variable importances add up to 100, and then we both print them out and create a bar chart.
+Lastly, we'll take a look at variable importance. The `ee.Classifier.smileRandomForest()` function automatically calculates variable importance based on the Gini Impurity Index, which measures how much each predictor variable reduces impurity in classes at each split (node) in the decision trees. We scale these so all variable importances add up to 100, and then we both print them out and create a bar chart.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -368,9 +385,11 @@ print(varRelImportanceChart);
 
 Now, we could refine the model by removing variables one by one, starting with the ones with lowest importance and seeing how many you can remove before it dramatically reduces accuracy. You can do this earlier in the script with the `.removeAll()` function, recording the variable importances and resulting accuracies at each removal. Usually, you will see a sharp decrease in accuracy after removing certain variables, indicating which variables should be kept in the model.
 
+*Try it out. Remove a variable band or two and re-run th script. How did the accuracies change?*
+
 ## Calculate Areas
 
-Additionally, we need to calculate class areas based on the map to use later in our weighted accuracy assessment. We use the `ee.Reducer.count()` function to count the number of pixels in each class and then stores these values in a `List` of `Dictionary`s. Each `Dictionary` has 2 keys: the class and the pixel count. We convert these to a `featureCollection` with 12 empty features in it (one for each class), attaching the correct class and pixel count as properties to each feature. Thus, we end up with a data type that can be exported as a .csv containing a row for each class and a column containing the pixel counts of those classes (unfortunately, converting to a `featureCollection` is the only way to export a table from GEE).
+Additionally, we need to calculate class areas based on the map (*these are pixel counts not our final unbiased area estimates!*) to use later in our weighted accuracy assessment. We use the `ee.Reducer.count()` function to count the number of pixels in each class and then store these values in a `List` of `Dictionaries`. Each `Dictionary` has 2 keys: the class and the pixel count. We convert these to a `featureCollection` with 12 empty features in it (one for each class), attaching the correct class and pixel count as properties to each feature. Thus, we end up with a data type that can be exported as a .csv containing a row for each class and a column containing the pixel counts of those classes (unfortunately, converting to a `featureCollection` is the only way to export a table from GEE).
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -490,4 +509,4 @@ Export.table.toDrive({
 });
 ```
 
-Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`
+Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.
