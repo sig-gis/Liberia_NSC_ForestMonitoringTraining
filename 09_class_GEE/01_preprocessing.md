@@ -431,8 +431,7 @@ We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depen
 
 <img align="center" src="../images/class-gee/HLS_info.png" hspace="15" vspace="10" width="400">
 
-*Resource:* For some background on cloud masking, you can go to the Cloud Masking page in the Resources tab of this website.
-<font color = red> insert correct link to resources </font>
+*Resource:* For some background on cloud masking, you can go to the [Cloud Masking section of the Resources page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/02_cloudmasking.html) in this website.
 
 ```javascript
 // Optical
@@ -719,8 +718,7 @@ The next thing we do is calculate some spectral indices from the optical imagery
 
 As we did before, we write separate functions for the optical and SAR indices, and only call the SAR function for the time period for which SAR is available.
 
-*Resource:* For some background on indices, you can go to the Spectral Indices page in the Resources tab of this website.
-<font color = red> insert correct link to resources </font>
+*Resource:* For some background on spectral indices, you can go to the [Spectral Indices section of the Resources page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/03_indices.html) in this website.
 
 ```javascript
 // Calculate indices
