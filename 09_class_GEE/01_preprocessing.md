@@ -679,8 +679,9 @@ function importPlanet(date1,date2){
 *Hint:* For dates of interest in 2014, you will get an error when trying to add Planet imagery to the map, since it is empty for this year.
 
 ## Prepare Predictor Image
+The *Predictor Image* is the image data that is being analyzed by the model to generate a prediction. Said another way, it is the satellite imagery for the year for which we are trying to produce a LULC map.
 
-Now, we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image. 
+Now that we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image, the Predictor Image. 
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -697,8 +698,7 @@ var predImage = dem
 ```
 
 ### Calculate Indices
-
-The next thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. Certain land cover types strongly reflect or absorb different wavelengths of light, and we can calculate normalized versions of these spectral differences to highlight certain land cover types. Most of these index values range from -1 to +1:
+The next thing we do is calculate some spectral indices from the optical imagery that are frequently used to identify LULC classes of interest. Certain land cover types strongly reflect or absorb different wavelengths of light, and we can calculate normalized versions of these spectral differences to highlight certain land cover types. Most of these index values range from -1 to +1.
 
 * **NDVI:** Normalized Difference Vegetation Index - highlights vegetation health and density; calculated using the NIR and red bands
 
@@ -811,8 +811,6 @@ function calculateSARIndices(image){
 }
 ```
 
-<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
-
 *Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
 
 ### Fix Projection Issues
@@ -837,8 +835,15 @@ predImage = predImage
     
 // print
 print('predictor image:', predImage)
-    
-// add to map
+```
+
+## Checking Our Work
+
+Let's print out some of our results to double check we did everything correctly.
+
+Add a few of the indeces we made to use for input variables of the predictor image.
+```javascript
+// add some of the features (a.k.a. variables or bands) from the preditor image to the map
 var ndviVis = {
   bands:['NDVI'],
   min:0,
@@ -852,8 +857,9 @@ var rviVis = {
   palette: ['black', 'white']};
 Map.addLayer(predImage, rviVis,'RVI',false);
 ```
+<img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
 
-Just to check we did everything correctly, we print out the resolution and the first few images in each `imageCollection` to the **Console** tab.
+Now, let's examine what we have printed to the **Console** tab. We printed out the resolution and the first few images in each `imageCollection`.
 
 <img align="center" src="../images/class-gee/print_images.png" hspace="15" vspace="10" width="200">
 
@@ -865,13 +871,16 @@ We can also check the band values of every image at specific points by opening o
 
 <img align="center" src="../images/class-gee/inspector_tab2.png" hspace="15" vspace="10" width="200">
 
-We also print the merged predictor image to make sure all the other bands were added and the indices were calculated correctly.
+We also printed the merged predictor image to make sure all the other bands were added and the indices were calculated correctly.
 
 <img align="center" src="../images/class-gee/predictor_image.png" hspace="15" vspace="10" width="200">
 
+
 ## Prepare Reference Points
 
-Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. We create a stratified random sample based on the 2014 LULC map, allocating 400 points to each class (excluding clouds and no data). The general rules of thumb for the number of reference data points are: 
+Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. 
+
+We will create a stratified random sample based on the 2014 LULC map, allocating 400 points to each class (excluding clouds and no data). The general rules of thumb for the number of reference data points are: 
 
 * **training points:** Generate enough training points per class to have at least 10 * p, where p the number of predictor variables (e.g. if your predictor image has 16 bands, generate at least 160 training points per LULC class)
 
@@ -888,9 +897,9 @@ In more recent years when SAR and Planet NICFI are available, we have 22 possibl
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// create a stratified random sampleb ased on the LULC map
+// create a stratified random sample based on the LULC map
   var refPoints = lulc10m.stratifiedSample({
-    // number of points per class
+    // number of points per class, set as a variable at the beginning of the script
     numPoints: classPointsNum,
     // the band with the LULC classes in it
     classBand: 'class',
@@ -959,3 +968,9 @@ Now, when we run our script, a new export task will show up in the **Tasks** tab
 <img align="center" src="../images/class-gee/export.png" hspace="15" vspace="10" width="200">
 
 Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/preprocessing`
+
+If your export is taking a long time, you can use the following pre-prepared results files from the workshop asset repository for the later steps.
+
+[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass)
+
+[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014)
