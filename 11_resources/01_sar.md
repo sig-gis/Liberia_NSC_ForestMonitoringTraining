@@ -1,11 +1,11 @@
 ---
 layout: page
-title:  "Intro to SAR"
+title:  "SAR"
 parent: "Resources"
 nav_order: 1
 ---
 
-# Intro to Synthetic Aperture Radar (SAR) 
+# Synthetic Aperture Radar (SAR) Background
 
 # Theory and Concepts
 

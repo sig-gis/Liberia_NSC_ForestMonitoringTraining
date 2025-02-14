@@ -208,8 +208,7 @@ As discussed before, the random forest model repeatedly selects a random subset 
 
 <img align="center" src="../images/class-gee/randomforest.png" hspace="15" vspace="10" width="600">
 
-*Resource:* For some background on random forest, you can go to the Random Forest page in the Resources tab of this website.
-<font color = red> insert correct link to SAR resources </font>
+*Resource:* For some background on random forest, you can go to the [Machine Learning page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/02_Intro_MachineLearning) in this website, and another brief intro can be found at this [website](https://www.ibm.com/think/topics/random-forest).
 
 First, we select the predictor variables we want the classifier to use. This is where we can remove bands as we refine the model. We remove any `constant` bands which are leftover artifacts from our exported image. Then, we train the `ee.Classifier.smileRandomForest()` classifier with 200 trees, the prepped training points, the selected LULC class band, and the selected prediction bands. 
 
@@ -281,8 +280,7 @@ Map.addLayer(RFclassification, lulcVis,
 
 Now, we take a look at the accuracies of each individual class. We first classify the testing points and then extract the error matrix, for which we just provide the property names of the "true" and "predicted" values (which are the original extracted LULC values and the LULC values predicted by the model). We print the error matrix and the lists of user's and producer's accuracies, but we do **not** print the overall accuracy. This simple way to calculate accuracy, where we divide the number of correctly classified points by the total number of points, is **not appropriate** here because our original sample was a stratified random sample. We need to do a weighted accuracy assessment, where we weight the class accuracies based on their predicted areas, and then aggregate them. We will do this separately in a spreadsheet.
 
-*Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the Accuracy Assessment page of this website.
-<font color = red> insert correct link to SAR resources </font>
+*Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the [Accuracy Assessment page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/10_accuracy) in this website.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
