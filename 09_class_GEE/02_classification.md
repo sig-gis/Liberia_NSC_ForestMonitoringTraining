@@ -7,7 +7,7 @@ nav_order: 2
 
 # Classification with Random Forest in GEE
 
-Open up the script you named `classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/classification`.
+Open up a new script and name it `1 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/1 classification`.
 
 ## Setup
 

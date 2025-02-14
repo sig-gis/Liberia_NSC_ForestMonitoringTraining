@@ -683,6 +683,9 @@ The *Predictor Image* is the image data that is being analyzed by the model to g
 
 Now that we have multiple composted images containing the different bands we would like to use as predictor variables in our random forest model. We combine all these bands into a single image, the Predictor Image. 
 
+>**Note:**
+>> The **Training Image** and the **Predictor Image** may be the same or different. In our case we are using the same image from which we are extracting the variables for the training samples, as we are for giving the Random Forest for the prediction of all the pixels. However, as long as the bands are the same between the two images, you can use training data from one image and apply it to a different image (e.g., use training points from a 2016 Training Image to classify a 2018 Preditor Image). You could not train a Random Forest classifier on a Training Image with fewer variables than the Predictor Image and expect it to be able to utilize all the information (e.g. training on 2014 with only Landsat and use the Random Forest classifier on a 2018 image with Landsat, Sentinel-2, and SAR).
+
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -926,7 +929,9 @@ print('reference points:', refPoints.limit(5))
 
 ## Export
 
-The last thing we do is export the reference points and predictor image to run the classification in a separate script. While we could do all the preprocessing and analysis steps in a single script, we would get an error that our user memory limit was exceeded, meaning that the script was too computationally expensive to do all in one go. This is because we are trying to run a computationally expensive preprocessing and machine learning functions on a large image with high saptial resolution and many prediction bands. 
+The last thing we do is export the **Reference Points** and **Predictor Image** (*for this demo it is being used as our **Training Image** too*) to run the classification in a separate script. These Reference Points have yet to be split up into training and testing data, and they are simple class labels without the extracted variable information from the Training Image yet.
+
+ While we could do all the preprocessing and analysis steps in a single script, we would get an error that our user memory limit was exceeded, meaning that the script was too computationally expensive to do all in one go. This is because we are trying to run a computationally expensive preprocessing and machine learning functions on a large image with high saptial resolution and many prediction bands. 
 
 When exporting, make sure to change the `assetId` to a path that is in your own asset library.
 
