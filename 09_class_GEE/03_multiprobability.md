@@ -382,7 +382,7 @@ Map.addLayer(
 
 <img align="center" src="../images/class-gee/certainty.png" hspace="15" vspace="10" width="600">
 
-Just by looking at the certainty layer overlaid with the final LULC map, we can see that pure areas of dense forest, settlements, and dense forest have high certainty, while transitional zones between different land cover types, especially less dense forests, grassland, and shrubland have low certainty.
+Just by looking at the certainty layer overlaid with the final LULC map, we can see that large contiguous areas of dense forest, settlements, and water have high certainty, while transitional zones between different land cover types, especially in sparse forests, grassland, shrubland, and mangroves have low certainty.
 
 ## Iterative Model Refinement
 
