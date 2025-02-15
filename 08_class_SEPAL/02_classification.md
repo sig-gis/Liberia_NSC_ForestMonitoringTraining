@@ -104,10 +104,10 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014 <font color = red> DO WE NEED TO SET IT TO "ANYONE CAN READ"? </font>:
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014:
 
 ```code
-projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_lc
+projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_l8
 ```
 
 **<font size = 3> Image bands </font>**
@@ -216,9 +216,8 @@ red,blue,green,code,class
 46,139,87,4,"mangroves"
 ```
 
-Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
+Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from [this folder](https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa). You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
-<font color = red> note for Crystal: the csv file is in the `SEPAL - training and testing data - raw` Google Drive folder </font>
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="400">
