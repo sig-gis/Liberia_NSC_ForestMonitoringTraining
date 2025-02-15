@@ -18,9 +18,9 @@ var d1 = '2024-1-1'
 var d2 = '2024-12-31'
 ```
 
-## Visualize Spectral Signatures
+<!-- ## Visualize Spectral Signatures
 
-## Rerun the Analysis for a Simpler LULC Typology
+## Rerun the Analysis for a Simpler LULC Typology -->
 
 
 
