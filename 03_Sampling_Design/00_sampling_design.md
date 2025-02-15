@@ -129,7 +129,7 @@ Historically, maps have been used to quantify the area of each class by *pixel c
 - Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
 
 
-## <span style="color: red;">Sampling design considerations</span> for quantifying the characteristics of a popultation
+## Sampling design considerations for quantifying the characteristics of a popultation
 Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
 
 In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
@@ -143,7 +143,7 @@ A map is not necessary for selecting sample locations but it makes the represent
 - Accuracy is often assessed using a confusion matrix (error matrix). *This will be explained further later in the workshop.*
 
 
-## <span style="color: red;">Sampling design considerations</span> for map accuracy assessments
+## Sampling design considerations for map accuracy assessments
 Random Sampling option:
 - Goal: A random sample allows for simple analysis using a confusion matrix.
 - Impact: Rare classes in the map may have too few points for meaningful accuracy analysis.

@@ -40,8 +40,12 @@ See the full ['Read the Docs' website](https://area2.readthedocs.io/en/latest/ov
 # 1. Using the AREA2 Stratified Random Sampling Tool
 For now we have pre-loaded a stratification map as a GEE asset for you. You will learn how to upload your own assets later in the workshop.
 
-1\. Enter the asset path for your land cover stratification map: 
-<span style="color: red;">**projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014**</span> 
+1\. Enter the asset path for your land cover stratification map:
+
+```code
+projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014
+```
+
 
 2\. This is not a multi-band image so leave the next parameter as 1, and leave the mask value as 0.
 
