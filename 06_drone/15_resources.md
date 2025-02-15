@@ -2,7 +2,7 @@
 layout: page
 title: Resources
 parent: "6. Drone Flight & Image Processing"
-nav_order: 15
+nav_order: 11
 ---
 
 # Extra Resources

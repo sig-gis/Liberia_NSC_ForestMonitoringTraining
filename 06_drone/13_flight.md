@@ -2,7 +2,7 @@
 layout: page
 title: "Flight Planning"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 
+nav_order: 10
 ---
 
 # Part 1 - Drone Flight

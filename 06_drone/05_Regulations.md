@@ -2,7 +2,7 @@
 layout: page
 title: "Liberian UAS Regulations"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 5
+nav_order: 4
 ---
 
 # UAS Regulations

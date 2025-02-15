@@ -2,7 +2,7 @@
 layout: page
 title: "Sensors"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 3
+nav_order: 2
 ---
 
 # UAS Sensors
