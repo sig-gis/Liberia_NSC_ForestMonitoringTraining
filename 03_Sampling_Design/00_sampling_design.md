@@ -106,7 +106,7 @@ Imagine teaching a child to identify apples:
 - **Model**: The kid forms a mental "rule" to identify apples.
 - **Prediction**: When shown a new fruit, the kid uses their rule to decide if it’s an apple.
 
-### <span style="color: red;">Sampling design considerations</span> for ML algorithm training
+### Sampling design considerations for ML algorithm training
 For training machine learning algorithms, sampling design is critical to ensure that the data used to train the model covers the variability in the dataset, preventing overfitting or underfitting. Sometimes the full data set of samples is split into training and testing subsets to evaluate model performance, but separate sampling design for the validation data can also be done. Anything you want the ML algorithm to learn, should be provided as an example in the training samples.
 
 General rules of thumb to use for sampling design to gather training data for Random Forest:
