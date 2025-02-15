@@ -159,7 +159,7 @@ Select the following indices:
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_7_5.png" vspace="10" width="500">
 
 
-Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g.Landsat and Sentinel), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or radar images), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_8.png" vspace="10" width="400">
