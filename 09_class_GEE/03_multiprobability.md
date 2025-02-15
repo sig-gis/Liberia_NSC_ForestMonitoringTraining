@@ -353,5 +353,39 @@ Map.addLayer(settlementProb,
 
 ### Calculate Certainty
 
+Last, we calculate a rough measure of certainty. We calculate the standard deviation of the probabilities at each band, with a few extra steps again to properly extract and rename the band. The way we can interpret this is:
 
+* **high standard deviation = high certainty** If the standard deviation is high, that likely means the distribution is spread out, with one class having a very high probability and a lot of classes having very low probabilities. This would indicate that the model could easily differentiate classes and is less likely to confuse them.
+* **low standard deviation = low certainty** If the standard deviation is low, that likely means the distribution is tightly clustered, with many classes sharing similar probabilities.his would indicate that the model could not easily differentiate classes and is more likely to confuse them.
 
+```javascript
+// Certainty
+// ------------------------------------------------------------------------------------------
+
+// get the standard deviation of probabilities at each pixel
+var certainty = RFclassification
+  // use a reducer to get standard deviation at each pixel (0th axis of the array)
+  .arrayReduce(ee.Reducer.sampleStdDev(),[0])
+  // extract it from the array to just create an image with one standard deviation band
+  .arrayFlatten([['classification']])
+  // rename the certainty band
+  .rename('certainty')
+
+// print 
+// print(uncertainty)
+// add to map
+Map.addLayer(
+  certainty,
+  {min:0,max:0.1,palette:['red','yellow','green']},
+  'certainty')
+```
+
+<img align="center" src="../images/class-gee/certainty.png" hspace="15" vspace="10" width="600">
+
+Just by looking at the certainty layer overlaid with the final LULC map, we can see that pure areas of dense forest, settlements, and dense forest have high certainty, while transitional zones between different land cover types, especially less dense forests, grassland, and shrubland have low certainty.
+
+## Iterative Model Refinement
+
+This measure of certainty now gives us another way to refine the model in a more targeted way. We could generate additional training points in the areas of highest uncertainty and retrain the model on the expanded set of training points. We would then repeat this process multiple times and see how much it improves model accuracy.
+
+Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/3 multiprobability_classification`.

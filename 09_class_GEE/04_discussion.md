@@ -32,6 +32,7 @@ nav_order: 4
 ### 2. Model Development
 * add and remove predictor variables based on variable importance and accuracy (e.g. different combinations of imagery sources or indices)
 * increase the number of trees in the random forest model
+* generate more training points in the areas of highest uncertainty and retrain the model with the addition of these new points
 
 ### 3. Postprocessing
 * change smoothing functions

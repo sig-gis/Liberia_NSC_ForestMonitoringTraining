@@ -385,7 +385,7 @@ print(varRelImportanceChart);
 
 Now, we could refine the model by removing variables one by one, starting with the ones with lowest importance and seeing how many you can remove before it dramatically reduces accuracy. You can do this earlier in the script with the `.removeAll()` function, recording the variable importances and resulting accuracies at each removal. Usually, you will see a sharp decrease in accuracy after removing certain variables, indicating which variables should be kept in the model.
 
-*Try it out. Remove a variable band or two and re-run th script. How did the accuracies change?*
+*Try it out. Remove a variable band or two and re-run the script. How did the accuracies change?*
 
 ## Calculate Areas
 
@@ -508,5 +508,11 @@ Export.table.toDrive({
   selectors: 'system:index,classification,class'
 });
 ```
+
+## Iterative Model Refinement
+
+Now that we have a functioning model, we can refine it to improve it. A good way to think about this process is "how can I make the model as simple as possible while still maintaining its predictive power." This concept is called "parsimony," and many scientific fields pursue parsimony when developing models.
+
+You can refine the model by iteratively removing predictor variables, as mentioned above, but there are also many other refinements you could make to the input data or model parameters. These are listed in the [Discussion Tab](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/09_class_GEE/04_discussion.html).
 
 Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.
