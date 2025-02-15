@@ -159,12 +159,12 @@ Select the following indices:
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_7_5.png" vspace="10" width="500">
 
 
-Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or radar images), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or [radar images](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/liberia_2024_radar)), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_8.png" vspace="10" width="400">
 
-
+Although we will not use radar for this demonstration of the 2014 classification, for years when radar imagery is available, select it and include both the 'VV' and 'VH' bands.
 
 ### Legend setup
 
