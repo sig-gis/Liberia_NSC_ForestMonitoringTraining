@@ -166,8 +166,6 @@ Once image selection is complete, select `✓ Apply`. The images and bands will 
 
 
 
-<font color = red> EDIT HERE ONWARDS </font>
-
 ### Legend setup
 
 In this step, specify the legend for the output classified image. SEPAL provides multiple ways to create and customize a legend - manually or by importing a `csv` table.
@@ -216,7 +214,9 @@ red,blue,green,code,class
 46,139,87,4,"mangroves"
 ```
 
-Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from [this folder](https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa). You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
+Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from [this folder](https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa). 
+
+You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
 
 
@@ -420,3 +420,5 @@ If you have selected GEE Asset as a destination, then you can also monitor tasks
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_31.png" vspace="10" width="500">
 
+##### **Note on Exporting Data**
+Exporting 2014 classification derived using Landsat 8 data and the abovementioned indices may take about 50 minutes.
