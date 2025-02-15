@@ -20,9 +20,6 @@ Or, in other terms:
 
 <img align="center" src="../images/accuracy/awa_formula2.png" hspace="15" vspace="10" width="700">
 
-*Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the Accuracy Assessment page of this website.
-<font color = red> insert correct link to SAR resources </font>
-
 Open the spreadsheets called 
 1. `accuracyAssessment_30m_2014_v1.xlsx`
 2. `classAreas_30m_2014_v1`
