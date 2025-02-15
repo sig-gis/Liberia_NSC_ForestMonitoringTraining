@@ -104,10 +104,10 @@ Both methods behave the same way in the interface.
 
 **<font size = 3> Select bands </font>**
 
-For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014 <font color = red> DO WE NEED TO SET IT TO "ANYONE CAN READ"? </font>:
+For this example, we use a public asset created with the **Optical mosaic** tool from SEPAL. It's a Landsat mosaic of Liberia for 2014:
 
 ```code
-projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_lc
+projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_l8
 ```
 
 **<font size = 3> Image bands </font>**
@@ -159,14 +159,12 @@ Select the following indices:
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_7_5.png" vspace="10" width="500">
 
 
-Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g.Landsat and Sentinel), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or [radar images](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/liberia_2024_radar)), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_8.png" vspace="10" width="400">
 
-
-
-<font color = red> EDIT HERE ONWARDS </font>
+Although we will not use radar for this demonstration of the 2014 classification, for years when radar imagery is available, select it and include both the 'VV' and 'VH' bands.
 
 ### Legend setup
 
@@ -216,9 +214,10 @@ red,blue,green,code,class
 46,139,87,4,"mangroves"
 ```
 
-Click `^` and select `Import from CSV` to upload your file. You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
+Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from [this folder](https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa). 
 
-<font color = red> note for Crystal: the csv file is in the `SEPAL - training and testing data - raw` Google Drive folder </font>
+You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
+
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_11.png" vspace="10" width="400">
@@ -421,3 +420,5 @@ If you have selected GEE Asset as a destination, then you can also monitor tasks
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_31.png" vspace="10" width="500">
 
+##### **Note on Exporting Data**
+Exporting 2014 classification derived using Landsat 8 data and the abovementioned indices may take about 50 minutes.

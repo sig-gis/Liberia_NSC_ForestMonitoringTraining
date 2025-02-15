@@ -210,7 +210,7 @@ You can export the image to the SEPAL workspace or to the Google Earth Engine As
 Select `Google Earth Engine Asset` and enter the directory where you want to export the assets. See the example below:
 
 ```
-projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_lc
+projects/pc556-ncs-liberia-forest-mang/assets/liberia_2014_l8
 ```
 
 Select `Retrieve` to start the download process.
