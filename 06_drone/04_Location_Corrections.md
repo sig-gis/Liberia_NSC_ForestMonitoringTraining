@@ -15,7 +15,7 @@ This method makes the location corrections in real time while the drone is flyin
 
 ### Post Processing Kinematics (PPK)
 
-This method of correction is done after flying and corrections are made as an additional step using data downloaded from a virtual base station.  This steps can be used when a base station is not available or proper satellite connection is unattainable. Similarly to RTK, an additional module is typically needed on the drone.
+This method of correction is done after flying and corrections are made as an additional step using data downloaded from a virtual base station.  This method can be used when a base station is not available or proper satellite connection is unattainable. Like RTK, an additional module is required on the drone.
 
 ### Ground Control Points (GCP)
 
