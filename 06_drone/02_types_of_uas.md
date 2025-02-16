@@ -7,7 +7,7 @@ nav_order: 1
 
 # Types of UAS Platforms
 
-In this section, we will go over the types of UAS and their advantages and limitations.
+In this section, we will go over the types of Unoccupied Aircraft Systems (UAS, also known as drones) and their advantages and limitations.
 
 # Overview 
 
