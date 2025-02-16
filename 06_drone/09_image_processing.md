@@ -53,7 +53,7 @@ This goes with the location of the imagery as well. Make sure it is located on t
 Select `New Project`
 
 Name the project `Campus`
-
+#### **This can be whatever you want it to be but if you are planning to fly a location more than once it is suggested to include a date* 
 Create a folder called `Drone Training`
 
 <img align="center" src="../images/drone/pix4d_newproject.png" hspace="15" vspace="10" width="600">
