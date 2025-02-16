@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Photos
+permalink: /Photos
 nav_order: 17
 ---
 
