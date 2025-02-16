@@ -7,7 +7,9 @@ nav_order: 1
 
 # Run Accuracy Assessment in Google Sheets
 
-As mentioned earlier, it is most appropriate to do an Area Weighted Accuracy (AWA) assessment when we use a stratified random sample and there are large differences in area between the classes. Some classes cover a much smaller proportion of the AOI than other classes, so they are more rare and effectively harder to sample and predict. This must be factored into how we calculate accuracy, so we weight each class accuracy value by the class area, and calculate overall accuracy from these weighted class accuracies. This ensures that:
+As mentioned earlier, it is most appropriate to do an **Area Weighted Accuracy (AWA) assessment** when we use a stratified random sample and there are large differences in area between the classes. Some classes cover a much smaller proportion of the AOI than other classes, so they are more rare and effectively harder to sample and predict. This must be factored into how we calculate accuracy, so we weight each class accuracy value by the class area, and calculate overall accuracy from these weighted class accuracies. 
+
+This ensures that:
 * larger land cover classes contribute more to overall accuracy
 * bias toward small classes is reduced, unlike standard overall accuracy measures
 
@@ -20,10 +22,18 @@ Or, in other terms:
 
 <img align="center" src="../images/accuracy/awa_formula2.png" hspace="15" vspace="10" width="700">
 
+<<<<<<< Updated upstream
 Open the spreadsheets called 
 1. `accuracyAssessment_30m_2014_v1.xlsx`
 2. `classAreas_30m_2014_v1`
 3. `testPointsClassified_30m_2014_v1`
+=======
+# Let's try it
+In your copy of the [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) open the spreadsheets called:
+1. accuracyAssessment_30m_2014_v1.xlsx
+2. classAreas_30m_2014_v1
+3. testPointsClassified_30m_2014_v1
+>>>>>>> Stashed changes
 
 In the accuracy assessment worksheet, you will work in the first three tabs labelled **empty**, copying and pasting data and code code into the appropriate cells. You can check your work by looking at the last three tabs, which have been filled out for you.
 
