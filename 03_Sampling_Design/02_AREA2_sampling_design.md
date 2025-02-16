@@ -110,3 +110,6 @@ A large number of points will make the tool run more slowly. Choose a reasonable
 The output will look something like this in Drive:
 <img align="center" src="./images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
 
+#### Challenge
+- If you make your own copy of the scripts, you can go into the script itself and alter the default input parameters to your own so you do not have to keep retyping them in the GUI. 
+- You can also add a randomization seed as a parameter into the .stratifiedSample function. This would allow for repeatability of your sampling design if you set and record this parameter.
