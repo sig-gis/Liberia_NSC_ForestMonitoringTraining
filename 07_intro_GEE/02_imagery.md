@@ -567,11 +567,11 @@ Then, copy the `Tile URL` from the Console.
 
 
 - Click **`Add Widget`** at the top of the screen.  
-   <img align="center" src="../images/intro-gee/gee2ceo_2.png" vspace="10" width="500">
+   <img align="center" src="../images/intro-gee/gee2ceo_2.png" vspace="10" width="300">
 
 
 - In the pop-up window, select `Image Asset` as the **Widget Type**.  
-   <img align="center" src="../images/intro-gee/gee2ceo_3.png" vspace="10" width="500">
+   <img align="center" src="../images/intro-gee/gee2ceo_3.png" vspace="10" width="400">
 
 
 - Fill in the following details:
@@ -594,7 +594,7 @@ Then, copy the `Tile URL` from the Console.
 
 - Click **`Go to first plot`** in your project.  
   This will open a new tab in your browser, displaying your selected plot over the imported image.  
-   <img align="center" src="../images/intro-gee/gee2ceo_6.png" vspace="10" width="500">
+   <img align="center" src="../images/intro-gee/gee2ceo_6.png" vspace="10" width="400">
 
 
 - If you need to modify the image or visualization settings, click `Edit Widget`.  
