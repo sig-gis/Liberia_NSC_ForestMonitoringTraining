@@ -161,7 +161,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 <img align="center" src="../images/drone/RC_Screenshots/Course_Angle.gif" hspace="15" vspace="10" width="1000">
 
-#### This is important if there are high winds, it is best practice to fly with the wind or against it as to not have a cross wind that could push the drone off its flight path.
+#### This is important if there are high winds, it is best practice to fly with and against the wind, a cross wind  could push the drone off its flight path.
 #### **This is not as important for multirotor systems like the Mavic 3 Enterprise but should still be taken into consideration*
 
 ## 22. Start the autonomous flight by closing all settings and clicking the blue play button in the upper left corner
@@ -175,6 +175,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 <img align="center" src="../images/drone/RC_Screenshots/LandingVid.gif" hspace="15" vspace="10" width="1000">
 
 ## Emergency Maneuvers
+
 These occurrences are rare, but can still happen and should be taken into consideration before flying.  Below is a chart with potential emergencies and resolutions:
 To interupt normal pre-planned flight patterns in DJI products, change the flight mode on the remote controller.
 
