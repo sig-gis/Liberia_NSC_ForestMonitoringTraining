@@ -115,11 +115,13 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 <img align="center" src="../images/drone/RC_Screenshots/11_DEMDownload.jpg" hspace="15" vspace="10" width="1000">
 
 ## 12. Adjust the flight altitude
+
 ### This can be done by either changing the "Ortho GSD (Ground Sampling Distance)" or the "Terrain Follow Altitude" (this value also known as Above Ground Level or AGL)
 
 <img align="center" src="../images/drone/RC_Screenshots/12_GSD_RC.jpg" hspace="15" vspace="10" width="1000">
 
 ## 13. Adjust flight speed
+
 ### Remember slower is better, 15 mph is recommended
 
 <img align="center" src="../images/drone/RC_Screenshots/13_Speed.jpg" hspace="15" vspace="10" width="1000">
@@ -129,6 +131,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 <img align="center" src="../images/drone/RC_Screenshots/14_AdvancedSettingsSelect.jpg" hspace="15" vspace="10" width="1000">
 
 ## 15. In "Advanced Settings", set the overlap parameters and change the "Photo Mode" to "Distance Interval Shot"
+
 ### You can choose either option here but I found when testing these that "Distance Interval Shot" gave a better result over "Time Interval Shot"
 
 <img align="center" src="../images/drone/RC_Screenshots/15_AdvancedSettings.jpg" hspace="15" vspace="10" width="1000">
