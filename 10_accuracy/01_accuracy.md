@@ -24,11 +24,14 @@ Or, in other terms:
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Open the spreadsheets called 
 1. `accuracyAssessment_30m_2014_v1.xlsx`
 2. `classAreas_30m_2014_v1`
 3. `testPointsClassified_30m_2014_v1`
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 # Let's try it
@@ -37,6 +40,9 @@ In your copy of the [Accuracy Assessment Folder](https://drive.google.com/drive/
 2. classAreas_30m_2014_v1
 3. testPointsClassified_30m_2014_v1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
