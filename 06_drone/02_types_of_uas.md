@@ -75,4 +75,4 @@ WingtraOne
 
 #### Example:
 DJI Mavic 3 Enterprise
-<img align="center" src="../images/drone/Mavic3E.jpg" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/Mavic3E_3.jpg" hspace="15" vspace="10" width="1000">
