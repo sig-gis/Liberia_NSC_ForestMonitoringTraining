@@ -22,30 +22,18 @@ Or, in other terms:
 
 <img align="center" src="../images/accuracy/awa_formula2.png" hspace="15" vspace="10" width="700">
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 Open the spreadsheets called 
 1. `accuracyAssessment_30m_2014_v1.xlsx`
 2. `classAreas_30m_2014_v1`
 3. `testPointsClassified_30m_2014_v1`
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 # Let's try it
 In your copy of the [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) open the spreadsheets called:
 1. accuracyAssessment_30m_2014_v1.xlsx
 2. classAreas_30m_2014_v1
 3. testPointsClassified_30m_2014_v1
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 In the accuracy assessment worksheet, you will work in the first three tabs labelled **empty**, copying and pasting data and code code into the appropriate cells. You can check your work by looking at the last three tabs, which have been filled out for you.
 
