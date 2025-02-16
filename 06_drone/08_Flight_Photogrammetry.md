@@ -7,12 +7,12 @@ nav_order: 7
 # Flight for Photogrammetry
 ## Automated Flight Patterns
 ### Single Grid
-This type of flight creates a mission that has the drone autonomously fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaic images and digital elevation models.  Data collection for these types of flights are typically nadir (camera pointing straight down).
+This type of flight creates a mission in which the drone autonomously flies parallel lines within a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaic images and digital elevation models.  Data collection for these types of flights are typically nadir (camera pointing straight down).
 
 <img align="center" src="../images/drone/SingleGrid.png" hspace="15" vspace="10" width="1000">
 
 ### Double Grid
-Similar to the single grid flight, this type of flight creates a mission that has the drone fly parallel lines however it is different in that the drone does a second parallel grid pattern that is perpendicular to the first.  These flights collected data with a slightly oblique sensor angle.  Products produced from this type of flight is generally 3 dimensional models (point clouds and meshes)
+Similar to the single grid flight, this type of flight creates a mission in which the drone flies parallel lines however it is different in that the drone does a second parallel grid pattern that is perpendicular to the first.  These flights collect data with a slightly oblique sensor angle.  Products produced from this type of flight are generally 3 dimensional models (point clouds and meshes)
 
 <img align="center" src="../images/drone/Double_grid_w_points.png" hspace="15" vspace="10" width="1000">
 
@@ -22,7 +22,7 @@ Corridor flights are a type of single grid flight that collects data of long str
 <img align="center" src="../images/drone/Corridor.png" hspace="15" vspace="10" width="1000">
 
 ### Circular
-This type of flight collects data in an oblique sensor angle with an ellipsoid flight path around an object like a single tree or building.  It is suggested that multiple flights are done using the same ellipsoid at multiple altitudes.  This type of flight produces three dimensional products (point clouds and meshes).
+This type of flight collects data with an oblique sensor angle in an elliptical flight path around an object like a single tree or building.  It is suggested that multiple flights are done using the same elliptical at multiple altitudes.  This type of flight produces three dimensional products (point clouds and meshes).
 
 <img align="center" src="../images/drone/Circular_flight.png" hspace="15" vspace="10" width="1000">
 
