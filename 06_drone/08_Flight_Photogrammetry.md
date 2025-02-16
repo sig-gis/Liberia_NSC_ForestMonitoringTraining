@@ -2,7 +2,7 @@
 layout: page
 title: "Flight for Photogrammetry"
 parent: "6. Drone Flight & Image Processing"
-nav_order: 7
+nav_order: 8
 ---
 # Flight for Photogrammetry
 
