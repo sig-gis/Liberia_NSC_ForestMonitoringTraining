@@ -518,14 +518,11 @@ While CEO provides built-in access to Google Earth, Bing Maps, and Sentinel-2, w
 
 The first step for connecting your GEE imagery with CEO is to determine the **Asset ID** for your Image Asset or Image Collection asset. If you are using your own imagery, be sure that the imagery is either shared publicly or if your asset must stay private, that you have given read access to “gateway1 [AT] ceo-production.iam.gserviceaccount [DOT COM]”.
 
-<img align="center" src="../images/intro-gee/gee_assetpath.png" vspace="10" width="400">
-
-
 You can find the Asset ID for your own data by clicking on the asset to bring up the Asset Details pane. The Asset ID is located on the left side as “Image ID”.
 
 If you are using data from the Data Catalog, you can find the Asset ID on the information page under “Earth Engine Snippet” between the quotation marks.
 
-<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500">
+<img align="center" src="../images/intro-gee/gee_assetpath.png" vspace="10" width="400">
 
 
 The second piece of information you will need are the **visualization parameters**. CEO uses GEE’s image visualization parameters to display your Image Asset or Image Collection Asset. The most important of these parameters are “bands”, “min” and “max”. 
@@ -544,12 +541,11 @@ Click `Add New Imagery` on your main institution page. Once you select either �
 - For Image Collection Assets, you will also need to specify your Start Date and End Date.
 
 
-
-### Bonus: GEE imagery as a CEO basemap
+### GEE imagery as a CEO basemap
 
 The following is an example of using a single Sentinel-2 image to replace the basemap of your CEO project.
 
-To export imagery as a web tile layer, we first need to generate a GEE Tile Layer URL using the following script in GEE:
+<!-- To export imagery as a web tile layer, we first need to generate a GEE Tile Layer URL using the following script in GEE:
 
    ```javascript
    var image = ee.Image('COPERNICUS/S2_SR/20220329T105629_20220329T111136_T29NLH')
@@ -563,11 +559,45 @@ To export imagery as a web tile layer, we first need to generate a GEE Tile Laye
 
 Then, copy the `Tile URL` from the Console.
 
-<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500">
+<img align="center" src="../images/intro-gee/gee_tile_url.png" vspace="10" width="500"> -->
 
 
-Finally, we can add the GEE Tile Layer in CEO:
-   - In the CEO project settings, go to `Custom Base Maps`.  
-   - Click `Add a New Base Map` and paste your *GEE Tile URL*.  
-   - Save and select it as your imagery source.  
+- In the CEO project settings, go to the **Project Management** section (on the right-hand side of the screen) and click **`Configure Geo-Dash`**.  
+   <img align="center" src="../images/intro-gee/gee2ceo_1.png" vspace="10" width="500">
+
+
+- Click **`Add Widget`** at the top of the screen.  
+   <img align="center" src="../images/intro-gee/gee2ceo_2.png" vspace="10" width="500">
+
+
+- In the pop-up window, select `Image Asset` as the **Widget Type**.  
+   <img align="center" src="../images/intro-gee/gee2ceo_3.png" vspace="10" width="500">
+
+
+- Fill in the following details:
+  - **Title**: Enter a descriptive name, such as `Sentinel2_March29_2022`.
+  - **Basemap**: Select `Sentinel-2`.
+  - **GEE Image Asset ID**: Paste the asset ID of the image you want to display, e.g.,  
+    `COPERNICUS/S2_SR/20220329T105629_20220329T111136_T29NLH`.
+  - **Available Bands**: Click `Refresh Available Bands` <img align="center" src="../images/intro-gee/gee2ceo_4.png" vspace="10" width="25">. This will load the available bands for the image.
+  - **Image Parameters**: Adjust the visualization settings.  
+    To display bands 4, 3, and 2 as **Red-Green-Blue (RGB)**, use:
+    ```json
+    {"bands": "B4, B3, B2",
+      "min": 0,
+      "max": 0.3
+    }
+    ```
+  - Click **`Create`**.  
+   <img align="center" src="../images/intro-gee/gee2ceo_5.png" vspace="10" width="500">
+
+
+- Click **`Go to first plot`** in your project.  
+  This will open a new tab in your browser, displaying your selected plot over the imported image.  
+   <img align="center" src="../images/intro-gee/gee2ceo_6.png" vspace="10" width="500">
+
+
+- If you need to modify the image or visualization settings, click `Edit Widget`.  
+   <img align="center" src="../images/intro-gee/gee2ceo_7.png" vspace="10" width="500">
+
 
