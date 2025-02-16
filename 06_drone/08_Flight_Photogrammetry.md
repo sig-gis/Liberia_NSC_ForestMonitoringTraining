@@ -189,3 +189,8 @@ To interupt normal pre-planned flight patterns in DJI products, change the fligh
 | Loss of data link connection | Return to home function is initiated until link is restored |
 | Bird Intrusion | Manual flight is utilized to avoid intrusion |
 | Manned Aircraft Intrusion | Manual flight is utilized to avoid intrusion |
+
+
+## Post-flight best practices
+
+Upon completing all flights, it is best practice to backup all images collected to another location so if the drone/SD card get lost or damaged there is another copy.  Charge all batteries to 60-70% for storage, this will maintain the battery and prolong it's life. *The DJI intelligent  batteries will discharge themselves automatically after 10 days of no use when fully charged so they can be charged completely after a flight.  A post-flight inspection should also be performed to ensure all parts are in working order for the next mission.
