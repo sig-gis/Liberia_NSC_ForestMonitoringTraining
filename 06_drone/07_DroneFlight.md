@@ -24,7 +24,7 @@ The DJI Mavic 3E is calibrated using the following steps:
 <img align="center" src="../images/drone/SensorCalib2.png" hspace="15" vspace="10" width="1000">
 
 7. Highlight Compass and select " Calibrate Compass" 
-8. Follow the instructions on the screen showing you the way the drone need to be moved to complete calibration
+8. Follow the instructions on the screen showing you the way the drone needs to be moved to complete calibration
 
 ## Controls
 
