@@ -56,7 +56,7 @@ WingtraOne
 
 <img align="center" src="../images/drone/2021-wingtra-drone-standing-angle-right-1.png" hspace="15" vspace="10" width="1000">
 
-## Multi-Rotar UAS
+## Multi-Rotor UAS
 
 ### Characteristics
 * Three or more propellers
