@@ -5,7 +5,9 @@ parent: "6. Drone Flight & Image Processing"
 nav_order: 7
 ---
 # Flight for Photogrammetry
+
 ## Automated Flight Patterns
+
 ### Single Grid
 This type of flight creates a mission in which the drone autonomously flies parallel lines within a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaic images and digital elevation models.  Data collection for these types of flights are typically nadir (camera pointing straight down).
 
@@ -22,7 +24,7 @@ Corridor flights are a type of single grid flight that collects data of long str
 <img align="center" src="../images/drone/Corridor.png" hspace="15" vspace="10" width="1000">
 
 ### Circular
-This type of flight collects data with an oblique sensor angle in an elliptical flight path around an object like a single tree or building.  It is suggested that multiple flights are done using the same elliptical at multiple altitudes.  This type of flight produces three dimensional products (point clouds and meshes).
+This type of flight collects data with an oblique sensor angle in an elliptical flight path around an object like a single tree or building.  It is suggested that multiple flights are done using the same ellipse at multiple altitudes.  This type of flight produces three dimensional products (point clouds and meshes).
 
 <img align="center" src="../images/drone/Circular_flight.png" hspace="15" vspace="10" width="1000">
 
@@ -30,17 +32,19 @@ This type of flight collects data with an oblique sensor angle in an elliptical 
 This type of flight is not ideal for surveying or photogrammetry, data is collected completely manually, data collection intervals and sensor angle are determined by the pilot in command.  However, this type of flight can be useful in complex terrain like urban environments or when infrastructure is a concern.  
 
 ## Ground Sampling Distance (GSD)
-Ground Sampling Distance refers to the amount of ground/surface area that is covered by a single image in a flight measured in cm/pixel.  Ground sampling distance determines the altitude that the flight will be flown.  Higher ground sampling distance refers to a high flight altitude and lower image resolution and typically a shorter flight time to cover an area.  Lower ground sampling distance translates to lower flight altitude and higher resolution images but typically increases flight time.  Depending on the type of terrain being surveyed, different ground sampling distance is recommended, for example forested areas it is recommended to fly a higher ground sampling distance.  
+
+Ground Sampling Distance refers to the amount of ground/surface area that is covered by a single image in a flight measured in cm/pixel.  Ground sampling distance determines the altitude that the drone will be flown.  Higher ground sampling distance refers to a high flight altitude and lower image resolution and typically a shorter flight time.  Lower ground sampling distance translates to lower flight altitude and higher resolution images but typically increases flight time.  Depending on the type of terrain being surveyed, different ground sampling distance is recommended, for example forested areas it is recommended to fly a higher ground sampling distance.  
 
 <img align="center" src="../images/drone/GSD.png" hspace="15" vspace="10" width="1000">
 
 ## Terrain Awareness
 
-The drone’s ability to follow variations in terrain (go up and down accordingly) to create consistent overlap and ground sampling distance between all images taken in a flight.  This parameter should be turned on if you are flying in a very hilly area. It is very important to know that buildings, trees, towers, and other objects that are ABOVE the ground are NOT considered part of terrain awareness.  Terrain awareness is based purely on elevation information from Pix4D’s existing maps, and these might not be 100% accurate or precise in your flight AOI.  Leave plenty of buffer between your drone and the surfaces you are flying over to account for these issues.  Not all flight planning platforms have terrain awareness capability, and offline maps have to be downloaded in Pix4Dcapture to activate terrain awareness.  
+The drone’s ability to follow variations in terrain (go up and down accordingly) to create consistent overlap and ground sampling distance between all images taken in a flight.  This parameter should be turned on if you are flying in a very hilly area. It is very important to know that buildings, trees, towers, and other objects that are ABOVE the ground are NOT considered part of terrain awareness.  Terrain awareness is based purely on elevation information from existing elevation data and these might not be 100% accurate or precise in your flight area.  Leave plenty of buffer between your drone and the surfaces you are flying over to account for these issues.  Not all flight planning platforms have terrain awareness capability and offline maps have to be downloaded in DJI Pilot 2 to activate terrain awareness.  
 
 <img align="center" src="../images/drone/terrainawareness.png" hspace="15" vspace="10" width="600">
 
 ## Overlap
+
 Overlap refers to the amount of overlap in coverage of each image collected.  More overlap means longer flight times especially with higher side overlap as more flight lines are added but there is the potential for more tie points between images.
 
 <img align="center" src="../images/drone/overlap.png" hspace="15" vspace="10" width="1000">
@@ -58,6 +62,7 @@ Overlap refers to the amount of overlap in coverage of each image collected.  Mo
 * 85% frontal and 60% side (if flying multiple flight lines) overlap
 
 ## Speed 
+
 Flight speed refers to the rate of travel of the drone.  Higher speeds allow the drone to cover more area but use more battery.  Higher speed can also cause motion blur in images especially when there are high winds.  Ideal speed is typically specific to each system, for the DJI Mavic 3 Enterprise, collecting images at 15 mph is the recommended speed.  
 
 # Automated Flight with the DJI Mavic 3 Enterprise
@@ -70,7 +75,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 <img align="center" src="../images/drone/RC_Screenshots/02_DJIPilotHomeScreen.jpg" hspace="15" vspace="10" width="1000">
 
-## 3. Create a Route by selecting the plus icon in the top left of the screen or if no other routes have been flown select the "Create Route" icon in the center of the screen
+## 3. Create a Route by selecting the plus icon in the top left of the screen or if no other routes have been flown, select the "Create Route" icon in the center of the screen
 
 <img align="center" src="../images/drone/RC_Screenshots/03_CreateRoute.jpg" hspace="15" vspace="10" width="1000">
 
@@ -104,7 +109,8 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 <img align="center" src="../images/drone/RC_Screenshots/10_AltitudeModeAGL.jpg" hspace="15" vspace="10" width="1000">
 
 ## 11. Download the DSM files from the internet
-### Elevation data can also be downloaded prior flight either to an SD card or to the RC itself.  The SD card option will allow the user to download multiple areas or larger areas. 
+
+### Elevation data can also be downloaded prior flight either to an SD card or to the RC itself.  The SD card option will allow the user to download multiple areas or larger areas without using the RCs internal storage. 
 
 <img align="center" src="../images/drone/RC_Screenshots/11_DEMDownload.jpg" hspace="15" vspace="10" width="1000">
 
