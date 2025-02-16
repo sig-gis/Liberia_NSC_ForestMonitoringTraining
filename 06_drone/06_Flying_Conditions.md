@@ -9,14 +9,15 @@ nav_order: 5
 When flying to collect data to process through photogrammetry there are a few considerations for conditions to produce the best products.  These conditions will not prevent data collection but will make the photogrammetry process difficult and could cause holes or no data areas in the final products.  
 
 ### Ideal Flying Conditions
-* Diffused light (cloudy skies)
+* Diffused light (overcast skies) or full sunlight (no clouds)
 * High sun angle (midday)
 * Low wind (stable flight)
 * Good visibility (maintain visual contact with the drone)
 
 ### Imperfect Flying Conditions
-* Rain
-* Low sun angle (Early morning or Late afternoon - these conditions cause shadows)
+* Rain and low cloud cover/fog (moisture is not good for the drone)
+* Partial cloud cover (shadowy light)
+* Low sun angle (early morning or late afternoon - these conditions cause shadows)
 * High winds (less stable flights, if drone gets pushed around GPS can struggle keeping the system on track)
 * Extreme heat or cold (effects drone battery performance) 
 
