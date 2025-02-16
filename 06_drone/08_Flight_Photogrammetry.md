@@ -7,7 +7,7 @@ nav_order: 7
 # Flight for Photogrammetry
 ## Automated Flight Patterns
 ### Single Grid
-This type of flight creates a mission that has the drone fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaics and digital elevation models (DTM and DSM).  Data collection for these types of flights are typically nadir (camera pointing straight down).
+This type of flight creates a mission that has the drone autonomously fly parallel lines in a rectangular or polygon boundary.  Products produced from this type of flight are 2D mapping products like orthomosaic images and digital elevation models.  Data collection for these types of flights are typically nadir (camera pointing straight down).
 
 <img align="center" src="../images/drone/SingleGrid.png" hspace="15" vspace="10" width="1000">
 
