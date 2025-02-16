@@ -67,11 +67,11 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 # Automated Flight with the DJI Mavic 3 Enterprise
 
-## 1. Open DJI Pilot 2 App on Remote Control
+## 1. Open DJI Pilot 2 App on the Remote Control
 
 <img align="center" src="../images/drone/RC_Screenshots/01_DJIPilot2App.jpg" hspace="15" vspace="10" width="1000">
 
-## 2. Select "Flight Route" on DJI Pilot 2
+## 2. Select "Flight Route" on DJI Pilot 2 home screen
 
 <img align="center" src="../images/drone/RC_Screenshots/02_DJIPilotHomeScreen.jpg" hspace="15" vspace="10" width="1000">
 
@@ -83,7 +83,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 <img align="center" src="../images/drone/RC_Screenshots/04_SelectRouteType.jpg" hspace="15" vspace="10" width="1000">
 
-## 5. Plan a flight by using your finger to create the mapping area by tapping verticies on the map
+## 5. Plan a flight a using your finger to create the mapping area by tapping verticies on the map
 
 <img align="center" src="../images/drone/RC_Screenshots/05_FlightPlanInterface.jpg" hspace="15" vspace="10" width="1000">
 
@@ -151,11 +151,11 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 ## 20. If there is another D-RTK2 Mobile station near by make sure to select the correct one
 
-<img align="center" src="../images/drone/RC_Screenshots/19_RTKSelect2.jpg" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/RC_Screenshots/20_RTKSelect3.jpg" hspace="15" vspace="10" width="1000">
 
 #### **Note the connection to the D-RTK Mobile Station is over wifi, ensure that the connection is strong and that the RC does not wander too far from the station*
 
-<img align="center" src="../images/drone/RC_Screenshots/20_RTKSelect3.jpg" hspace="15" vspace="10" width="1000">
+<img align="center" src="../images/drone/RC_Screenshots/21_RTKSelect4.jpg" hspace="15" vspace="10" width="1000">
 
 ## 21. Set the "Course Angle" fpr most efficient flight
 
