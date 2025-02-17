@@ -240,15 +240,7 @@ You should now see the Pix4Dmapper home screen.
 
 <img align="center" src="images/setup/pix4d-16.png" vspace="10" width="500">
 
-#### 4. Download Pix4Dcapture onto your phone
 
-In your App Store/Play Store, search for “Pix4Dcapture”.
-
-<img align="center" src="images/setup/pix4d-17.png" vspace="10" width="200">
-
-Download it onto your phone and open it.
-
-Sign in with your Pix4D login information you created in step 1.
 
 
 
