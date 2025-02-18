@@ -172,7 +172,7 @@ Map.addLayer(
     'True Color S2');
 ```
 
-In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets (<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2" target="_blank" rel="noopener noreferrer">USGS Landsat 9 Level 2, Collection 2, Tier 1</a> & <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR" target="_blank" rel="noopener noreferrer">Sentinel-2 MSI: MultiSpectral Instrument, Level-2A</a>) and see the different band designations. Inspect the metadata for both images in the Console as well.
+In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets (<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2" target="_blank" rel="noopener noreferrer">USGS Landsat 9 Level 2, Collection 2, Tier 1</a> & <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED" target="_blank" rel="noopener noreferrer">Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-2A</a>) and see the different band designations. Inspect the metadata for both images in the Console as well.
 
 <img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
 
@@ -295,7 +295,7 @@ First, we scale the images as it is recommended by the developer (<a href="https
 
 > Note: 
 >
-> Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types (<a href="https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products" target="_blank" rel="noopener noreferrer">https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products</a>).
+> Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types (<a href="https://www.usgs.gov/faqs/how-do-i-use-a-scale-factor-landsat-level-2-science-products" target="_blank" rel="noopener noreferrer">https://www.usgs.gov/faqs/how-do-i-use-a-scale-factor-landsat-level-2-science-products</a>).
 
 We create a function for the application of the scale factors:
 
