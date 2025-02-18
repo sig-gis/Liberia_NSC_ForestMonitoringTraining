@@ -6,18 +6,19 @@ has_children: True
 nav_order: 8
 ---
 
+
 # Introduction to GEE
 
-Here we will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the [EEFA](https://eefabook.org) book.
+Here we will provide an overview of the Google Earth Engine cloud-based geospatial platform, its benefits over desktop geospatial software, access to a large catalog of remote sensing datasets, applications in GEE, the basics of programming language and main concepts. Much of the content is based on the <a href="https://eefabook.org" target="_blank" rel="noopener noreferrer">EEFA</a> book.
 
 ## Pre-configuration
 
 As mentioned in the pre-workshop set up page, joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees* type GEE Cloud Project of your own. 
 
 
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register). 
+Create a <a href="https://code.earthengine.google.com/register" target="_blank" rel="noopener noreferrer">Google Earth Engine account</a>. 
 
-You will need a [Google account](https://accounts.google.com/signup). 
+You will need a <a href="https://accounts.google.com/signup" target="_blank" rel="noopener noreferrer">Google account</a>. 
 
 Create a GEE account for non-commercial purposes.
 

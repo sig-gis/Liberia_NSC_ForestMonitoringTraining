@@ -5,6 +5,7 @@ parent: "7. Intro to GEE"
 nav_order: 2
 ---
 
+
 # Imagery in GEE
 
 Imagery in GEE can be accessed either from your local workstation or Earth Engine's public data catalog, which offers over forty years of historical imagery and scientific datasets, updated and expanded daily.
@@ -12,7 +13,7 @@ Imagery in GEE can be accessed either from your local workstation or Earth Engin
 
 ## Importing Raster Data to GEE assets
  
-You can use the Asset Manager to upload images or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use [the command-line upload option](https://developers.google.com/earth-engine/guides/command_line#upload).
+You can use the Asset Manager to upload images or other georeferenced raster datasets, including georeferenced drone images. You can upload GeoTIFF image files up to 10 GB in size to your Earth Engine user folder. For larger files, we would need to use <a href="https://developers.google.com/earth-engine/guides/command_line#upload" target="_blank" rel="noopener noreferrer">the command-line upload option</a>.
 
 To upload a GeoTIFF using the Code Editor, select the Assets tab in the upper left corner, click **`NEW`**, then select **Image upload**. Click the **`SELECT`** button and navigate to a GeoTIFF on your local file system, or drag and drop your GeoTIFF into this upload dialog.
 
@@ -171,7 +172,7 @@ Map.addLayer(
     'True Color S2');
 ```
 
-In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets ([USGS Landsat 9 Level 2, Collection 2, Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2)  & [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)) and see the different band designations. Inspect the metadata for both images in the Console as well.
+In the Console, can you see the difference in band quantity? Open the Earth Engine catalog for both datasets (<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1_L2" target="_blank" rel="noopener noreferrer">USGS Landsat 9 Level 2, Collection 2, Tier 1</a> & <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR" target="_blank" rel="noopener noreferrer">Sentinel-2 MSI: MultiSpectral Instrument, Level-2A</a>) and see the different band designations. Inspect the metadata for both images in the Console as well.
 
 <img align="center" src="../images/intro-gee/fig45.png" vspace="10" width="500">
 
@@ -221,11 +222,11 @@ Export.image.toDrive({
 
 Check this function's description in the `Docs` tab for more information.
 
-You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from [your Google Drive](https://drive.google.com/drive/my-drive).
+You will see that once you run the code, the `Tasks` tab will flash orange and you will see the option to `Run` this export task. It might take several minutes for your image to export. Once the export task is finalized, you will be able to download the tif file(s) from <a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">your Google Drive</a>.
 
 ### Complete code
 
-Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: [https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d](https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d)
+Script "`2 Image Visualization - L9 & S2`" from the repository and folder `07_intro_to_GEE/02_imagery` or direct link: <a href="https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/7a082a5c8a09c5ac1c67a073b377843d</a>
 
 
 ## Image Collections & Composites in Earth Engine
@@ -290,11 +291,11 @@ We use the `ee.Filter.lt` to get images with cloud cover "less than" 30%, result
 
 Now, we are going to apply a cloud masking function. Clouds and cloud shadows reduce the view of the optical sensors and block or obscure the Earth's surface. Working with pixels contaminated by clouds can influence accuracy and information content of products derived from remote sensing activities, including land cover classification, vegetation modeling, and change detection, where undetected clouds can be mapped as false changes. Therefore, information provided by cloud detection algorithms is essential to exclude clouds and cloud shadows from processing.
 
-First, we scale the images as it is recommended by the developer ([https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2)). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. 
+First, we scale the images as it is recommended by the developer (<a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2" target="_blank" rel="noopener noreferrer">https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1_L2</a>). A scale factor must be applied to both Collection 1 and Collection 2 Landsat Level-2 surface reflectance and surface temperature products before using the data. 
 
 > Note: 
 >
-> Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types ([https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products](https://www.usgs.gov/faqs/how-do-i-use-scale-factor-landsat-level-2-science-products)).
+> Landsat Collection 1 and Collection 2 Tier 2 products have different scale factors, fill values, and data types (<a href="https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products" target="_blank" rel="noopener noreferrer">https://www.usgs.gov/faqs/how-do-i- use-scale-factor-landsat-level-2-science-products</a>).
 
 We create a function for the application of the scale factors:
 
@@ -465,7 +466,7 @@ Script "`3 ImageCollections & Composite`" is in the repository under this folder
 
 ## Publicly available datasets 
 
-Earth Engine also provides access to [numerous publicly available datasets](https://developers.google.com/earth-engine/datasets) that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
+Earth Engine also provides access to <a href="https://developers.google.com/earth-engine/datasets" target="_blank" rel="noopener noreferrer">numerous publicly available datasets</a> that support environmental monitoring, including forest change and fire alerts. These datasets come from global satellite missions and scientific research initiatives, enabling rapid analysis and decision-making.
 
 ### Global Forest Change  
 For example, the **Global Forest Change dataset** tracks forest loss, gain, and disturbance from 2000 onward, derived from Landsat imagery. It can be accessed using the following code snippet:
@@ -482,8 +483,7 @@ Map.addLayer(gfc.select('lossyear'), {min: 0, max: 22, palette: ['yellow', 'red'
 
 
 ### Fire Alerts  
-The **MODIS and VIIRS fire** datasets can provide near real-time active fire detections. For instance, **[Fire Information for Resource Management System (FIRMS)](https://developers.google.com/earth-engine/datasets/catalog/FIRMS
-)** can be added to your map with:
+The **MODIS and VIIRS fire** datasets can provide near real-time active fire detections. For instance, **<a href="https://developers.google.com/earth-engine/datasets/catalog/FIRMS" target="_blank" rel="noopener noreferrer">Fire Information for Resource Management System (FIRMS)</a>** can be added to your map with:
 
 
 ```javascript
@@ -506,7 +506,7 @@ These datasets can help detect deforestation, monitor wildfires, and assess land
 
 # Linking GEE imagery to CEO
 
-*The following is adapted from a CEO blog, see the [source](https://www.collect.earth/connecting-gee-raster-data/) for further details.* 
+*The following is adapted from a CEO blog, see the <a href="https://www.collect.earth/connecting-gee-raster-data/" target="_blank" rel="noopener noreferrer">source</a> for further details.* 
 
 GEE imagery can be integrated into CEO and can provide the following benefits: 
 - Access near real-time satellite data for interpretation.  

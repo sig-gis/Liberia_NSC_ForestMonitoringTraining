@@ -20,6 +20,7 @@ Follow along by copying and pasting each code block in the lesson into your own 
 ## Setup     
 
 1. Log into your Google Earth Engine account and open the code editor.
-2. Click this link to accept the GEE script repository as a "reader" - https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops
+2. Click this link to accept the GEE script repository as a "reader" - <a href="https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops</a>.
+
 3. Create 2 new script files in your own script repository - name them `Preprocessing` and `Classification`.
 4. You can always check the full scripts here in the above reposity, in a folder called `09_classification_GEE` with this lesson's scripts in it - `preprocessing` and `classification`.

@@ -6,6 +6,8 @@ has_children: True
 nav_order: 4
 ---
 
+<a href="testlink" target="_blank" rel="noopener noreferrer">testing</a>
+
 
 # Overview of Sampling Design
 
@@ -217,15 +219,19 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 <br />
 
 ## Sources
-- Belgiu, M., & Drăguţ, L. (2016). Random forest in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 114, 24–31. https://doi.org/10.1016/j.isprsjprs.2016.01.011
+- Belgiu, M., & Drăguţ, L. (2016). Random forest in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 114, 24–31. <a href="https://doi.org/10.1016/j.isprsjprs.2016.01.011" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.isprsjprs.2016.01.011</a>
 
-- Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
+
+- Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. <a href="https://doi.org/10.1023/A:1010933404324" target="_blank" rel="noopener noreferrer">https://doi.org/10.1023/A:1010933404324</a>
+
 
 - Congalton, R. G., & Green, K. (2009). Assessing the accuracy of remotely sensed data: Principles and practices (2nd ed.). CRC Press.
 
-- Kuhn, M., & Johnson, K. (2013). Applied predictive modeling. Springer. https://doi.org/10.1007/978-1-4614-6849-3
+- Kuhn, M., & Johnson, K. (2013). Applied predictive modeling. Springer. <a href="https://doi.org/10.1007/978-1-4614-6849-3" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/978-1-4614-6849-3</a>
 
-- Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. Remote Sensing of Environment, 148, 42–57. https://doi.org/10.1016/j.rse.2014.02.015
+
+- Olofsson, P., Foody, G. M., Herold, M., Stehman, S. V., Woodcock, C. E., & Wulder, M. A. (2014). Good practices for estimating area and assessing accuracy of land change. Remote Sensing of Environment, 148, 42–57. <a href="https://doi.org/10.1016/j.rse.2014.02.015" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.rse.2014.02.015</a>
+
 
 
 

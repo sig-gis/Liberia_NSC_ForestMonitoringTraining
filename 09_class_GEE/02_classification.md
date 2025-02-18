@@ -5,6 +5,7 @@ parent: "9. Classification with GEE"
 nav_order: 2
 ---
 
+
 # Classification with Random Forest in GEE
 
 Open up a new script and name it `2 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.
@@ -217,7 +218,7 @@ As discussed before, the random forest model repeatedly selects a random subset 
 
 <img align="center" src="../images/class-gee/randomforest.png" hspace="15" vspace="10" width="600">
 
-*Resource:* For some background on Random Forest, you can go to the [Machine Learning page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/02_Intro_MachineLearning) in this website, and another brief intro can be found at this [website](https://www.ibm.com/think/topics/random-forest).
+*Resource:* For some background on Random Forest, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/02_Intro_MachineLearning" target="_blank" rel="noopener noreferrer">Machine Learning page</a> on this website, and another brief intro can be found at <a href="https://www.ibm.com/think/topics/random-forest" target="_blank" rel="noopener noreferrer">this website</a>.
 
 First, we select the predictor variables we want the classifier to use. This is where we can remove bands as we refine the model. We remove any `constant` bands which are leftover artifacts from our exported image. Then, we train the `ee.Classifier.smileRandomForest()` classifier with 200 trees, the prepped training points, the selected LULC class band, and the selected prediction bands. 
 
@@ -289,7 +290,7 @@ Map.addLayer(RFclassification, lulcVis,
 
 Now, we take a look at the accuracies of each individual class. We first classify the testing points and then extract the error matrix, for which we just provide the property names of the "true" and "predicted" values (which are the original extracted LULC values and the LULC values predicted by the model). We print the error matrix and the lists of user's and producer's accuracies, but we do **not** print the overall accuracy. This simple way to calculate accuracy, where we divide the number of correctly classified points by the total number of points, is **not appropriate** here because our original sample was a **stratified** random sample. We need to do a **weighted** accuracy assessment, where we weight the class accuracies based on their predicted areas, and then aggregate them. We will do this separately in a spreadsheet.
 
-*Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the [Accuracy Assessment page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/10_accuracy) in this website.
+*Resource:* For some background on accuracy assessment and user's and producer's accuracy, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/10_accuracy" target="_blank" rel="noopener noreferrer">Accuracy Assessment page</a> on this website.
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -513,6 +514,6 @@ Export.table.toDrive({
 
 Now that we have a functioning model, we can refine it to improve it. A good way to think about this process is "how can I make the model as simple as possible while still maintaining its predictive power." This concept is called "parsimony," and many scientific fields pursue parsimony when developing models.
 
-You can refine the model by iteratively removing predictor variables, as mentioned above, but there are also many other refinements you could make to the input data or model parameters. These are listed in the [Discussion Tab](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/09_class_GEE/04_discussion.html).
+You can refine the model by iteratively removing predictor variables, as mentioned above, but there are also many other refinements you could make to the input data or model parameters. These are listed in the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/09_class_GEE/04_discussion.html" target="_blank" rel="noopener noreferrer">Discussion Tab</a>.
 
 Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.

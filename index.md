@@ -4,8 +4,9 @@ title: Overview
 nav_order: 1
 ---
 
+
 # Liberia Geospatial Capacity Building Workshops for Forest Monitoring
-This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's [concept note and full agenda](https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing).
+This workshop aim to build participants' capacity to use remote sensing technologies (Earth observation satellites and drones) and machine learning techniques for forest monitoring. For a detailed overview, you can read the workshop's <a href="https://docs.google.com/document/d/1ed5aAAm7OfiYvlKrU0aBoUlyP_KOmo6Ta8P0z2d4Mms/edit?usp=sharing" target="_blank" rel="noopener noreferrer">concept note and full agenda</a>.
 
 #### Instructors:
 Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis.com) from Spatial Informatics Group (SIG)
@@ -26,7 +27,7 @@ Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis
 #### Note...
 The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
-A quick resource page of **all important links for this workshop** can be found **[here](https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing)**.
+A quick resource page of **all important links for this workshop** can be found **<a href="https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>**.
 
 ## Agenda
 
@@ -68,7 +69,7 @@ A quick resource page of **all important links for this workshop** can be found 
 ## Feedback
 At the end of the workshop please fill out the form below to provide feedback. It helps us improve future workshops and plan follow up events for you!
 
-[Give Feedback](https://forms.gle/8Jdm1aybL9sqzNEw6){: .btn .btn-purple }
+<a href="https://forms.gle/8Jdm1aybL9sqzNEw6" target="_blank" rel="noopener noreferrer">Give Feedback</a>{: .btn .btn-purple }
 
 
 # Support

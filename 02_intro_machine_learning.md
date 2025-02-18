@@ -108,19 +108,25 @@ It performs well in predicting most classes, but may struggle with classes that 
 <br />
 <br />
 
+
+
 ## Sources
-- Analytics Vidhya. (2021, June). Understanding Random Forest Algorithm With Examples. Retrieved from https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/
+- Analytics Vidhya. (2021, June). Understanding Random Forest Algorithm With Examples. Retrieved from <a href="https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/" target="_blank" rel="noopener noreferrer">https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/</a>
 - Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5–32.
-- Coursera. (2024, December 9). What are the advantages and disadvantages of Random Forest? Coursera. Retrieved February 7, 2025, from https://www.coursera.org/articles/advantages-and-disadvantages-of-random-forest
-- GeeksforGeeks. (n.d.). Random Forest Algorithm in Machine Learning. Retrieved from https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/
-- Great Learning. (2023, June 15). Random Forest Algorithm in Machine Learning. Great Learning. Retrieved February 7, 2025, from https://www.mygreatlearning.com/blog/random-forest-algorithm/
+- Coursera. (2024, December 9). What are the advantages and disadvantages of Random Forest? Coursera. Retrieved February 7, 2025, from <a href="https://www.coursera.org/articles/advantages-and-disadvantages-of-random-forest" target="_blank" rel="noopener noreferrer">https://www.coursera.org/articles/advantages-and-disadvantages-of-random-forest</a>
+- GeeksforGeeks. (n.d.). Random Forest Algorithm in Machine Learning. Retrieved from <a href="https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/" target="_blank" rel="noopener noreferrer">https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/</a>
+- Great Learning. (2023, June 15). Random Forest Algorithm in Machine Learning. Great Learning. Retrieved February 7, 2025, from <a href="https://www.mygreatlearning.com/blog/random-forest-algorithm/" target="_blank" rel="noopener noreferrer">https://www.mygreatlearning.com/blog/random-forest-algorithm/</a>
+
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction (2nd ed.). Springer.
 - Ho, T. K. (1995). Random Decision Forests. Proceedings of the 3rd International Conference on Document Analysis and Recognition, 278–282.
-- Humboldt-Universität zu Berlin. (n.d.). Image classification: Random Forests. Retrieved from https://pages.cms.hu-berlin.de/EOL/geo_rs/S08_Image_classification2.html
+- Humboldt-Universität zu Berlin. (n.d.). Image classification: Random Forests. Retrieved from <a href="https://pages.cms.hu-berlin.de/EOL/geo_rs/S08_Image_classification2.html" target="_blank" rel="noopener noreferrer">https://pages.cms.hu-berlin.de/EOL/geo_rs/S08_Image_classification2.html</a>
+
 - Liaw, A., & Wiener, M. (2002). Classification and Regression by randomForest. R News, 2(3), 18–22.
-- Rebellion Research. (2023, February 7). What are the advantages and disadvantages of Random Forest? Rebellion Research. Retrieved February 7, 2025, from https://www.rebellionresearch.com/what-are-the-advantages-and-disadvantages-of-random-forest
-- [image] MyGeoBlog. (2019, October 18). Using artificial intelligence for satellite image classification. MyGeoBlog. https://mygeoblog.com/2019/10/18/using-artificial-intelligence-for-satellite-image-classification/
-- [image] Manning Publications. (n.d.). Bagging. Manning LiveBook. Retrieved February 6, 2025, from https://livebook.manning.com/concept/machine-learning/bagging
+- Rebellion Research. (2023, February 7). What are the advantages and disadvantages of Random Forest? Rebellion Research. Retrieved February 7, 2025, from <a href="https://www.rebellionresearch.com/what-are-the-advantages-and-disadvantages-of-random-forest" target="_blank" rel="noopener noreferrer">https://www.rebellionresearch.com/what-are-the-advantages-and-disadvantages-of-random-forest</a>
+- [image] MyGeoBlog. (2019, October 18). Using artificial intelligence for satellite image classification. MyGeoBlog. <a href="https://mygeoblog.com/2019/10/18/using-artificial-intelligence-for-satellite-image-classification/
+" target="_blank" rel="noopener noreferrer">https://mygeoblog.com/2019/10/18/using-artificial-intelligence-for-satellite-image-classification/</a>
+- [image] Manning Publications. (n.d.). Bagging. Manning LiveBook. Retrieved February 6, 2025, from <a href="https://livebook.manning.com/concept/machine-learning/bagging" target="_blank" rel="noopener noreferrer">https://livebook.manning.com/concept/machine-learning/bagging</a>
+
 
 
 

@@ -5,11 +5,12 @@ parent: "6. Drone Flight & Image Processing"
 nav_order: 4
 ---
 
+
 # UAS Regulations
 
 Drones are regulated by the Liberian Civil Aviation Authority
 
-[LCAA UAS Regulations](https://lcaa.gov.lr/sites/default/files/documents/LCAR%20PART%2017%20A%20-%20Aviation%20Security.docx.pdf)
+<a href="https://lcaa.gov.lr/sites/default/files/documents/LCAR%20PART%2017%20A%20-%20Aviation%20Security.docx.pdf" target="_blank" rel="noopener noreferrer">LCAA UAS Regulations</a>
 
 ## Restrictions
 

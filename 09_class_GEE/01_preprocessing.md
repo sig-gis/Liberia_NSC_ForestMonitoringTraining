@@ -5,6 +5,8 @@ parent: "9. Classification with GEE"
 nav_order: 1
 ---
 
+
+
 # Preprocessing Imagery in GEE
 
 Open up the script you named `1 preprocessing`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/1 preprocessing`.
@@ -263,7 +265,7 @@ Map.addLayer(dem, demVis, 'DEM', false);
 Now, we start importing the raw satellite imagery we will use in our model, starting with synthetic aperture radar (SAR) imagery. We need to do some filtering and preprocessing for the SAR imagery before we use it in our model. SAR can be more complex to interpret and analyze, but it can be very useful in tropical areas where cloud cover makes optical imagery difficult to use. 
 
 >*Details on SAR:* 
->>*Resource:* For some background on SAR data, you can go to the [SAR section of the Resources page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/01_sar.html) in this website, and more extensive SAR materials can be found at this [website](https://learnsar.open.uaf.edu/sar-resources/).
+>>*Resource:* For some background on SAR data, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/01_sar.html" target="_blank" rel="noopener noreferrer">SAR section of the Resources page</a> on this website, and more extensive SAR materials can be found at this [website](https://learnsar.open.uaf.edu/sar-resources/).
 
 >>In general, for forest mapping in tropical West Africa, the following types of SAR images are most useful, so we will use these to guide our decisions:
 >>* Descending orbit pass 
@@ -431,7 +433,7 @@ We will use either Landsat 8 or Harmonized Landsat-Sentinel (HLS) imagery, depen
 
 <img align="center" src="../images/class-gee/HLS_info.png" hspace="15" vspace="10" width="400">
 
-*Resource:* For some background on cloud masking, you can go to the [Cloud Masking section of the Resources page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/02_cloudmasking.html) in this website.
+*Resource:* For some background on cloud masking, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/02_cloudmasking.html" target="_blank" rel="noopener noreferrer">Cloud Masking section of the Resources page</a> on this website.
 
 ```javascript
 // Optical
@@ -718,7 +720,7 @@ The next thing we do is calculate some spectral indices from the optical imagery
 
 As we did before, we write separate functions for the optical and SAR indices, and only call the SAR function for the time period for which SAR is available.
 
-*Resource:* For some background on spectral indices, you can go to the [Spectral Indices section of the Resources page](https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/03_indices.html) in this website.
+*Resource:* For some background on spectral indices, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/03_indices.html" target="_blank" rel="noopener noreferrer">Spectral Indices section of the Resources page</a> on this website.
 
 ```javascript
 // Calculate indices
@@ -812,7 +814,8 @@ function calculateSARIndices(image){
 }
 ```
 
-*Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
+*Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: <a href="https://www.indexdatabase.de/" target="_blank" rel="noopener noreferrer">https://www.indexdatabase.de/</a>.
+
 
 ### Fix Projection Issues
 
@@ -974,6 +977,6 @@ Code checkpoint: check your work in `users/ee-scripts/Liberia_Forest_SIG_worksho
 
 If your export is taking a long time, you can use the following pre-prepared results files from the workshop asset repository for the later steps.
 
-[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass)
+<a href="https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_2014_400PerClass</a>
 
-[https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014)
+<a href="https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2014</a>

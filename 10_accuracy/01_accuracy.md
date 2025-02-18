@@ -30,7 +30,7 @@ Open the spreadsheets called
 
 
 # Let's try it
-In your copy of the [Accuracy Assessment Folder](https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY) open the spreadsheets called:
+In your copy of the <a href="https://drive.google.com/drive/folders/1rALEutPpR3BW9O0GWxZY7tcBBSb49ecY" target="_blank" rel="noopener noreferrer">Accuracy Assessment Folder</a> open the spreadsheets called:
 1. accuracyAssessment_30m_2014_v1.xlsx
 2. classAreas_30m_2014_v1
 3. testPointsClassified_30m_2014_v1

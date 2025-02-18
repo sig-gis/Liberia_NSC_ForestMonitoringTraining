@@ -5,9 +5,10 @@ parent: "8. Classification with SEPAL"
 nav_order: 2
 ---
 
+
 # Classification with Random Forest in SEPAL
 
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=HBlYrwmq5ak)*.
+> *A video-tutorial is available in <a href="https://www.youtube.com/watch?v=HBlYrwmq5ak" target="_blank" rel="noopener noreferrer">this YouTube video</a>*.
 
 
 # Classification
@@ -159,7 +160,7 @@ Select the following indices:
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_7_5.png" vspace="10" width="500">
 
 
-Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or [radar images](https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/liberia_2024_radar)), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
+Once image selection is complete, select `✓ Apply`. The images and bands will be displayed in the `IMG` panel. Selecting the `Trash bin` button removes the image and its bands from the analysis. If you want to add more images or different datasets (e.g. optical Landsat and Sentinel, or <a href="https://code.earthengine.google.com/?asset=projects/pc556-ncs-liberia-forest-mang/assets/liberia_2024_radar" target="_blank" rel="noopener noreferrer">radar images</a>), you can click `+ Add` to select bands specific to the other image. Click `> Next` to continue to next step.
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_8.png" vspace="10" width="400">
@@ -186,7 +187,7 @@ Select `+ Add` to add a new class to your legend. A class consists of:
 
 You can select `HEX` (4) to display the hexadecimal value of the selected color. It can also be used to insert a known color palette by utilizing its values.
 
-If unsure which colors to use for each class, apply colors using a preselected [GEE color map](https://github.com/gee-community/ee-palettes) (5). It will color all classes in your panel.
+If unsure which colors to use for each class, apply colors using a preselected <a href="https://github.com/gee-community/ee-palettes" target="_blank" rel="noopener noreferrer">GEE color map</a> (5). It will color all classes in your panel.
 
 ![Manual legend](../images/sepal/sepal_rf/sepal_rf_10.png)
 
@@ -214,7 +215,7 @@ red,blue,green,code,class
 46,139,87,4,"mangroves"
 ```
 
-Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from [this folder](https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa). 
+Click `^` and select `Import from CSV` to upload your file.  Use the `SEPAL_classification_legend_liberia` document from <a href="https://drive.google.com/drive/u/1/folders/1pG6-rkRXKo_x5hXWMpqb06ItZYY3TFNa" target="_blank" rel="noopener noreferrer">this folder</a>. 
 
 You can select the columns that are defining your `csv` file (`Single column` for hexadecimal-defined colors or `Multiple columns` for RGB-defined colors).
 
@@ -251,7 +252,7 @@ Training data can be imported from:
 - Sampled classifications
 - Existing SEPAL recipes
 
-We will use the first option, but see more details on each option in the [SEPAL Documentation](https://docs.sepal.io/en/latest/cookbook/classification.html).
+We will use the first option, but see more details on each option in the <a href="https://docs.sepal.io/en/latest/cookbook/classification.html" target="_blank" rel="noopener noreferrer">SEPAL Documentation</a>.
 
 Click `+ Add` and select `CSV File` in the pop-out window. 
 
@@ -295,9 +296,9 @@ You can now zoom in to visualize the map in better detail. However, you can also
 You can select `AUX` to include more information that could be useful to the classification model but is not always included in satellite image bands, such as **elevation** data. Three sources are currently available on SEPAL:
  - **Latitude:** On-the-fly latitude dataset built from the coordinates of each pixel’s center.
 
- - **Terrain:** From the [NASA SRTM Digital Elevation 30 m dataset](https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003), SEPAL will use the `Elevation`, `Slope` and `Aspect` bands. It will also add an `Eastness` and `Northness` band derived from `Aspect`.
+ - **Terrain:** From the <a href="https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003" target="_blank" rel="noopener noreferrer">NASA SRTM Digital Elevation 30 m dataset</a>, SEPAL will use the `Elevation`, `Slope` and `Aspect` bands. It will also add an `Eastness` and `Northness` band derived from `Aspect`.
 
- - **Water:** From the [JRC Global Surface Water Mapping Layers, v1.3 dataset](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater), SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
+ - **Water:** From the <a href="https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater" target="_blank" rel="noopener noreferrer">JRC Global Surface Water Mapping Layers, v1.3 dataset</a>, SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_22.png" vspace="10" width="350">
 
@@ -390,7 +391,7 @@ In the example image, the water body is classified as `water`, with a confidence
 
 > **Important:**
 >
-> Exporting requires a small computation quota, which can be added through the `Terminal` (see  [**Terminal** section here](https://docs.sepal.io/en/latest/setup/presentation.html)).
+> Exporting requires a small computation quota, which can be added through the `Terminal` (see  **Terminal** section <a href="https://docs.sepal.io/en/latest/setup/presentation.html" target="_blank" rel="noopener noreferrer">here</a>).
 
 Selecting the *cloud download* icon to access the `Retrieve` pane to open the **Export** pane and choose the export parameters:
  - Select the band to export. There is no maximum number of bands; however, exporting useless bands will only increase the size and time of the output.
@@ -412,7 +413,7 @@ Select the options as shown in the image below and click `Retrieve` to start the
 
 You can follow the progress of exportation in `Tasks` tab in the lower left of your screen. 
 
-If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
+If you have selected GEE Asset as a destination, then you can also monitor tasks using the <a href="https://code.earthengine.google.com/tasks" target="_blank" rel="noopener noreferrer">GEE task manager</a>.
 
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_30.png" vspace="10" width="500">
