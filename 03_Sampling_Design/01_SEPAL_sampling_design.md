@@ -92,7 +92,7 @@ A well-prepared sample can provide a robust estimate of the parameters of intere
 
 These directions will provide a stratified random sample of the proper sampling size:
 
-1\. First, navigate to<a href="https://sepal.io/" target="_blank" rel="noopener noreferrer">https://sepal.io/</a> and sign in.
+1\. First, navigate to <a href="https://sepal.io/" target="_blank" rel="noopener noreferrer">https://sepal.io/</a> and sign in.
 
 2\. Select the **Apps** button (purple wrench).
 
