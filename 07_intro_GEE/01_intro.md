@@ -42,8 +42,9 @@ Types of data:
 
 To explore all datasets:
 
-- [https://developers.google.com/earth-engine/datasets](https://developers.google.com/earth-engine/datasets)
-- [https://developers.google.com/earth-engine/datasets/catalog](https://developers.google.com/earth-engine/datasets/catalog)
+- <a href="https://developers.google.com/earth-engine/datasets" target="_blank" rel="noopener noreferrer">https://developers.google.com/earth-engine/datasets</a>
+- <a href="https://developers.google.com/earth-engine/datasets/catalog" target="_blank" rel="noopener noreferrer">https://developers.google.com/earth-engine/datasets/catalog</a>
+
 
 <img align="center" src="../images/intro-gee/fig3.png" vspace="10" width="600">
 
@@ -58,19 +59,20 @@ GEE is a powerful tool but it is also designed to be accessible to users who are
 Codes can be converted into applications maintained on GEE:
 <img align="center" src="../images/intro-gee/fig4.png" vspace="10" width="600">
 
-<font size=2> Earth Engine Application: MODIS Ocean Temperature - Time Series Inspector. Source: https://google.earthengine.app/view/ocean. </font>
+<font size=2> Earth Engine Application: MODIS Ocean Temperature - Time Series Inspector. Source: <a href="https://google.earthengine.app/view/ocean" target="_blank" rel="noopener noreferrer">https://google.earthengine.app/view/ocean</a>. </font>
 
 
 Examples of GEE Apps:
 
-- [Fire Monitoring in the Amazon](https://gis-acca.users.earthengine.app/view/amazon-fire-tracker) - Monitoring of the Andean Amazon Project
-- [Global Forest Change](https://glad.earthengine.app/view/global-forest-change) - University of Maryland
-- [Global Forest Watch](https://www.globalforestwatch.org/) - World Resources Institute
-- [Global Surface Water](https://global-surface-water.appspot.com/map) - Joint Research Center (JRC)
-- [Tiger Habitat Monitoring](https://www.science.org/doi/10.1126/sciadv.1501675) - University of Minnesota and others
-- [Map of Life](https://species.mol.org/species/map/Perdix_dauurica)
-- [Malaria Risk Mapping](http://www.shrinkingthemalariamap.org/) - University of California San Francisco
-- [MapBiomas](https://mapbiomas.org)
+- <a href="https://gis-acca.users.earthengine.app/view/amazon-fire-tracker" target="_blank" rel="noopener noreferrer">Fire Monitoring in the Amazon</a> - Monitoring of the Andean Amazon Project
+- <a href="https://glad.earthengine.app/view/global-forest-change" target="_blank" rel="noopener noreferrer">Global Forest Change</a> - University of Maryland
+- <a href="https://www.globalforestwatch.org/" target="_blank" rel="noopener noreferrer">Global Forest Watch</a> - World Resources Institute
+- <a href="https://global-surface-water.appspot.com/map" target="_blank" rel="noopener noreferrer">Global Surface Water</a> - Joint Research Center (JRC)
+- <a href="https://www.science.org/doi/10.1126/sciadv.1501675" target="_blank" rel="noopener noreferrer">Tiger Habitat Monitoring</a> - University of Minnesota and others
+- <a href="https://species.mol.org/species/map/Perdix_dauurica" target="_blank" rel="noopener noreferrer">Map of Life</a>
+- <a href="http://www.shrinkingthemalariamap.org/" target="_blank" rel="noopener noreferrer">Malaria Risk Mapping</a> - University of California San Francisco
+- <a href="https://mapbiomas.org" target="_blank" rel="noopener noreferrer">MapBiomas</a>
+
 
 ## The GEE Code Editor
 
@@ -78,13 +80,13 @@ The Code Editor is an integrated development environment for the Earth Engine Ja
 
 The Google Earth Engine Code Editor is essentially a web-based interface that allows users to write and execute code using the Earth Engine API. The Code Editor offers an easy way to write, debug, run, and manage code. 
 
-Once you have registered an Earth Engine account, you can open the [Code Editor](https://code.earthengine.google.com/) and you'll see a screen like the one below.
+Once you have registered an Earth Engine account, you can open the <a href="https://code.earthengine.google.com/" target="_blank" rel="noopener noreferrer">Code Editor</a> and you'll see a screen like the one below.
 
 <img align="center" src="../images/intro-gee/fig5.png" vspace="10" width="600">
 
 The menu on the left consists of three tabs: `Scripts`, `Docs`, `Assets`: 
 - In the `Scripts` section you have all your code stored in repositories, folders, and files. You can organize your scripts by project, and also share access with other GEE users. 
-- `Docs` is the [API Documentation](https://developers.google.com/earth-engine/) with functions and their explanations. 
+- `Docs` is the <a href="https://developers.google.com/earth-engine/" target="_blank" rel="noopener noreferrer">API Documentation</a> with functions and their explanations. 
 - In `Assets` you can store and organize files that you upload from your computer or download from GEE. 
 
 In the center, you'll find the web-based code editor where you can insert your JS code without any prior software installation. With the `Apps` button, you can develop small automated applications to process and display data in a more user-friendly manner and interface. The `Run` button executes the code. 
@@ -142,7 +144,7 @@ Once the script is saved, it will appear in the script manager panel (under `Own
 Congratulations! You have created your first script.
 
 # Repository
-All the codes created in this workshop are available in this repository: [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops](https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops).
+All the codes created in this workshop are available in this repository: <a href="https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops</a>.
 
 Once you click this link it will be added to your account under the *Reader* repositories in the `Scripts` panel.
 
@@ -261,7 +263,7 @@ A comment can be added by selecting multiple lines and using a shortcut (`Ctrl +
 
 The Earth Engine API is extensive, providing objects and methods to do everything from simple math to advanced algorithms for image processing. 
 
-You can switch to the `Docs` tab to see the API functions grouped by object types (or in the [Earth Engine documentation](https://developers.google.com/earth-engine/apidocs)). API functions are prefixed with `ee` (for Earth Engine).
+You can switch to the `Docs` tab to see the API functions grouped by object types (or in the <a href="https://developers.google.com/earth-engine/apidocs" target="_blank" rel="noopener noreferrer">Earth Engine documentation</a>). API functions are prefixed with `ee` (for Earth Engine).
 
 <img align="center" src="../images/intro-gee/fig15.png" vspace="10" width="300">
 
@@ -295,7 +297,7 @@ Property List
      <img align="center" src="../images/intro-gee/fig13.png" vspace="10" width="150">
      <img align="center" src="../images/intro-gee/fig14.png" vspace="10" width="150">
 
-For more information access the [EE objects and methods site](https://developers.google.com/earth-engine/guides/objects_methods_overview).
+For more information access the <a href="https://developers.google.com/earth-engine/guides/objects_methods_overview" target="_blank" rel="noopener noreferrer">EE objects and methods site</a>.
 
 
 
@@ -346,7 +348,7 @@ var mean = numbersList.reduce(ee.Reducer.mean());
 print(mean);
 ```
 
-You have just completed a moderately complex programming task with the help of the Earth Engine API!
+You have just completed a moderately complex programming task with the Earth Engine API!
 
 <br />
 <br />
@@ -422,4 +424,4 @@ Calculate the sum of all Numbers in `newList`. Save and print that value as `sum
 
 ### Complete code
 
-"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link: [https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267](https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267)
+"`3 Earth Engine API`" script from the repository and the `07_intro_to_GEE/01_intro` folder or direct link: <a href="https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/d31b78d60bedfc9cf33ee819359da267</a>

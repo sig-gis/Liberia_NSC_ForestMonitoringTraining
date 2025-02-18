@@ -5,13 +5,14 @@ permalink: /05_CEO
 nav_order: 6
 ---
 
+
 # Collect Earth Online (CEO)
 This hands on session assumes you have some previous experience with CEO from past trainings. 
 
 ## Ensure you have an account and have joined the institution
- [Make CEO Accounts and Join Institution](https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link) 
+ <a href="https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Make CEO Accounts and Join Institution</a> 
 
-Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “[The Environmental Protection Agency of Liberia (EPA).](https://app.collect.earth/review-institution?institutionId=4290)” Click `Visit`.
+Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “<a href="https://app.collect.earth/review-institution?institutionId=4290" target="_blank" rel="noopener noreferrer">The Environmental Protection Agency of Liberia (EPA).</a>” Click `Visit`.
 
 <img align="center" src="./images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
 
@@ -24,7 +25,7 @@ Gathering samples for...
 - pre-work designing an efficient field campaign
 - comparison to field data
 - validating near-real-time alerts of landscape disturbances
-- creating high quality sample data that can be readily shared with others [DOI creation in CEO](https://www.collect.earth/introducing-dois-for-ceo/)
+- creating high quality sample data that can be readily shared with others <a href="https://www.collect.earth/introducing-dois-for-ceo/" target="_blank" rel="noopener noreferrer">DOI creation in CEO</a>
 - ...
 
 
@@ -51,8 +52,8 @@ Click on the `edit` button for the last imagery on the page called "Global Mangr
 <img align="center" src="./images/ceo/CEO_GEE_import_viz_params.png" hspace="15" vspace="10" width="700">
 
 These blogs have further information on adding imagery in CEO:
-- [Setting up multiple imagery sources in CEO](https://www.collect.earth/setting-up-multiple-imagery-sources-in-ceo/)
-- [Using your own data in CEO: Connecting GEE raster data](https://www.collect.earth/connecting-gee-raster-data/)
+- <a href="https://www.collect.earth/setting-up-multiple-imagery-sources-in-ceo/" target="_blank" rel="noopener noreferrer">Setting up multiple imagery sources in CEO</a>
+- <a href="https://www.collect.earth/connecting-gee-raster-data/" target="_blank" rel="noopener noreferrer">Using your own data in CEO: Connecting GEE raster data</a>
 
 
 ## Create a CEO Project
@@ -130,7 +131,7 @@ On the `Survey Rules` page, you can create rules related to your survey question
 <img align="center" src="./images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
 
 *See here for futher details on rules:* 
-[Blog - Using rules to collect better data in CEO](https://www.collect.earth/using-rules-to-collect-better-data-in-ceo/)
+<a href="https://www.collect.earth/using-rules-to-collect-better-data-in-ceo/" target="_blank" rel="noopener noreferrer">Blog - Using rules to collect better data in CEO</a>
 
 Click `Next`.
 
@@ -149,8 +150,8 @@ Open the Geo-Dash via the Project Edit page through the `Configure Geo-Dash` but
 
 <img align="center" src="./images/ceo/CEO_geodash_degradation_widget.png" hspace="15" vspace="10" width="500">
 
-### <span style="color: blue;">**Tip for the Geo-Dashboard*</span>
-<span style="color: blue;">*The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.</span>
+### <span style="color: blue;">*Tip for the Geo-Dashboard*</span>
+<span style="color: blue;">The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.</span>
 
 Publish your project when you have tested it's functionallity using the draft `Collect` button on on the project editing page and have finalized your design. Most features of the project cannot be changed once you publish, but worst case scenario if you make a mistake and need to make a change, you can use the project you made as a starting *Template* for a new project.
 
@@ -184,7 +185,7 @@ Go back to the CEO project. Exambine the available imagey and the Geo-Dashboard 
 
 ### <span style="color: blue;">*Tip about finalizing an interpretation*</span>
 - <span style="color: blue;">Use all the resources available to you. A good interpretation is usually informed by multiple sources, such as the Google Earth Pro imagery, the imagery in CEO from multiple days, and/or the graphs in the Geo-Dashboard.</span> 
-- <span style="color: blue;">Follow a standardized procedure for interpretation across your team, referencing your Interpretation Key. See this [recommended interpretation procedure example](https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link) and update it for your needs.</span>
+- <span style="color: blue;">Follow a standardized procedure for interpretation across your team, referencing your Interpretation Key. See this <a href="https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">recommended interpretation procedure example</a> and update it for your needs.</span>
 - <span style="color: blue;">**Always record the confidence** of your interpretation (making sure your team is using the 0-100 Confidence values in the same way), and record your reasoning and points of confusion for later reference during QA/QC reviews. The *Confidence Slider* values can be used automatically selecting points for quality review.</span>
 
 Click `Save`.  
@@ -213,11 +214,14 @@ You can also export the results as a Plots file `P` or as a `shapefile`. This is
 ## Sources 
 Material for this overview was gathered and modified from:
 
-* https://www.collect.earth/
-* https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)
-* https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)
-* https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/
-* https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory
+* <a href="https://www.collect.earth/" target="_blank" rel="noopener noreferrer">https://www.collect.earth/</a>
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides - Data Collection Manual
+</a>
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/ - Institution Project Creation  Manual
+</a>
+* <a href="https://www.collect.earth/connecting-gee-raster-data/" target="_blank" rel="noopener noreferrer">https://www.collect.earth/connecting-gee-raster-data/
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/ - Project Development Theory 
+</a>
 
 <br />
 <br />
@@ -225,7 +229,7 @@ Material for this overview was gathered and modified from:
 ## Exercise
 Next, let's practice out our CEO interpretation skills in the demo project in your CEO institution!
 
-An example Plot Data CSV for making your own project is available [here](https://drive.google.com/drive/folders/13aQi8Sz0vKfKY8wOEAuu6vNWlpG9Vs_m?usp=drive_link).
+An example Plot Data CSV for making your own project is available <a href="https://drive.google.com/drive/folders/13aQi8Sz0vKfKY8wOEAuu6vNWlpG9Vs_m?usp=drive_link" target="_blank" rel="noopener noreferrer">here</a>.
 
 Demo CEO project: "Workshop2_validation_DEMO"
-- [https://app.collect.earth/review-project?projectId=49814](https://app.collect.earth/review-project?projectId=49814)
+- <a href="https://app.collect.earth/review-project?projectId=49814" target="_blank" rel="noopener noreferrer">https://app.collect.earth/review-project?projectId=49814</a>

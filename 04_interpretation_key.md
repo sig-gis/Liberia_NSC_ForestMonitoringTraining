@@ -5,6 +5,7 @@ permalink: /04_InterpretationKey
 nav_order: 5
 ---
 
+
 <img align="center" src="./images/ceo/looking_at_key_v2.png" hspace="10" vspace="20" width="600">
 
 
@@ -12,15 +13,15 @@ nav_order: 5
 
 <br />
 
-[*Link to Workshop 1 Google Drive*](https://drive.google.com/drive/folders/1G9PdSQWQzkpUaXD0BISQ-NT9mfd1l7vM?usp=sharing)
+<a href="https://drive.google.com/drive/folders/1G9PdSQWQzkpUaXD0BISQ-NT9mfd1l7vM?usp=sharing" target="_blank" rel="noopener noreferrer">*Link to Workshop 1 Google Drive*</a>
 
 
 | **Topic** | **Materials** |
 |---|---|
-| Project and Procedure Planning | [InterpretationProjects_CEO_and_InterpretationPlanning](https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link) |
-| Overview of Key template | [Template Option](https://docs.google.com/document/d/1NtC8SD27o-6qHWA--XFO11_fMT2WUzRG-s7Kpnvhr-c/edit?usp=sharing) |
-| Overview on how to continue gathering examples for the key | [Examples of images for interpretation](https://docs.google.com/presentation/d/1-i7fFr6rzjbcj8r4lAcYCOw54IEiVik-1psdN8-Iw_Y/edit?usp=drive_link) |
-| Interpretation Practices Quick Overview | [Best practices for interpretation](https://docs.google.com/presentation/d/1c1qLd8eFGWZMoXAn3chOi0h0VlidBnnHKF7Wy1DSQaU/edit?usp=drive_link) / [Interpretation Procedures](https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link) |
+| Project and Procedure Planning | <a href="https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">InterpretationProjects_CEO_and_InterpretationPlanning</a> |
+| Overview of Key template | <a href="https://docs.google.com/document/d/1NtC8SD27o-6qHWA--XFO11_fMT2WUzRG-s7Kpnvhr-c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Template Option</a>|
+| Overview on how to continue gathering examples for the key | <a href="https://docs.google.com/presentation/d/1-i7fFr6rzjbcj8r4lAcYCOw54IEiVik-1psdN8-Iw_Y/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Examples of images for interpretation</a>|
+| Interpretation Practices Quick Overview | <a href="https://docs.google.com/presentation/d/1c1qLd8eFGWZMoXAn3chOi0h0VlidBnnHKF7Wy1DSQaU/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Best practices for interpretation</a> / <a href="https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Interpretation Procedures</a>|
 
 
 # Reminder of Goals
@@ -31,7 +32,7 @@ nav_order: 5
 3. **Creating institutional knowledge** – Helps new team members start collecting data and contributing to your project quickly and accurately.
 
 # Interpretation Key Recommendations
-Here is a [link](https://drive.google.com/drive/folders/15wtjNl-YhMMw3111k0K6nYmySClJ8LtD?usp=sharing) to Liberia's current Interpretation Key in Google Drive. 
+Here is a <a href="https://drive.google.com/drive/folders/15wtjNl-YhMMw3111k0K6nYmySClJ8LtD?usp=sharing" target="_blank" rel="noopener noreferrer">link</a> to Liberia's current Interpretation Key in Google Drive. 
 
 Key areas that can always be improved and should be revisited:
 1. Make sure your definitions are clear and that the requirements relate to characterisitics visible in remote sensing imagery.

@@ -8,19 +8,19 @@ nav_order: 2
 
 # Sampling Design using SEPAL
 
-These instructions are adapted from [OpenMRV](https://www.openmrv.org/web/guest/w/modules/sepal-ceo/sample-design-and-stratification).
+These instructions are adapted from <a href="https://www.openmrv.org/web/guest/w/modules/sepal-ceo/sample-design-and-stratification" target="_blank" rel="noopener noreferrer">OpenMRV</a>.
 
 
 We will use the SEPAL Stratified Area Estimator (SAE)-Design tool to distribute sample points usind a stratified random sampling approach. The SAE-Design tool will generate a set of stratified random points that are placed in each of the different map classes (which we will now call strata) represented in your map. 
 
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=mbskeQNjj7A&t=4s)*.
+> *A video-tutorial is available in <a href="https://www.youtube.com/watch?v=mbskeQNjj7A&t=4s" target="_blank" rel="noopener noreferrer">this YouTube video</a>*.
 
 
 ## Pre-requisites
 - A SEPAL account and a Collect Earth Online (CEO) account. 
 - A previously generated map to use for stratification.
     - For this workshop, you will need to first download the map to your local machine, and then upload it to SEPAL following the instructions below.
-- If you have a large Area of Interest (AOI), you may need to first increase the size of your instance for faster processing (see `Terminal` section [here](https://docs.sepal.io/en/latest/setup/presentation.html)).
+- If you have a large Area of Interest (AOI), you may need to first increase the size of your instance for faster processing (see `Terminal` section <a href="https://docs.sepal.io/en/latest/setup/presentation.html" target="_blank" rel="noopener noreferrer">here</a>).
 
 
 ## 1. Uploading your stratification map
@@ -81,7 +81,7 @@ d. Click **Import**
 
 > **_NOTE:_** 
 >
->*You can view a demonstration of creating a stratification on this [YouTube demo video](https://www.youtube.com/watch?v=mbskeQNjj7A).*
+>*You can view a demonstration of creating a stratification on this <a href="https://www.youtube.com/watch?v=mbskeQNjj7A" target="_blank" rel="noopener noreferrer">YouTube demo video</a>.*
 
 
 ## Part 1: Creating a stratified random sample
@@ -92,7 +92,7 @@ A well-prepared sample can provide a robust estimate of the parameters of intere
 
 These directions will provide a stratified random sample of the proper sampling size:
 
-1\. First, navigate to https://sepal.io/ and sign in.
+1\. First, navigate to <a href="https://sepal.io/" target="_blank" rel="noopener noreferrer">https://sepal.io/</a> and sign in.
 
 2\. Select the **Apps** button (purple wrench).
 

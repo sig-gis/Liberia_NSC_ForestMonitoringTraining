@@ -8,10 +8,9 @@ nav_order: 1
 # Preprocessing Imagery in SEPAL
 
 
-
 ## Optical mosaics
 
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=N8kIBBE3tdM)*.
+> *A video-tutorial is available in <a href="https://www.youtube.com/watch?v=N8kIBBE3tdM" target="_blank" rel="noopener noreferrer">this YouTube video</a>*.
 
 A mosaic is a combination or fusion of two or more images. In SEPAL, you can create a single raster dataset from several raster datasets by mosaicking them together. This can be achieved on both contiguous rasters (first image below) and overlapping images (second image below).
 
@@ -33,7 +32,7 @@ SEPAL offers an interactive and intuitive way to create mosaics in any area of i
 
 > **Note:**
 >
-> In order to be able to retrieve the images, be sure to [connect your SEPAL and Google Earth Engine (GEE) accounts](https://docs.sepal.io/en/latest/setup/gee.html).
+> In order to be able to retrieve the images, be sure to <a href="https://docs.sepal.io/en/latest/setup/gee.html" target="_blank" rel="noopener noreferrer">connect your SEPAL and Google Earth Engine (GEE) accounts</a>.
 
 ## Start
 
@@ -86,7 +85,7 @@ The data exported by the recipe will be generated from within the bounds of the 
 - EE Tables (from GEE assets)
 - Drawn polygons
 
-For more details, see [AOI selection](https://docs.sepal.io/en/latest/feature/aoi_selector.html).
+For more details, see <a href="https://docs.sepal.io/en/latest/feature/aoi_selector.html" target="_blank" rel="noopener noreferrer">AOI selection</a>.
 
 For this workshop, type `Liberia` in the **country** cell under the `AOI` tab and also select one of the provinces, since a smaller area will export faster for the purposes of this workshop. Click `Next`.
 
@@ -115,11 +114,13 @@ You can also expand the date selection tool in the `DAT` panel by clicking `More
 
 A mosaic uses different raster datasets obtained from multiple sources. SEPAL allows you to select data from multiple entry points:
 
-- **L9**: Landsat 9 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
-- **L8**: Landsat 8 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
-- **L7**: Landsat 7 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1) and [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2)
-- **L4-5**: Landsat 4 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T1), [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T2), and Landsat 5 [Tier 1](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T1), [Tier 2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T2)
-- **S2**: Sentinel-2 [Multispectral](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED)
+- **L9**: Landsat 9 <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T1" target="_blank" rel="noopener noreferrer">Tier 1</a> and <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2" target="_blank" rel="noopener noreferrer">Tier 2</a>
+- **L8**: Landsat 8 <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C02_T1" target="_blank" rel="noopener noreferrer">Tier 1</a> and <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2" target="_blank" rel="noopener noreferrer">Tier 2</a>
+- **L7**: Landsat 7 <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LE07_C02_T1" target="_blank" rel="noopener noreferrer">Tier 1</a> and <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC09_C02_T2" target="_blank" rel="noopener noreferrer">Tier 2</a>
+- **L4-5**: Landsat 4 <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T1" target="_blank" rel="noopener noreferrer">Tier 1</a>, <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT04_C02_T2" target="_blank" rel="noopener noreferrer">Tier 2</a>, and Landsat 5 <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T1" target="_blank" rel="noopener noreferrer">Tier 1</a>, <a href="https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T2" target="_blank" rel="noopener noreferrer">Tier 2</a>
+[]()
+- **S2**: Sentinel-2 <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_HARMONIZED" target="_blank" rel="noopener noreferrer">Multispectral</a>
+[]()
 
 Let's select L8 Tier 1 and click `Done`.
 ![Source selection](../images/sepal/sepal_prep/sepal_prep_10.png)
@@ -154,7 +155,7 @@ Let's select **Use all scenes** and click `Apply`.
 > - **Snow masking**: `On`
 > - **Composing method**: `Medoid`
 
-For our workshop, we will use the default settings, but we encourage you to explore different options and refer to SEPAL documentation under [Composite](https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html) for further details. Click `Apply`.
+For our workshop, we will use the default settings, but we encourage you to explore different options and refer to SEPAL documentation under <a href="https://docs.sepal.io/en/latest/cookbook/optical_mosaic.html" target="_blank" rel="noopener noreferrer">Composite</a> for further details. Click `Apply`.
 
 ![Composite options](../images/sepal/sepal_prep/sepal_prep_12.png)
 
@@ -180,7 +181,7 @@ In the upper-right corner, three tabs are available, which allow you to customiz
 
 > **Important:**
 >
-> Exporting of a `.tiff` file requires a small computation quota (see [Resource setup](https://docs.sepal.io/en/latest/setup/resource.html)).
+> Exporting of a `.tiff` file requires a small computation quota (see <a href="https://docs.sepal.io/en/latest/setup/resource.html" target="_blank" rel="noopener noreferrer">Resource setup</a>).
 
 Click the `Retrieve mosaic` button (*cloud download* icon) to open the `Retrieve` pane where you can select the parameters for exporting.
 
@@ -203,7 +204,7 @@ You can set a custom scale for exportation by changing the value of the slider i
 You can export the image to the SEPAL workspace or to the Google Earth Engine Asset folder. The same image will be exported to both; however, for the former, you will find it in `.tif` format in the `Downloads` folder; for the latter, the image will be exported to your GEE account asset list.
 
 
-> **Note:** If `Google Earth Engine Asset` is not displayed, ensure your [GEE account is connected to SEPAL](https://docs.sepal.io/en/latest/setup/gee.html).
+> **Note:** If `Google Earth Engine Asset` is not displayed, ensure your <a href="https://docs.sepal.io/en/latest/setup/gee.html" target="_blank" rel="noopener noreferrer">GEE account is connected to SEPAL</a>.
 
 ![Retrieve pane](../images/sepal/sepal_prep/sepal_prep_14.png)
 
@@ -237,7 +238,7 @@ Tests showed exporting 2014 L8 T1 took about 25 minutes, and exporting 2024 L8 T
 > This operation is running between GEE and SEPAL servers in the background. You can close the SEPAL page without stopping the process.
 
 
-If you have selected GEE Asset as a destination, then you can also monitor tasks using the [GEE task manager](https://code.earthengine.google.com/tasks).
+If you have selected GEE Asset as a destination, then you can also monitor tasks using the <a href="https://code.earthengine.google.com/tasks" target="_blank" rel="noopener noreferrer">GEE task manager</a>.
 
 ![Download process](../images/sepal/sepal_prep/sepal_prep_18.png)
 
@@ -262,7 +263,7 @@ Now that you've downloaded the optical mosaic, you can use it in other SEPAL wor
 
 
 ## Radar mosaics
-> *A video-tutorial is available in [this YouTube video](https://www.youtube.com/watch?v=lip8C4tq7ig)*.
+> *A video-tutorial is available in <a href="https://www.youtube.com/watch?v=lip8C4tq7ig" target="_blank" rel="noopener noreferrer">this YouTube video</a>*.
 
 
 In addition to Optical imagery, you can also access Radar imagery through SEPAL. The SEPAL recipe for radar mosaics allows users to generate analysis-ready data (ARD) from the Sentinel-1 C-Band synthetic aperture radar (SAR) mission, which can be used in subsequent analysis, such as land cover classification.

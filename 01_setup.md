@@ -19,10 +19,9 @@ nav_order: 2
 - Make a Google Earth Engine account (for days 1, 2, 4, and 5)
     - Joining the workshop Google Group will give you access to the **pc556-ncs-liberia-forest-mang** GEE Cloud Project, but you may also choose to make a noncommercial *Trainer & Trainees type* GEE Cloud Project of your own. 
 
-
 ## Workshop Google Group
 
-Sign in to [Google Groups](https://groups.google.com/)(https://groups.google.com/) or click on the square of 9 dots at the top right of your gmail.
+Sign in to <a href="https://groups.google.com/" target="_blank" rel="noopener noreferrer">Google Groups</a> (https://groups.google.com/) or click on the square of 9 dots at the top right of your gmail.
 
 Set the search dropdown to “All groups and messages”.
 
@@ -33,9 +32,9 @@ Click on the group and then click the *Ask to join group* button.
 
 ## GEE Account
 
-Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
+Create a <a href="https://code.earthengine.google.com/register" target="_blank" rel="noopener noreferrer">Google Earth Engine account</a> (https://code.earthengine.google.com/register). 
 
-You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
+You will need a <a href="https://accounts.google.com/signup" target="_blank" rel="noopener noreferrer">Google account</a> (https://accounts.google.com/signup). 
 
 Create a GEE account for non-commercial purposes.
 
@@ -52,7 +51,10 @@ Follow the steps below if you want to register your own GEE cloud project:
 Create a SEPAL account and request additional resources to be able to access the stratified estimator analysis apps.
 
 Go to this page:
-[S E P A L](https://sepal.io/)(https://sepal.io/)
+<a href="https://sepal.io/" target="_blank" rel="noopener noreferrer">S E P A L</a> (https://sepal.io/)
+
+
+
 
 Click `Launch` and then `Sign Up`.
 
@@ -87,7 +89,7 @@ Within a few days, SEPAL admins should grant you these resources, which will all
 Create a Collect Earth Online Account and request to join the Guyana Workshop institution.
 
 Go to this page:
-[Collect Earth Online Home - Collect Earth Online](https://www.collect.earth/)(https://www.collect.earth/)
+<a href="https://www.collect.earth/" target="_blank" rel="noopener noreferrer">Collect Earth Online Home - Collect Earth Online</a> (https://www.collect.earth/)
 
 Click `Register` at the top right.
 
@@ -115,7 +117,7 @@ Admins of the institution can then add you as either a member or an admin.
 Download Google Earth Pro Software to your computer.
 
 Go to this page:
-[Earth Versions – Google Earth](https://www.google.com/earth/versions/)
+<a href="https://www.google.com/earth/versions/" target="_blank" rel="noopener noreferrer">Earth Versions – Google Earth</a> (https://www.google.com/earth/versions/)
 
 Scroll down to the bottom of the page and click `Download Earth Pro on Desktop`.
 
@@ -134,7 +136,7 @@ Download and install QGIS on your computer.
 
 <img align="center" src="images/setup/qgis-icon.png" vspace="10" width="70">
 
-Go to the official [QGIS Download Page](https://qgis.org/download/)(https://qgis.org/download/).
+Go to the official <a href="https://qgis.org/download/" target="_blank" rel="noopener noreferrer">QGIS Download Page</a> (https://qgis.org/download/).
 
 Scroll down to the appropriate section based on your operating system (Windows, macOS, Linux).
 
@@ -161,7 +163,7 @@ Create a Pix4D account, activate the free 15-day trial, download Pix4Dmapper to 
 #### 1. Create a Pix4D account
 
 Go to this page:
-[Professional photogrammetry and drone mapping software | Pix4D](https://www.pix4d.com/)(https://www.pix4d.com/)
+<a href="https://www.pix4d.com/" target="_blank" rel="noopener noreferrer">Professional photogrammetry and drone mapping software | Pix4D</a> (https://www.pix4d.com/)
 
 Click `Login`.
 
