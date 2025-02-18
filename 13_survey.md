@@ -10,6 +10,5 @@ Please share your feedback for this workshop. Your responses are anonymous. Feed
 
 **<a href="https://forms.gle/uAigJNF7ymciAL787" target="_blank" rel="noopener noreferrer">Survey link</a>**
 
-[test](https://forms.gle/uAigJNF7ymciAL787){:target="_blank" rel="noopener noreferrer"}
 
 Thank you! 
