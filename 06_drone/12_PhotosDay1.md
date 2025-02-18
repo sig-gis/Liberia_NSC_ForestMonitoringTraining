@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Types of UAS Platforms"
+title: "Drone Photos"
 parent: "6. Drone Flight & Image Processing"
 nav_order: 12
 ---
