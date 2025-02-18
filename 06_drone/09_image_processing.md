@@ -249,6 +249,8 @@ In some cases the edges of the imagery will have a lot of errors and no data "ho
 
 <img align="center" src="../images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
 
+<img align="center" src="../images/drone/ProcessingExtentPix4D_2.png" hspace="15" vspace="10" width="600">
+
 ## 3.3 Ray Cloud
 
 After Initial Processing is complete, you can access the `rayCloud` view from the tab on the left side of the main screen. This is called a “ray cloud” and it contains lots of important features that you should become familiar with. Each of the spheres at the top of the pyramid-like structures represents a camera position. The blue spheres are the initial camera position from GPS coordinates the camera recorded during the flight. The green spheres are optimized camera positions the program calculates. The red spheres are the initial camera positions for uncalibrated cameras which Pix4D could not find optimized positions for. Because imagery relating to uncalibrated cameras will have generated potential warnings in the quality report and affected your output negatively, you may want to disable cameras or remove the bad images. 
