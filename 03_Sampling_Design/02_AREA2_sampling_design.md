@@ -72,10 +72,12 @@ Based on your selection your screen will update to look like one of the options 
 
 So we will use the **Arbitrary sample size** option with this in mind.
 
-    Note: 
-    If you were performing a **sample-based area estimation** with these points, you would likely want to use one of the latter two options. You would use values for expected User's Accuracies and target Standard Error in the same way you just did in SEPAL. 
-
-    You would also be required to place samples in all areas of the map, even over cloudy strata. For sample-based estimates of the full population it is a rule that all areas must have a non-zero probability of being sampled.
+> Note: 
+> 
+> If you were performing a **sample-based area estimation** with these points, you would likely want to use one of the latter two options. You would use values for expected User's Accuracies and target Standard Error in the same way you just did in SEPAL. 
+>
+> You would also be required to place samples in all areas of the map, even over cloudy strata. For sample-based estimates of the full population it is a rule that all areas must have a non-zero probability of being sampled.
+>
 
 8\. Remember, these are the map values of the stratification map we are using.
 
