@@ -265,7 +265,7 @@ Map.addLayer(dem, demVis, 'DEM', false);
 Now, we start importing the raw satellite imagery we will use in our model, starting with synthetic aperture radar (SAR) imagery. We need to do some filtering and preprocessing for the SAR imagery before we use it in our model. SAR can be more complex to interpret and analyze, but it can be very useful in tropical areas where cloud cover makes optical imagery difficult to use. 
 
 >*Details on SAR:* 
->>*Resource:* For some background on SAR data, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/01_sar.html" target="_blank" rel="noopener noreferrer">SAR section of the Resources page</a> on this website, and more extensive SAR materials can be found at this [website](https://learnsar.open.uaf.edu/sar-resources/).
+>>*Resource:* For some background on SAR data, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/01_sar.html" target="_blank" rel="noopener noreferrer">SAR section of the Resources page</a> on this website, and more extensive SAR materials can be found at this <a href="https://learnsar.open.uaf.edu/sar-resources/" target="_blank" rel="noopener noreferrer">website</a>.
 
 >>In general, for forest mapping in tropical West Africa, the following types of SAR images are most useful, so we will use these to guide our decisions:
 >>* Descending orbit pass 
