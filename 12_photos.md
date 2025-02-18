@@ -21,4 +21,4 @@ Photos from recent workshops will be displayed here.
 
 <img align="center" src="./images/photos/photo_flight3.jpeg" hspace="5" vspace="5" width="400">
 
-<img align="center" src="./images/photos/photo_flight4.jpeg" hspace="5" vspace="5" width="400">
+<img align="center" src="./images/photos/photo_flight4.jpeg" hspace="5" vspace="5" width="800">
