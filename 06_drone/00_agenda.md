@@ -14,7 +14,7 @@ Welcome to Drone Flight and Image Processing! In this portion of the workshop, w
 
 ## Pre-workshop Set-up
 
-1. Make sure you have <a href="https://www.pix4d.com/download/pix4dmapper/" target="_blank" rel="noopener noreferrer">tesPix4Dmapperting</a> installed on your computer.
+1. Make sure you have <a href="https://www.pix4d.com/download/pix4dmapper/" target="_blank" rel="noopener noreferrer">Pix4Dmapper</a> installed on your computer.
 2. Make sure you have made a Pix4D account and activated your <a href="https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4Dmapper" target="_blank" rel="noopener noreferrer">14-day free Pix4Dmapper trial</a>.
 3. Download all the files from <a href="https://drive.google.com/drive/folders/1evFZg4gZ99b4NHabrhMnxwjFJszIUKcU?usp=sharing" target="_blank" rel="noopener noreferrer">this Google Drive folder</a> onto your computer.
 
