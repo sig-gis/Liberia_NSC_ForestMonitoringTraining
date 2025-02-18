@@ -12,8 +12,6 @@ nav_order: 9
 
 Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
 
-
-
 ### General Pix4Dmapper workflow
 
 1. Keypoint extraction
@@ -92,26 +90,7 @@ Select `3D Maps`
 
 <img align="center" src="../images/drone/pix4d_processingoptions.png" hspace="15" vspace="10" width="600">
 
-Before you continue, you want to consider: 
-1. the type of imagery you are processing
-2. your desired final products
-
-The type of imagery you are processing will determine which workflow you use and which products you can generate.  Here are some products you can make with various types of imagery:
-
-RGB 
-* Orthomosaics
-* DSM/DTM (Elevation Models)
-* Point Cloud 
-
-Multispectral 
-* Reflectance maps 
-* Vegetation indices 
-
-Thermal 
-* Thermal IR indices 
-* Temperature indices 
-
-Also keep in mind that the specific sensor you used to collect your imagery will determine your process. Some sensors calibrate while in flight (such as the senseFly ThermoMAP), while many others do not and will require calibration in Pix4D. Also, you will need to know if your sensor is recording absolute temperature (senseFly ThermoMAP) or relative temperature (FLIR Vue Pro), as this will determine how thermal indices are calculated.
+## **The other options can be applied if you collected data with another type of sensor.*
 
 ### Make sure the box next to "Start Processing Now" is not checked
 This will automatically start the photogrammetry process and you will not be able to change additional settings or select extra outputs
