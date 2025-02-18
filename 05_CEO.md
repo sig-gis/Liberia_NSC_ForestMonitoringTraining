@@ -150,8 +150,8 @@ Open the Geo-Dash via the Project Edit page through the `Configure Geo-Dash` but
 
 <img align="center" src="./images/ceo/CEO_geodash_degradation_widget.png" hspace="15" vspace="10" width="500">
 
-### <span style="color: blue;">**Tip for the Geo-Dashboard*</span>
-<span style="color: blue;">*The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.</span>
+### <span style="color: blue;">*Tip for the Geo-Dashboard*</span>
+<span style="color: blue;">The Degradation Widget is especially useful because you can view the time series graph and immediately inspect the Landsat imagery for any points along that graph.</span>
 
 Publish your project when you have tested it's functionallity using the draft `Collect` button on on the project editing page and have finalized your design. Most features of the project cannot be changed once you publish, but worst case scenario if you make a mistake and need to make a change, you can use the project you made as a starting *Template* for a new project.
 
@@ -215,18 +215,12 @@ You can also export the results as a Plots file `P` or as a `shapefile`. This is
 Material for this overview was gathered and modified from:
 
 * <a href="https://www.collect.earth/" target="_blank" rel="noopener noreferrer">https://www.collect.earth/</a>
-
-* <a href="https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)
-" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Data%20Collection%20Manual%20(English)" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides - Data Collection Manual
 </a>
-* <a href="https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)
-" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Institution%20%26%20Project%20Creation%20Manual%20(English)" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/ - Institution Project Creation  Manual
 </a>
-* <a href="https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/
-" target="_blank" rel="noopener noreferrer">https://blog.collect.earth/index.php/2022/04/21/connecting-gee-raster-data/
-</a>
-* <a href="https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory
-" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory
+* <a href="https://www.collect.earth/connecting-gee-raster-data/" target="_blank" rel="noopener noreferrer">https://www.collect.earth/connecting-gee-raster-data/
+* <a href="https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory" target="_blank" rel="noopener noreferrer">https://www.collect.earth/ceo-guides/ - Project Development Theory 
 </a>
 
 <br />
