@@ -348,7 +348,7 @@ var mean = numbersList.reduce(ee.Reducer.mean());
 print(mean);
 ```
 
-You have just completed a moderately complex programming task with the help of the Earth Engine API!
+You have just completed a moderately complex programming task with the Earth Engine API!
 
 <br />
 <br />
