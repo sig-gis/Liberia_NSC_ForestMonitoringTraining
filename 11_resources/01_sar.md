@@ -255,7 +255,7 @@ Each scene was pre-processed with <a href="https://sentinel.esa.int/web/sentinel
 
 For more information about these pre-processing steps, please refer to the <a href="https://developers.google.com/earth-engine/sentinel1" target="_blank" rel="noopener noreferrer">Sentinel-1 Pre-processing article</a>. For further advice on working with Sentinel-1 imagery, see <a href="https://developers.google.com/earth-engine/tutorials/community/sar-basics" target="_blank" rel="noopener noreferrer">Guido Lemoine's tutorial on SAR basics</a> and <a href="https://developers.google.com/earth-engine/tutorials/community/detecting-changes-in-sentinel-1-imagery-pt-1" target="_blank" rel="noopener noreferrer">Mort Canty's tutorial on SAR change detection</a>.
 
-This collection is computed on-the-fly. If you want to use the underlying collection with raw power values (which is updated faster), see <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD_FLOAT" target="_blank" rel="noopener noreferrer">COPERNICUS/S1_GRD_FLOAT</a>.
+This collection is computed on-the-fly. If you want to use the underlying collection with raw power values (which is updated faster), see <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD" target="_blank" rel="noopener noreferrer">COPERNICUS/S1_GRD</a>.
 
 The different <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-1/instrument-payload" target="_blank" rel="noopener noreferrer">Sentinel-1 Product Modes</a> are:
 
