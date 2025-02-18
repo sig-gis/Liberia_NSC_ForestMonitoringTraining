@@ -160,7 +160,7 @@ Flight speed refers to the rate of travel of the drone.  Higher speeds allow the
 
 <img align="center" src="../images/drone/RC_Screenshots/21_RTKSelect4.jpg" hspace="15" vspace="10" width="1000">
 
-## 21. Set the "Course Angle" fpr most efficient flight
+## 21. Set the "Course Angle" for most efficient flight
 
 <img align="center" src="../images/drone/RC_Screenshots/Course_Angle.gif" hspace="15" vspace="10" width="1000">
 
