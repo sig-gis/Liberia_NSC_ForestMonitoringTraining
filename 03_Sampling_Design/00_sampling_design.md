@@ -6,8 +6,6 @@ has_children: True
 nav_order: 4
 ---
 
-<a href="testlink" target="_blank" rel="noopener noreferrer">testing</a>
-
 
 # Overview of Sampling Design
 
