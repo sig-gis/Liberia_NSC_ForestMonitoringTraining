@@ -138,7 +138,10 @@ Make sure that `Advanced` is selected (at the very bottom of the window)
 ## 2.1 General 
 
 Pix4D documentation: 
-<a href="https://support.pix4d.com/hc/en-us/articles/202557759-Menu-Process-Processing-Options-1-Initial-Processing-General" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > General (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/202557759" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > General (pix4d.com)</a>
+
+<!-- Afa: The link below didn't work, so updated it with the one above (relevant to all Pix4D documentation links): -->
+<!-- <a href="https://support.pix4d.com/hc/en-us/articles/202557759-Menu-Process-Processing-Options-1-Initial-Processing-General" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > General (pix4d.com)</a> -->
 
 
 * `Keypoints Image Scale` is the image size at which keypoints are extracted, compared to the original image size. You can select `Custom` to change it. Varying your keypoint image scale will affect the density of the sparse point cloud and subsequent products. Anything under 1 (original image size) will reduce accuracy, but is ideal for images that are blurry or low in texture. Quarter (¼) image scale is recommended for projects with high overlap because it helps to speed up the processing.  A lower image scale is also better if there are many homogenous/flat surface types in your image that look very similar (e.g. a very uniform forest/field).  In areas of dense vegetation, processing at half (½) image scale can yield a higher number of calibrated images (if some are left uncalibrated at full (1) image scale).  
@@ -159,7 +162,7 @@ Set the parameters to the following:
 ## 2.2 Matching
 
 Pix4D Documentation: 
-<a href="https://support.pix4d.com/hc/en-us/articles/205433155-Menu-Process-Processing-Options-1-Initial-Processing-Matching" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > Matching (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/205433155" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > Matching (pix4d.com)</a>
 
 * Check `Aerial Grid or Corridor` if you used an automated grid approach for your flight. 
 
@@ -178,7 +181,7 @@ Set the parameters to the following:
 ## 2.3 Calibration 
 
 Pix4D Documentation:
-<a href="https://support.pix4d.com/hc/en-us/articles/205327965-Menu-Process-Processing-Options-1-Initial-Processing-Calibration" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > Calibration (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/205327965" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 1. Initial Processing > Calibration (pix4d.com)</a>
 
 During the calibration process, the raw images are adjusted based on the actual camera settings and environmental conditions that occurred during the flight based on the location of the keypoint images. 
 
@@ -264,7 +267,7 @@ There are several other components of the report which you may want to examine n
 ## 3.2 Processing Extent
 In some cases the edges of the imagery will have a lot of errors and no data "holes".  To accomodate this it helps to create a processing extent, this step reduces the "holes" around edges.  To do this step click the map view pull down in the top ribbon and you can either import a polygon or draw your own extent
 
-<img align="center" src="images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
 
 ## 3.3 Ray Cloud
 
@@ -293,7 +296,7 @@ Alternatively, you can address calibration issues by clicking the red sphere, fi
 ## 3.5 Manual Tie Points
 
 Pix4D Documentation: 
-<a href="https://support.pix4d.com/hc/en-us/articles/202560349-How-to-add-import-and-mark-manual-tie-points-MTPs-in-the-rayCloud" target="_blank" rel="noopener noreferrer">How to add / import and mark manual tie points (MTPs) in the rayCloud (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/202560349" target="_blank" rel="noopener noreferrer">How to add / import and mark manual tie points (MTPs) in the rayCloud (pix4d.com)</a>
 
 You can add Manual Tie Points (MTPs) to help align your drone images better.  You should add MTPs in problematic areas where there is little overlap or misalignment. To know where to add a MTP, you should verify the re-projection of a point. Open the `rayCloud` view from the main screen.
 
@@ -363,7 +366,7 @@ Set the parameters to the following:
 ## 4.2 3D Textured Mesh
 
 Pix4D Documenation: 
-<a href="https://support.pix4d.com/hc/en-us/articles/208194103-Menu-Process-Processing-Options-2-Point-Cloud-and-Mesh-3D-Textured-Mesh" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 2. Point Cloud and Mesh > 3D Textured Mesh (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/208194103" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 2. Point Cloud and Mesh > 3D Textured Mesh (pix4d.com)</a>
 
 The second screen is the `3D Textured Mesh` screen. A 3D textured mesh is a surface composed of triangles and is created from the point cloud. The vertices of the triangles are made in a way that minimizes the distance between points of the point cloud and the surface.  
 
@@ -418,7 +421,7 @@ Open `Processing Options` again and go to `DSM, Orthomosaic, and Index`
 ## 5.1 DSM and Orthomosaic
 
 Pix4D Documentation:
-<a href="https://support.pix4d.com/hc/en-us/articles/202557769-Menu-Process-Processing-Options-3-DSM-Orthomosaic-and-Index-DSM-and-Orthomosaic" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > DSM and Orthomosaic (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/202557769" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > DSM and Orthomosaic (pix4d.com)</a>
 
 The first screen is `DSM and Orthomosaic`.  A digital surface model, or DSM, is a model of Earth’s surface and any objects on it (trees, buildings, etc). An orthomosaic is a series of individual images which are programmatically matched up so they form a composite image. The orthomosaic is obtained from the DSM and corrected for perspective. The value of each pixel is obtained as a weighted average of the pixels in the original images that correspond to that particular pixel. Color balancing is used to adjust the intensity of colors so images fit together better. The goal is to create a visually pleasing, cohesive image. 
 
@@ -466,7 +469,7 @@ Set the parameters to the following:
 ## 5.2 Additional Outputs
 
 Pix4D Documentation:
-<a href="https://support.pix4d.com/hc/en-us/articles/202558419-Menu-Process-Processing-Options-3-DSM-Orthomosaic-and-Index-Additional-Outputs" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > Additional Outputs (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/202558419" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > Additional Outputs (pix4d.com)</a>
 
 The second screen is the `Additional Outputs`. A digital terrain model or DTM represents bare ground (buildings and vegetation have been removed). This is where having that classified point cloud is useful – the DTM will be better if the software already knows what is a tree or building and what is not. Contour lines join points of equal elevation and give an indication of surface slope. You are also able to produce contour lines if you wish, but this can also be done in a program such as ArcGIS. 
 
@@ -479,7 +482,7 @@ Set the parameters to the following:
 ## 5.3 Index Calculator
 
 Pix4D Documentation:
-<a href="https://support.pix4d.com/hc/en-us/articles/202558419-Menu-Process-Processing-Options-3-DSM-Orthomosaic-and-Index-Additional-Outputs" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > Index Calculator (pix4d.com)</a>
+<a href="https://support.pix4d.com/hc/en-us/articles/202558419" target="_blank" rel="noopener noreferrer">Menu Process > Processing Options... > 3. DSM, Orthomosaic and Index > Index Calculator (pix4d.com)</a>
 
 The third screen is `Index Calculator`, which only really applies to multispectral and thermal data processing, but you can try to create indeces from the reflectances in RGB images as well. Most often when using RGB imagery, you will select `No Correction`.
 
