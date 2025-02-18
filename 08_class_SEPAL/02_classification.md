@@ -298,7 +298,7 @@ You can select `AUX` to include more information that could be useful to the cla
 
  - **Terrain:** From the <a href="https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003" target="_blank" rel="noopener noreferrer">NASA SRTM Digital Elevation 30 m dataset</a>, SEPAL will use the `Elevation`, `Slope` and `Aspect` bands. It will also add an `Eastness` and `Northness` band derived from `Aspect`.
 
- - **Water:** From the <a href="https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_3_GlobalSurfaceWater" target="_blank" rel="noopener noreferrer">JRC Global Surface Water Mapping Layers, v1.3 dataset</a>, SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
+ - **Water:** From the <a href="https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_GlobalSurfaceWater" target="_blank" rel="noopener noreferrer">JRC Global Surface Water Mapping Layers, v1.4 dataset</a>, SEPAL will add the following bands: `occurrence`, `change_abs`, `change_norm`, `seasonality`, `max_extent`, `water_occurrence`, `water_change_abs`, `water_change_norm`, `water_seasonality` and `water_max_extent`.
 
 <img align="center" src="../images/sepal/sepal_rf/sepal_rf_22.png" vspace="10" width="350">
 
