@@ -35,7 +35,7 @@ Click on the group and then click the *Ask to join group* button.
 
 Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
 
-You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup){:target="_blank" rel="noopener noreferrer"}. 
+You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
 
 Create a GEE account for non-commercial purposes.
 
@@ -53,6 +53,9 @@ Create a SEPAL account and request additional resources to be able to access the
 
 Go to this page:
 [S E P A L](https://sepal.io/)(https://sepal.io/)
+
+<a href="https://sepal.io/" target="_blank" rel="noopener noreferrer">S E P A L</a>
+
 
 Click `Launch` and then `Sign Up`.
 
