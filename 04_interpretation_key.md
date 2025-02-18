@@ -21,7 +21,7 @@ nav_order: 5
 | Project and Procedure Planning | <a href="https://docs.google.com/presentation/d/1B3UEeHB9tPPmkhozLUVLoM6L_SaCyRsOpH6MvLdO5WM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">InterpretationProjects_CEO_and_InterpretationPlanning</a> |
 | Overview of Key template | <a href="https://docs.google.com/document/d/1NtC8SD27o-6qHWA--XFO11_fMT2WUzRG-s7Kpnvhr-c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Template Option</a>|
 | Overview on how to continue gathering examples for the key | <a href="https://docs.google.com/presentation/d/1-i7fFr6rzjbcj8r4lAcYCOw54IEiVik-1psdN8-Iw_Y/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Examples of images for interpretation</a>|
-| Interpretation Practices Quick Overview | <a href="https://docs.google.com/presentation/d/1c1qLd8eFGWZMoXAn3chOi0h0VlidBnnHKF7Wy1DSQaU/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Best practices for interpretation</a>/ <a href="https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Interpretation Procedures</a>|
+| Interpretation Practices Quick Overview | <a href="https://docs.google.com/presentation/d/1c1qLd8eFGWZMoXAn3chOi0h0VlidBnnHKF7Wy1DSQaU/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Best practices for interpretation</a> / <a href="https://docs.google.com/document/d/11FwTS1ov9nhVtcYmq3gLTfupqaMnjYGIDafK5ZomPAY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer">Interpretation Procedures</a>|
 
 
 # Reminder of Goals
