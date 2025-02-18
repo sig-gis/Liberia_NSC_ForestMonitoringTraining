@@ -79,7 +79,8 @@ Goodbody, T. R. H., Coops, N. C., & White, J. C. (2019). Digital Aerial Photogra
 
 <img align="center" src="../images/drone/tiepoints_3.png" hspace="15" vspace="10" width="500">
 
-<a href="https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/TiePoint_explain.html" target="_blank" rel="noopener noreferrer">https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/TiePoint_explain.html</a>
+<!-- Afa: link didn't work, so commenting it out:
+<a href="https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/TiePoint_explain.html" target="_blank" rel="noopener noreferrer">https://catalyst.earth/catalyst-system-files/help/COMMON/concepts/TiePoint_explain.html</a> -->
 
 
 ## Bundle Block Adjustment:
