@@ -35,7 +35,7 @@ Click on the group and then click the *Ask to join group* button.
 
 Create a [Google Earth Engine account](https://code.earthengine.google.com/register)(https://code.earthengine.google.com/register). 
 
-You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup). 
+You will need a [Google account](https://accounts.google.com/signup)(https://accounts.google.com/signup){:target="_blank" rel="noopener noreferrer"}. 
 
 Create a GEE account for non-commercial purposes.
 
