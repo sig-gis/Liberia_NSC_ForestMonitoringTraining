@@ -13,7 +13,7 @@ Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis
 
 
 ## Important Links for Participants
-A quick resource page of **all important links for this workshop** can be found **<a href="https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing" target="_blank" rel="noopener noreferrer">**HERE**</a>**. The most used are below.
+A quick resource page of **all important links for this workshop** can be found **<a href="https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing" target="_blank" rel="noopener noreferrer">HERE</a>**. The most used are below.
 
 <span style="color: red;"> **GEE code editor**</span>: [https://code.earthengine.google.com/](https://code.earthengine.google.com/)
 
