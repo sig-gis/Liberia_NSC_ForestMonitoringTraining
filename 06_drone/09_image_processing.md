@@ -177,9 +177,9 @@ Set the parameters to the following:
 
 <img align="center" src="../images/drone/calibration_external.png" hspace="15" vspace="10" width="500">
 
-## 2.4 Run Initial Processing
-
 Select `OK` (at the bottom of the window)
+
+## 2.4 Run Initial Processing
 
 Now, at the bottom left of the main screen, you can see the `Processing` window. All of the text will appear red initially, but will turn green after each processing step is complete. You are able to cancel at any time during processing to stop the process if your results are poor or you receive errors. You can then correct any errors that and start the process again, but any part of the process that was previously completed will be overwritten. 
 
