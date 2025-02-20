@@ -11,6 +11,32 @@ This workshop aim to build participants' capacity to use remote sensing technolo
 #### Instructors:
 Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis.com) from Spatial Informatics Group (SIG)
 
+
+## Important Links for Participants
+A quick resource page of **all important links for this workshop** can be found **<a href="https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing" target="_blank" rel="noopener noreferrer">HERE</a>**. The most used are below.
+
+<span style="color: red;"> **GEE code editor**</span>: [https://code.earthengine.google.com/](https://code.earthengine.google.com/)
+
+<span style="color: red;"> **SEPAL**</span>: [https://sepal.io/](https://sepal.io/)
+
+<br />
+
+<span style="color: red;"> Drone Data</span>: [https://drive.google.com/drive/u/1/folders/1evFZg4gZ99b4NHabrhMnxwjFJszIUKcU](https://drive.google.com/drive/u/1/folders/1evFZg4gZ99b4NHabrhMnxwjFJszIUKcU)
+
+
+<span style="color: red;"> Liberia 2014 landcover old map geotiff</span>: [https://drive.google.com/file/d/1hgiUtymwlH8jX64n8mnvL6sjIR0bpVUx/view?usp=drive_link](https://drive.google.com/file/d/1hgiUtymwlH8jX64n8mnvL6sjIR0bpVUx/view?usp=drive_link)
+
+<span style="color: red;"> Liberia 2014 landcover old map GEE asset</span>:
+projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014
+
+<span style="color: red;"> Liberia AOI shapefile</span>:
+[https://drive.google.com/drive/folders/1_D4WMxwpI3qZX3ugYNOfgbXZtyVEC9nN?usp=sharing](https://drive.google.com/drive/folders/1_D4WMxwpI3qZX3ugYNOfgbXZtyVEC9nN?usp=sharing)
+
+<span style="color: red;"> Liberia AOI GEE asset</span>: projects/pc556-ncs-liberia-forest-mang/assets/liberia_boundary
+
+<br />
+
+
 ## Expected outcomes of the workshop
 
 #### Skills: 
@@ -27,7 +53,6 @@ Crystal Wespestad (cwespestad@sig-gis.com) and Jarrett Barbuto (jbarbuto@sig-gis
 #### Note...
 The lesson content for each workshop can be found in the tabs on the lefthand side panel. Additionally, you can find supplementary learning material under the **Resources** tab and a link to share/view photos from the workshop under the **Photos** tab. 
 
-A quick resource page of **all important links for this workshop** can be found **<a href="https://docs.google.com/document/d/1c-VJ1rwEfX70sK1MhOvqyMjFlpvCKe8pOUoKlEtaYek/edit?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>**.
 
 ## Agenda
 

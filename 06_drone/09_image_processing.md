@@ -13,7 +13,6 @@ nav_order: 9
 Structure from motion (SfM) is a remote sensing technique for estimating three-dimensional structures from two-dimensional image sequences. It uses multiple photographs of an object to create a three-dimensional set of points corresponding to the surface of the feature (each with X, Y, Z coordinates), called a point cloud.  Most drone imagery processing software uses SfM to create outputs.
 
 ### General Pix4Dmapper workflow
-After loading the drone images into the software, it finds key points (features that stand out) in the images, which it then turns into tie points.  Then, in a step called bundle adjustment, the tie points, camera parameters, and camera positions are used to construct a low density point cloud from the images.  Next, it creates a high density point cloud from the low density point cloud.  Last, it creates a 3D mesh from the high density point cloud, which can be turned into a digital surface model.
 
 1. Keypoint extraction
 2. Keypoint matching (creating tie points)
@@ -33,9 +32,9 @@ Westoby, M.J. et al., 2012. ‘Structure-from-Motion’ photogrammetry: a low-co
 
 In this exercise, we will go over the steps to analyze drone images in Pix4Dmapper.
 
-Download the all the images from this folder onto your computer: []().
-
-Download this zipped folder onto your computer and unzip it: []().
+Download the all the data from these folder onto your computer: 
+[Processed Drone Data](https://drive.google.com/drive/folders/1Cc9E_lEAERg6blbpGBeKeC9jpqEtX5_o?usp=drive_link)
+[Raw Drone Images](https://drive.google.com/drive/folders/1AgP1fNHy0yJY0D5xt7AoCJV_DVCmaI2n?usp=drive_link)
 
 # 1. Project Setup
 
@@ -91,26 +90,7 @@ Select `3D Maps`
 
 <img align="center" src="../images/drone/pix4d_processingoptions.png" hspace="15" vspace="10" width="600">
 
-Before you continue, you want to consider: 
-1. the type of imagery you are processing
-2. your desired final products
-
-The type of imagery you are processing will determine which workflow you use and which products you can generate.  Here are some products you can make with various types of imagery:
-
-RGB 
-* Orthomosaics
-* DSM/DTM (Elevation Models)
-* Point Cloud 
-
-Multispectral 
-* Reflectance maps 
-* Vegetation indices 
-
-Thermal 
-* Thermal IR indices 
-* Temperature indices 
-
-Also keep in mind that the specific sensor you used to collect your imagery will determine your process. Some sensors calibrate while in flight (such as the senseFly ThermoMAP), while many others do not and will require calibration in Pix4D. Also, you will need to know if your sensor is recording absolute temperature (senseFly ThermoMAP) or relative temperature (FLIR Vue Pro), as this will determine how thermal indices are calculated.
+## **The other options can be applied if you collected data with another type of sensor.*
 
 ### Make sure the box next to "Start Processing Now" is not checked
 This will automatically start the photogrammetry process and you will not be able to change additional settings or select extra outputs
@@ -197,9 +177,9 @@ Set the parameters to the following:
 
 <img align="center" src="../images/drone/calibration_external.png" hspace="15" vspace="10" width="500">
 
-## 2.4 Run Initial Processing
-
 Select `OK` (at the bottom of the window)
+
+## 2.4 Run Initial Processing
 
 Now, at the bottom left of the main screen, you can see the `Processing` window. All of the text will appear red initially, but will turn green after each processing step is complete. You are able to cancel at any time during processing to stop the process if your results are poor or you receive errors. You can then correct any errors that and start the process again, but any part of the process that was previously completed will be overwritten. 
 
@@ -269,58 +249,8 @@ In some cases the edges of the imagery will have a lot of errors and no data "ho
 
 <img align="center" src="../images/drone/ProcessingExtentPix4D.png" hspace="15" vspace="10" width="600">
 
-## 3.3 Ray Cloud
+<img align="center" src="../images/drone/ProcessingExtentPix4D_2.png" hspace="15" vspace="10" width="600">
 
-After Initial Processing is complete, you can access the `rayCloud` view from the tab on the left side of the main screen. This is called a “ray cloud” and it contains lots of important features that you should become familiar with. Each of the spheres at the top of the pyramid-like structures represents a camera position. The blue spheres are the initial camera position from GPS coordinates the camera recorded during the flight. The green spheres are optimized camera positions the program calculates. The red spheres are the initial camera positions for uncalibrated cameras which Pix4D could not find optimized positions for. Because imagery relating to uncalibrated cameras will have generated potential warnings in the quality report and affected your output negatively, you may want to disable cameras or remove the bad images. 
-
-Attached to the bottom of the pyramid-like shapes are the actual images associated with the camera position. The four bands are stacked on top of each other in a multispectral camera like the Parrot. The 3D colored points represent Automatic Tie Points (ATPs).
-
-<img align="center" src="../images/drone/pix4d_raycloud_open.png" hspace="15" vspace="10" width="600">
-
-The image depicts rays coming from each of the cameras. These rays can be displayed by clicking on any of the 3D colored points that are shown below the ray cloud. The rays are coming from multiple images and are tied at this one 3D point. The green rays are connected to the 3D point and the calibrated cameras where the 3D point was visible but not marked, while the orange rays are connected to the 3D point and the calibrated cameras where the 3D point was marked (per Pix4D support). To the right is a screen which shows the images from the various cameras which are connected to this 3D point. If you click on the image in this panel, you can scroll in and out to see the exact location of the point within that image.
-
-<img align="center" src="../images/drone/pix4d_raycloud_cameras.png" hspace="15" vspace="10" width="600">
-
-## 3.4 Disable Uncalibrated Images
-
-To disable a camera manually, click on the red dot. The red color changes to pale red and you can see the image on the right side of the screen that is causing issues. Select `Disable` and it will no longer consider the image in the process. 
-
-<img align="center" src="../images/drone/pix4d_uncalibrated_remove.png" hspace="15" vspace="10" width="500">
-
-After disabling a camera, it will be a translucent red as opposed to an opaque red.
-
-<img align="center" src="../images/drone/pix4d_uncalibrated_disabled.png" hspace="15" vspace="10" width="200">
-
-Alternatively, you can address calibration issues by clicking the red sphere, figuring out which image is related to the uncalibrated camera, and removing that image from the project data folder. You will then need to begin another processing run with these images removed. Once problem images are removed, you should not have an issue with uncalibrated cameras again for that group of images.  
-
-## 3.5 Manual Tie Points
-
-Pix4D Documentation: 
-<a href="https://support.pix4d.com/hc/en-us/articles/202560349" target="_blank" rel="noopener noreferrer">How to add / import and mark manual tie points (MTPs) in the rayCloud (pix4d.com)</a>
-
-You can add Manual Tie Points (MTPs) to help align your drone images better.  You should add MTPs in problematic areas where there is little overlap or misalignment. To know where to add a MTP, you should verify the re-projection of a point. Open the `rayCloud` view from the main screen.
-
-<img align="center" src="../images/drone/pix4d_tiepoints_open.png" hspace="15" vspace="10" width="600">
-
-Click different locations in the point model and check on the images in the thumbnails in the right sidebar.  Here, you can check if the point is re-projected at the correct location on all images.
-
-<img align="center" src="../images/drone/pix4d_tiepoints_add2.png" hspace="15" vspace="10" width="400">
-
-If you want to add a MTP, click the `New Tie Point` button and select the place you want to place the MTP in each of the images.
-
-<img align="center" src="../images/drone/pix4d_tiepoints_add1.png" hspace="15" vspace="10" width="50">
-
-After adding MTPs, you will need to reoptimize the internal and external camera parameters according to your new MTPs. You should also reoptimize after any changes made *after* the Initial Processing step.
-
-* Adding GCPs
-* Adding Manual Tie Points
-* Adding Check Points
-* Changing coordinate systems
-* Disabling images
-
-To do this, select `Reoptimize` from the `Process` tab at the very top of the main screen.  This will begin the Initial Processing step again and overwrite any results you have already generated.
-
-<img align="center" src="../images/drone/pix4d_tiepoints_reoptimize.png" hspace="15" vspace="10" width="400">
 
 # 4 Point Cloud and Mesh
 
@@ -333,9 +263,13 @@ Pix4D documentation:
 
 After determining the coordinates of the same point in two images of an object, the 3D position of that point can be calculated using knowledge of camera data and relative orientation. The first screen is the `Point Cloud` option screen. Under here is `Point Cloud Densification`, which is where the major settings for this section are contained.
 
-* `Image Scale` defines the scale of the images at which additional 3D points are created. The default is 1/2 (half image size), where half size images are used to create the 3D points. Other options are possible too, such as 1 (original image size), which yields good results, but is very slow. 1/4 (quarter) image size yields fairly good results and is quite fast. It uses quarter size images to compute the 3D points. Fewer points are computed at this setting than at 1/2 or 1, but more points are computed in areas with features that cannot be matched easily, such as vegetated areas. Thus, it is recommended for projects involving vegetation. 1/2 or 1 scale tends to produce the best results, with 1/2 being the faster of the two.  In areas of dense vegetation, Pix4D recommends using ¼ to ⅛ image scale in areas of only dense vegetation, and ½ image scale with `Multiscale` selected in areas of dense vegetation with roads/buildings (to improve the point cloud and orthomosaic).  
+* `Image Scale` defines the scale of the images at which additional 3D points are created. The default is 1/2 (half image size), where half size images are used to create the 3D points. Other options are possible too, such as 1 (original image size), which yields good results, but is very slow. 1/4 (quarter) image size yields fairly good results and is quite fast. It uses quarter size images to compute the 3D points. Fewer points are computed at this setting than at 1/2 or 1, but more points are computed in areas with features that cannot be matched easily, such as vegetated areas. Thus, it is recommended for projects involving vegetation. 1/2 or 1 scale tends to produce the best results, with 1/2 being the faster of the two.  In areas of dense vegetation, Pix4D recommends using 1/4 to 1/8 image scale in areas of only dense vegetation, and 1/2 image scale with `Multiscale` selected in areas of dense vegetation with roads/buildings (to improve the point cloud and orthomosaic).  
 
-* `Point Density` defines the density of the point cloud. There are three options, Optimal (the default), high, and low. Optimal calculates a 3D point for every 4/image scale of the pixel, so if ½ image scale is chosen, one 3D point is computed for every 4/(.5)=8 pixels in the original image. High computes a 3D point for each image scale pixel, but the Pix4D support site notes that this may produce an oversampled point cloud, but not significantly better results. Low computes a 3D point for every 16/image scale of the pixel. This will make one 3D point for every 32 pixels of the original image, if 1/2 image scale is used. Optimal and high yield good results and are recommended over Low. High produces very good results, but the processing is very slow. 
+#### **The smaller the number the faster the processing but products could be degraded.  Start with the default setting, 1/2 image scale, and if there are issues with your products try other options. Use multiscale in areas with a variety of features.*  
+
+* `Point Density` defines the density of the point cloud. There are three options, Optimal (the default), high, and low. Optimal calculates a 3D point for every 4/image scale of the pixel, so if 1/2 image scale is chosen, one 3D point is computed for every 4/(.5)=8 pixels in the original image. High computes a 3D point for each image scale pixel, but the Pix4D support site notes that this may produce an oversampled point cloud, but not significantly better results. Low computes a 3D point for every 16/image scale of the pixel. This will make one 3D point for every 32 pixels of the original image, if 1/2 image scale is used. Optimal and high yield good results and are recommended over Low. High produces very good results, but the processing is very slow. 
+
+#### **Start with the default setting, Optimal, and make adjustments as needed if products do not come out well.
 
 * `Minimum Number of Matches` is the minimum number of valid reprojections of this 3D point in the images. The default is 3, meaning that each 3D point has to be correctly re-projected in at least 3 images. This setting is recommended for most projects. Higher numbers reduce noise and improves the overall quality of the point cloud, but fewer 3D points may be in the final point cloud due to the more stringent number of matches required. A dense point cloud will look similar to the sparse point cloud, but the increase in detail is very apparent.
 
@@ -531,3 +465,56 @@ You can also clearly see where the software had difficulty classifying and inter
 <img align="center" src="../images/drone/pix4d_DTM.png" hspace="15" vspace="10" width="700">
 
 
+# 5. Extra steps that can improve poor quality products
+## Ray Cloud Inspection
+
+After Initial Processing is complete, you can access the `rayCloud` view from the tab on the left side of the main screen. This is called a “ray cloud” and it contains lots of important features that you should become familiar with. Each of the spheres at the top of the pyramid-like structures represents a camera position. The blue spheres are the initial camera position from GPS coordinates the camera recorded during the flight. The green spheres are optimized camera positions the program calculates. The red spheres are the initial camera positions for uncalibrated cameras which Pix4D could not find optimized positions for. Because imagery relating to uncalibrated cameras will have generated potential warnings in the quality report and affected your output negatively, you may want to disable cameras or remove the bad images. 
+
+Attached to the bottom of the pyramid-like shapes are the actual images associated with the camera position. The four bands are stacked on top of each other in a multispectral camera like the Parrot. The 3D colored points represent Automatic Tie Points (ATPs).
+
+<img align="center" src="../images/drone/pix4d_raycloud_open.png" hspace="15" vspace="10" width="600">
+
+The image depicts rays coming from each of the cameras. These rays can be displayed by clicking on any of the 3D colored points that are shown below the ray cloud. The rays are coming from multiple images and are tied at this one 3D point. The green rays are connected to the 3D point and the calibrated cameras where the 3D point was visible but not marked, while the orange rays are connected to the 3D point and the calibrated cameras where the 3D point was marked (per Pix4D support). To the right is a screen which shows the images from the various cameras which are connected to this 3D point. If you click on the image in this panel, you can scroll in and out to see the exact location of the point within that image.
+
+<img align="center" src="../images/drone/pix4d_raycloud_cameras.png" hspace="15" vspace="10" width="600">
+
+## Disable Uncalibrated Images
+
+To disable a camera manually, click on the red dot. The red color changes to pale red and you can see the image on the right side of the screen that is causing issues. Select `Disable` and it will no longer consider the image in the process. 
+
+<img align="center" src="../images/drone/pix4d_uncalibrated_remove.png" hspace="15" vspace="10" width="500">
+
+After disabling a camera, it will be a translucent red as opposed to an opaque red.
+
+<img align="center" src="../images/drone/pix4d_uncalibrated_disabled.png" hspace="15" vspace="10" width="200">
+
+Alternatively, you can address calibration issues by clicking the red sphere, figuring out which image is related to the uncalibrated camera, and removing that image from the project data folder. You will then need to begin another processing run with these images removed. Once problem images are removed, you should not have an issue with uncalibrated cameras again for that group of images.  
+
+## Manual Tie Points
+
+Pix4D Documentation: 
+<a href="https://support.pix4d.com/hc/en-us/articles/202560349" target="_blank" rel="noopener noreferrer">How to add / import and mark manual tie points (MTPs) in the rayCloud (pix4d.com)</a>
+
+You can add Manual Tie Points (MTPs) to help align your drone images better.  You should add MTPs in problematic areas where there is little overlap or misalignment. To know where to add a MTP, you should verify the re-projection of a point. Open the `rayCloud` view from the main screen.
+
+<img align="center" src="../images/drone/pix4d_tiepoints_open.png" hspace="15" vspace="10" width="600">
+
+Click different locations in the point model and check on the images in the thumbnails in the right sidebar.  Here, you can check if the point is re-projected at the correct location on all images.
+
+<img align="center" src="../images/drone/pix4d_tiepoints_add2.png" hspace="15" vspace="10" width="400">
+
+If you want to add a MTP, click the `New Tie Point` button and select the place you want to place the MTP in each of the images.
+
+<img align="center" src="../images/drone/pix4d_tiepoints_add1.png" hspace="15" vspace="10" width="50">
+
+After adding MTPs, you will need to reoptimize the internal and external camera parameters according to your new MTPs. You should also reoptimize after any changes made *after* the Initial Processing step.
+
+* Adding GCPs
+* Adding Manual Tie Points
+* Adding Check Points
+* Changing coordinate systems
+* Disabling images
+
+To do this, select `Reoptimize` from the `Process` tab at the very top of the main screen.  This will begin the Initial Processing step again and overwrite any results you have already generated.
+
+<img align="center" src="../images/drone/pix4d_tiepoints_reoptimize.png" hspace="15" vspace="10" width="400">
