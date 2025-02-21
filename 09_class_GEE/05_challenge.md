@@ -24,6 +24,14 @@ Open up a new script and name it `4 spectral_signatures`. You will copy and past
 
 As part of the data exploration process, we can visualize the differences in how different LULC types reflect/reemit different wavelengths of light. These are called "spectral signatures," and they can give good insight into which bands or indices will be the most useful for distinguishing different LULC types in the classification, and which LULC types will be easily confused with one another. The greater the difference in spectral signatures, the easier the LULC types will be to separate.
 
+<img align="center" src="../images/class-gee/opticalbands_chart.png" hspace="15" vspace="10" width="800">
+
+<img align="center" src="../images/class-gee/opticalindices_chart.png" hspace="15" vspace="10" width="800">
+
+Looking at these charts, we can already predict that water will probably be extremely easy to distinguish from other classes, as it has a unique spectral signature and unique values in many of the indices. Sand and settlements, on the other hand, may be relatively easy to distinguish from other classes but may be difficult to distinguish from each other. Similarly, all the vegetation classes will probably be extremely difficult to distinguish from each other, with the NIR band looking like the best band for distinguishing them.
+
+Another interesting thing to note is how similar the bare soil spectral signature is to the vegetation classes and how different it is from the sand and settlement classes - it is nearly identical to grassland. This is surprising, as bare soil should be much more similar in composition to sand and settlements than to vegetation. This could be because what was defined as bare soil in the 2014 map may not have been bare soil year-round, but rather bare soil in the dry season with a thin layer of annual herbacious vegetation in the dry season. Thus, when taking the annual median to composite the predictor image, areas which were bare in less than half of the images may appear greener than we might expect from a "bare soil" class. This is an example of why manual labelling of reference points with strict definitions and extensive QAQC is crucial. Our reference points for this exercise were just blindly generated from the 2014 map, which should not be done when generating a final product. 
+
 First, we just import the data sets we have prepped for classification: the AOI, the predictor image, the reference points, and the 2014 LULC maps. 
 
 ```javascript
@@ -138,7 +146,7 @@ Map.addLayer(lulc30m, lulcVis, 'LULC 2014 30m', false);
 var lulc = lulc10m;
 ```
 
-Next, we create some `ui.Chart.image.byClass()` objects which aggregate the median of the predictor image bands at each reference point by LULC class. First we plot the optical bands as a line graph, and then we plot th eindices as a bar chart. We will not discuss each component of creating a chart in GEE here, but if you want to learn more about this topic there are plenty of resources online.
+Next, we create some `ui.Chart.image.byClass()` objects which aggregate the median of the predictor image bands at each reference point by LULC class. First we plot the optical bands as a line graph, and then we plot the indices as a bar chart. We will not discuss each component of creating a chart in GEE here, but if you want to learn more about this topic there are plenty of resources online.
 
 ``` javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -283,14 +291,6 @@ var indexChart = ui.Chart.image
 print(opticalChart);
 print(indexChart);
 ```
-
-<img align="center" src="../images/class-gee/opticalbands_chart.png" hspace="15" vspace="10" width="800">
-
-<img align="center" src="../images/class-gee/opticalindices_chart.png" hspace="15" vspace="10" width="800">
-
-Looking at these charts, we can already predict that water will probably be extremely easy to distinguish from other classes, as it has a unique spectral signature and unique values in many of the indices. Sand and settlements, on the other hand, may be relatively easy to distinguish from other classes but may be difficult to distinguish from each other. Similarly, all the vegetation classes will probably be extremely difficult to distinguish from each other, with the NIR band looking like the best band for distinguishing them.
-
-Another interesting thing to note is how similar the bare soil spectral signature is to the vegetation classes and how different it is from the sand and settlement classes - it is nearly identical to grassland. This is surprising, as bare soil should be much more similar in composition to sand and settlements than to vegetation. This could be because what was defined as bare soil in the 2014 map may not have been bare soil year-round, but rather bare soil in the dry season with a thin layer of annual herbacious vegetation in the dry season. Thus, when taking the annual median to composite the predictor image, areas which were bare in less than half of the images may appear greener than we might expect from a "bare soil" class. This is an example of why manual labelling of reference points with strict definitions and extensive QAQC is crucial. Our reference points for this exercise were just blindly generated from the 2014 map, which should not be done when generating a final product for real-world use. 
 
 ## Rerun the Analysis for a Simpler LULC Typology
 
