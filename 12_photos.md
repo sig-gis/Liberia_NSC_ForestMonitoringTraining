@@ -22,3 +22,12 @@ Photos from recent workshops will be displayed here.
 <img align="center" src="./images/photos/photo_flight3.jpeg" hspace="5" vspace="5" width="400">
 
 <img align="center" src="./images/photos/photo_flight4.jpeg" hspace="5" vspace="5" width="800">
+
+<img align="center" src="./images/photos/leadership_group.jpeg" hspace="5" vspace="5" width="800">
+
+<img align="center" src="./images/photos/drone6.jpeg" hspace="5" vspace="5" width="400">
+
+<img align="center" src="./images/photos/SIG_instructors.jpeg" hspace="5" vspace="5" width="400">
+
+Thanks for a great workshop everyone! 
+--- the SIG team
