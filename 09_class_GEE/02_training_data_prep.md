@@ -121,6 +121,12 @@ It will take a while to collect the data in CEO with the work of several team me
 
 Once the data collection is complete download the Sample Data CSV file. Since we saved the lat/long as additional columns in our file cleaning earlier, you can use those columns to ingest these points into GEE. You will need to adjust the column name of your survey question so it has no spaces, e.g., class2024.
 
+XXXX CHECK USE OF CLASS2014
+
+Finally, as one last clean up task, you need to convert the 'words' from the survey response to 
+
+XXXX CHECK IF WORDS CAN BE CONVERTED TO NUMBERS IN THE SCRIPT
+
 On GEE, under the Assets tab, click `New, select `CSV file`. Give the sample file asset an understandable name. Use the preserved LAT_save and LON_save columns as the X column and Y column, respectively. Click `Upload`.
 
 Once ingested, make this file readable to all. We will need it in the next section.
