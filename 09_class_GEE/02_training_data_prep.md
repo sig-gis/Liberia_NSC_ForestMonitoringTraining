@@ -116,6 +116,16 @@ You can use this text to use the `Bulk Add` feature for adding the answer option
 Your final project will come out looking something like this: [https://app.collect.earth/review-project?projectId=56260](https://app.collect.earth/review-project?projectId=56260) 
 <img align="center" src="../images/class-gee/CEO_trainingdata_project_overview.png" hspace="15" vspace="10" width="600">
 
+### After the Data Collection
+It will take a while to collect the data in CEO with the work of several team members. The quality of this data will determine the quality of all your resulting maps, so be sure you are satisfied with the data and have performed sufficient QA/QC. 
+
+Once the data collection is complete download the Sample Data CSV file. Since we saved the lat/long as additional columns in our file cleaning earlier, you can use those columns to ingest these points into GEE. You will need to adjust the column name of your survey question so it has no spaces, e.g., class2024.
+
+On GEE, under the Assets tab, click `New, select `CSV file`. Give the sample file asset an understandable name. Use the preserved LAT_save and LON_save columns as the X column and Y column, respectively. Click `Upload`.
+
+Once ingested, make this file readable to all. We will need it in the next section.
+
+
 
 
 
