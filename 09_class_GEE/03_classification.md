@@ -14,6 +14,16 @@ Open up a new script and name it `2 classification`. You will copy and paste eac
 
 ### Set Important Parameters
 
+Put the path to the asset you uploade in the last section in the "2 v3 classification  - USE THIS" script in the repository to define the refPoints variable. Example below:
+
+```javascript
+var refPoints = ee.FeatureCollection(
+  "projects/pc556-ncs-liberia-forest-mang/assets/stratSample2024_example") 
+```
+You will also be updaing the script so it refers to your selected column name (e.g., var classBand = 'class2024'). More in the next section on this script.
+
+
+
 Again, we define some important parameters at the beginning of the script so they are easy to change later on. These are related to the version number, time period of interest, final map resolution, and smoothing.
 
 The version number and dates should match the ones in the preprocessing script. 
