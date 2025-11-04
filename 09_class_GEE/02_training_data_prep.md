@@ -85,6 +85,8 @@ Clean up the columns so they look like this. You can remove the extraneous colum
 
 Download this cleaned file as a CSV to be used as the Plot Locations CSV in a CEO project.
 
+A prepared version of the CSV file made with the directions above is available [here](https://docs.google.com/spreadsheets/d/1aKRgh0WlPhkmoPDTgUU9RrDXJjfnD35BMxPf1yNVtZA/edit?usp=sharing). The seed used was 33 and 100 points per strata were allocated, for a total of 1,000 points.
+
 
 
 
