@@ -52,10 +52,10 @@ We will use AREA2 (local version in our repository) to easily generate locations
 See this [recording](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQyzYhKD-/view?usp=sharing) from Workshop 3, that shows Crystal walking through the use of AREA2 (you can ignore the sections on proportional sample distribution from this recording, as we are just using 100). 
 
 #### Steps in AREA2
-- Open the [local version of AREA2[(https://code.earthengine.google.com/59d18ee712ce510ae5f99a1987af0e61) from the repository.
-- You will see the 'seed' at the top of the code. It is set to 33 by default, but you can change it to any random integer you like if you ever want a totally different set of points. The seed will be saved in the file name.
-- Click <Run>.
-- Leave the pre-set defaults of the path to the defined stratification map, the 1 (for a single band image), the 0 mask value, and the 10m resolution. Click <Load image>. It may take a few moments for the next screen to load.
+1\.  Open the [local version of AREA2[(https://code.earthengine.google.com/59d18ee712ce510ae5f99a1987af0e61) from the repository.
+2\.  You will see the 'seed' at the top of the code. It is set to 33 by default, but you can change it to any random integer you like if you ever want a totally different set of points. The seed will be saved in the file name.
+3\.  Click `Run`.
+4\. Leave the pre-set defaults of the path to the defined stratification map, the 1 (for a single band image), the 0 mask value, and the 10m resolution. Click `Load image`. It may take a few moments for the next screen to load.
 - 
 
 <img align="center" src="../images/class-gee/localAREA2_screen1.png" hspace="15" vspace="10" width="400">
