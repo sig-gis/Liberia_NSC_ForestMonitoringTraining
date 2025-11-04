@@ -62,13 +62,13 @@ See this [recording](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQy
 
 4\. Leave the pre-set defaults of the path to the defined stratification map, the 1 (for a single band image), the 0 mask value, and the 10m resolution. Click `Load image`. It may take a few moments for the next screen to load.
 
-<img align="center" src="../images/class-gee/localAREA2_screen1.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/localAREA2_screen1.png" hspace="15" vspace="10" width="600">
 
 5\. On the second screen select "Arbitrary sample size" from the drop down menu of options for howt to "Determine sample size".
 
 6\. Type 100 in all the cells except the last one, where you need to type 0. The cells correspond to the classes in your stratification map from the table above. Class 0 was removed when you used 0 as the masking value on the first screen of AREA2. The last cell is the clouds strata, which we do not need to sample.
 
-<img align="center" src="../images/class-gee/localAREA2_screen2.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/localAREA2_screen2.png" hspace="15" vspace="10" width="600">
 
 7\. Click `Create sample`. Then go to the Tasks tab on the top right of your browser window. Download the CSV file to Drive.
 
@@ -77,11 +77,11 @@ See this [recording](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQy
 #### Clean the CSV File for Use in CEO
 Once your download to Drive completes you need to clean up the file a bit so it can be used by CEO. The CSV file produced by AREA2 will look like this:
 
-<img align="center" src="../images/class-gee/Samples_for_CEO_before_cleaning.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/Samples_for_CEO_before_cleaning.png" hspace="15" vspace="10" width="600">
 
 Clean up the columns so they look like this. You can remove the extraneous columns (system:index, random, .geo). Rename the ID column to "PLOTID", the classification to a clearer "old_2014map_classification", lat to "LAT", and lon to "LON". Finally, I recommend duplicating the LAT and LON columns. CEO does not export the coordinates in the final Sample file output, so it is easiest to preserve them now. The final version will look like this:
 
-<img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning.png" hspace="15" vspace="10" width="600">
 
 Download this cleaned file as a CSV to be used as the Plot Locations CSV in a CEO project.
 
