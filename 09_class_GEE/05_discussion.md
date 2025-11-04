@@ -2,7 +2,7 @@
 layout: page
 title:  Discussion
 parent: "9. Classification with GEE"
-nav_order: 4
+nav_order: 5
 ---
 
 # Discussion
