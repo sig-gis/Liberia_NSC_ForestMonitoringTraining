@@ -5,10 +5,9 @@ parent: "9. Classification with GEE"
 nav_order: 2
 ---
 
+** This page has been added since the original workshop event **
 
 # Preparing Training Data for Random Forest
-
-** This page has been added since the original workshop event **
 
 We need to train the Random Forest model (coming in the next section) by giving it examples of what each land cover looks like. We need to give the Random Forest model training data. 
 
