@@ -113,7 +113,7 @@ You can use this text to use the `Bulk Add` feature for adding the answer option
 
 <img align="center" src="../images/class-gee/CEOquestion_training_data.png" hspace="15" vspace="10" width="400">
 
-Your final project will come out looking something like this:
+Your final project will come out looking something like this: [https://app.collect.earth/review-project?projectId=56260](https://app.collect.earth/review-project?projectId=56260) 
 <img align="center" src="../images/class-gee/CEO_trainingdata_project_overview.png" hspace="15" vspace="10" width="600">
 
 
