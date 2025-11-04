@@ -2,7 +2,7 @@
 layout: page
 title:  Multiprobability Classification
 parent: "9. Classification with GEE"
-nav_order: 3
+nav_order: 4
 ---
 
 # Multiprobability Classification
