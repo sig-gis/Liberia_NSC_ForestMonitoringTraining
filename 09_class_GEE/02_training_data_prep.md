@@ -72,7 +72,19 @@ See this [recording](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQy
 7\. Click `Create sample`. Then go to the Tasks tab on the top right of your browser window. Download the CSV file to Drive.
 
 ### Creating a CEO Project Using the Samples
-Once your download to Drive completes you need to clean up the file a bit so it can be used by CEO. The CSV file produced by AREA2 will look like this.
+
+#### Clean the CSV File for Use in CEO
+Once your download to Drive completes you need to clean up the file a bit so it can be used by CEO. The CSV file produced by AREA2 will look like this:
+
+<img align="center" src="../images/class-gee/Samples_for_CEO_before_cleaning.png" hspace="15" vspace="10" width="400">
+
+Clean up the columns so they look like this. You can remove the extraneous columns (system:index, random, .geo). Rename the ID column to "PLOTID", the classification to a clearer "old_2014map_classification", lat to "LAT", and lon to "LON". Finally, I recommend duplicating the LAT and LON columns. CEO does not export the coordinates in the final Sample file output, so it is easiest to preserve them now. The final version will look like this:
+
+<img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning.png" hspace="15" vspace="10" width="400">
+
+Download this cleaned file as a CSV to be used as the Plot Locations CSV in a CEO project.
+
+
 
 
  
