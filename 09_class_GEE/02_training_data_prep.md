@@ -5,7 +5,7 @@ parent: "9. Classification with GEE"
 nav_order: 2
 ---
 
-**This page has been added since the original workshop event.**
+*This page has been added since the original workshop event.*
 
 # Preparing Training Data for Random Forest
 
