@@ -2,7 +2,7 @@
 layout: page
 title:  Challenges
 parent: "9. Classification with GEE"
-nav_order: 5
+nav_order: 6
 ---
 
 # Challenges
