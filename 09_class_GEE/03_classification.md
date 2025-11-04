@@ -5,6 +5,7 @@ parent: "9. Classification with GEE"
 nav_order: 3
 ---
 
+*This page has been edited since the original workshop event.*
 
 # Classification with Random Forest in GEE
 
