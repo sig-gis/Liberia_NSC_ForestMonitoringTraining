@@ -87,6 +87,36 @@ Download this cleaned file as a CSV to be used as the Plot Locations CSV in a CE
 
 A prepared version of the CSV file made with the directions above is available [here](https://docs.google.com/spreadsheets/d/1aKRgh0WlPhkmoPDTgUU9RrDXJjfnD35BMxPf1yNVtZA/edit?usp=sharing). The seed used was 33 and 100 points per strata were allocated, for a total of 1,000 points.
 
+#### Create the CEO Project
+
+Build a very simple CEO project to collect training data. The data collected should be for the land cover in 2024.
+
+We are choosing to collect data for 2024 because all data we will be using (sensors on various satellites and Google embeddings) were available at this time. Earlier years will not have all the available data (e.g. Google embeddings are only available from 2017 onwards). 
+
+- Give the project an informative name.
+- Make sure the plot confidence is collected during the survey, so it can be used for QA/QC reviews.
+- Use the CSV you just made as the spatial distribution file under Plot Design.
+- Use "Center" for the Sample Design.
+- Your only necessary survey question should ask about the land cover in 2024, with all the land cover types you want.
+
+You can use this text to use the `Bulk Add` feature for adding the answer options.
+#006d3a, forest_80
+#009c53, forest_30-80
+#00cc6c, forest_30
+#00bba4, mangroves
+#7b0000, settlements
+#015890, water
+#b6da03, grassland
+#d29f00, shrub
+#e3e3e3, bare soil
+#fff6a9, sand
+
+<img align="center" src="../images/class-gee/CEOquestion_training_data.png" hspace="15" vspace="10" width="400">
+
+Your final project will come out looking something like this:
+<img align="center" src="../images/class-gee/CEO_trainingdata_project_overview.png" hspace="15" vspace="10" width="600">
+
+
 
 
 
