@@ -130,12 +130,12 @@ Your final project will come out looking something like this: [https://app.colle
 ### After the Data Collection
 It will take a while to collect the data in CEO with the work of several team members. The quality of this data will determine the quality of all your resulting maps, so be sure you are satisfied with the data and have performed sufficient QA/QC. 
 
-Once the data collection is complete download the Sample Data CSV file. You will want to adjust the column name of your survey question so it has no spaces. We suggest "LandCoverLabel2024", which is already set up to be used in the coming script. You can remove extraneous columns from the data if you wish, but it will work as-is in GEE.
+1\. Once the data collection is complete download the Sample Data CSV file. You will want to adjust the column name of your survey question so it has no spaces. We suggest "LandCoverLabel2024", which is already set up to be used in the coming script. You can remove extraneous columns from the data if you wish, but it will work as-is in GEE.
 
 
-In GEE, under the Assets tab, click `New`, select `CSV file`. Give the sample file asset an understandable name. Define the CSV's "lat" and "lon" columns as the X column and Y column, respectively, when filling in the asset upload form. Click `Upload`.
+2\. In GEE, under the Assets tab, click `New`, select `CSV file`. Give the sample file asset an understandable name. Define the CSV's "lat" and "lon" columns as the X column and Y column, respectively, when filling in the asset upload form. Click `Upload`.
 
-Once ingested, make this file readable to all. We will need it in the next section.
+3\. Once ingested, make this file readable to all. We will need it in the next section.
 
 
 
