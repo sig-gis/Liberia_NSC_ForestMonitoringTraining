@@ -5,7 +5,8 @@ parent: "9. Classification with GEE"
 nav_order: 1
 ---
 
-
+*This page has been updated since the workshop*
+*The updated version does not include Planet NICFI imagery, but instead you have the option to include Google Embeddings*
 
 # Preprocessing Imagery in GEE
 
@@ -30,11 +31,11 @@ These include values related to setting the version number, time period of inter
 // ------------------------------------------------------------------------------------------
 
 // version
-var version = 1;
+var version = 3;
 
 // dates of interest
-var d1 = '2014-1-1'
-var d2 = '2014-12-31'
+var d1 = '2024-1-1'
+var d2 = '2024-12-31'
 
 // basemap
 Map.setOptions('SATELLITE')
@@ -42,11 +43,15 @@ Map.setOptions('SATELLITE')
 // final map resolution
 var resolution = 30;
 
-// number of reference data points per class
-var classPointsNum = 400;
-// (uncomment this if you want to customize the number of points per class)
-// var classValuesList = [1,  2,  3,  4,  5,  7,  8,  9,  10, 11]
-// var classPointsList = [400, 400, 400, 400, 400, 400, 400, 400, 400, 400]
+// Decide whether or not to use annual Google Embeddings with this true/false flag
+// ------------------------------------------------------------------------------------------
+
+// ---- Feature flags, choosing to use Google Embeddings or not ----
+var USE_GE = true; // toggle Google Embeddings on/off 
+//final predictor image will result in 31 bands if false and 95 bands if true
+  // USE_GE = true + year ≥ 2017 → GE (A00…A63) is included.
+  // USE_GE = true + year < 2017 → your If(...) returns an empty image, so no GE bands (by design due to data availability). 
+  // USE_GE = false → GE is not added at all, regardless of year. (may chose to do this if the results prove not helpful)
 
 // SAR 
 // ------------------------------------------------------------------------------------------
@@ -87,7 +92,7 @@ For this exercise, we use a union of a `featureCollection` of a simple polygon a
 // import the simple Liberia feature collection
 var Liberia = ee.FeatureCollection("projects/pc556-ncs-liberia-forest-mang/assets/Liberia_simple")
   
-// define an aoi from the feature collection, grouping the provinces
+// define an aoi from the feature collection
 var aoi = Liberia
   .union();
   
@@ -318,96 +323,113 @@ var sar = ee.Image(
 );
 
 // define visualization parameters
-var s1vis = {bands:['VH'],min:-20,max:0};
-var palsarvis = {bands:['HV'],min:-20,max:0};
+var s1vis = {bands:['VH_C_S1'],min:-20,max:0};
+var palsarvis = {bands:['HV_L_P'],min:-20,max:0};
 // add to map
-Map.addLayer(sar, palsarvis,'SAR HV',false);
-Map.addLayer(sar, s1vis,'SAR VH',false);
+Map.addLayer(sar, palsarvis,'SAR HV from PALSAR',false);
+Map.addLayer(sar, s1vis,'SAR VH from S1',false);
 
 // functions are defined below:
 
-// Sentinel-1 SAR (C-band)
-// -----------------------------------------
-
-// write a function to import and preprocess Sentinel 1
-function importS1(date1,date2){
-
-  // import Sentinel-1 SAR image collection
-  var s1Collection = ee.ImageCollection('COPERNICUS/S1_GRD')
-  
-  // print the resolution
-  print('Sentinel-1 SAR resolution (m):',s1Collection.first().select('HV').projection().nominalScale())
-  print("Example Sentinel-1 images:", s1Collection.limit(3))
-  
-  // do some preprocessing
-  var s1 = s1Collection
-    // select images that intersect with your AOI
+// ===== Import Sentinel-1 (C-band) =====
+function importS1(date1, date2) {
+  var s1 = ee.ImageCollection('COPERNICUS/S1_GRD')
     .filterBounds(aoi)
-    // select images in your dates of interest
     .filterDate(date1, date2)
-    // select images made with the Interferometric Wide Swath mode
     .filter(ee.Filter.eq('instrumentMode', 'IW'))
-    // select pixels with certain incidence angles
     .map(function(image) {
-      // select the angle band
       var angle = image.select('angle');
-      // mask out bands outside of a certain angle range
-      return image.updateMask(angle.gte(angles.get(0).getInfo()).and(angle.lte(angles.get(1).getInfo())));
+      return image.updateMask(angle.gte(20).and(angle.lte(45)));
     })
-    // // select images that were taken during the north to south orbit
-    // .filter(ee.Filter.eq('orbitProperties_pass', 'DESCENDING')) //DESCENDING //ASCENDING
-    // select specific bands
-    .select('VV','VH') //VV //VH //HH //HV
-    // get the median for the time period of interest
+    .select(['VV', 'VH'])
     .median()
-    // apply speckle filter
-    .focal_mean(smoothingRadius,'circle','meters')
-    // clip to the AOI
+    .focal_mean(50, 'circle', 'meters')
     .clip(aoi);
-  
-  // return the composited and cleaned Sentinel 1 image
-  return(s1)
+
+  // Rename bands with new convention
+  return s1.rename(['VV_C_S1', 'VH_C_S1']);
 }
 
-// PALSAR SAR (L-band)
-// -----------------------------------------
-
-// write a function to import and preprocess Sentinel 1
-function importPALSAR(date1,date2){
-
-  // import PALSAR SAR image collection
-  var palsarCollection = ee.ImageCollection('JAXA/ALOS/PALSAR-2/Level2_2/ScanSAR')
-  // var palsarCollection = ee.ImageCollection('JAXA/ALOS/PALSAR/YEARLY/SAR_EPOCH')
-  
-  // print the resolution
-  print('PALSAR SAR resolution (m):',palsarCollection.first().select('HH').projection().nominalScale())
-  print("Example PALSAR images:", palsarCollection.limit(3))
-  
-  // do some preprocessing
-  var palsar = palsarCollection
-    // select images that intersect with your AOI
+// ===== Import PALSAR (L-band) =====
+function importPALSAR(date1, date2) {
+  var palsar = ee.ImageCollection('JAXA/ALOS/PALSAR-2/Level2_2/ScanSAR')
     .filterBounds(aoi)
-    // select images in your dates of interest
     .filterDate(date1, date2)
-    // select images with certain incidence angles
-    .filter(ee.Filter.gte('IncAngleNearRange', 0))  
+    .filter(ee.Filter.gte('IncAngleNearRange', 0))
     .filter(ee.Filter.lte('IncAngleFarRange', 90))
-    // // select images that were taken during the north to south orbit
-    // .filter(ee.Filter.eq('PassDirection', 'Descending')) //Descending //Ascending
-    // select specific bands
-    .select('HH','HV') //VV //VH //HH //HV
-    // get the median for the time period of interest
+    .select(['HH', 'HV'])
     .median()
-    // convert to decibels
-    .pow(2).log10().multiply(10).subtract(83.0)
-    // apply speckle filter
-    .focal_mean(smoothingRadius,'circle','meters')
-    // clip to the AOI
+    .pow(2).log10().multiply(10).subtract(83.0) // Convert DN to gamma0 backscatter in dB using JAXA's scaling factor
+    .focal_mean(50, 'circle', 'meters')
     .clip(aoi);
 
-  // return the composited and cleaned PALSAR image
-  return(palsar)
+  // Rename bands with new convention
+  return palsar.rename(['HH_L_P', 'HV_L_P']);
 }
+
+  // Radar Vegetation Index (RVI) is a measure used to assess the density and health of vegetation
+
+  // S1 RVI may be extraneous and is more suited to disturbance mapping than LC mapping, but keeping it for now
+          // PALSAR RVI is better suited for land cover mapping than Sentinel-1 RVI because 
+          // its L-band wavelength penetrates deeper into vegetation canopies, 
+          // providing stronger sensitivity to forest structure and biomass
+      
+  //for Dual-Polarimetric Data (e.g., HH and HV or VV and VH) a simplified version of the RVI is used
+  //    RVI = (4 × cross-pol) / (co-pol + cross-pol)
+  // (https://documentation.dataspace.copernicus.eu/APIs/openEO/openeo-community-examples/python/RVI/RVI.html)
+  // Suitable for Sentinel-1 (VV/VH) or PALSAR-2 ScanSAR (HH/HV)
+  
+      // Where:
+      //    - cross-pol = HV (for HH/HV systems) or VH (for VV/VH systems)
+      //    - co-pol    = HH (for HH/HV systems) or VV (for VV/VH systems)
+      //
+      // This index ranges from 0 to 1+ and increases with vegetation volume (can exceed 1 in some high-scatter vegetation)
+      // and structural complexity. Higher values typically indicate dense
+      // or complex vegetation canopies.
+      //
+      // Example (PALSAR, using HH & HV):
+      //    RVI = (4 × HV) / (HH + HV)
+      //
+      // Example (Sentinel-1, using VV & VH):
+      //    RVI = (4 × VH) / (VV + VH)
+  
+  // The traditional RVI formula for Full-Polarimetric Data (HH, HV, VV) is below
+  // RVI: (8*HV) / (HH + VV + (2*HV))
+          // We don't want to use this one because we'd have to mix sensors
+          
+          
+// ===== RVI from Sentinel-1 (C-band) =====
+function calculateRVI_S1(image) {
+  var vv = ee.Image(10).pow(image.select('VV_C_S1').divide(10));
+  var vh = ee.Image(10).pow(image.select('VH_C_S1').divide(10));
+  var rvi = vh.multiply(4).divide(vv.add(vh)).rename('RVI_C_S1'); //simplified RVI
+  return rvi;
+}
+
+// ===== RVI from PALSAR (L-band) =====
+// Radar Vegetation Index
+// used to quantify vegetation structure and density
+function calculateRVI_PALSAR(image) {
+  var hh = ee.Image(10).pow(image.select('HH_L_P').divide(10));
+  var hv = ee.Image(10).pow(image.select('HV_L_P').divide(10));
+  var rvi = hv.multiply(4).divide(hh.add(hv)).rename('RVI_L_P'); //simplified RVI
+  return rvi;
+}
+
+// ===== Compose SAR image =====
+var s1 = importS1(d1, d2);
+var palsar = importPALSAR(d1, d2);
+
+// Merge bands
+var sar = s1.addBands(palsar);
+
+// Compute RVIs
+var rviC = calculateRVI_S1(s1); //optionally comment out
+var rviL = calculateRVI_PALSAR(palsar);
+
+// Add RVIs to SAR image
+sar = sar.addBands(rviL).addBands(rviC); //optionally comment out rviC
+
 ```
 
 <img align="center" src="../images/class-gee/SAR.png" hspace="15" vspace="10" width="400">
@@ -454,16 +476,16 @@ var optical = ee.Image(
       ee.Date(d1).millis()
         .gte(ee.Date('2016-01-01').millis()),   
       // call function to import and preprocess HLS
-      importHLS(d1,d2), 
+      importHLS(d1,d2).addBands(importL8(d1,d2)), 
     // if the date range is outside of 2013-present, return an empty image
     ee.Image(0)            
   )
 ));
 
 // define visualization parameters
-var opticalVis = {bands:['red','green','blue'],min:0,max:0.3};
+var opticalVis = {bands:['red_L8','green_L8','blue_L8'],min:0,max:0.3};
 // add to map
-Map.addLayer(optical, opticalVis,'optical',false);
+Map.addLayer(optical, opticalVis,'optical L8',false);
 
 // functions are defined below:
 
@@ -473,7 +495,7 @@ Map.addLayer(optical, opticalVis,'optical',false);
 // write a function to import and preprocess Landsat 8 
 function importL8(date1,date2){
   
-  // import the Sentinel 2 image collection
+  // import the Landsat 8 image collection
   var l8Collection = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
   
   // print the resolution
@@ -508,7 +530,7 @@ function importL8(date1,date2){
     })
     // select and rename desired bands
     .select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7'], 
-            ['blue',  'green', 'red',   'NIR',   'SWIR1', 'SWIR2',])
+            ['blue_L8',  'green_L8', 'red_L8',   'NIR_L8',   'SWIR1_L8', 'SWIR2_L8',])
     // get the median for the time period of interest
     .median()
     // convert to reflectance values
@@ -530,13 +552,13 @@ function importHLS(date1,date2){
   var l8Collection = ee.ImageCollection("NASA/HLS/HLSL30/v002")
     // select and rename desired bands
     .select(['B2',    'B3',    'B4',    'B5',    'B6',    'B7',   'Fmask'], 
-            ['blue',  'green', 'red',   'NIR',   'SWIR1', 'SWIR2','Fmask'])
+            ['blue_HLS',  'green_HLS', 'red_HLS',   'NIR_HLS',   'SWIR1_HLS', 'SWIR2_HLS','Fmask_HLS'])
   // import the Sentinel 2 HLS image collection
   var s2Collection = ee.ImageCollection("NASA/HLS/HLSS30/v002")
     // .select(['B2',  'B3',   'B4', 'B5',      'B6',      'B7',      'B8', 'B8A',     'B11',  'B12',  'Fmask'], 
     //         ['blue','green','red','redEdge1','redEdge2','redEdge3','NIR','redEdge4','SWIR1','SWIR2','Fmask'])
     .select(['B2',  'B3',   'B4', 'B8', 'B11',  'B12',  'Fmask'], 
-            ['blue','green','red','NIR','SWIR1','SWIR2','Fmask'])
+            ['blue_HLS','green_HLS','red_HLS','NIR_HLS','SWIR1_HLS','SWIR2_HLS','Fmask_HLS'])
   
   // merge the two collections into one big HLS image collection
   var hlsCollection = l8Collection.merge(s2Collection);
@@ -555,7 +577,7 @@ function importHLS(date1,date2){
     // mask out cloudy pixels
     .map(function(image) {
       // define the quality score band to use
-      var qaBand = image.select('Fmask');
+      var qaBand = image.select('Fmask_HLS');
       // select the bits of interest
       // Bits 1,2,3,4 are cloud-related 
       // The << operator is the "bitwise shift" operator, shifting 1 to the left by the specified number of bits
@@ -570,7 +592,7 @@ function importHLS(date1,date2){
       return image.updateMask(mask);
     })
     // select the bands of interest
-    .select(['blue','green','red','NIR','SWIR1','SWIR2'])
+    .select(['blue_HLS','green_HLS','red_HLS','NIR_HLS','SWIR1_HLS','SWIR2_HLS'])
     // get the median for the time period of interest
     .median()
     // clip to the AOI
@@ -579,105 +601,53 @@ function importHLS(date1,date2){
   // return the composited and cleaned HLS image
   return(hls)
 }
+
 ```
 
 <img align="center" src="../images/class-gee/optical.png" hspace="15" vspace="10" width="400">
 
-### Optical Imagery (Planet)
+### Google Embeddings
+This annual dataset is available 2017 onward. This is a powerful 10-meter pixel dataset in a 64-dimensional representation, or "embedding vector".
 
-Last, let's import Planet NICFI imagery. Although it only has red, green, blue, and NIR bands, all of which are also present in the Landsat and Sentinel, adding this data set may strengthen the model.
-
-Planet NICFI biannual to monthly mosaics are only available starting in 2015, so we write functions for the importing and preprocessing of the data set, and then we call the function only if our time period of interest is after 2015. Within each importing and preprocessing function, we:
-
-* filter for images that match our area of interest
-* filter for our dates of interest
-* mask out clouds (using the reflectance values of the bands)
-* select and rename bands (so the band names are consistent regardless of which imagery source we use)
-* composite the image (using median)
+* filter for our dates of interest (annual images)
 * clip the image to the AOI
 
 ```javascript
-// Additional Optical
-// ------------------------------------------------------------------------------------------
+// Google Embeddings (for 2017-present)
+// -----------------------------------------
 
-// import and preprocess Planet imagery based on the dates of interest
-var planet = ee.Image(
+// import and preprocess Google Embedding based on the dates of interest
+var GE = ee.Image(
   // if the date range is 2015-present, use planet imagery
   ee.Algorithms.If(
     ee.Date(d1).millis()
-      .gte(ee.Date('2015-01-01').millis()),
+      .gte(ee.Date('2017-01-01').millis()),
     // call function to import and preprocess Planet
-    ee.Image(importPlanet(d1,d2)),
-    // if the date range is outside of 2015-present, return an empty image
+    ee.Image(importGE(d1,d2)),
+    // if the date range is outside of 2017-present, return an empty image
     ee.Image(0)            
   )
 );
 
-// define visualization parameters
-var planetVis = {bands:['red_planet','green_planet','blue_planet'],min:64,max:5454,gamma:1.8};
-// add to map
-Map.addLayer(planet, planetVis,'planet optical',false);
 
-// functions are defined below:
+// ===== Import embeddings =====
 
-// Planet (after 2015)
-// -----------------------------------------
-
-// write a function to import and preprocess Landsat 8 
-function importPlanet(date1,date2){
-  
-  // import the Sentinel 2 image collection
-  var planetCollection = ee.ImageCollection("projects/planet-nicfi/assets/basemaps/africa")
-  
-  // print the resolution
-  print('Planet NICFI resolution (m):',planetCollection.first().select(1).projection().nominalScale())
-  print("Example Planet NICFI images:", planetCollection.limit(3))
-  
-  // do some preprocessing to make an image from the Sentinel 8 image collection
-  var planet = planetCollection
-    // select images that intersect with your AOI
+// Google Embeddings importer
+function importGE(date1, date2) {
+  return ee.ImageCollection('GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL')
     .filterBounds(aoi)
-    // select images in your dates of interest
     .filterDate(date1, date2)
-     // mask out clouds 
-    .map(function(image) {
-      // select and rename the bands we want to use
-      var blue = image.select('B'); 
-      var green = image.select('G');  
-      var red = image.select('R'); 
-      var NIR = image.select('N');
-      // calculate a brightness value by averaging all the bands
-      var brightness = image.expression(
-        '(b1 + b2 + b3 + b4) / 4', {
-          'b1': blue, 'b2': green, 'b3': red, 'b4': NIR
-        })
-      // Create a cloud mask by setting thresholds for each band 
-      // (high reflectance in all bands suggests clouds)
-      var cloudMask = blue
-        .lt(1100)  //1100
-        .and(green.lt(1600))  // 1600
-        .and(red.lt(2200)) //2200
-        // .and(NIR.lt(3500)) //3500
-        .and(brightness.lt(2200));  // 2000
-      // Apply the cloud mask to the image
-      return image.updateMask(cloudMask);
-    })
-    // select and rename desired bands
-    .select(['B',          'G',           'R',         'N'], 
-            ['blue_planet','green_planet','red_planet','NIR_planet',])
-    // get the median for the time period of interest
+    .select([
+      'A00','A01','A02','A03','A04','A05','A06','A07','A08','A09','A10','A11','A12','A13','A14','A15',
+      'A16','A17','A18','A19','A20','A21','A22','A23','A24','A25','A26','A27','A28','A29','A30','A31',
+      'A32','A33','A34','A35','A36','A37','A38','A39','A40','A41','A42','A43','A44','A45','A46','A47',
+      'A48','A49','A50','A51','A52','A53','A54','A55','A56','A57','A58','A59','A60','A61','A62','A63'
+    ])
     .median()
-    // clip to the AOI
     .clip(aoi);
-  
-  // return the composited and cleaned Sentinel 2 image
-  return(planet)
 }
+
 ```
-
-<img align="center" src="../images/class-gee/optical_planet.png" hspace="15" vspace="10" width="400">
-
-*Hint:* For dates of interest in 2014, you will get an error when trying to add Planet imagery to the map, since it is empty for this year.
 
 ## Prepare Predictor Image
 The *Predictor Image* is the image data that is being analyzed by the model to generate a prediction. Said another way, it is the satellite imagery for the year for which we are trying to produce a LULC map.
@@ -687,6 +657,8 @@ Now that we have multiple composted images containing the different bands we wou
 >**Note:**
 >> The **Training Image** and the **Predictor Image** may be the same or different. In our case we are using the same image from which we are extracting the variables for the training samples, as we are for giving the Random Forest for the prediction of all the pixels. However, as long as the bands are the same between the two images, you can use training data from one image and apply it to a different image (e.g., use training points from a 2016 Training Image to classify a 2018 Preditor Image). You could not train a Random Forest classifier on a Training Image with fewer variables than the Predictor Image and expect it to be able to utilize all the information (e.g. training on 2014 with only Landsat and use the Random Forest classifier on a 2018 image with Landsat, Sentinel-2, and SAR).
 
+Inclusiong of the Google Embeddings is noted as optional, based on a true/false flag defined in the parameters. You may want to test your results with and without the embeddings. The dataset is very powerful and could potentially lead to overfitting or outweigh the importance of your other imagery bands. Observe the results and the importace of the bands in your later classification script. The default is to include this data.
+
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
@@ -694,11 +666,32 @@ Now that we have multiple composted images containing the different bands we wou
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// merge all images into a predictor image with many bands
+
+// Build GE only if enabled
+var GE = ee.Image(0);
+if (USE_GE) {
+  GE = ee.Image(
+    ee.Algorithms.If(
+      ee.Date(d1).millis().gte(ee.Date('2017-01-01').millis()),
+      importGE(d1, d2),   // <-- call the pure importer
+      ee.Image(0)
+    )
+  );
+}
+
+  
+// When building predImage -- // merge all images into a predictor image with many bands -- optional flag to remove embeddings if results are overfitted
 var predImage = dem
   .addBands(sar)
-  .addBands(optical)
-  .addBands(planet)
+  .addBands(optical);
+if (USE_GE) predImage = predImage.addBands(GE); // only include Google Embeddings if marked (chosen in parameters at the top)
+
+// remove the constant bands we created during the if algorithms
+predImage = predImage
+  .select(predImage
+    .bandNames()
+    .removeAll(['constant','constant_1','constant_2','constant_3']))
+
 ```
 
 ### Calculate Indices
@@ -723,28 +716,10 @@ As we did before, we write separate functions for the optical and SAR indices, a
 *Resource:* For some background on spectral indices, you can go to the <a href="https://sig-gis.github.io/Liberia_NSC_ForestMonitoringTraining/11_resources/03_indices.html" target="_blank" rel="noopener noreferrer">Spectral Indices section of the Resources page</a> on this website.
 
 ```javascript
-// Calculate indices
-// ------------------------------------------------------------------------------------------
-
-// calculate indices on imagery
-predImage = predImage
-  .addBands(calculateOpticalIndices(predImage))
-  .addBands(ee.Image(
-  // if the date range is 2015-present
-    ee.Algorithms.If(
-      ee.Date(d1).millis()
-        .gte(ee.Date('2015-01-01').millis()),
-      // call function to calculate SAR indices
-      ee.Image(calculateSARIndices(predImage)),
-      // if the date range is outside of 2015-present, add an empty image
-      ee.Image(0)          
-    ))
-  )
-
 // functions defined below:
 
 // write function to calculate indices
-function calculateOpticalIndices(image){
+function calculateHLSIndices(image){
   
   // make sure the image is recognized as an image
   ee.Image(image)
@@ -753,28 +728,28 @@ function calculateOpticalIndices(image){
   
   // When we can, we use the GEE function normalizedDifference, expressed as: (b1-b2)/(b1+b2)
   // NDVI: (NIR-Red)/(NIR+Red)
-  var ndvi = image.normalizedDifference(['NIR', 'red']).rename('NDVI');
+  var ndvi = image.normalizedDifference(['NIR_HLS', 'red_HLS']).rename('NDVI_HLS');
   // LSWI: (NIR-SWIR1)/(NIR+SWIR1)
-  var lswi = image.normalizedDifference(['NIR', 'SWIR1']).rename('LSWI');
+  var lswi = image.normalizedDifference(['NIR_HLS', 'SWIR1_HLS']).rename('LSWI_HLS');
   // NDMI: (SWIR2-Red)/(SWIR2+Red)
-  var ndmi = image.normalizedDifference(['SWIR2', 'red']).rename('NDMI');
+  var ndmi = image.normalizedDifference(['SWIR2_HLS', 'red_HLS']).rename('NDMI_HLS');
   // NDWI: (Green-NIR)/(Green+NIR)
-  var ndwi = image.normalizedDifference(['green', 'NIR']).rename('NDWI');
+  var ndwi = image.normalizedDifference(['green_HLS', 'NIR_HLS']).rename('NDWI_HLS');
   // MNDWI: (Green-SWIR2)/(Green+SWIR2)
-  var mndwi = image.normalizedDifference(['green', 'SWIR2']).rename('MNDWI');
+  var mndwi = image.normalizedDifference(['green_HLS', 'SWIR2_HLS']).rename('MNDWI_HLS');
   
   // for the more complicated indices, we define the input bands separately first
-  var nir = image.select('NIR');
-  var red = image.select('red');
-  var blue = image.select('blue');
-  var green = image.select('green');
-  var swir1 = image.select('SWIR1');
+  var nir = image.select('NIR_HLS');
+  var red = image.select('red_HLS');
+  var blue = image.select('blue_HLS');
+  var green = image.select('green_HLS');
+  var swir1 = image.select('SWIR1_HLS');
   // EVI: 2.5 * (NIR-red) / (NIR + (6*red) - (7.5*blue) + 1)
   var evi = nir.subtract(red).multiply(2.5)
     .divide(nir.add(red.multiply(6)).subtract(blue.multiply(7.5)).add(1))
-    .rename('EVI');
+    .rename('EVI_HLS');
   // MVI: (NIR-green)/(SWIR1-green)
-  var mvi = nir.subtract(green).divide(swir1.subtract(green)).rename('MVI');
+  var mvi = nir.subtract(green).divide(swir1.subtract(green)).rename('MVI_HLS');
 
   // merge indices into a single image
   var indices = ndvi
@@ -790,28 +765,75 @@ function calculateOpticalIndices(image){
 }
 
 // write function to calculate indices
-function calculateSARIndices(image){
+function calculateL8Indices(image){
   
   // make sure the image is recognized as an image
   ee.Image(image)
   
   // calculate the indices and rename them
-
+  
+  // When we can, we use the GEE function normalizedDifference, expressed as: (b1-b2)/(b1+b2)
+  // NDVI: (NIR-Red)/(NIR+Red)
+  var ndvi = image.normalizedDifference(['NIR_L8', 'red_L8']).rename('NDVI_L8');
+  // LSWI: (NIR-SWIR1)/(NIR+SWIR1)
+  var lswi = image.normalizedDifference(['NIR_L8', 'SWIR1_L8']).rename('LSWI_L8');
+  // NDMI: (SWIR2-Red)/(SWIR2+Red)
+  var ndmi = image.normalizedDifference(['SWIR2_L8', 'red_L8']).rename('NDMI_L8');
+  // NDWI: (Green-NIR)/(Green+NIR)
+  var ndwi = image.normalizedDifference(['green_L8', 'NIR_L8']).rename('NDWI_L8');
+  // MNDWI: (Green-SWIR2)/(Green+SWIR2)
+  var mndwi = image.normalizedDifference(['green_L8', 'SWIR2_L8']).rename('MNDWI_L8');
+  
   // for the more complicated indices, we define the input bands separately first
-  // for the SAR bands, we need to convert from decibels to a linear scale for the calculations
-  var vv = ee.Image(10).pow(image.select('VV').divide(10));
-  var vh = ee.Image(10).pow(image.select('VH').divide(10));
-  var hh = ee.Image(10).pow(image.select('HH').divide(10));
-  var hv = ee.Image(10).pow(image.select('HV').divide(10));
-  // RVI: (8*HV) / (HH + VV + (2*HV))
-  var rvi = hv.multiply(8).divide(hh.add(vv).add(hv.multiply(2))).rename('RVI');
+  var nir = image.select('NIR_L8');
+  var red = image.select('red_L8');
+  var blue = image.select('blue_L8');
+  var green = image.select('green_L8');
+  var swir1 = image.select('SWIR1_L8');
+  // EVI: 2.5 * (NIR-red) / (NIR + (6*red) - (7.5*blue) + 1)
+  var evi = nir.subtract(red).multiply(2.5)
+    .divide(nir.add(red.multiply(6)).subtract(blue.multiply(7.5)).add(1))
+    .rename('EVI_L8');
+  // MVI: (NIR-green)/(SWIR1-green)
+  var mvi = nir.subtract(green).divide(swir1.subtract(green)).rename('MVI_L8');
 
   // merge indices into a single image
-  var indices = rvi
+  var indices = ndvi
+    .addBands(lswi)
+    .addBands(ndmi)
+    // .addBands(ndwi)
+    .addBands(mndwi)
+    .addBands(evi)
+    .addBands(mvi);
                     
   // return the index image
   return indices
 }
+
+
+// // write function to calculate indices
+// function calculateSARIndices(image){
+  
+//   // make sure the image is recognized as an image
+//   ee.Image(image) 
+  
+//   // calculate the indices and rename them
+//   // for the more complicated indices, we define the input bands separately first
+//   // for the SAR bands, we need to convert from decibels to a linear scale for the calculations
+//   var vv = ee.Image(10).pow(image.select('VV').divide(10));
+//   var vh = ee.Image(10).pow(image.select('VH').divide(10));
+//   var hh = ee.Image(10).pow(image.select('HH').divide(10));
+//   var hv = ee.Image(10).pow(image.select('HV').divide(10));
+//   // RVI: (8*HV) / (HH + VV + (2*HV)) //Radar Vegetation Index (RVI) is a measure used to assess the density and health of vegetation
+//   var rvi = hv.multiply(8).divide(hh.add(vv).add(hv.multiply(2))).rename('RVI');
+
+//   // merge indices into a single image
+//   var indices = rvi
+                    
+//   // return the index image
+//   return indices
+// }
+
 ```
 
 *Resource:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: <a href="https://www.indexdatabase.de/" target="_blank" rel="noopener noreferrer">https://www.indexdatabase.de/</a>.
@@ -839,6 +861,8 @@ predImage = predImage
     
 // print
 print('predictor image:', predImage)
+
+
 ```
 
 ## Checking Our Work
@@ -846,20 +870,23 @@ print('predictor image:', predImage)
 Let's print out some of our results to double check we did everything correctly.
 
 Add a few of the indeces we made to use for input variables of the predictor image.
+
 ```javascript
 // add some of the features (a.k.a. variables or bands) from the preditor image to the map
+// add to map
 var ndviVis = {
-  bands:['NDVI'],
+  bands:['NDVI_L8'],
   min:0,
   max:0.8,
   palette: ['8bc4f9', 'c9995c', 'c7d270','8add60','097210']};
-Map.addLayer(predImage, ndviVis, 'NDVI', false);
-var rviVis = {
-  bands:['RVI'],
-  min:0,
-  max:2,
-  palette: ['black', 'white']};
-Map.addLayer(predImage, rviVis,'RVI',false);
+Map.addLayer(predImage, ndviVis, 'NDVI L8', false);
+
+var rviCVis = {bands:['RVI_C_S1'], min:0, max:2, palette: ['black', 'white']};
+Map.addLayer(predImage, rviCVis, 'RVI C-band (S1)', false);
+
+var rviLVis = {bands:['RVI_L_P'], min:0, max:2, palette: ['black', 'white']};
+Map.addLayer(predImage, rviLVis, 'RVI L-band (PALSAR)', false);
+
 ```
 <img align="center" src="../images/class-gee/NDVI.png" hspace="15" vspace="10" width="400">
 
@@ -880,7 +907,7 @@ We also printed the merged predictor image to make sure all the other bands were
 <img align="center" src="../images/class-gee/predictor_image.png" hspace="15" vspace="10" width="200">
 
 
-## Prepare Reference Points
+## Prepare Reference Points (SKIP THIS SECTION, NOW THAT WE USE CEO DATA)
 
 Next, we generate reference data. We can either import the points we generated in SEPAL or AREA2, or we can generate points directly in this script. 
 
@@ -943,17 +970,21 @@ When exporting, make sure to change the `assetId` to a path that is in your own 
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// Export the reference points
-Export.table.toAsset({
-  // the feature collection you want to export
-  collection: refPoints,
-  // the task name
-  description: 'refPoints',
-  // the asset ID and path (change to your own asset library)
-  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_'+d1.slice(0,4)+'_'+classPointsNum+'PerClass_v'+version
-});
+// Export the reference points -- SKIP
+//Export.table.toAsset({
+//  // the feature collection you want to export
+//  collection: refPoints,
+//  // the task name
+//  description: 'refPoints',
+//  // the asset ID and path (change to your own asset library)
+//  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_'+d1.slice(0,4)+'_'+classPointsNum+'PerClass_v'+version
+//});
 
-// Export the reference points
+predImage = predImage.set('system:time_start', ee.Date(d1).millis())
+predImage = predImage
+  .set('year', d1.slice(0,4)) //preserve year in metadata
+  
+// Export the image
 Export.image.toAsset({
   // the image you want to export
   image: predImage,
@@ -964,9 +995,10 @@ Export.image.toAsset({
   // the geometry to clip the image to
   region: aoi,
   // the resolution of the image
-  scale: resolution,
-  maxPixels: 1e13
+  scale: 30,
+  maxPixels: 1e13,
 })
+
 ```
 
 Now, when we run our script, a new export task will show up in the **Tasks** tab. Click **RUN** to begin the export, and track its status just below in **SUBMITTED TASKS**.
