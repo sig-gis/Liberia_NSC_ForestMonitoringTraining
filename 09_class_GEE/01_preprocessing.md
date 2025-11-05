@@ -6,7 +6,11 @@ nav_order: 1
 ---
 
 *This page has been updated since the workshop*
+
 *The updated version does not include Planet NICFI imagery, but instead you have the option to include Google Embeddings*
+
+*This version also assume you are using CEO data, not making dummy reference data.'
+
 
 # Preprocessing Imagery in GEE
 
