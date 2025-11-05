@@ -117,7 +117,7 @@ You can use this text to use the `Bulk Add` feature for adding the answer option
 
 #d29f00, shrub
 
-#e3e3e3, bare soil
+#e3e3e3, bare_soil
 
 #fff6a9, sand
 
