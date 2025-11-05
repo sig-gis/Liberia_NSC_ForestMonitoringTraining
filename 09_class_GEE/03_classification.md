@@ -211,9 +211,9 @@ Map.addLayer(refPoints, {}, 'reference points', false);
 // ------------------------------------------------------------------------------------------
 
 var lulc10m = ee.Image(
-  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014')
+  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014') //used for distributing training data samples
 var lulc30m = ee.Image(
-  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_30m_2014')
+  'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_30m_2014') //same resolution as the final maps will be
 
 // do some preprocessing to remove classes we don't want
 lulc10m = lulc10m
