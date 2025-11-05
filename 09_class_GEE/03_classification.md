@@ -7,7 +7,9 @@ nav_order: 3
 
 *This page has been edited since the original workshop event.*
 
-*This updated version  no longer includes Planet NICFI imagery, and instead includes Google Embeddings.*
+*This updated version no longer includes Planet NICFI imagery, and instead includes Google Embeddings.*
+
+*It also assumes the use of uploaded CEO data for training and testing the classifier.*
 
 
 # Classification with Random Forest in GEE
