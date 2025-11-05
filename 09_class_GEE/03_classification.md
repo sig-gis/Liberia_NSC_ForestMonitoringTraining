@@ -256,9 +256,6 @@ var lulcVis = {
 Map.addLayer(lulc10m, lulcVis, 'LULC 2014 10m', false);
 Map.addLayer(lulc30m, lulcVis, 'LULC 2014 30m', false);
 
-// select which lulc to use for generating reference data
-var lulc = lulc10m;
-
 ```
 
 
