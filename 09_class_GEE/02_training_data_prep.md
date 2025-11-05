@@ -100,16 +100,27 @@ We are choosing to collect data for 2024 because all data we will be using (sens
 - Your only necessary survey question should ask about the land cover in 2024, with all the land cover types you want.
 
 You can use this text to use the `Bulk Add` feature for adding the answer options.
+
 #006d3a, forest_80
+
 #009c53, forest_30-80
+
 #00cc6c, forest_30
+
 #00bba4, mangroves
+
 #7b0000, settlements
+
 #015890, water
+
 #b6da03, grassland
+
 #d29f00, shrub
+
 #e3e3e3, bare soil
+
 #fff6a9, sand
+
 
 <img align="center" src="../images/class-gee/CEOquestion_training_data.png" hspace="15" vspace="10" width="400">
 
@@ -127,7 +138,7 @@ Finally, as one last clean up task, you need to convert the 'words' from the sur
 
 XXXX CHECK IF WORDS CAN BE CONVERTED TO NUMBERS IN THE SCRIPT
 
-On GEE, under the Assets tab, click `New, select `CSV file`. Give the sample file asset an understandable name. Use the preserved LAT_save and LON_save columns as the X column and Y column, respectively. Click `Upload`.
+On GEE, under the Assets tab, click `New`, select `CSV file`. Give the sample file asset an understandable name. Use the preserved LAT_save and LON_save columns as the X column and Y column, respectively. Click `Upload`.
 
 Once ingested, make this file readable to all. We will need it in the next section.
 
