@@ -17,6 +17,8 @@ A quick resource page of **all important links for this workshop** can be found 
 
 <span style="color: red;"> **GEE code editor**</span>: [https://code.earthengine.google.com/](https://code.earthengine.google.com/)
 
+<span style="color: red;"> **Link to add GEE Repository**</span>: [https://code.earthengine.google.com/?accept_repo=users/ee-scripts/Liberia_Forest_SIG_workshops)
+
 <span style="color: red;"> **SEPAL**</span>: [https://sepal.io/](https://sepal.io/)
 
 <br />
