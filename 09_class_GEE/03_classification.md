@@ -6,54 +6,167 @@ nav_order: 3
 ---
 
 *This page has been edited since the original workshop event.*
+*This updated version  no longer includes Planet NICFI imagery, and instead includes Google Embeddings.*
 
 # Classification with Random Forest in GEE
 
-Open up a new script and name it `2 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 classification`.
+Open up a new script and name it `2 classification`. You will copy and paste each code block into the empty script. You can check your work by looking at the following script `users/ee-scripts/Liberia_Forest_SIG_workshops/09_classification_GEE/2 v3 classification  - USE THIS`.
 
 ## Setup
 
 ### Set Important Parameters
 
-Put the path to the asset you uploade in the last section in the "2 v3 classification  - USE THIS" script in the repository to define the refPoints variable. Example below:
+Insert all of your asset paths. Pay special attention to this section as this is where you interact with the code as the user and need to change a few things.
+
+- Verions number: just for keeping track of your export files as you test things
+- Training image: Composite image generated for 2024 in "1 v3 preprocessing - USE THIS" from the repository.
+- Deployment image: **This will change every time**, as it is the image for your time period of interest, for which you are making a map. This will be one of the many composite images generated using "1 v3 preprocessing - USE THIS" from the repository.
+- CEO data: Put the path to the asset you uploaded in the last section in to define the **refPoints** variable.
+- CEOlabel_column: This is the name of the column in your CEO data that holds the user defined LC label for each point, should be 'LandCoverLabel2024'
+- CEO label dictionary: This is the dictionary defining the number label associated with each land cover type. This should not need to change unless you change your CEO project answers or want to change which land covers you are mapping.
+
+
+Copy the script below to get started. Alter the  ##USER INPUT## sections as needed.
+
 
 ```javascript
-var refPoints = ee.FeatureCollection(
-  "projects/pc556-ncs-liberia-forest-mang/assets/stratSample2024_example") 
+// **********************************************************
+// USER DEFINED VARIABLES
+// **********************************************************
+
+// ############### USER INPUT ###############
+// version for file naming
+var version = 4; 
+
+
+// Predictor Variable Images //SET THESE ASSET PATHS
+// ------------------------------------------------------------------------------------------
+
+// **************************************** **************************************** ****************************************
+
+// ############### USER INPUT ###############
+//CHANGE THE TRAINING IMAGE PATH IF NEEDED (using testing image made by Crystal for 2024, which includes embeddings) --- should be the year of the CEO data
+var trainImage = ee.Image('projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2024_v3_embeddingtest')
+
+Map.addLayer(trainImage, {bands:['red_L8','green_L8','blue_L8'],min:0,max:0.3}, 
+  'training image L8', false);
+
+// **************************************** **************************************** ****************************************  
+
+// ############### USER INPUT ###############
+// Deployment image (or just define the exact image path for the correct year as is done for the var trainImage)
+// CHANGE THE DEPLOYMENT IMAGE TO THE YEAR OF INTEREST (created using 1. v3 preprocessing script)
+//var deployImage = ee.Image("projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_"+d1Deploy.slice(0,4)+'_v'+version)
+var deployImage = ee.Image("projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_2023_v3_embeddingtest")
+print('Deploy image year, to be used for year of interest:', deployImage.get('year')); // set in preprocessing
+
+// Confirm deploy image year matches the selected year by definin the variable through the metadata of the deployment image
+// Server-side scalar → client string (OK for tiny metadata)
+var year_of_interest = ee.String(deployImage.get('year')).getInfo();  // Pull this from the deployment image to avoid issues. 'year' was set in preprocessing
+
+
+Map.addLayer(deployImage, {bands:['red_L8','green_L8','blue_L8'],min:0,max:0.3}, 
+  'deployment image L8', false);
+
+// **************************************** **************************************** **************************************** 
+
+// ############### USER INPUT ###############
+// YOU CAN UPLOAD A CEO SAMPLES FILE FOR THIS INSTEAD IF YOU HAVE ONE
+var refPoints = ee.FeatureCollection("projects/pc556-ncs-liberia-forest-mang/assets/CEO_test_lc_labels")
+  //"projects/pc556-ncs-liberia-forest-mang/assets/stratSample2014_example") //let's switch this to using something recent (e.g. 2024) for the training year
+  
+// ############### USER INPUT ###############  
+var CEOlabel_column = 'LandCoverLabel2024' //SWITCH THIS TO THE COLUMN NAME USED TO INDICATE THE CLASS VALUES, should hopefully remain the same as this and not need changing
+                                           //(words for LC type, which we will convert to numbers)
+
+
+// ############### USER INPUT ###############
+// Ensure the CEO answers from you survey exactly match the dictionary below so the words for the LC can be given a number label
+var dictionary_CEO_lc = ee.Dictionary({ //for 2024 land cover question
+        1: 'forest_80',
+        2: 'forest_30-80',
+        3: 'forest_30',
+        4: 'mangroves',
+        5: 'settlements',
+        7: 'water',
+        8: 'grassland',
+        9: 'shrub',
+        10: 'bare_soil',
+        11: 'sand'
+});
+
 ```
-You will also be updaing the script so it refers to your selected column name (e.g., var classBand = 'class2024'). More in the next section on this script.
 
-
-
-Again, we define some important parameters at the beginning of the script so they are easy to change later on. These are related to the version number, time period of interest, final map resolution, and smoothing.
+The following parameters are also needed, but should not need changing. The time period of interest (defined using your deployment image), final map resolution, and smoothing.
 
 The version number and dates should match the ones in the preprocessing script. 
 
 ```javascript
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
-// Define Parameters
+// Define Stable Parameters
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// version
-var version = 1;
+// dates of training image and points
+// (THIS SHOULD REMAIN 2024 TO ALIGN WITH THE CEO DATA)
+var d1Train = '2024-1-1'
+var d2Train = '2024-12-31'
 
-// dates of interest
-var d1 = '2014-1-1'
-var d2 = '2014-12-31'
+// dates of deploying image
+var d1Deploy = year_of_interest+'-1-1'
+var d2Deploy = year_of_interest+'-12-31'
 
 // basemap
 Map.setOptions('SATELLITE')
 
-// class band name
-var classBand = 'class' //'simplifiedClass' //'class'
 
 // final map resolution
 var resolution = 30;
 // smoothing radius for final map (pixels)
 var modeRadius = 2;
 ```
+
+### Prepare the CEO data
+Your CEO survey exports words for each answer, the land cover type selected by the user (e.g., water), but we need to convert these to numberic labels. The next part of the code will reference the dictionary you created in the parameters section to add a column to the refpoints, so each written landcover label will have the correct corresponding numeric label.
+
+```javascript
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+// Set up the CEO data
+// //////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////
+
+var classBand = 'classvalues2024'; //New column of LC number values for each class labeled in 2024. 
+                                  //This will be created based on the CEOlabel_column and the dictionary_CEO_lc dictionary above
+
+// --- Invert it to label->number ---
+// Invert to label->code (keys come out as strings)
+var labelToCode = ee.Dictionary.fromLists(dictionary_CEO_lc.values(),
+                                         dictionary_CEO_lc.keys());
+
+
+
+// --- Add numeric class column using the defined column name ---
+var withCodes = refPoints.map(function(f) {
+  var label = ee.String(f.get(CEOlabel_column)).trim();
+  var code = ee.Algorithms.If(
+    labelToCode.contains(label),
+    ee.Number.parse(labelToCode.get(label)),// keys are strings; parse to numb
+    ee.Number(-9999) // or null
+  );
+  return f.set(classBand, code);
+});
+
+
+
+// --- Quick preview ---
+print('Preview CEO data with numeric classes:', withCodes.limit(10));
+
+refPoints = withCodes // switch back to the original variable name with the numberic labels added
+
+```
+
 
 ### Import Data
 
@@ -79,24 +192,17 @@ var aoi = Liberia
 // Add the aoi object as a layer to the map
 Map.addLayer(aoi, {}, 'AOI', false);
 
-// Reference Points
+// Reference Points (must be known point locations with a label for the LC class)
 // ------------------------------------------------------------------------------------------
-
-var refPoints = ee.FeatureCollection(
-  "projects/pc556-ncs-liberia-forest-mang/assets/refPoints_10m_"+d1.slice(0,4)+"_400PerClass")
-
-// Predictor Variable Image
-// ------------------------------------------------------------------------------------------
-
-var predImage = ee.Image(
-  "projects/pc556-ncs-liberia-forest-mang/assets/predImage_30m_"+d1.slice(0,4))
-
-// add to map
-Map.addLayer(predImage, {bands:['red','green','blue'],min:0,max:0.3}, 
-  'optical', false);
-Map.addLayer(predImage, {bands:['red_planet','green_planet','blue_planet'],min:64,max:5454,gamma:1.8}, 
-  'optical planet', false);
+// Use the uploaded CEO points...
   
+print('reference points:', refPoints)
+// print(refPoints.geometry());
+// print(ee.Algorithms.ObjectType(refPoints.first().get('lon')))
+print('property names:', refPoints.first().propertyNames());  
+Map.addLayer(refPoints, {}, 'reference points', false);
+
+
 // LULC
 // ------------------------------------------------------------------------------------------
 
@@ -148,9 +254,8 @@ Map.addLayer(lulc30m, lulcVis, 'LULC 2014 30m', false);
 
 // select which lulc to use for generating reference data
 var lulc = lulc10m;
-```
 
-*If you are getting an error about Planet at this point, why might that be?*
+```
 
 
 ## Prepare Training and Testing Points
@@ -168,20 +273,13 @@ We split the data by generating a new property in the reference data points whic
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
-// extract the training image band values at the reference point locations
-refPoints = predImage.sampleRegions({
+// extract the predictor image band values reference points
+refPoints = trainImage.sampleRegions({
       collection: refPoints, 
       properties: [classBand], 
       scale: resolution,
       geometries:true
     })
-
-// refPoints = lulc.sampleRegions({
-//       collection: refPoints, 
-//       properties: [classBand], 
-//       scale: 10,
-//       geometries:true
-//     })
 
 // Add to the map
 Map.addLayer(refPoints, {}, 'reference points', false);
@@ -190,8 +288,6 @@ print('reference points:', refPoints.limit(5))
 
 // Divide reference points into training and testing points
 // Create random column in reference points
-// Note: There is an equal number of points per class label, 
-//    so a fully random selection of the 80/20 works fine instead of getting 80/20 per class
 refPoints = refPoints.randomColumn();
 
 // set aside 80% of data for training 
@@ -202,15 +298,23 @@ var testPoints = refPoints.filter(ee.Filter.gte('random', 0.8));
 // print size of testing and training data sets
 print('Number of training points:', trainPoints.size());
 print('Number of testing points:', testPoints.size());
+//print('testPoints', testPoints)
 
 // add to map
 Map.addLayer(trainPoints, {color: 'black'}, 'training points', false); 
 Map.addLayer(testPoints, {color: 'white'}, 'testing points', false); 
 
-// alternatively,  import the training and testing points created in SEPAL or AREA2 
+// **************************************** **************************************** ****************************************
+// alternatively, import the if training and testing points were created separatelyu (in SEPAL or AREA2), 
+// or they will be split using a larger reference points
 // (comment out the rest of this section above)
 // var trainPoints = ee.FeatureCollection()
 // var testPoints = ee.FeatureCollection()
+// // print size of testing and training data sets
+// print('Number of training points:', trainPoints.size());
+// print('Number of testing points:', testPoints.size());
+// **************************************** **************************************** ****************************************
+
 ```
 
 <img align="center" src="../images/class-gee/trainingtesting_pts.png" hspace="15" vspace="10" width="400">
@@ -240,24 +344,83 @@ First, we select the predictor variables we want the classifier to use. This is 
 // //////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////
 
+
+//Google embedding band list, set as variable
+var geBands = ee.List([
+  'A00','A01','A02','A03','A04','A05','A06','A07','A08','A09','A10','A11','A12','A13','A14','A15',
+  'A16','A17','A18','A19','A20','A21','A22','A23','A24','A25','A26','A27','A28','A29','A30','A31',
+  'A32','A33','A34','A35','A36','A37','A38','A39','A40','A41','A42','A43','A44','A45','A46','A47',
+  'A48','A49','A50','A51','A52','A53','A54','A55','A56','A57','A58','A59','A60','A61','A62','A63'
+]);
+
 // Define prediction bands
-// Get all image bands from the predictor image and remove any you want to leave out
-var predBands =  predImage.bandNames()
-  .removeAll(['constant','constant_1','constant_2']) //adjust as needed, the constant bands are for the demo
+var predBands =  deployImage
+  // Get all image bands from the predictor image
+  .bandNames()
+  // if the date range is 2013-2015, use only Landsat 8 optical bands and indices (remove HLS)
+  .removeAll(ee.List(
+    ee.Algorithms.If(
+      ee.Date(d2Deploy).millis()
+        .lt(ee.Date('2016-01-01').millis())
+        .and(ee.Date(d1Deploy).millis()
+          .gte(ee.Date('2013-01-01').millis())),
+      ee.List(['blue_HLS','green_HLS','red_HLS','NIR_HLS','SWIR1_HLS','SWIR2_HLS',
+               'NDVI_HLS','LSWI_HLS','NDMI_HLS','MNDWI_HLS','EVI_HLS','MVI_HLS']),
+      // if the date range is 2016-present, use only HLS optical bands and indices (remove L8)
+      ee.Algorithms.If(
+        ee.Date(d1Deploy).millis()
+          .gte(ee.Date('2016-01-01').millis()),
+        ee.List(['blue_L8','green_L8','red_L8','NIR_L8','SWIR1_L8','SWIR2_L8',
+                 'NDVI_L8','LSWI_L8','NDMI_L8','MNDWI_L8','EVI_L8','MVI_L8']),
+        ee.List([]) // fallback
+      )
+    )
+  ));
+
+    
+// Additional, explicit removal of embeddings for <2017
+predBands = ee.List(
+  ee.Algorithms.If(
+    ee.Date(d1Deploy).millis().lt(ee.Date('2017-01-01').millis()),
+    predBands.removeAll(geBands),
+    predBands
+  )
+);    
+    
 
 // print prediction bands
 print('prediction bands:', predBands)
+
+
+//double check all bands are the same in both images
+var trainBands  = trainImage.bandNames();
+var deployBands = deployImage.bandNames();
+
+// Keep only bands present in BOTH train and deploy images
+predBands = ee.List(predBands)
+  .map(function(b) {
+    b = ee.String(b);
+    var inTrain  = ee.Number(trainBands.indexOf(b)).gte(0);
+    var inDeploy = ee.Number(deployBands.indexOf(b)).gte(0);
+    return ee.Algorithms.If(inTrain.and(inDeploy), b, null);
+  })
+  .removeAll([null]);
+  
+  
+print('Confirm bands are the same in both images.')
+print('Bands in both, should be same as above: ',predBands)
 
 // Train random forest classifier with the training points and prediction bands
 var RFclassifier = ee.Classifier.smileRandomForest({numberOfTrees:200, seed:234})
   .train({
     features: trainPoints, 
     classProperty: classBand,
-    inputProperties: predBands
+    inputProperties: predBands //this ensures the bands for two images match
 });
 
 // Print decision trees
 print('decision trees:', RFclassifier.explain());
+
 ```
 
 We also print out the prediction bands and the decision trees of the random forest model so we can explore what kinds of cutoffs the random forest decision trees have created in the different predictor variables.
@@ -278,13 +441,13 @@ Second, we actually deploy the classifier on the full predictor image to get a c
 // //////////////////////////////////////////////////////////////////////////////////////////
 
 // Classify the predictor image with the trained classifier
-var RFclassification = predImage
-  .select(predBands)
+var RFclassification = deployImage
+  .select(predBands) //this ensures the bands for two images match
   .classify(RFclassifier)
   // smooth to make it less speckly
   .focalMode(modeRadius, 'circle', 'pixels')
   .reproject({
-    crs: predImage.projection(),
+    crs: deployImage.projection(),
     scale: resolution})
   .clip(aoi)
 
