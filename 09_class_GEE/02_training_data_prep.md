@@ -79,7 +79,7 @@ Once your download to Drive completes you need to clean up the file a bit so it 
 
 <img align="center" src="../images/class-gee/Samples_for_CEO_before_cleaning.png" hspace="15" vspace="10" width="600">
 
-Clean up the columns so they look like this. You can remove the extraneous columns (system:index, random, .geo). Rename the ID column to "PLOTID", the classification to a clearer "old_2014map_classification", lat to "LAT", and lon to "LON". Finally, I recommend duplicating the LAT and LON columns. CEO does not export the coordinates in the final Sample file output, so it is easiest to preserve them now. The final version will look like this:
+Clean up the columns so they look like this. You can remove the extraneous columns (system:index, random, .geo). Rename the ID column to "PLOTID", the classification to a clearer "old_2014map_classification", lat to "LAT", and lon to "LON". The final version will look like this:
 
 <img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning.png" hspace="15" vspace="10" width="600">
 
@@ -130,15 +130,10 @@ Your final project will come out looking something like this: [https://app.colle
 ### After the Data Collection
 It will take a while to collect the data in CEO with the work of several team members. The quality of this data will determine the quality of all your resulting maps, so be sure you are satisfied with the data and have performed sufficient QA/QC. 
 
-Once the data collection is complete download the Sample Data CSV file. Since we saved the lat/long as additional columns in our file cleaning earlier, you can use those columns to ingest these points into GEE. You will need to adjust the column name of your survey question so it has no spaces, e.g., class2024.
+Once the data collection is complete download the Sample Data CSV file. You will want to adjust the column name of your survey question so it has no spaces. We suggest "LandCoverLabel2024", which is already set up to be used in the coming script. You can remove extraneous columns from the data if you wish, but it will work as-is in GEE.
 
-XXXX CHECK USE OF CLASS2014
 
-Finally, as one last clean up task, you need to convert the 'words' from the survey response to 
-
-XXXX CHECK IF WORDS CAN BE CONVERTED TO NUMBERS IN THE SCRIPT
-
-On GEE, under the Assets tab, click `New`, select `CSV file`. Give the sample file asset an understandable name. Use the preserved LAT_save and LON_save columns as the X column and Y column, respectively. Click `Upload`.
+In GEE, under the Assets tab, click `New`, select `CSV file`. Give the sample file asset an understandable name. Define the CSV's "lat" and "lon" columns as the X column and Y column, respectively, when filling in the asset upload form. Click `Upload`.
 
 Once ingested, make this file readable to all. We will need it in the next section.
 
