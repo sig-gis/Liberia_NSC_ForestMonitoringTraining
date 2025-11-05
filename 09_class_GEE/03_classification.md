@@ -645,24 +645,47 @@ Export.image.toAsset({
   // the image you want to export
   image: RFclassification,
   // the name of the task
-  description: 'RFclassification',
+  description: 'RFclassification'+year_of_interest,
   // the path and name of the asset (change this to be in your own asset library)
-  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/RFclassification_'+resolution+'m_'+d1.slice(0,4)+'_v'+version,
+  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/RFclassification_'+year_of_interest+'yr_'+resolution+'m_'+d1Deploy.slice(0,4)+'training_v'+version,
   // the geometry to clip the image to
   region: aoi,
   // the resolution of the image
   scale: resolution,
   maxPixels: 1e13
 })
+
+
+
+///Add DRIVE
+
+
+// Export the classification map to Drive
+Export.image.toDrive({
+  // the image you want to export
+  image: RFclassification,
+  // Drive folder (will be created if it does not exist)
+  folder: 'LC_Classification_Results',
+  // the name of the task
+  description: 'todrive_RFclassification'+year_of_interest,
+  //file name
+  fileNamePrefix:'RFclassification'+year_of_interest,
+  // the geometry to clip the image to
+  region: aoi,
+  // the resolution of the image
+  scale: resolution,
+  maxPixels: 1e13
+})
+
             
-// Export the reference points Asset Library
+// Export the classified testing points Asset Library
 Export.table.toAsset({
   // the feature collection you want to export
   collection: testPointsClassified,
   // the task name
-  description: 'testPointsClassified',
+  description: 'testPointsClassified'+year_of_interest,
   // the asset ID and path (change to your own asset library)
-  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/testPointsClassified_'+resolution+'m_'+d1.slice(0,4)+'_v'+version,
+  assetId: 'projects/pc556-ncs-liberia-forest-mang/assets/testPointsClassified_'+year_of_interest+'yr_'+resolution+'m_'+d1Train.slice(0,4)+'training_v'+version,
 });
 
 // Export the class areas as a CSV to Google Drive
@@ -670,21 +693,21 @@ Export.table.toDrive({
   // the feature collection
   collection: pixelCounts_fc,
   // the task name
-  description: 'classAreas',
+  description: 'todrive_classAreas'+year_of_interest,
   // folder and file name in Drive
-  fileNamePrefix: 'classAreas_'+resolution+'m_'+d1.slice(0,4)+'_v'+version,
+  fileNamePrefix: 'classAreas_'+year_of_interest+'yr_'+resolution+'m_'+d1Deploy.slice(0,4)+'training_v'+version,
   fileFormat: 'CSV'
 });
 
-// Export reference points to Google Drive
+// Export testing points to Google Drive
 Export.table.toDrive({
   collection: testPointsClassified,
   // the task name
-  description: 'todrive_testPointsClassified',
+  description: 'todrive_testPointsClassified'+year_of_interest,
   // folder and file name in Drive
-  fileNamePrefix: 'testPointsClassified_'+resolution+'m_'+d1.slice(0,4)+'_v'+version,
+  fileNamePrefix: 'testPointsClassified_'+year_of_interest+'yr_'+resolution+'m_'+d1Train.slice(0,4)+'training_v'+version,
   // columns to export
-  selectors: 'system:index,classification,class'
+  selectors: ['system:index','classification',classBand]
 });
 ```
 
