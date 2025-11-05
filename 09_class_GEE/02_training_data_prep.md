@@ -81,7 +81,7 @@ Once your download to Drive completes you need to clean up the file a bit so it 
 
 Clean up the columns so they look like this. You can remove the extraneous columns (system:index, random, .geo). Rename the ID column to "PLOTID", the classification to a clearer "old_2014map_classification", lat to "LAT", and lon to "LON". The final version will look like this:
 
-<img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/class-gee/Samples_for_CEO_after_cleaning_v2.png" hspace="15" vspace="10" width="600">
 
 Download this cleaned file as a CSV to be used as the Plot Locations CSV in a CEO project.
 
