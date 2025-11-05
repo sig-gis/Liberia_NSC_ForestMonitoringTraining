@@ -6,7 +6,9 @@ nav_order: 3
 ---
 
 *This page has been edited since the original workshop event.*
+
 *This updated version  no longer includes Planet NICFI imagery, and instead includes Google Embeddings.*
+
 
 # Classification with Random Forest in GEE
 
