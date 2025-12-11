@@ -31,6 +31,7 @@ Historically, maps have been used to quantify the area of each class by *pixel c
    - This is the data used to make the final estimates.
 4. Analysis to Quantify Area Estimates and Uncertainties
    - Use the information on the manner of sample distribution and the interpreted sample labels to statisically estimate the area associated with each label, along with the uncertainty of that area estimate. (e.g., 1000 hectares of forest loss +/- 120 hectares)
+   - If the samples were distributed using a stratification map, a confusion matrix (aka error matrix) is used for the analysis.
 
 
 
