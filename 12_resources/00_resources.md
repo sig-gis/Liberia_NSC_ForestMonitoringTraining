@@ -3,7 +3,7 @@ layout: page
 title: "Resources"
 permalink: /11_resources
 has_children: True
-nav_order: 16
+nav_order: 17
 ---
 
 # Further Resources
