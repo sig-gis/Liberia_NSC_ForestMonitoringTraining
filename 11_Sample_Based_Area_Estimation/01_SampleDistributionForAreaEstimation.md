@@ -66,7 +66,7 @@ To make the change maps, you compare the class value of each pixel at time 1 aga
 # Option 1 - GEE Method 
 ## General Approach
 Use the two LC rasters (`lc_t1`, `lc_t2`) to calculate transition codes or classify changes directly using logical expressions.
----
+
 ## A. Detailed Transition Map (all change types)
 Each transition can be uniquely encoded:
 ```js
@@ -75,7 +75,7 @@ var transition = lc_t1.multiply(100).add(lc_t2);
 ```
 You can use this map as-is or reclassify it later into thematic change groups.
 
----
+
 ## B. Simplified Change Classes
 Define forest and mangrove groups:
 
@@ -92,13 +92,13 @@ noChange.multiply(1) // 1 = no_change .where(isForest_t1.eq(1).and(isForest_t2.e
 
 .and(isForest_t1.eq(0).or(isForest_t2.eq(0))) .and(isMangrove_t1.eq(0).and(isMangrove_t2.eq(0))), 4); // other_change
 ```
----
+
 ## C. Binary Change / No-Change Map
 Updated per your request: 0 = no_change, 1 = change.
 ```js
 var changeBinary = lc_t1.neq(lc_t2).rename('change'); // changeBinary: 1 = change, 0 = no_change
 ```
----
+
 ## D. Basic Steps in GEE
 1. Load LC maps (`lc_t1`, `lc_t2`), ensure same projection/resolution.
 2. Compute either:
@@ -119,7 +119,6 @@ In Raster Calculator:
 ```
 Save as change_binary.tif
 
----
 ## B. Detailed Transition Codes
 In Raster Calculator, if using detailed transition codes:
 ```text
@@ -134,7 +133,6 @@ These can be reclassified with a lookup table to thematic groups. Use “Reclass
 - to group transitions (e.g., all forest→non-forest as forest_loss), or
 - to directly relabel specific transitions.
 
----
 ## C. Simplified Change Classes
 Decide which LC codes are forest/mangroves: 
 - Forest = {1,2,3}
@@ -159,7 +157,6 @@ Save as change_classes.tif and apply a custom legend.
 - 3 = mangrove_loss
 - 4 = other_change
 
----
 ## D. Basic Steps in QGIS
 1. Load rasters.
 2. Use Raster Calculator or "Reclassify by table" to compute:
