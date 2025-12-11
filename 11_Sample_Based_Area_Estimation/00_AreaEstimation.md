@@ -21,13 +21,6 @@ Historically, maps have been used to quantify the area of each class by *pixel c
 - Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
 
 
-## Sampling design considerations for quantifying the characteristics of a popultation
-Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
-
-In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
-
-A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at a characteristic of interest with a geographically small area within the population, reducing the total number of points you need to collect to meet your desired level of uncertainty in your estimates.
-
 
 
 # Reminder... Overview of Sampling Design
@@ -42,6 +35,7 @@ The design includes several key dedision points such as the:
 - method of sample distribution (tool used to assign sample locations)
 
 <img align="center" src="./images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
+
 
 
 ## What are the goals of a good sampling design?
@@ -69,6 +63,14 @@ The design includes several key dedision points such as the:
 6. **Reproducibility**
 - Design a sampling process that can be repeated by others for consistency and verification.
 - Use clear, documented procedures for sample selection and measurement.
+
+
+## Sampling design considerations for quantifying the characteristics of a popultation
+Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
+
+In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
+
+A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at a characteristic of interest with a geographically small area within the population, reducing the total number of points you need to collect to meet your desired level of uncertainty in your estimates.
 
 
 ## Some Well Known Sampling Techniques
