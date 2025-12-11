@@ -41,8 +41,8 @@ Post-classification comparison is a straightforward approach for generating chan
 To make the change maps, you compare the class value of each pixel at time 1 against its value at time 2 and then assign a change label. This can be done with either:
 - **Full-detail transitions:** every possible class-to-class change (e.g., `forest_80 → settlements`).
 - **Simplified schemes:**
- - binary (`change` / `no_change`), or
- - thematic categories (e.g., `no_change`, `forest_loss`, `mangrove_loss`, `other_change`).
+   - binary (`change` / `no_change`), or
+   - thematic categories (e.g., `no_change`, `forest_loss`, `mangrove_loss`, `other_change`).
 
 
 ## Key considerations for your change maps
@@ -55,10 +55,10 @@ To make the change maps, you compare the class value of each pixel at time 1 aga
 ### Change legend design
 - Full detail: every possible transition (e.g., forest_80 → settlements, mangroves → water). This is rich but can produce many classes.
 - Simplified: e.g.,
- - no_change
- - forest_loss (any forest/mangrove class → non-forest)
- - mangrove_loss (mangroves → non-mangroves)
- - other_change (grassland → shrub, shrub → forest, etc.)
+   - no_change
+   - forest_loss (any forest/mangrove class → non-forest)
+   - mangrove_loss (mangroves → non-mangroves)
+   - other_change (grassland → shrub, shrub → forest, etc.)
 - Or the most minimal: 2 classes – no_change, change.
 
 
