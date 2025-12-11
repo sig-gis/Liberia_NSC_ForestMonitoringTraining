@@ -60,19 +60,23 @@ Use the two LC rasters (`lc_t1`, `lc_t2`) to calculate transition codes or class
 Each transition can be uniquely encoded:
 ```js
 var transition = lc_t1.multiply(100).add(lc_t2);
-// e.g., forest_80 (1) → settlements (5) becomes 105 ```
+// e.g., forest_80 (1) → settlements (5) becomes 105
+```
 ---
 ## B. Simplified Change Classes
 ```js
 var forestClasses = [1,2,3]; // forest strata
 var isForest_t1 = lc_t1.remap(forestClasses, [1,1,1], 0); var isForest_t2 = lc_t2.remap(forestClasses, [1,1,1], 0);
 var isMangrove_t1 = lc_t1.eq(4); var isMangrove_t2 = lc_t2.eq(4);
-var noChange = lc_t1.eq(lc_t2); ```
+var noChange = lc_t1.eq(lc_t2);
+```
+
 ```js
 var changeClass =
 noChange.multiply(1) // 1 = no_change .where(isForest_t1.eq(1).and(isForest_t2.eq(0)), 2) // forest_loss .where(isMangrove_t1.eq(1).and(isMangrove_t2.eq(0)), 3) // mangrove_loss .where(noChange.not()
 
-.and(isForest_t1.eq(0).or(isForest_t2.eq(0))) .and(isMangrove_t1.eq(0).and(isMangrove_t2.eq(0))), 4); // other_change ```
+.and(isForest_t1.eq(0).or(isForest_t2.eq(0))) .and(isMangrove_t1.eq(0).and(isMangrove_t2.eq(0))), 4); // other_change
+```
 ---
 ## C. Binary Change / No-Change Map
 ```js
@@ -86,12 +90,14 @@ var changeBinary = lc_t1.neq(lc_t2).rename('change'); // changeBinary: 1 = chang
 # 2. QGIS Method
 ## A. Binary Change / No-Change
 ```text
-("LC_t1@1" != "LC_t2@1") ```
+("LC_t1@1" != "LC_t2@1")
+```
 ---
 ## B. Detailed Transition Codes
 ```text
 
-("LC_t1@1" * 100) + "LC_t2@1" ```
+("LC_t1@1" * 100) + "LC_t2@1"
+```
 ---
 ## C. Simplified Change Classes
 ```text
