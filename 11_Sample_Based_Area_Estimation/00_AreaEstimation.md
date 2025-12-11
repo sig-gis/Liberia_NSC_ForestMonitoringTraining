@@ -12,13 +12,25 @@ nav_order: 12
 
 ## Use: Inferring characteristics of a population based on a sample (e.g. sample-based area estimation)
 Historically, maps have been used to quantify the area of each class by *pixel counting*. Pixel counting approaches simply sum up the area belonging to each class. 
- - However, this method is prone to bias due to classification errors (e.g., data noise, pixel mixing, or poor class separation).
+- However, this method is prone to bias due to classification errors (e.g., data noise, pixel mixing, or poor class separation).
 - Pixel counting can result in over- or underestimates, and you cannot quantify this uncertainty.
 
 *Sample-based approaches* use manually collected samples and statistical formulas based on the sampling design to estimate class areas.
 - Uses manually collected reference samples (typically collected in a program like CEO) and statistical methods to estimate class areas. 
 - The sample data is used to make estimates for for the whole area of interest.
-- Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
+- Provides **unbiased estimates and quantifies uncertainty**, making results more reliable and robust.
+- Reporting uncertainty and unbiased estimates of area is often a requirement of forest change reporting mechanisms.
+
+## Steps of Area Estimation
+
+1. Sampling Design
+   - The number and manner of distribution of samples across the area of interest in a representative manner (e.g. randomly, systematically, or using a stratification map)
+   - Determines the distribution of the sample data to be collected
+3. Response Design
+  - Guidelines for collecting reference data, the 'true label' for the samples, collected by interpreters using remote sensing or field visits.
+  - This is the data used to make the final estimates.
+4. Analysis to Quantify Area Estimates and Uncertainties
+- Use the information on the manner of sample distribution and the interpreted sample labels to statisically estimate the area associated with each label, along with the uncertainty of that area estimate. (e.g., 1000 hectares of forest loss +/- 120 hectares)
 
 
 
