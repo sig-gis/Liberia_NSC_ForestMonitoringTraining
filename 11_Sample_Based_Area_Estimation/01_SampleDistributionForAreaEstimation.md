@@ -16,7 +16,7 @@ The Google Sheets template we used in the follow-up workshop to calculate the nu
 
 You will most likely be using Stratified Random Sampling (using a map to inform the design, a minimum number of observations randomly placed in each category), so that is assumed here. However, for the area estimation of land cover change **you will be using a different map asset than was used in the video.**
 
-## Option 1: Making a Stratification Map
+## Methods if You Are Making And Using a Stratification Map
 
 The plan discussed in the workshop event was to use the land cover maps created using Random Forest, comparing them to make **LC Change Maps** to be used as the stratification maps for sample distribution.  This could be done in GEE or QGIS, so we will discuss both options.
 
