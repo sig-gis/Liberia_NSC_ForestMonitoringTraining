@@ -148,6 +148,9 @@ A large number of points will make the tool run more slowly. Choose a reasonable
 The output will look something like this in Drive:
 <img align="center" src="./images/sampling/AREA2_csv_results.png"  vspace="10" width="800">
 
+# Further Resources
+We reviewed how to use AREA2 in a follow-up workshop to this event. The recording of that walk-through is [here](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQyzYhKD-/view?usp=sharing). You can stop watching at 16:00, when the topic switches to uploading the samples to CEO. The Google Sheets template we used in the follow-up workshop to calculate the number of samples per strata (proportional with a minimum sample size) is [here](https://docs.google.com/spreadsheets/d/1O2-5G-W4lZET1e8tv4uyK_-6D93FIprmj7ksD4J1WtA/edit?usp=sharing). You can make a copy of the template in order to make your own edits.
+
 #### Challenge
 - If you make your own copy of the scripts, you can go into the script itself and alter the default input parameters to your own so you do not have to keep retyping them in the GUI. 
 - You can also add a randomization seed as a parameter into the .stratifiedSample function. This would allow for repeatability of your sampling design if you set and record this parameter.
