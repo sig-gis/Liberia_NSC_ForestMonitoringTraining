@@ -123,7 +123,6 @@ Save as change_binary.tif
 ## B. Detailed Transition Codes
 In Raster Calculator, if using detailed transition codes:
 ```text
-
 ("LC_t1@1" * 100) + "LC_t2@1"
 ```
 
@@ -137,23 +136,28 @@ These can be reclassified with a lookup table to thematic groups. Use “Reclass
 
 ---
 ## C. Simplified Change Classes
-Forest = {1,2,3}, Mangroves = {4}. Use nested if() expressions in Raster Calculator:
+Decide which LC codes are forest/mangroves: 
+- Forest = {1,2,3}
+- Mangroves = {4}
+- Non-forest = {5, 7, 8, 9, 10, 11}
+
+Use nested if() expressions in Raster Calculator:
 ```text
-if(
-"LC_t1@1" = "LC_t2@1",
-1,
-if(
-("LC_t1@1" = 1 OR "LC_t1@1" = 2 OR "LC_t1@1" = 3)
-AND NOT("LC_t2@1" = 1 OR "LC_t2@1" = 2 OR "LC_t2@1" = 3), 2,
-if(
-("LC_t1@1" = 4) AND ("LC_t2@1" != 4),
-3,
-4
-)
-)
+if( "LC_t1@1" = "LC_t2@1", 1,     -- no_change
+    if( ("LC_t1@1" in (1,2,3)) AND NOT ("LC_t2@1" in (1,2,3)),
+        2,                       -- forest_loss
+        if( ("LC_t1@1" = 4) AND ("LC_t2@1" != 4),
+            3,                   -- mangrove_loss
+            4                    -- other_change
+        )
+    )
 )
 ```
 Save as change_classes.tif and apply a custom legend.
+- 1 = no_change
+- 2 = forest_loss
+- 3 = mangrove_loss
+- 4 = other_change
 
 ---
 ## D. Basic Steps in QGIS
