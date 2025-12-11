@@ -51,6 +51,24 @@ The LC classes:
 9: shrub
 10: bare_soil 11: sand
 ```
+
+## Key considerations for your change maps
+
+### Input maps
+- Same projection, resolution, and extent.
+- Same class scheme (you already have consistent codes: 1–11).
+- Make sure it’s clear which map is t1 (earlier) and which is t2 (later).
+
+### Change legend design
+- Full detail: every possible transition (e.g., forest_80 → settlements, mangroves → water). This is rich but can produce many classes.
+- Simplified: e.g.,
+ - no_change
+ - forest_loss (any forest/mangrove class → non-forest)
+ - mangrove_loss (mangroves → non-mangroves)
+ - other_change (grassland → shrub, shrub → forest, etc.)
+- Or the most minimal: 2 classes – no_change, change.
+
+
 ---
 # Option 1 - GEE Method 
 ## General Approach
@@ -99,18 +117,34 @@ var changeBinary = lc_t1.neq(lc_t2).rename('change'); // changeBinary: 1 = chang
    
 ---
 # Option 2 - QGIS Method
+Ensure LC rasters from t1 and t2 are aligned. In QGIS, you’ll typically use Raster Calculator and/or “Raster → Raster Calculator” and the “Reclassify by table” or “Raster reclassify” tools (from Processing). Use Raster Calculator with logical expressions.
+
 ## A. Binary Change / No-Change
+In Raster Calculator:
 ```text
 ("LC_t1@1" != "LC_t2@1")
 ```
+Save as change_binary.tif
+
 ---
 ## B. Detailed Transition Codes
+In Raster Calculator, if using detailed transition codes:
 ```text
 
 ("LC_t1@1" * 100) + "LC_t2@1"
 ```
+
+The first map label is seen in the 10s place, while the second map is the 1s digit. This produces codes such as:
+- 105 = 1 to 5 transition
+- 403 = 4 to 3 transition
+
+These can be reclassified with a lookup table to thematic groups. Use “Reclassify by table” or “Raster reclassify” tools (from Processing). Use a reclassification table (CSV or manually in the tool) if you want:
+- to group transitions (e.g., all forest→non-forest as forest_loss), or
+- to directly relabel specific transitions.
+
 ---
 ## C. Simplified Change Classes
+Forest = {1,2,3}, Mangroves = {4}. Use nested if() expressions in Raster Calculator:
 ```text
 if(
 "LC_t1@1" = "LC_t2@1",
@@ -126,7 +160,13 @@ if(
 )
 )
 ```
+Save as change_classes.tif and apply a custom legend.
+
 ---
 ## D. Basic Steps in QGIS
 1. Load rasters.
-2. Use Raster Calculator to generate change classes. 3. Style and export.
+2. Use Raster Calculator or "Reclassify by table" to compute:
+ - binary change
+ - transition codes
+ - or simplified thematic classes
+3. Style and export.
