@@ -52,7 +52,7 @@ The LC classes:
 10: bare_soil 11: sand
 ```
 ---
-# 1. GEE Method
+# Option 1 - GEE Method 
 ## General Approach
 Use the two LC rasters (`lc_t1`, `lc_t2`) to calculate transition codes or classify changes directly using logical expressions.
 ---
@@ -62,15 +62,19 @@ Each transition can be uniquely encoded:
 var transition = lc_t1.multiply(100).add(lc_t2);
 // e.g., forest_80 (1) → settlements (5) becomes 105
 ```
+You can use this map as-is or reclassify it later into thematic change groups.
+
 ---
 ## B. Simplified Change Classes
+Define forest and mangrove groups:
+
 ```js
 var forestClasses = [1,2,3]; // forest strata
 var isForest_t1 = lc_t1.remap(forestClasses, [1,1,1], 0); var isForest_t2 = lc_t2.remap(forestClasses, [1,1,1], 0);
 var isMangrove_t1 = lc_t1.eq(4); var isMangrove_t2 = lc_t2.eq(4);
 var noChange = lc_t1.eq(lc_t2);
 ```
-
+Build a simplified 4-class scheme:
 ```js
 var changeClass =
 noChange.multiply(1) // 1 = no_change .where(isForest_t1.eq(1).and(isForest_t2.eq(0)), 2) // forest_loss .where(isMangrove_t1.eq(1).and(isMangrove_t2.eq(0)), 3) // mangrove_loss .where(noChange.not()
@@ -79,15 +83,22 @@ noChange.multiply(1) // 1 = no_change .where(isForest_t1.eq(1).and(isForest_t2.e
 ```
 ---
 ## C. Binary Change / No-Change Map
+Updated per your request: 0 = no_change, 1 = change.
 ```js
 var changeBinary = lc_t1.neq(lc_t2).rename('change'); // changeBinary: 1 = change, 0 = no_change
 ```
 ---
 ## D. Basic Steps in GEE
 1. Load LC maps (`lc_t1`, `lc_t2`), ensure same projection/resolution.
-2. Compute either full transition image, simplified change classes, or binary map. 3. Visualize and export.
+2. Compute either:
+   - a full transition image
+   - simplified change classes
+   - or a binary chang/no-change map
+4. Visualize and export.
+
+   
 ---
-# 2. QGIS Method
+# Option 2 - QGIS Method
 ## A. Binary Change / No-Change
 ```text
 ("LC_t1@1" != "LC_t2@1")
