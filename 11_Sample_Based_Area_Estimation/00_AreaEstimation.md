@@ -27,10 +27,10 @@ Historically, maps have been used to quantify the area of each class by *pixel c
    - The number and manner of distribution of samples across the area of interest in a representative manner (e.g. randomly, systematically, or using a stratification map)
    - Determines the distribution of the sample data to be collected
 3. Response Design
-  - Guidelines for collecting reference data, the 'true label' for the samples, collected by interpreters using remote sensing or field visits.
-  - This is the data used to make the final estimates.
+   - Guidelines for collecting reference data, the 'true label' for the samples, collected by interpreters using remote sensing or field visits.
+   - This is the data used to make the final estimates.
 4. Analysis to Quantify Area Estimates and Uncertainties
-- Use the information on the manner of sample distribution and the interpreted sample labels to statisically estimate the area associated with each label, along with the uncertainty of that area estimate. (e.g., 1000 hectares of forest loss +/- 120 hectares)
+   - Use the information on the manner of sample distribution and the interpreted sample labels to statisically estimate the area associated with each label, along with the uncertainty of that area estimate. (e.g., 1000 hectares of forest loss +/- 120 hectares)
 
 
 
