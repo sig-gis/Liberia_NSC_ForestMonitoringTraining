@@ -6,8 +6,31 @@ has_children: True
 nav_order: 12
 ---
 
+# What is Sample-Based Area Estimation?
+- A statistical approach used to infer the characteristics of a larger area or population by analyzing data from a representative subset (sample) of that area
+    - Namely, *sample-based area estimation*, for estimating areas of a feature and quantifying uncertainties, avoiding the bias inherent in using maps for area estimation
 
-# Overview of Sampling Design
+## Use: Inferring characteristics of a population based on a sample (e.g. sample-based area estimation)
+Historically, maps have been used to quantify the area of each class by *pixel counting*. Pixel counting approaches simply sum up the area belonging to each class. 
+ - However, this method is prone to bias due to classification errors (e.g., data noise, pixel mixing, or poor class separation).
+- Pixel counting can result in over- or underestimates, and you cannot quantify this uncertainty.
+
+*Sample-based approaches* use manually collected samples and statistical formulas based on the sampling design to estimate class areas.
+- Uses manually collected reference samples (typically collected in a program like CEO) and statistical methods to estimate class areas. 
+- The sample data is used to make estimates for for the whole area of interest.
+- Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
+
+
+## Sampling design considerations for quantifying the characteristics of a popultation
+Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
+
+In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
+
+A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at a characteristic of interest with a geographically small area within the population, reducing the total number of points you need to collect to meet your desired level of uncertainty in your estimates.
+
+
+
+# Reminder... Overview of Sampling Design
 
 ## What is Sampling Design?
 Sampling design refers to the structured approach used to select a subset of data points or observations from a larger population or dataset. A well-thought-out sampling design ensures that the selected sample is representative of the broader population, reducing bias and improving the reliability of results. 
@@ -19,13 +42,6 @@ The design includes several key dedision points such as the:
 - method of sample distribution (tool used to assign sample locations)
 
 <img align="center" src="./images/sampling/map_graphic_wide.png"  vspace="10" width="300" border-radius="50%"> 
-
-## How is sampling used?
-Sampling design has uses in many fields, but we will be focusing on three main use cases:
-- Gathering samples for training machine learning algorithms
-- A statistical approach used to infer the characteristics of a larger area or population by analyzing data from a representative subset (sample) of that area
-    - Namely, *sample-based area estimation*, for estimating areas of a feature and quantifying uncertainties, avoiding the bias inherent in using maps for area estimation
-- Extracting samples for accuracy assessment of a map
 
 
 ## What are the goals of a good sampling design?
@@ -46,13 +62,10 @@ Sampling design has uses in many fields, but we will be focusing on three main u
 4. **Flexibility**
 - Allow for adaptability to unforeseen challenges during sampling, such as planning for iterative additional sampling.
 - Plan for potential integration of additional samples or modifications without compromising the design's integrity.
-5. **Validity for Analysis (Statistical and/or ML Model)**
+5. **Validity for Analysis**
 - Allow for robust statistical analysis and meaningful inference about the population.
-- Ensure the sample size is adequate for achieving reliable estimates and uncertainties (when applicable).
+- Ensure the sample size is adequate for achieving reliable estimates and uncertainties.
     - For most statistical analyses important to our use case, at least 30 samples from the class of interest are necessary for reliable results.
-- Avoid over-fitting or under-fitting a machine learning model due to the number of training samples.
-    - Overfitting occurs when a model learns patterns, noise, or anomalies specific to the training data, rather than generalizable patterns relevant to the entire population.
-    - Underfitting occurs when a model fails to learn sufficient patterns from the data, resulting in poor model performance.
 6. **Reproducibility**
 - Design a sampling process that can be repeated by others for consistency and verification.
 - Use clear, documented procedures for sample selection and measurement.
@@ -80,70 +93,7 @@ Stratified random sampling has two key benefits
 
 
 
-# Use cases for sampling
-
-
-## Use 1: How samples are used as training data for a machine learning algorithm
-In simple terms, training data is the information a machine learning algorithm uses to "learn" how to make predictions or decisions. 
-
-- The training samples are like the examples to a teacher provides to a student. The sample data includes:
-    - the *inputs*, which are the features and/or associated variables for the sample, 
-    - and the "outputs", which are the correct labels for the samples.
-
-- The algorithm looks at the training data and tries to figure out the rules or patterns that connect the inputs to the outputs
-
-- Using the patterns it finds, the algorithm builds a model. A model is like a set of rules or a formula that can predict the output for new, unseen inputs.
-
-- Once the model is sufficiently trained, it can be used to make predictions on new data that does not have provided labels.
-
-In summary, a machine learning algorithm uses training data to learn patterns and create a model that can predict/classify new information.
-
-#### Simple Example 
-Imagine teaching a child to identify apples:
-
-- **Training Data**: You show the child pictures of apples and oranges and tell them which is which.
-- **Learning**: The kid notices patterns (apples are round, red or green, and have a stem).
-- **Model**: The kid forms a mental "rule" to identify apples.
-- **Prediction**: When shown a new fruit, the kid uses their rule to decide if it’s an apple.
-
-### Sampling design considerations for ML algorithm training
-For training machine learning algorithms, sampling design is critical to ensure that the data used to train the model covers the variability in the dataset, preventing overfitting or underfitting. Sometimes the full data set of samples is split into training and testing subsets to evaluate model performance, but separate sampling design for the validation data can also be done. Anything you want the ML algorithm to learn, should be provided as an example in the training samples.
-
-General rules of thumb to use for sampling design to gather training data for Random Forest:
-- A commonly cited rule is to have at least 10 times as many samples as there are features (variables) in the dataset to provide enough data for the model to learn meaningful patterns.
-    -   Example: For 20 features, aim for at least 200 samples per class
-- Decide on a minimum number of samples per class:
-    -   For simple problems, aim for 50–100 samples per class.
-    -   For complex problems or high-dimensional datasets, aim for 500–1,000 samples per class or more.
-- Classes with fewer samples (minority classes) should have a minimum of 30–50 samples to ensure meaningful learning.
-- Highly variabile classs requires larger sample sizes to capture the diversity.
-
-## Use 2: Inferring characteristics of a population based on a sample (e.g. sample-based area estimation)
-Historically, maps have been used to quantify the area of each class by *pixel counting*. Pixel counting approaches simply sum up the area belonging to each class. 
- - However, this method is prone to bias due to classification errors (e.g., data noise, pixel mixing, or poor class separation).
-- Pixel counting can result in over- or underestimates, and you cannot quantify this uncertainty.
-
-*Sample-based approaches* use manually collected samples and statistical formulas based on the sampling design to estimate class areas.
-- Uses manually collected reference samples (typically collected in a program like CEO) and statistical methods to estimate class areas. 
-- The sample data is used to make estimates for for the whole area of interest.
-- Provides **unbiased estimates and quantifies errors**, making results more reliable and robust. 
-
-
-## Sampling design considerations for quantifying the characteristics of a popultation
-Probability-based methods of sampling are used to ensure each unit has a known and non-zero chance of selection, which is required for statistical analysis and uncertainty estimations. The major objective of the sample is to provide information that is representative of the full population.
-
-In sample-based area estimation, such as estimating forest cover, a representative sampling design ensures accurate population metrics while minimizing variance and resource use. The selected type of sampling design is tailored to the study's objectives and constraints. 
-
-A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at a characteristic of interest with a geographically small area within the population, reducing the total number of points you need to collect to meet your desired level of uncertainty in your estimates.
-
-## Use 3: Map validation (accuracy assessment)
-- Map validation compares map class labels at sample points to reference data labels, considered the reference data to be "correct" values.
-- The reference labels are typically based on human interpretations of imagery.
-- High agreement between map labels and reference labels indicates the map accurately represents the mapped characteristics.
-- Accuracy is often assessed using a confusion matrix (error matrix). *This will be explained further later in the workshop.*
-
-
-## Sampling design considerations for map accuracy assessments
+## Sampling design considerations
 Random Sampling option:
 - Goal: A random sample allows for simple analysis using a confusion matrix.
 - Impact: Rare classes in the map may have too few points for meaningful accuracy analysis.
@@ -154,8 +104,10 @@ Stratified Sampling option:
 - Impact: Stratified sampling introduces unequal sample sizes, so although helpful for class-specific accuracy (allows >30 points per strata), it can skew overall accuracy assessments if not correctly weighted
 - Consideration: In order to adjust for this unequal distribution you must use a slightly more complicated analysis for your overall accuracy, by weighting class-specific accuracy based on the area proportions.
 
-Note...
-The samples you are using for training the machine learning algorithm **CANNOT** also be used or for map validation. This must be a completely separate set of points. When you validate with training data, the accuracy is typically much higher than it would be for new, unseen data because the model is evaluated on the same information it was trained to replicate.
+### *The >30 samples rule*
+The Central Limit Theorem states that, for a sufficiently large sample size (commonly 30 or more), the sampling distribution of the sample mean approaches a normal distribution, regardless of the population's actual distribution. This normality assumption is crucial for many statistical tests and confidence interval calculations used in accuracy assessments. 
+### Also Note...
+The samples you are using for training the machine learning algorithm **ARE NOT THE SAME** as the samples that will be used for area estimation. 
 
 
 <br />
@@ -165,8 +117,6 @@ The samples you are using for training the machine learning algorithm **CANNOT**
 
 ## Futher explanation of statistical details 
 
-### *The >30 samples rule*
-The Central Limit Theorem states that, for a sufficiently large sample size (commonly 30 or more), the sampling distribution of the sample mean approaches a normal distribution, regardless of the population's actual distribution. This normality assumption is crucial for many statistical tests and confidence interval calculations used in accuracy assessments. With smaller sample sizes, the estimates of accuracy (e.g., overall accuracy, producer’s accuracy, user’s accuracy) can vary widely, leading to unreliable or unstable results.
 
 
 ### Using a Confusion Matrix (simple unweighted example)
