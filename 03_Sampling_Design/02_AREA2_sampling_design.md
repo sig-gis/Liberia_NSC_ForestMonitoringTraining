@@ -21,6 +21,8 @@ See the full <a href="https://area2.readthedocs.io/en/latest/overview.html" targ
 
 ## Getting Started with AREA2
 1\. Add the tool to your personal GEE repository by clicking this link: <a href="https://code.earthengine.google.com/?accept_repo=projects/AREA2/public" target="_blank" rel="noopener noreferrer">https://code.earthengine.google.com/?accept_repo=projects/AREA2/public</a>.
+    - **Note:** We have added a local version of AREA2 to our repository with some additional features and pre-set parameters. https://code.earthengine.google.com/1f971ddd4035bcac3c25e87b86396444 (Stratified_Random_Sampling_alteredAREA2 in the Liberia_Forest_SIG_workshops GEE repository)
+
 2\. On the left side of your GEE code editor under the scripts tab you will now see **projects/AREA2/public** listed under the **Reader** access repositories. You can click the drop down arrow to view the included scripts.
 <img align="center" src="./images/sampling/AREA2_repository.png"  vspace="10" width="400"> 
 
@@ -36,6 +38,39 @@ See the full <a href="https://area2.readthedocs.io/en/latest/overview.html" targ
 7\. The Map (D) is where spatial data is displayed.
 
 <img align="center" src="./images/sampling/AREA2_tool_overview.png"  vspace="10" width="800"> 
+
+
+### Notes on Changes Made to Our Local Version of AREA2
+1. SEED defined at the top of the script (not in the GUI)
+
+User defined parameter (this is used for repeatable randomization and is saved in the file name)
+
+var definedseed = 33 //set this to any integer you like
+
+This variable is used in the stratifiedSample function -- "seed: definedseed" 
+
+User must comment out this "seed: definedseed" line and remove from file name if using a seed is not desired
+
+2. FILENAME includes seed for later reference
+
+"description:'sample_csv_seed'+definedseed,"
+
+"description:'sample_asset_seed'+definedseed,"
+
+User must remove "+definedseed" from these lines from "description:" lines of the export funtion if a seed is not desired
+
+3. In the stratifiedSample function, set scale parameter to the map pixel size instead of a hard-coded 30
+
+However, if you are using Landsat, it works with the update or without
+
+"scale: Number(SCALEBOX.getValue()), // Landsat spatial resolution // edited - was 30 in the original AREA2"
+
+4. PRE-SET STRATA MAP ASSET PATH in the code instead of having to type it in the GUI (optional)
+
+If desired the user can change the asset path in the code. This variable is now called upon in the code for the default path in the first textbox "IMAGEID = ui.Textbox('Specify image ID', defined_strata_map_path);"
+
+var defined_strata_map_path = 'projects/pc556-ncs-liberia-forest-mang/assets/Liberia_landcover_forest_map_10m_v1_2014' //set this asset path
+
 
 
 # 1. Using the AREA2 Stratified Random Sampling Tool
