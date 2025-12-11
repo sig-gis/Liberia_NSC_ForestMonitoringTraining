@@ -42,15 +42,7 @@ To make the change maps, you compare the class value of each pixel at time 1 aga
 - **Full-detail transitions:** every possible class-to-class change (e.g., `forest_80 → settlements`). - **Simplified schemes:**
 - binary (`change` / `no_change`), or
 - thematic categories (e.g., `no_change`, `forest_loss`, `mangrove_loss`, `other_change`).
-The LC classes:
-```
-1: forest_80
-2: forest_30-80 3: forest_30
-4: mangroves 5: settlements 7: water
-8: grassland
-9: shrub
-10: bare_soil 11: sand
-```
+
 
 ## Key considerations for your change maps
 
