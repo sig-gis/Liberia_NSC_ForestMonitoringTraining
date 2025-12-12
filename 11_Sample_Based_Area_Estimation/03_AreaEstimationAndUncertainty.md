@@ -26,6 +26,7 @@ Use this template to do your own analysis. Make a copy and adjust the:
     -  rows to match your map strata
     -  pixel counts for your map strata (get this from AREA2 or QGIS)
     -  sample counts within the matrix (*see next sub-section*)
+    -  total area of your AOI
     
 [Spreashsheet Template for Stratified Area and Uncertainty Estimation](https://docs.google.com/spreadsheets/d/1hCHuU13Rs7j2rj1Ll7IymBtGSSfZLOLg/edit?usp=sharing&ouid=113437415151435538893&rtpof=true&sd=true)
 <img align="center" src="../images/areaestimation/fullareaestimationexample.png" hspace="15" vspace="10" width="900">
@@ -49,6 +50,8 @@ Example from the last section, [10. Accuracy / Run Accuracy Assessment in Google
 
 * COUNTIFS counts values, dependent on multiple criteria. Your equation should check if the classification in the column with the map strata labels is equal to the corresponding value of of the rows of your confusion matrix, AND checks if the values of your spreadsheet of assigned true reference labels is equal to the value in the columns of your confusion matrix. The equation counts the number of points for which both requirements are true (the row and column values are found).
 
+## Final Results
+Your final results will be an area estimate of each of the classes from your reference data in hectares, plus their 95% confidence interval. If you perform any QA/QC on your samples (especially looking at those points that are off the diagonal on the confusion matrix), repeat the spreadsheet analysis above. When you are happy with the quality of your data, you are all done. **You now have unbiased estiamtes of your areas of change!**
 
 
 
