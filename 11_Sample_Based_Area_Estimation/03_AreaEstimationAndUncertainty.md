@@ -9,7 +9,7 @@ nav_order: 4
 # Sample-Based Area Estimation and Uncertainty Analysis
 
 The **confusion matrix** compares the mapped class with the labels assigned by interpreters at the reference points. It shows the agreement (green fields on the diagonal) and disagreement (grey fields off the diagonal) frequency between the two.
-<img align="center" src="../images/areaestimation/confusionmatrixexample.png" hspace="15" vspace="10" width="600">
+<img align="center" src="images/areaestimation/confusionmatrixexample.png" hspace="15" vspace="10" width="600"> 
 
 
 It provides insight into the quality of the mapping method and helps to identify areas that may need further refinement or a double check in CEO.
