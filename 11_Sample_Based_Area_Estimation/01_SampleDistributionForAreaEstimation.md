@@ -162,10 +162,20 @@ Save as change_classes.tif and apply a custom legend.
 You will most likely be using Stratified Random Sampling (using a map to inform the design, a minimum number of observations randomly placed in each category), so that is assumed here. 
 * If you decide to use random or systematic sampling you can do that in QGIS or directly in CEO. All you would need is a shapefile for your AOI.
 
+**Stratified random sampling key benefits:**
+- Updates map-based areas to increase precision (reduces uncertainty)
+- Helps increase chance of having plots in rare classes
+- A map is not necessary for selecting sample locations but it makes the representative sampling process far more efficient when you are looking at small areas of change, reducing the total number of points you need to collect to meet your desired level of uncertainty
+
+
 Now that you have a stratification map, you can use AREA2 to distribute your samples. Refer to the full directions on AREA2 on the [3. Sampling Design / Sampling Design using AREA2 page](/03_Sampling_Design/02_AREA2_sampling_design.md). Remember, we have a local version of AREA2 set up in your GEE repository for this workshop.
 
 We reviewed how to use AREA2 in a follow-up workshop to the main workshop event. The recording of that walk-through is [here](https://drive.google.com/file/d/1oIiLt1I1oAF8WQIHUtkbHYQQQyzYhKD-/view?usp=sharing). You can stop watching at 16:00, when the topic switches to uploading the samples to CEO.  For the area estimation of land cover change **you will be using a different map asset than was used in the video**.
 
 The Google Sheets template we used in the follow-up workshop to calculate the number of samples per strata (proportional with a minimum sample size) is [here](https://docs.google.com/spreadsheets/d/1O2-5G-W4lZET1e8tv4uyK_-6D93FIprmj7ksD4J1WtA/edit?usp=sharing). You can make a copy of the template in order to make your own edits. As seen in the demo video and previous sections, a key point to remember is that you **must have 30 samples minimum per strata, but 50 or more is better** in order for the statistical equations for area estimation to be valid. Therefore, the more strata in your map, the more points you will need to collect. But having more detailed strata can be beneficial depending on your goals. The total number of samples you collect can be determined based on a target minimim viable uncertainty, as is done in this spreadhseet, or simply be based on available resources (the number of interpreters and the time available for data collection). As a rule of thumb, 1,000 points for your Liberia AOI should probably be the minimum for decent results.
+
+The major objective of the sample is to provide information that is representative of the population. If the sample is representative of the population, then the sample statistics are good and valid estimates of the population parameters.
+
+However, sampling can be expensive, so you must balance sampling validity with cost when considering total sample size and stratification. Consider the time it will take to collect the samples plus time necessary for QA/QC reviews.
 
 
