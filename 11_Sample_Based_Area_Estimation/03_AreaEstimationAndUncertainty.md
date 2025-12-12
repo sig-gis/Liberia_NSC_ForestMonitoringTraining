@@ -19,7 +19,7 @@ To **estimate the area of a target land cover change class** we can apply a stra
 
 <img align="center" src="images/areaestimation/Cochran51.png" hspace="15" vspace="10" width="300">
 
-<img align="center" src="../images/areaestimation/matrixexample.png" hspace="15" vspace="10" width="600">
+<img align="center" src="images/areaestimation/matrixexample.png" hspace="15" vspace="10" width="600">
 
 Use this template to do your own analysis. Make a copy and adjust the:
     -  columns to match your reference data labels
@@ -29,7 +29,7 @@ Use this template to do your own analysis. Make a copy and adjust the:
     -  total area of your AOI
     
 [Spreashsheet Template for Stratified Area and Uncertainty Estimation](https://docs.google.com/spreadsheets/d/1hCHuU13Rs7j2rj1Ll7IymBtGSSfZLOLg/edit?usp=sharing&ouid=113437415151435538893&rtpof=true&sd=true)
-<img align="center" src="../images/areaestimation/fullareaestimationexample.png" hspace="15" vspace="10" width="900">
+<img align="center" src="images/areaestimation/fullareaestimationexample.png" hspace="15" vspace="10" width="900">
 
 ## Creating Your Confusion Matrix
 
