@@ -42,7 +42,7 @@ The creation of the confuion matrix is something you can do in Google Sheets usi
     - column values that match those present in spreadsheet column 'B' (refernce labels)
 
 
-Example from the last [10. Accuracy section](/10_accuracy/01_accuracy.md).: 
+Example from the last section, [10. Accuracy / Run Accuracy Assessment in Google Sheets](/10_accuracy/01_accuracy.md).: 
 ```
 =COUNTIFS('classified test points empty'!$B:$B, $C5, 'classified test points empty'!$C:$C, D$4)
 ```
