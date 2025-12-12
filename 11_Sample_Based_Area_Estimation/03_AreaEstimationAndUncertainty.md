@@ -25,10 +25,30 @@ Use this template to do your own analysis. Make a copy and adjust the:
     -  columns to match your reference data labels
     -  rows to match your map strata
     -  pixel counts for your map strata (get this from AREA2 or QGIS)
-    -  sample counts within the matrix
+    -  sample counts within the matrix (*see next sub-section*)
     
 [Spreashsheet Template for Stratified Area and Uncertainty Estimation](https://docs.google.com/spreadsheets/d/1hCHuU13Rs7j2rj1Ll7IymBtGSSfZLOLg/edit?usp=sharing&ouid=113437415151435538893&rtpof=true&sd=true)
 <img align="center" src="../images/areaestimation/fullareaestimationexample.png" hspace="15" vspace="10" width="900">
+
+## Creating Your Confusion Matrix
+
+The creation of the confuion matrix is something you can do in Google Sheets using your Samples file from CEO. We talked about doing this in the Accuracy section, using the COUNTIFS function in Google Sheets. As inputs you need:
+
+- A samples data spreadsheet with (Sample file from CEO)
+    - column 'A' of stratification map labels 
+    - column 'B' of refrence data labels
+- a matrix set up with:
+    - row values that match those present in spreadsheet column 'A' (map labels)
+    - column values that match those present in spreadsheet column 'B' (refernce labels)
+
+
+Example from the last Accuracy section:
+```
+=COUNTIFS('classified test points empty'!$B:$B, $C5, 'classified test points empty'!$C:$C, D$4)
+```
+
+* COUNTIFS counts values, dependent on multiple criteria. Your equation should check if the classification in the column with the map strata labels is equal to the corresponding value of of the rows of your confusion matrix, AND checks if the values of your spreadsheet of assigned true reference labels is equal to the value in the columns of your confusion matrix. The equation counts the number of points for which both requirements are true (the row and column values are found).
+
 
 
 
