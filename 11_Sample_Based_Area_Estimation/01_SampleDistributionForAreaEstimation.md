@@ -98,7 +98,7 @@ var changeBinary = lc_t1.neq(lc_t2).rename('change'); // changeBinary: 1 = chang
    - or a binary chang/no-change map
 4. Visualize and export.
 
-A full demo script of this process is in the GEE repository. [Quick link.](https://code.earthengine.google.com/e0a904e0a656a1ca9b2feef31a3389e7)
+A full demo script of this process is in the GEE repository (CreateChangeMapForStratification). [Quick link.](https://code.earthengine.google.com/e0a904e0a656a1ca9b2feef31a3389e7)
    
 ---
 ## Option 2 - QGIS Method
