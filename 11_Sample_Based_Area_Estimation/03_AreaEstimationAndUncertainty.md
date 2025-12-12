@@ -8,14 +8,25 @@ nav_order: 4
 
 # Sample-Based Area Estimation and Uncertainty Analysis
 
-The **confusion matrix** compares the mapped class with the labels assigned by interpreters at the reference points. It shows the agreement (green fields on the diagonal) and disagreement (yellow fields off the diagonal) frequency between the two.
+The **confusion matrix** compares the mapped class with the labels assigned by interpreters at the reference points. It shows the agreement (green fields on the diagonal) and disagreement (grey fields off the diagonal) frequency between the two.
 
 It provides insight into the quality of the mapping method and helps to identify areas that may need further refinement or a double check in CEO.
 
 
 To **estimate the area of a target land cover change class** we can apply a stratified estimator by Cochran (1977, Eq. 5.1). It incorporates the confusion matrix and each stratum area to **estimate the true unbiased area of the target land cover change class**. This method accounts for accuracy variability in the land cover map, improving area estimation precision.
 
-*Made up example but strata weights from Arevalo et al. (2018)*
+- [Spreashsheet Template for Stratified Area and Uncertainty Estimation](https://docs.google.com/spreadsheets/d/1hCHuU13Rs7j2rj1Ll7IymBtGSSfZLOLg/edit?usp=sharing&ouid=113437415151435538893&rtpof=true&sd=true)
+(You will need to adjust the columns of the template to match the classes of your reference data)
+
+
+
+
+# [Optional] Systematic or Random Sampling Analysis
+If the team ends up deciding to use systematic or random sampling instead of stratified sampling, then here are some resources to guide that analysis. The process is more straight forward. These slides and templates are pulled from a workshop for The Gambia.
+
+- [Slides on Sample Based Area Estimation with Simple Random/Systematic Sampling](https://docs.google.com/presentation/d/10F7c5-laA-iiWy_slMzaQz7RlCatxZ3LywfKCTS9xm0/edit?usp=sharing)
+- [Spreadsheet Template for Systematic/Random Sampling Area Estimation](https://docs.google.com/spreadsheets/d/1DrMBMR11tGpUeHOy6VwA39VrYJI4CNyC/edit?usp=drive_link&ouid=113437415151435538893&rtpof=true&sd=true)
+
 
 
 
