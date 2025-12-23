@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "12. Sample-Based Area Estimation"
-permalink: /12_AreaEstimation
+title: "11. Sample-Based Area Estimation"
+permalink: /11_AreaEstimation
 has_children: True
 nav_order: 12
 ---
