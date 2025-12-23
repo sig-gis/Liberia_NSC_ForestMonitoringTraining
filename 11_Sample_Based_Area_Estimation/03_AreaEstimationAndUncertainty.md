@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Area Estimation and Uncertainty Analysis"
-parent: "12. Sample-Based Area Estimation"
+parent: "11. Sample-Based Area Estimation"
 permalink: /AnalysisAreaEstimation
 nav_order: 4
 ---
@@ -43,7 +43,7 @@ The creation of the confuion matrix is something you can do in Google Sheets usi
     - column values that match those present in spreadsheet column 'B' (refernce labels)
 
 
-Example from the last section, [10. Accuracy / Run Accuracy Assessment in Google Sheets](/10_accuracy/01_accuracy.md): 
+Example from the last section, [10. Accuracy / Run Accuracy Assessment in Google Sheets](../10_accuracy/01_accuracy.md): 
 ```
 =COUNTIFS('classified test points empty'!$B:$B, $C5, 'classified test points empty'!$C:$C, D$4)
 ```
