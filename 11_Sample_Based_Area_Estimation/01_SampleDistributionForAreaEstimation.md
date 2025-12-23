@@ -72,8 +72,10 @@ Define forest and mangrove groups:
 
 ```js
 var forestClasses = [1,2,3]; // forest strata
-var isForest_t1 = lc_t1.remap(forestClasses, [1,1,1], 0); var isForest_t2 = lc_t2.remap(forestClasses, [1,1,1], 0);
-var isMangrove_t1 = lc_t1.eq(4); var isMangrove_t2 = lc_t2.eq(4);
+var isForest_t1 = lc_t1.remap(forestClasses, [1,1,1], 0);
+var isForest_t2 = lc_t2.remap(forestClasses, [1,1,1], 0);
+var isMangrove_t1 = lc_t1.eq(4);
+var isMangrove_t2 = lc_t2.eq(4);
 var noChange = lc_t1.eq(lc_t2);
 ```
 Build a simplified 4-class scheme:
